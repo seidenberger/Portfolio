@@ -1,16 +1,29 @@
-// section {
-//     width: 100%;
-//     background-color: #141D2F;
-//     width: 1440px;
-// }
+@import './../../../styles.scss';
+// $p: 0px 100px 0px 100px;
+
 section {
-    width: 100%;
-    padding: 37px 0px 37px 0px;
-        display: flex;
-    justify-content: space-between;
-    align-items: center;
-    >div {
-                display: flex;
-        justify-content: space-between;
-    }
+padding: $p;
 }
+
+
+// section {
+
+//     width: 100%;
+//     // padding: 37px 0px 37px 0px;
+//     width: calc(100vw - 200px);
+//     // overflow: hidden;
+//         display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     >div {
+//                 display: flex;
+//         justify-content: space-between;
+//     }
+// }
+
+
+
+// //     width: 100%;
+// //     background-color: #141D2F;
+// //     width: 1440px;
+// // padding: 0px 100px 0px 100px;
