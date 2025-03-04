@@ -1,18 +1,7 @@
-// @import './../../styles.scss';
+// @import1 "./../../styles.scss";
+@import "./../../styles.scss";
 
-// // section {
-// //     padding: $p;
-// // }
-
-*{
-    width: 100%;
-
-    // width: 1440px;
-
-    
+div {
+  padding: $p;
+  background-color: $dark_blue;
 }
-
-// section{
-//     padding: $p;
-// }
-
