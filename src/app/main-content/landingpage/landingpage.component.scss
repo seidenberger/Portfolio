@@ -6,12 +6,11 @@ section {
   background-color: $blue;
 }
 
-.img_text {
+.container {
   display: flex;
 
   .img_person {
     position: absolute;
-    // background-image: url(./../../../../public/assets/img/body.png);
     width: 450px;
     height: 450px;
     z-index: 2;
@@ -25,8 +24,11 @@ section {
     width: 450px;
     height: 400px;
   }
-  .person {
+  // .person {
+  // display: flex;
+  .d_flex_c {
     display: flex;
+    align-items: center;
     .rotate {
       transform: rotate(90deg);
       gap: 20px;
@@ -35,11 +37,20 @@ section {
       color: $purple;
     }
   }
+  // }
 }
 
 a {
+  font-size: 23px;
   text-decoration: none;
   color: $white;
+  background-color: $green;
+  padding: 15px 30px 15px 30px;
+  border-radius: 10px;
+}
+
+p {
+  font-size: 48px;
 }
 
 .imgs {
@@ -57,7 +68,14 @@ a {
 // }
 
 .hero_background {
-  width: 100%;
-  bottom: 500px;
-  z-index: 3;
+  // width: 100%;
+  // bottom: 20px;
+  // z-index: 3;
+  position: absolute;
+  top: 250px;
+}
+
+.icons {
+  z-index: 99;
+  padding: 20px;
 }
