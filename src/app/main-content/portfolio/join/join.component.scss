@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  width: 80%;
+  height: 90vh;
+  margin: auto;
+  padding: 10px;
+}
+
+.section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid green;
+  margin: 10px;
+  padding: 10px;
+}
+
+.inner-box {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.small-box {
+  width: 30px;
+  height: 50px;
+  background-color: blue;
+  border: 2px solid blue;
+  margin-right: 5px;
+}
+
+.wide-box {
+  width: 150px;
+  height: 50px;
+  background-color: blue;
+  border: 2px solid blue;
+}
+
+.multi-box {
+  display: flex;
+  gap: 5px;
+}
+
+.tiny-box {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  border: 2px solid blue;
+}
+
+.side-box {
+  width: 30px;
+  height: 60px;
+  background-color: red;
+  border: 2px solid red;
+}

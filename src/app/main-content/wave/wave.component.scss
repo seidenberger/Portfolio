@@ -1,0 +1,52 @@
+@import "./../../../styles.scss";
+
+section {
+  // padding: $p;
+  // min-height: 100vh;
+  background-color: $blue;
+}
+
+.icons {
+  z-index: 9;
+  // padding: 20px;
+}
+
+// .hero_background {
+//   // width: 100%;
+//   // bottom: 20px;
+//   // z-index: 3;
+//   position: absolute;
+//   top: 250px;
+// }
+
+// .rotate {
+//   transform: rotate(90deg);
+//   gap: 20px;
+// }
+
+.wave {
+  padding: 0;
+  width: 100%;
+  .wave_right {
+    border: 2px solid green;
+    position: absolute;
+    top: 50px;
+  }
+  .wave_left {
+    border: 2px solid red;
+    position: absolute;
+    top: 300px;
+    z-index: 2;
+    width: 50%;
+    // object-fit: cover;
+  }
+}
+
+// hr {
+//   border: none;
+//   height: 4px;
+//   width: 100px;
+//   color: $purple;
+//   background-color: $purple;
+//   // background: linear-gradient(to right, $purple, $green);
+// }

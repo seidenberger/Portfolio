@@ -1,23 +1,15 @@
 @import "./../../../styles.scss";
 
-// section {
-// padding: $p;
-// }
-
 section {
-  //     width: 100%;
-  //     // padding: 37px 0px 37px 0px;
-  //     width: calc(100vw - 200px);
-  //     // overflow: hidden;
+  padding: $p;
   position: sticky;
-  // position: fixed;
+
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
   > div {
-    // width: 400px;
     display: flex;
     justify-content: space-around;
   }
@@ -58,34 +50,6 @@ a {
   color: $white;
   padding: 20px;
 }
-
-// .letter_e {
-//   position: relative;
-//   display: inline-block;
-// }
-
-// .letter_e::after {
-//   content: "e";
-//   position: absolute;
-//   left: 0;
-//   top: 50;
-//   color: $green;
-//   clip-path: inset(0 0 50% 0);
-// }
-
-// .letter_r {
-//   position: relative;
-//   display: inline-block;
-// }
-
-// .letter_r::after {
-//   content: "r";
-//   position: absolute;
-//   left: 0;
-//   top: 50;
-//   color: $purple;
-//   clip-path: inset(0 0 50% 50%);
-// }
 
 .ABSTAND {
   margin: 20px;
