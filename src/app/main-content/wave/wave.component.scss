@@ -5,6 +5,7 @@ section {
 
   background-color: $blue;
   width: 100%;
+  border: 2px solid darkmagenta;
 }
 
 .wave {
@@ -16,7 +17,6 @@ section {
     top: 300px;
   }
   .wave_left {
-    border: 2px solid red;
     position: absolute;
     top: 300px;
     z-index: 2;

@@ -1,17 +1,21 @@
 @import "./../../../styles.scss";
 
 section {
-  padding: $p;
   position: sticky;
-
   top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  > div {
+  border: 2px solid burlywood;
+  .header {
+    padding: $p;
+
+    top: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    > div {
+      display: flex;
+      justify-content: space-around;
+    }
   }
 }
 
