@@ -1,6 +1,8 @@
 // padding
 $p: 0px 100px 0px 100px;
 
+$p-left: 100px;
+
 // color
 $black: rgb(0, 0, 0, 1);
 $blue: rgb(20, 29, 47, 1);
@@ -8,6 +10,12 @@ $dark_blue: rgb(24, 34, 53, 1);
 $purple: rgb(151, 71, 255, 1);
 $green: rgb(112, 230, 28, 1);
 $white: rgb(255, 252, 252, 1);
+
+//font
+// @mixin fontH() {
+//   font-size: 90px;
+//   font-weight: 700;
+// }
 
 body {
   color: white;

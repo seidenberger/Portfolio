@@ -3,10 +3,16 @@
 section {
   position: absolute;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index: 5;
   border: 2px solid green;
-  .div {
+  // width: 100%;
+  .discriptio {
     display: flex;
+    flex-direction: column;
+
+    padding-left: $p-left;
   }
 }
 
@@ -21,15 +27,17 @@ img {
 }
 
 hr {
-  position: absolute;
   border: none;
   height: 4px;
-  // top: 1333px;
-  left: 1173px;
   width: 267px;
 
   color: $purple;
   background-color: $green;
+}
+
+.picture {
+  display: flex;
+  align-items: center;
 }
 
 // hr {
