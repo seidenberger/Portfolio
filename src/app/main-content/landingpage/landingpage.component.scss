@@ -63,6 +63,9 @@ section {
           transform: rotate(90deg);
           gap: 20px;
         }
+        .heding {
+          @include fontH();
+        }
         .discription {
           color: $purple;
         }
@@ -93,7 +96,6 @@ a {
       width: 100px;
       color: $purple;
       background-color: $purple;
-      // background: linear-gradient(to right, $purple, $green);
     }
     .icons {
       padding: 20px;

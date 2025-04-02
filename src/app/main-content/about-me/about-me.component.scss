@@ -40,6 +40,10 @@ hr {
   align-items: center;
 }
 
+.heding {
+  @include fontH();
+}
+
 // hr {
 //   border: none;
 //   height: 4px;

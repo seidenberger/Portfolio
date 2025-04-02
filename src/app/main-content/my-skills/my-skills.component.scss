@@ -1,4 +1,21 @@
+@import "./../../../styles.scss";
+
 section {
   border: 2px solid yellow;
-  height: 1000px;
+  padding: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.heding {
+  @include fontH();
+}
+
+hr {
+  border: none;
+  height: 4px;
+  width: 100px;
+  color: $purple;
+  background-color: $purple;
 }
