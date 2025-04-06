@@ -1,3 +1,5 @@
+export type TranslationKey = 'title' | 'greeting' | 'goodbye' | 'profile' | 'settings' | 'dashboard';
+
 export const translations = {
 
     de: {

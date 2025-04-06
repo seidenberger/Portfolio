@@ -34,18 +34,9 @@
           <div>
             <hr />
           </div>
-
-          <img class="icons" src="assets/icons/Property 1=Default.png" alt="" />
-          <img
-            class="icons"
-            src="assets/icons/Property 1=Default (1).png"
-            alt=""
-          />
-          <img
-            class="icons"
-            src="assets/icons/Property 1=Default (2).png"
-            alt=""
-          />
+          <div *ngFor="let iconsLandingpage of iconsLandingpage">
+            <img class="icons" [src]="iconsLandingpage" alt="pictur" />
+          </div>
           <span class="icons">email icans</span>
         </div>
 
