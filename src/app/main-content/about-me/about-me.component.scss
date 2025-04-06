@@ -1,8 +1,12 @@
 @import "./../../../styles.scss";
 
 section {
-  position: absolute;
-  display: flex;
+  display: grid;
+  grid-template-columns: 20% 20% 30% 30%;
+  grid-template-rows: auto;
+
+  // position: absolute;
+  // display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 5;
