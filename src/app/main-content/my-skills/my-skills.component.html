@@ -1,7 +1,11 @@
 <section>
   <div class="icons">
-    <div *ngFor="let iconsSkills of iconsSkills">
-      <img class="img" [src]="iconsSkills" alt="pictur" />
+    <!-- <div *ngFor="let mySkillJosn of mySkillJosn">
+      <img class="img" [src]="mySkillJosn" alt="pictur" />
+    </div> -->
+    <div *ngFor="let skill of skills">
+      <img [src]="skill.image" alt="skill image" />
+      <p>{{ skill.text }}</p>
     </div>
   </div>
 

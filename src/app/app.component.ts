@@ -3,7 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { MainContentComponent } from './main-content/main-content.component';
 // import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-// import { TranslationService } from './translation.service';
+import { TranslationService } from './translation.service';
+import { TranslationKey } from './translations';
 
 
 @Component({
@@ -11,16 +12,17 @@ import { FooterComponent } from './shared/footer/footer.component';
   imports: [RouterOutlet, 
             MainContentComponent,  
             // HeaderComponent, 
-            FooterComponent],
+            FooterComponent,
+          ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  // title = 'portfolio';
-  // constructor(public translationService: TranslationService) {}
+  title = 'portfolio';
+  constructor(public translationService: TranslationService) {}
 
-  // t(key: string): string {
-  //   return this.translationService.translate(key);
-  // }
+  t(key: string): string {
+    return this.translationService.translate(key as TranslationKey);
+  }
 }
   
