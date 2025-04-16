@@ -2,6 +2,10 @@
 @import "./../scss/color.scss";
 
 section {
+  width: 100%;
+}
+
+div {
   max-width: 1440px;
   // width: 100%;
   margin: auto;

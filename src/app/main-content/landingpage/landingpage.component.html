@@ -1,57 +1,58 @@
 <!-- <section class="font"> -->
 <section>
-  <div><app-header></app-header></div>
-  <div class="container">
+  <header></header>
+  <div class="container_imgs">
     <div class="imgs">
-      <img class="img_person" src="assets/img/body.png" alt="" />
-      <img
-        class="img img_shadows"
-        src="assets/shadows/29. photo shadows (1).png"
-        alt=""
-      />
-    </div>
-  </div>
-
-  <div class="overlay border">
-    <div class="display">
-      <div class="name">
-        <div class="column">
-          <div class="d_flex_c">
-            <!-- <p class="rotate">{{ rotate }}</p> -->
-            <p class="rotate">I am</p>
-            <div>
-              <p class="heding">Theodor Seidenberger</p>
-              <p class="discription">FRONTEND DEVELOPER</p>
-            </div>
-          </div>
-          <div>
-            <a href="">Let's talk</a>
-          </div>
-        </div>
+      <div class="container_img_person">
+        <img class="img_person" src="assets/img/body.png" alt="" />
       </div>
-
-      <div class="display_ai">
-        <div class="overlay_icons">
-          <div>
-            <hr />
-          </div>
-          <div *ngFor="let iconsLandingpage of iconsLandingpage">
-            <img class="icons" [src]="iconsLandingpage" alt="pictur" />
-          </div>
-          <span class="icons">email icans</span>
-        </div>
-
-        <div class="overlay_rotated">
-          <p class="discription_page">scroll down</p>
-          <img
-            class="rotate_arrow"
-            src="assets/icons/arrow-down-line.png"
-            alt=""
-          />
-        </div>
+      <div class="container_img_shadows">
+        <img
+          class="img img_shadows"
+          src="assets/shadows/29. photo shadows (1).png"
+          alt=""
+        />
       </div>
     </div>
   </div>
+
+  <!-- <div class="container_overlay">
+    <div class="display"> -->
+  <div class="container_name">
+    <div class="column">
+      <div class="d_flex_c">
+        <p class="rotate">{{ rotate }}</p>
+        <!-- <p class="rotate">I am</p> -->
+        <div>
+          <p class="heding">Theodor Seidenberger</p>
+          <p class="discription">FRONTEND DEVELOPER</p>
+        </div>
+      </div>
+      <div>
+        <!-- <a href="">Let's talk</a> -->
+        <a href="">{{ talk }}</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container_icons">
+    <div class="overlay_icons">
+      <div>
+        <hr />
+      </div>
+      <div *ngFor="let iconsLandingpage of iconsLandingpage">
+        <img class="icons" [src]="iconsLandingpage" alt="pictur" />
+      </div>
+      <span class="icons">email icans</span>
+    </div>
+
+    <div class="overlay_rotated">
+      <p class="discription_page">{{ scroll }}</p>
+      <img class="rotate_arrow" src="assets/icons/arrow-down-line.png" alt="" />
+    </div>
+  </div>
+  <!-- </div>
+  </div> -->
 </section>
 
 <!-- class="rotate_arrow" -->

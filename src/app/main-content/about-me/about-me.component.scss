@@ -3,13 +3,14 @@
 section {
   display: grid;
   grid-template-columns: 20% 20% 30% 30%;
-  grid-template-rows: auto;
+  // grid-template-rows: auto;
+  grid-template-areas: "discriptio discriptio picture picture";
 
   // position: absolute;
   // display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 5;
+  z-index: 60;
   border: 2px solid green;
   // width: 100%;
   .discriptio {
@@ -20,7 +21,7 @@ section {
   }
 }
 
-img {
+.head {
   height: 435px;
   width: 435px;
   border-radius: 50%;
@@ -39,9 +40,14 @@ hr {
   background-color: $green;
 }
 
+.discriptio {
+  grid-area: discriptio;
+}
+
 .picture {
   display: flex;
   align-items: center;
+  grid-area: picture;
 }
 
 .heding {
@@ -55,3 +61,8 @@ hr {
 //   color: $purple;
 //   background-color: $purple;
 // }
+
+.icons {
+  height: 48px;
+  width: 48px;
+}

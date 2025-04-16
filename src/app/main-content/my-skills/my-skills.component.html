@@ -3,9 +3,12 @@
     <!-- <div *ngFor="let mySkillJosn of mySkillJosn">
       <img class="img" [src]="mySkillJosn" alt="pictur" />
     </div> -->
-    <div *ngFor="let skill of skills">
-      <img [src]="skill.image" alt="skill image" />
-      <p>{{ skill.text }}</p>
+    <div class="grid-container">
+      <div *ngFor="let skill of skills">
+        <img [src]="skill.image" alt="skill image" />
+
+        <p>{{ skill.text }}</p>
+      </div>
     </div>
   </div>
 

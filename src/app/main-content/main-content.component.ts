@@ -5,14 +5,16 @@ import { MySkillsComponent } from './my-skills/my-skills.component';
 import { DescriptionOfOtherComponent } from './description-of-other/description-of-other.component';
 import { ContactComponent } from './contact/contact.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { WaveComponent } from './wave/wave.component';
+import { HeaderComponent } from '../shared/header/header.component';
+// import { WaveComponent } from './wave/wave.component';
 
 @Component({
   selector: 'app-main-content',
   imports: [LandingpageComponent,
             AboutMeComponent, 
             MySkillsComponent, 
-            WaveComponent,
+            // WaveComponent,
+            HeaderComponent,
             DescriptionOfOtherComponent, 
             ContactComponent,
             PortfolioComponent],

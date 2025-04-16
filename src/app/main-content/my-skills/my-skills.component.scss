@@ -8,6 +8,14 @@ section {
   grid-template-areas: "icon icon icon discription discription";
 }
 
+.grid-container {
+  display: grid;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px 100px;
+  gap: 20px;
+  padding: $p;
+}
+
 .icons {
   grid-area: icon;
   // display: flex;
