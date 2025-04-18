@@ -161,12 +161,15 @@ p {
   padding: 0;
   // display: flex;
   // align-items: flex-end;
+  margin-top: -40%;
+  // zeigt nur die oberen 70%
+  overflow: hidden;
   .wave_right {
     // margin: -50%;
-    margin-top: -40%;
+
     object-fit: cover;
     width: 100%;
-    height: auto;
+    height: 800px;
     // z-index: 5;
   }
 }
