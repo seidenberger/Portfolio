@@ -1,6 +1,8 @@
 @import "./../../../styles.scss";
+@import "./../../../scss/layers.scss";
 
 section {
+  // z-index: 2;
   min-height: 100vh;
   width: 100%;
   background-color: $dark_blue;
@@ -10,11 +12,14 @@ section {
   grid-template-areas:
     "header header header header"
     "person person name name"
-    "icons icons icons icons";
+    "icons icons icons icons"
+    "wave wave wave wave";
 }
 
 header {
   grid-area: header;
+  // z-index: 0;
+  @include layers(0);
 }
 
 .container_imgs {
@@ -38,10 +43,20 @@ header {
 
 .container_name {
   grid-area: name;
+  // z-index: 4;
+  @include layers(4);
 }
 
 .container_icons {
   grid-area: icons;
+  // z-index: 4;
+  @include layers(4);
+}
+
+.wave {
+  grid-area: wave;
+  // z-index: 3;
+  @include layers(3);
 }
 
 .container_imgs {
@@ -52,11 +67,14 @@ header {
     width: 646px;
     height: 705px;
     bottom: 0px;
-    z-index: 2;
+    // z-index: 2;
+    @include layers(2);
   }
   .img_shadows {
     width: 690px;
     height: 671px;
+    // z-index: 1;
+    // @include layers(4);
   }
 }
 
@@ -135,4 +153,20 @@ a {
 
 p {
   font-size: 48px;
+}
+
+.wave {
+  grid-area: wave;
+  // align-content: flex-end;
+  padding: 0;
+  // display: flex;
+  // align-items: flex-end;
+  .wave_right {
+    // margin: -50%;
+    margin-top: -40%;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    // z-index: 5;
+  }
 }
