@@ -15,3 +15,10 @@ hr {
 .heding {
   @include fontH();
 }
+
+.img {
+  height: 747px;
+  width: 902px;
+  left: -312px;
+  // transform: rotate(deg);
+}
