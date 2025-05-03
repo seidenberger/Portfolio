@@ -47,6 +47,7 @@ section {
 .shadow {
   grid-column: 5 / 6;
   grid-row: 1 / 2;
+  @include layers(4);
   img {
     width: 572px;
     height: 608px;

@@ -1,9 +1,29 @@
 @import "./../../../styles.scss";
+@import "./../../../scss/layers.scss";
 
 section {
   border: 2px solid blue;
   display: grid;
-  grid-template-rows: auto 1fr 1fr;
+  grid-template-rows: auto 1fr 50px 1fr;
+  .container_img_shadows {
+    grid-row: 3 /4;
+    overflow: visible;
+    position: relative;
+    @include layers(0);
+    .img {
+      height: 636px;
+      width: 748px;
+      left: -300px;
+      position: absolute;
+    }
+  }
+  .join {
+    grid-row: 2 / 3;
+  }
+
+  .pollo_loco {
+    grid-row: 4 / 5;
+  }
 }
 
 .header {
@@ -24,22 +44,50 @@ section {
   }
 }
 
-// hr {
-//   border: none;
-//   height: 4px;
-//   width: 100%;
-//   color: $purple;
-//   background-color: $purple;
-// }
+.container_project {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  @include layers(1);
 
-// .heding {
-//   @include fontH();
-// }
+  .container_img_project {
+    grid-column: 1 /2;
+    img {
+      width: 620px;
+      height: 340px;
+    }
+  }
+  .container_text_project {
+    grid-column: 2 /3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .button {
+      display: flex;
+      gap: 30px;
+    }
+  }
+}
 
-// .display {
-//   display: flex;
-// }
-.img {
-  height: 636px;
-  width: 748px;
+a {
+  font-size: 23px;
+  text-decoration: none;
+  color: $white;
+  //   background-color: $green;
+  background-color: red;
+  padding: 15px 30px 15px 30px;
+  border-radius: 10px;
+}
+
+.container_item.reverse {
+  .container_project {
+    // display: flex;
+    // flex-direction: row-reverse;
+    .container_text_project {
+      grid-column: 1 /2;
+      grid-row: 1 / 2;
+    }
+    .container_img_project {
+      grid-column: 2 /3;
+    }
+  }
 }

@@ -8,7 +8,7 @@ section {
   background-color: $dark_blue;
   display: grid;
   grid-template-columns: 20% 20% 30% 30%;
-  grid-template-rows: 109px 705px 100px;
+  grid-template-rows: 109px 705px 100px auto;
   grid-template-areas:
     "header header header header"
     "person person name name"
@@ -118,6 +118,7 @@ a {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  background-color: yellow;
   .overlay_icons {
     display: flex;
     align-items: center;
