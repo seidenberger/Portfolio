@@ -1,4 +1,4 @@
-export const mySkills =   [
+export const carousel =   [
     {
       "image": 'assets/img/description/übung/IMG_0541.JPG',
       "text": "theo ist ferundlich und kennt das taem ",
@@ -6,12 +6,12 @@ export const mySkills =   [
     },
     {
         "image": 'assets/img/description/übung/IMG_0547.JPG',
-        "text": "theo ist ferundlich und kennt das taem ",
-        "signature": "m.seide - team Partner"
+        "text": "1 und 2 und 3 ",
+        "signature": "eva - team Partner"
     },
     {
         "image": 'assets/img/description/übung/WIN_20250223_21_13_37_Pro.jpg',
-        "text": "theo ist ferundlich und kennt das taem ",
-        "signature": "m.seide - team Partner"
+        "text": "das wird schön ",
+        "signature": "leo - team Partner"
     }
 ]

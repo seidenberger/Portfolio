@@ -1,16 +1,33 @@
 <section>
-  <div>
+  <div class="carousel">
     <div>
-      <img src="assets/img/description/übung/IMG_0541.JPG" alt="" />
       <div>
         <p></p>
         <hr />
         <p></p>
       </div>
     </div>
-    <div>
-      <img src="" alt="" />
+    <div class="img_description">
+      <img [src]="currentItem.image" alt="" />
       <hr />
+    </div>
+    <div class="navigator">
+      <button (click)="prev()" [disabled]="currentIndex === 0">⬅️</button>
+
+      <div class="content">
+        <h2>{{ currentItem.signature }}</h2>
+        <p>{{ currentItem.text }}</p>
+      </div>
+
+      <div *ngFor="let carousel of carousel; let i = index">
+        <div class="circle"></div>
+      </div>
+      <button
+        (click)="next()"
+        [disabled]="currentIndex === carousel.length - 1"
+      >
+        ➡️
+      </button>
     </div>
   </div>
   <div class="container_img_shadows">

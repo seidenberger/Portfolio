@@ -1,10 +1,42 @@
+@import "./../../../styles.scss";
+@import "./../../../scss/layers.scss";
+
 section {
   border: 2px solid bisque;
   display: grid;
+}
+
+.carousel {
+  overflow: hidden;
+  display: flex;
 }
 
 .img {
   height: 951px;
   width: 428px;
   transform: rotate(196deg);
+}
+
+.img_description {
+  height: 300px;
+  width: 300px;
+}
+
+.navigator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.content {
+  min-width: 200px;
+  text-align: center;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  background-color: #70e61c;
 }
