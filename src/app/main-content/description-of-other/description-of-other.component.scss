@@ -4,23 +4,45 @@
 section {
   border: 2px solid bisque;
   display: grid;
+  grid-template-columns: auto 272px 104px;
+  .carousel {
+    overflow: hidden;
+    display: flex;
+    .border {
+      border: 4px solid $green;
+      grid-column: 1 / 2;
+    }
+  }
 }
 
-.carousel {
-  overflow: hidden;
-  display: flex;
+.img_carousel {
+  height: 272px;
+  width: 272px;
+  border-radius: 50%;
+  border: 4px solid $purple;
+  object-fit: contain;
+  grid-column: 2 / 3;
+}
+.line {
+  border: none;
+  height: 4px;
+  background-color: $purple;
+  grid-column: 5 /6;
+  grid-column: 3 / 4;
 }
 
-.img {
+.img_shadows {
   height: 951px;
   width: 428px;
   transform: rotate(196deg);
+  @include layers(0);
+  grid-column: 3 / 4;
 }
 
-.img_description {
-  height: 300px;
-  width: 300px;
-}
+// .img_description {
+//   height: 300px;
+//   width: 300px;
+// }
 
 .navigator {
   display: flex;

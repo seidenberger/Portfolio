@@ -1,24 +1,22 @@
 <section>
   <div class="carousel">
-    <div>
-      <div>
-        <p></p>
+    <div class="border">
+      <div class="content">
+        <div><img src="assets/img/description/Frame 281@2x.png" alt="" /></div>
+        <p>{{ currentItem.text }}</p>
         <hr />
-        <p></p>
+        <p>{{ currentItem.signature }}</p>
       </div>
     </div>
-    <div class="img_description">
-      <img [src]="currentItem.image" alt="" />
-      <hr />
+    <!-- <div class="img_carousel"> -->
+    <div>
+      <img class="img_carousel" [src]="currentItem.image" alt="" />
+      <div class="line"></div>
     </div>
     <div class="navigator">
-      <button (click)="prev()" [disabled]="currentIndex === 0">⬅️</button>
-
-      <div class="content">
-        <h2>{{ currentItem.signature }}</h2>
-        <p>{{ currentItem.text }}</p>
-      </div>
-
+      <button (click)="prev()" [disabled]="currentIndex === 0">
+        <img src="assets/img/description/Property 1=links.png" alt="" />
+      </button>
       <div *ngFor="let carousel of carousel; let i = index">
         <div class="circle"></div>
       </div>
@@ -26,7 +24,7 @@
         (click)="next()"
         [disabled]="currentIndex === carousel.length - 1"
       >
-        ➡️
+        <img src="assets/img/description/Property 1=rechts.png" alt="" />
       </button>
     </div>
   </div>
