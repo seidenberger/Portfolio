@@ -4,61 +4,77 @@
 section {
   border: 2px solid bisque;
   display: grid;
-  grid-template-columns: auto 272px 104px;
-  .carousel {
-    overflow: hidden;
-    display: flex;
-    .border {
-      border: 4px solid $green;
-      grid-column: 1 / 2;
+  grid-template-columns: auto 104px;
+
+  .container_carousel {
+    grid-column: 1 /3;
+    padding-left: 100px;
+    @include layers(1);
+    .carousel {
+      display: grid;
+      grid-template-columns: auto 276px 104px;
+      align-items: center;
+      // overflow: hidden;
+      // display: flex;
+      .border {
+        width: 851px;
+        height: 272px;
+        // padding 48px,;
+        border-radius: 32px;
+        border: 4px solid $green;
+        grid-column: 1 / 2;
+        .content {
+          min-width: 200px;
+          text-align: center;
+        }
+      }
     }
   }
 }
 
-.img_carousel {
-  height: 272px;
-  width: 272px;
-  border-radius: 50%;
-  border: 4px solid $purple;
-  object-fit: contain;
+.container_img_carousel {
   grid-column: 2 / 3;
+
+  .img_carousel {
+    height: 272px;
+    width: 272px;
+    border-radius: 50%;
+    border: 4px solid $purple;
+    object-fit: contain;
+    @include layers(2);
+  }
 }
+
 .line {
   border: none;
   height: 4px;
+  // width: 100%;
   background-color: $purple;
-  grid-column: 5 /6;
+  // grid-column: 5 /6;
   grid-column: 3 / 4;
 }
 
-.img_shadows {
-  height: 951px;
-  width: 428px;
-  transform: rotate(196deg);
+.container_img_shadows {
   @include layers(0);
-  grid-column: 3 / 4;
+  grid-column: 2 / 3;
+  // position: relative;
+  // position: absolute;
+  .img_shadows {
+    height: 951px;
+    width: 428px;
+    transform: rotate(196deg);
+  }
 }
-
-// .img_description {
-//   height: 300px;
-//   width: 300px;
-// }
 
 .navigator {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-}
-
-.content {
-  min-width: 200px;
-  text-align: center;
-}
-
-.circle {
-  border-radius: 50%;
-  height: 8px;
-  width: 8px;
-  background-color: #70e61c;
+  .circle {
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    background-color: #70e61c;
+  }
 }

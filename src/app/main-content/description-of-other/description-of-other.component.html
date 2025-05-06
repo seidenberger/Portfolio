@@ -1,18 +1,25 @@
 <section>
-  <div class="carousel">
-    <div class="border">
-      <div class="content">
-        <div><img src="assets/img/description/Frame 281@2x.png" alt="" /></div>
-        <p>{{ currentItem.text }}</p>
-        <hr />
-        <p>{{ currentItem.signature }}</p>
+  <div class="container_carousel">
+    <div class="carousel">
+      <div class="border">
+        <div class="content">
+          <div>
+            <img src="assets/img/description/Frame 281@2x.png" alt="" />
+          </div>
+          <p>{{ currentItem.text }}</p>
+          <div>
+            <hr />
+            <p>{{ currentItem.signature }}</p>
+          </div>
+        </div>
       </div>
-    </div>
-    <!-- <div class="img_carousel"> -->
-    <div>
-      <img class="img_carousel" [src]="currentItem.image" alt="" />
+
+      <div class="container_img_carousel">
+        <img class="img_carousel" [src]="currentItem.image" alt="" />
+      </div>
       <div class="line"></div>
     </div>
+
     <div class="navigator">
       <button (click)="prev()" [disabled]="currentIndex === 0">
         <img src="assets/img/description/Property 1=links.png" alt="" />
