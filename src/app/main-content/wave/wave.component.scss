@@ -1,46 +1,13 @@
 @import "./../../../styles.scss";
 @import "./../../../scss/layers.scss";
 
-// section {
-//   width: 100vw;
-//   margin: 0;
-//   padding: 0;
-//   overflow: hidden;
-//   background-color: #141d2f;
-//   // background-image: url("assets/background/28. Hero Background.png");
-//   // background-position: 40% 0;
+section {
+  display: flex;
 
-//   // padding: $p;
-//   // width: 100vw;''
-//   background-color: $blue;
-//   // width: 100%;
-//   border: 2px solid rgb(223, 90, 223);
-//   z-index: 1;
-//   // margin-top: -50px;
+  @include layers(2);
+  margin-top: -650px;
+}
 
-//   display: grid;
-//   grid-template-columns: 60% 40%;
-//   grid-template-rows: 60% 40%;
-//   grid-template-areas:
-//     ". ."
-//     "wave wave";
-// }
-
-// .wave {
-//   // grid-area: wave;
-//   align-content: flex-end;
-//   padding: 0;
-//   display: flex;
-//   // align-items: flex-end;
-//   // @include layers(0);
-//   object-fit: cover;
-//   // .wave_right {
-//   //   object-fit: cover;
-//   //   width: 100vw;
-//   //   height: auto;
-//   //   // z-index: 5;
-//   // }
-// }
 img {
   width: 100%;
 }

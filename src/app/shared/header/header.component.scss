@@ -1,29 +1,52 @@
 @import "./../../../styles.scss";
+@import "./../../../scss/layers.scss";
 
 section {
   background-color: $blue;
   position: fixed;
   top: 0;
-  // border: 2px solid burlywood;
-  // display: flex;
-  width: 1440px;
+  width: 100%;
   z-index: 6;
-  .header {
-    padding: $p;
-
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    > div {
+  height: 110px;
+  .container_header_outer {
+    @include max_Width();
+    .container_header_inner {
+      @include max_Width();
+      border: 2px solid yellow;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: $p;
+      > div {
+        display: flex;
+        justify-content: space-around;
+        > div {
+          display: flex;
+          // justify-content: space-around;
+          gap: 20px;
+          button {
+            background-color: #04aa6d; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+          }
+          //           background-color: white;
+          // color: black;
+          // border: 2px solid #04AA6D;
+        }
+      }
     }
   }
 }
 
 p {
+  border-color: green;
   font-size: 35px;
   font-weight: 700;
   > .letter_e {
