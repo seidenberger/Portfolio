@@ -8,13 +8,53 @@
       alt=""
     />
   </div>
-  <div class="container">
-    <div class="anschreiben">
+  <div class="container_write_to">
+    <div class="write_to">
       <div class="text">
         <h3>got a poroblem to solve</h3>
         <p>spioughsüseesaüohaäühahonayäbü</p>
       </div>
-      <div class="container_input"></div>
+      <div class="container_input">
+        <div class="input">
+          <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+            <label for="name"></label>
+            <input
+              [(ngModel)]="contactData.name"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+
+            <label for="email"></label>
+            <input
+              [(ngModel)]="contactData.email"
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Your Mail"
+              required
+              pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            /><label for=""></label>
+
+            <label for="message"></label>
+            <textarea
+              #message="ngModel"
+              [(ngModel)]="contactData.message"
+              id="message"
+              name="message"
+              placeholder="Your Massage"
+              required
+            ></textarea>
+            @if (!message.valid && message.touched) {
+            <span>pleas enter a message</span>
+            }
+
+            <input type="submit" value="submit" />
+          </form>
+        </div>
+      </div>
     </div>
   </div>
 </section>

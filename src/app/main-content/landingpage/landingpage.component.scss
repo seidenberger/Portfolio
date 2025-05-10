@@ -2,10 +2,13 @@
 @import "./../../../scss/layers.scss";
 
 section {
+  @include max_Width();
   // z-index: 2;
+  // @include layers();
+  // position: absolute;
   min-height: 100vh;
   width: 100%;
-  background-color: $dark_blue;
+  background-color: $blue;
   display: grid;
   grid-template-columns: 20% 20% 30% 30%;
   grid-template-rows: 109px 705px 100px auto;

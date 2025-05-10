@@ -5,7 +5,7 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { TranslationService } from './translation.service';
 import { TranslationKey } from './translations';
-import { WaveComponent } from './main-content/wave/wave.component';
+// import { WaveComponent } from './main-content/wave/wave.component';
 
 
 @Component({
@@ -14,7 +14,7 @@ import { WaveComponent } from './main-content/wave/wave.component';
             MainContentComponent,  
             // HeaderComponent, 
             FooterComponent,
-            WaveComponent
+            // WaveComponent
           ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

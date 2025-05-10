@@ -1,15 +1,8 @@
-// @import1 "./../../styles.scss";
 @import "./../../styles.scss";
 @import "./../../scss/color.scss";
 
 div {
-  // padding: $p;
-  // background-color: $dark_blue;
+  @include max_Width();
+
   background-color: #141d2f;
 }
-
-// section {
-//   display: grid;
-//   grid-template-columns: 20% 20% 30% 30%;
-//   grid-template-rows: auto;
-// }

@@ -2,7 +2,8 @@
 @import "./../../../scss/layers.scss";
 
 section {
-  padding: $p;
+  @include max_Width();
+  // padding: $p;
   border: 2px solid burlywood;
   @include layers(2);
   background-color: $black;

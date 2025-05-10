@@ -6,7 +6,10 @@ $p: 0px 100px 0px 100px;
 
 $p-left: 100px;
 
-// color
+@mixin max_Width() {
+  max-width: 1440px;
+  margin: auto;
+}
 
 body {
   // color: white;
@@ -15,7 +18,7 @@ body {
   border: 0;
   padding: 0;
   // background-color: $black;
-  background-color: $dark_blue;
+  background-color: $blue;
   color: $white;
   font-family: "Poppins";
 }

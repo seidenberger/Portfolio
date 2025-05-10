@@ -1,4 +1,5 @@
 @import "./../../../styles.scss";
+@import "./../../../scss/layers.scss";
 
 // section {
 //   width: 100vw;
@@ -25,16 +26,21 @@
 //     "wave wave";
 // }
 
-.wave {
-  grid-area: wave;
-  align-content: flex-end;
-  padding: 0;
-  display: flex;
-  align-items: flex-end;
-  .wave_right {
-    object-fit: cover;
-    width: 100vw;
-    height: auto;
-    // z-index: 5;
-  }
+// .wave {
+//   // grid-area: wave;
+//   align-content: flex-end;
+//   padding: 0;
+//   display: flex;
+//   // align-items: flex-end;
+//   // @include layers(0);
+//   object-fit: cover;
+//   // .wave_right {
+//   //   object-fit: cover;
+//   //   width: 100vw;
+//   //   height: auto;
+//   //   // z-index: 5;
+//   // }
+// }
+img {
+  width: 100%;
 }
