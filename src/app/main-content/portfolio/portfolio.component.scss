@@ -1,5 +1,6 @@
 @import "./../../../styles.scss";
 @import "./../../../scss/layers.scss";
+@import "./../../../scss/mixin.scss";
 
 section {
   border: 2px solid blue;
@@ -19,10 +20,12 @@ section {
   }
   .join {
     grid-row: 2 / 3;
+    // padding: $p;
   }
 
   .pollo_loco {
     grid-row: 4 / 5;
+    // padding: $p;
   }
 }
 
@@ -33,11 +36,7 @@ section {
   align-items: center;
   justify-content: end;
   hr {
-    border: none;
-    height: 4px;
-    width: 100%;
-    color: $purple;
-    background-color: $purple;
+    @include hr($wi: 100%);
   }
   .heding {
     @include fontH();
@@ -50,6 +49,7 @@ section {
   @include layers(1);
 
   .container_img_project {
+    padding: $p;
     grid-column: 1 /2;
     img {
       width: 620px;
@@ -57,6 +57,7 @@ section {
     }
   }
   .container_text_project {
+    padding: $p;
     grid-column: 2 /3;
     display: flex;
     flex-direction: column;
@@ -68,14 +69,12 @@ section {
   }
 }
 
-a {
-  font-size: 23px;
-  text-decoration: none;
-  color: $white;
-  //   background-color: $green;
-  background-color: red;
-  padding: 15px 30px 15px 30px;
-  border-radius: 10px;
+.live {
+  @include customA($backc: $purple, $bColor: $purple);
+}
+
+.github {
+  @include customA($backc: $blue);
 }
 
 .container_item.reverse {

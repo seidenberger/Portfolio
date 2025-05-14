@@ -1,12 +1,17 @@
 @import "./../../../styles.scss";
 @import "./../../../scss/layers.scss";
+@import "./../../../scss/mixin.scss";
+@import "./../../../scss/media.scss";
 
 section {
-  margin-top: -650px;
-  @include layers(5);
+  // border: 2px solid yellow;
+  // margin-top: -650px;
+  // overflow-x: hidden;
+
+  @include layers(3);
   display: grid;
-  grid-template-columns: 20% 20% 1fr auto 267px;
-  grid-template-rows: 50px auto;
+  grid-template-columns: 20% 20% 1fr auto minmax(100px, 267px);
+  grid-template-rows: 200px auto;
   justify-content: space-between;
   align-items: center;
   .discriptio {
@@ -17,19 +22,28 @@ section {
   }
   .shadow {
     grid-column: 5 / 6;
-    grid-row: 1 / 2;
+    grid-row: 2 / 2;
     @include layers(4);
+    overflow: visible;
+    // position: relative;
+    position: absolute;
+    margin-top: -400px;
     img {
       width: 572px;
       height: 608px;
     }
   }
+}
+
+.border_line {
+  grid-column: 5 /6;
+  grid-row: 2 / 3;
   .line {
-    border: none;
-    height: 4px;
-    background-color: $green;
-    grid-column: 5 /6;
-    grid-row: 2 / 3;
+    @include line();
+
+    // border: none;
+    // height: 4px;
+    // background-color: $green;
   }
 }
 

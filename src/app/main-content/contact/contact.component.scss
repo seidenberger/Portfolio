@@ -1,5 +1,6 @@
 @import "./../../../styles.scss";
 @import "./../../../scss/layers.scss";
+@import "./../../../scss/mixin.scss";
 
 section {
   border: 2px solid brown;
@@ -8,11 +9,7 @@ section {
   grid-template-rows: auto auto;
   .line {
     grid-column: 1 /2;
-    border: none;
-    height: 4px;
-    width: 100px;
-    color: $purple;
-    background-color: $purple;
+    @include line($backc: $purple);
   }
   p {
     grid-column: 2 /3;
@@ -23,6 +20,7 @@ section {
     grid-row: 2 /3;
   }
   .container_write_to {
+    padding: $p;
     // snschreiben
     grid-column: 1 / 4;
     grid-row: 2 /3;

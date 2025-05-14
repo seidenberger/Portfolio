@@ -1,5 +1,6 @@
 @import "./../../../styles.scss";
 @import "./../../../scss/layers.scss";
+@import "./../../../scss/mixin.scss";
 
 section {
   // border: 2px solid yellow;
@@ -32,11 +33,14 @@ section {
   @include layers(1);
 }
 
-.vector {
+.line {
   grid-column: 3 /4;
   grid-row: 1 / 2;
   display: flex;
   align-items: center;
+  hr {
+    @include hr($wi: 100%);
+  }
 }
 
 .heding {
@@ -55,21 +59,14 @@ section {
   grid-row: 3 / 4;
 }
 
-hr {
-  border: none;
-  height: 4px;
-  width: 100%;
-  color: $purple;
-  background-color: $purple;
-}
-
 a {
-  font-size: 23px;
-  text-decoration: none;
-  color: $white;
-  background-color: $green;
-  padding: 15px 30px 15px 30px;
-  border-radius: 10px;
+  @include customA();
+  // font-size: 23px;
+  // text-decoration: none;
+  // color: $white;
+  // background-color: $green;
+  // padding: 15px 30px 15px 30px;
+  // border-radius: 10px;
 }
 
 // .img {

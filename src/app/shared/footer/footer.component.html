@@ -1,5 +1,15 @@
 <section>
+  <div class="border"></div>
   <div>
-    <p>footer works!</p>
+    <p>Th<span class="letter_e">e</span>odo<span class="letter_r">r </span></p>
+    <p>Legel Notice</p>
+  </div>
+  <div>
+    <p>Theodor Seidenberger</p>
+  </div>
+  <div>
+    <div *ngFor="let iconsLandingpage of iconsLandingpage">
+      <img class="icons" [src]="iconsLandingpage" alt="pictur" />
+    </div>
   </div>
 </section>

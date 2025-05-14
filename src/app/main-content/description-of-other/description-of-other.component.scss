@@ -37,7 +37,7 @@ section {
   // overflow: hidden;
   // display: flex;
   .border {
-    width: 851px;
+    width: auto;
     height: 272px;
     // padding 48px,;
     border-radius: 32px;
@@ -101,4 +101,8 @@ section {
     width: 8px;
     background-color: #70e61c;
   }
+}
+
+button {
+  text-decoration: none;
 }

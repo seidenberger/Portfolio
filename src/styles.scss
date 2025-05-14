@@ -12,15 +12,13 @@ $p-left: 100px;
 }
 
 body {
-  // color: white;
-
   margin: 0 auto;
   border: 0;
   padding: 0;
-  // background-color: $black;
   background-color: $blue;
   color: $white;
   font-family: "Poppins";
+  overflow-x: hidden;
 }
 
 @mixin fontH() {

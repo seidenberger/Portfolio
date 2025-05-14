@@ -1,0 +1,50 @@
+@import "./color.scss";
+// @mixin buttonStyling() {
+//   color: white;
+//   cursor: pointer;
+//   text-decoration: none;
+// }
+
+@mixin dFlex($jc: center, $ai: center, $g: 0px) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $g;
+}
+
+@mixin CustomBtn() {
+  border: 1px solid $green;
+  border-radius: 10px;
+
+  background-color: $blue;
+  font-weight: 600;
+  padding: 5px 8px 5px 8px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@mixin customA($backc: $green, $bWidth: 1px, $bStyle: solid, $bColor: $green) {
+  font-size: 23px;
+  text-decoration: none;
+  color: $white;
+  border: $bWidth $bStyle $bColor;
+  background-color: $backc;
+  padding: 15px 30px 15px 30px;
+  border-radius: 10px;
+}
+
+@mixin line($backc: $green) {
+  border: none;
+  height: 4px;
+  background-color: $backc;
+  width: 100%;
+}
+
+@mixin hr($wi: 100px) {
+  border: none;
+  height: 4px;
+  width: $wi;
+  color: $purple;
+  background-color: $purple;
+}

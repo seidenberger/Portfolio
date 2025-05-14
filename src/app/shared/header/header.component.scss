@@ -1,5 +1,11 @@
 @import "./../../../styles.scss";
 @import "./../../../scss/layers.scss";
+@import "./../../../scss/mixin.scss";
+@import "./../../../scss/media.scss";
+
+button {
+  @include CustomBtn();
+}
 
 section {
   background-color: $blue;
@@ -13,42 +19,27 @@ section {
     .container_header_inner {
       @include max_Width();
       border: 2px solid yellow;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
+      @include dFlex($jc: space-around, $g: 10);
       padding: $p;
       > div {
+        height: auto;
         display: flex;
         justify-content: space-around;
         > div {
           display: flex;
-          // justify-content: space-around;
+          align-items: center;
           gap: 20px;
-          button {
-            background-color: #04aa6d; /* Green */
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            cursor: pointer;
-          }
-          //           background-color: white;
-          // color: black;
-          // border: 2px solid #04AA6D;
         }
       }
     }
   }
 }
 
-p {
-  border-color: green;
+.letter {
   font-size: 35px;
   font-weight: 700;
+  text-decoration: none;
+  color: $white;
   > .letter_e {
     position: relative;
     display: inline-block;
@@ -75,16 +66,11 @@ p {
   }
 }
 
-a {
-  font-size: 28px;
-  text-decoration: none;
-  color: $white;
-  padding: 20px;
-}
-
-.ABSTAND {
-  margin: 20px;
-  border: 1px;
-  border-radius: 10px;
-  border-color: $green;
+.destop {
+  a {
+    font-size: 28px;
+    text-decoration: none;
+    color: $white;
+    padding: 20px;
+  }
 }
