@@ -18,7 +18,7 @@ section {
     @include max_Width();
     .container_header_inner {
       @include max_Width();
-      border: 2px solid yellow;
+      // border: 2px solid yellow;
       @include dFlex($jc: space-around, $g: 10);
       padding: $p;
       > div {
@@ -72,5 +72,16 @@ section {
     text-decoration: none;
     color: $white;
     padding: 20px;
+  }
+}
+
+// @media (pointer: fine) {
+//   …
+//https://www.mediaevent.de/css/userinterface.html
+// }
+
+@media (min-width: 480px) {
+  .destop {
+    display: none;
   }
 }

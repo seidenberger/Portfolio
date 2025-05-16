@@ -3,17 +3,11 @@
 @import "./../../../scss/mixin.scss";
 
 section {
-  border: 2px solid brown;
+  // border: 2px solid brown;
   display: grid;
   grid-template-columns: 535px auto auto 100px;
   grid-template-rows: auto auto;
-  .line {
-    grid-column: 1 /2;
-    @include line($backc: $purple);
-  }
-  p {
-    grid-column: 2 /3;
-  }
+
   .container_img_shadows {
     @include layers(0);
     grid-column: 1 / 2;
@@ -27,6 +21,16 @@ section {
     @include layers(1);
   }
 }
+
+// .head {
+.line {
+  grid-column: 1 /2;
+  @include line($backc: $purple);
+}
+p {
+  grid-column: 2 /3;
+}
+// }
 
 .write_to {
   display: grid;

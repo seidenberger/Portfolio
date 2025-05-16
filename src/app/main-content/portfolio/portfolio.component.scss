@@ -3,7 +3,7 @@
 @import "./../../../scss/mixin.scss";
 
 section {
-  border: 2px solid blue;
+  // border: 2px solid blue;
   display: grid;
   grid-template-rows: auto 1fr 50px 1fr;
   .container_img_shadows {

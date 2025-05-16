@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
@@ -22,5 +22,22 @@ import { WaveComponent } from './wave/wave.component';
   styleUrl: './main-content.component.scss'
 })
 export class MainContentComponent {
+// implements OnInit 
 
+  // constructor(private responsive: BreakpointObserver) {
+  
+  // }
+  
+  // ngOnInit() {
+  
+  //   this.responsive.observe(Breakpoints.HandsetLandscape)
+  //     .subscribe(result => {
+
+  //       if (result.matches) {
+  //         console.log("screens matches HandsetLandscape");
+  //       }
+
+  // });
+    
+  // }
 }
