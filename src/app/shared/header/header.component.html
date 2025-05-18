@@ -1,26 +1,16 @@
-<section>
+<!-- <section>
   <div class="container_header_outer">
     <div class="container_header_inner">
-      <!-- <p> -->
       <a href="#landingpage" class="letter">
-        <!-- <p> -->
         Th<span class="letter_e">e</span>odo<span class="letter_r">r </span>
-        <!-- </p> -->
       </a>
-      <!-- </p> -->
       <div class="burger">
         <img src="assets/icons/Property 1=burger.png" alt="" />
       </div>
-      <div class="destop">
+      <div class="desktop">
         <a href="#about">{{ about }}</a>
         <a href="#mySkill">{{ skill }}</a>
         <a href="#portfolio">{{ portfolio }}</a>
-        <!-- <div>
-        <a class="ABSTAND" href="">DE</a>
-        <a class="ABSTAND" href="">EN</a>
-
-
-      </div> -->
 
         <div>
           <button (click)="switchLang('de')">De</button>
@@ -29,4 +19,24 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
+
+<header>
+  <div class="header-inner">
+    <a href="#home" class="logo"
+      >Th<span class="letter_e">e</span>odo<span class="letter_r">r </span></a
+    >
+    <div class="burger">
+      <img src="assets/icons/Property 1=burger.png" alt="" />
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <div>
+        <button (click)="switchLang('de')">DE</button>
+        <button (click)="switchLang('en')">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>

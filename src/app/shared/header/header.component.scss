@@ -1,41 +1,28 @@
 @import "./../../../styles.scss";
 @import "./../../../scss/layers.scss";
 @import "./../../../scss/mixin.scss";
-@import "./../../../scss/media.scss";
+// @import "./../../../scss/media.scss";
 
 button {
   @include CustomBtn();
 }
 
-section {
-  background-color: $blue;
+header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
+  background-color: $blue;
   z-index: 6;
-  height: 110px;
-  .container_header_outer {
+  padding: 0 100px;
+  .header-inner {
     @include max_Width();
-    .container_header_inner {
-      @include max_Width();
-      // border: 2px solid yellow;
-      @include dFlex($jc: space-around, $g: 10);
-      padding: $p;
-      > div {
-        height: auto;
-        display: flex;
-        justify-content: space-around;
-        > div {
-          display: flex;
-          align-items: center;
-          gap: 20px;
-        }
-      }
-    }
+
+    @include dFlex($jc: space-around, $g: 10);
   }
 }
 
-.letter {
+.logo {
   font-size: 35px;
   font-weight: 700;
   text-decoration: none;
@@ -66,7 +53,10 @@ section {
   }
 }
 
-.destop {
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
   a {
     font-size: 28px;
     text-decoration: none;
@@ -75,13 +65,22 @@ section {
   }
 }
 
-// @media (pointer: fine) {
-//   …
-//https://www.mediaevent.de/css/userinterface.html
-// }
+.burger {
+  height: 28px;
+  width: 30px;
+}
 
-@media (min-width: 480px) {
-  .destop {
-    display: none;
+@media only screen and (min-width: 1001px) {
+  .burger {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  nav {
+    display: none !important;
+  }
+  header {
+    padding: 37px 25px 37px 0px;
   }
 }

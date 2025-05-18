@@ -1,17 +1,25 @@
 @import "./../../../styles.scss";
 @import "./../../../scss/layers.scss";
+@import "./../../../scss/mixin.scss";
 
 section {
-  @include max_Width();
+  // @include max_Width();
   // padding: $p;
-  display: flex;
-  justify-content: space-around;
+
   // align-items: center;
   // border: 2px solid burlywood;
   @include layers(2);
   background-color: $black;
   background-color: #141d2f;
   height: 291px;
+  .container_header_outer {
+    @include max_Width();
+    .container_header_inner {
+      @include max_Width();
+      display: flex;
+      justify-content: space-around;
+    }
+  }
 }
 
 p {
@@ -44,7 +52,8 @@ p {
 }
 
 .border {
-  width: 100px;
-  height: 4px;
-  background-color: $green;
+  @include line();
+  // width: 100%;''
+  // height: 4px;''
+  // background-color: $green;
 }

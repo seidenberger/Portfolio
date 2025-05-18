@@ -9,6 +9,7 @@ $p-left: 100px;
 @mixin max_Width() {
   max-width: 1440px;
   margin: auto;
+  width: 100%;
 }
 
 body {

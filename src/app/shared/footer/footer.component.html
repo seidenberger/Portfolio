@@ -1,15 +1,23 @@
 <section>
   <div class="border"></div>
-  <div>
-    <p>Th<span class="letter_e">e</span>odo<span class="letter_r">r </span></p>
-    <a href="imprint">Legel Notice</a>
-  </div>
-  <div>
-    <p>Theodor Seidenberger</p>
-  </div>
-  <div>
-    <div *ngFor="let iconsLandingpage of iconsLandingpage">
-      <img class="icons" [src]="iconsLandingpage" alt="pictur" />
+  <div class="container_header_outer">
+    <div class="container_header_inner">
+      <div>
+        <p>
+          Th<span class="letter_e">e</span>odo<span class="letter_r">r </span>
+        </p>
+        <a href="imprint" target="_blank" rel="noopener noreferrer"
+          >Legel Notice</a
+        >
+      </div>
+      <div>
+        <p>Theodor Seidenberger</p>
+      </div>
+      <div>
+        <div *ngFor="let iconsLandingpage of iconsLandingpage">
+          <img class="icons" [src]="iconsLandingpage" alt="pictur" />
+        </div>
+      </div>
     </div>
   </div>
 </section>
