@@ -46,7 +46,7 @@ section {
 .heding {
   grid-column: 1 /3;
   grid-row: 1 / 2;
-  @include fontH();
+  // @include fontH();
 }
 
 .text {

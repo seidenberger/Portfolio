@@ -1,5 +1,5 @@
 <!-- <section class="font"> -->
-<section>
+<section id="#home">
   <!-- <header></header> -->
   <div id="landingpage" class="container_imgs">
     <div class="imgs">
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div>
-        <a href="#contact">{{ talk }}</a>
+        <a class="button" href="#contact">{{ talk }}</a>
       </div>
     </div>
   </div>
@@ -40,7 +40,8 @@
       <div *ngFor="let iconsLandingpage of iconsLandingpage">
         <img class="icons" [src]="iconsLandingpage" alt="pictur" />
       </div>
-      <span class="icons">email icans</span>
+      <!-- <span class="icons">email icans</span> -->
+      <a class="email" href="#contact">email icans</a>
     </div>
 
     <div class="overlay_rotated">

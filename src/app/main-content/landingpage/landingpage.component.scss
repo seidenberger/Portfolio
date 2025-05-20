@@ -1,8 +1,10 @@
 @import "./../../../styles.scss";
 @import "./../../../scss/layers.scss";
 @import "./../../../scss/mixin.scss";
+// @import "./../../../scss/font.scss";
 
 section {
+  // @include fontH();
   padding-top: 109px;
   border: 2px solid green;
   @include max_Width();
@@ -75,7 +77,7 @@ section {
 
 .container_name {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-end;
   height: 600px;
   grid-area: name;
@@ -92,24 +94,39 @@ section {
         transform: rotate(270deg);
         gap: 20px;
         white-space: nowrap;
+        @include fontH(
+          $font_size: $font_h_2,
+          $font_weight: $f_w_small,
+          $f_mobil: $f_s_m_h_2
+        );
       }
       .heding {
         @include fontH();
       }
       .discription {
+        @include fontH(
+          $font_size: $font_h_3,
+          $font_weight: $f_w_small,
+          $f_mobil: $f_s_m_h_3
+        );
         color: $purple;
       }
     }
   }
 }
 
-a {
+.button {
   font-size: 23px;
   text-decoration: none;
   color: $white;
   background-color: $green;
   padding: 15px 30px 15px 30px;
   border-radius: 10px;
+  @include fontH(
+    $font_size: $font_h_3,
+    $font_weight: $f_w_small,
+    $f_mobil: $f_s_m_h_3
+  );
 }
 
 .container_icons {
@@ -126,6 +143,10 @@ a {
     .icons {
       padding: 0 10px;
     }
+    .email {
+      text-decoration: none;
+      color: $white;
+    }
   }
 }
 
@@ -138,6 +159,11 @@ a {
   .discription_page {
     font-size: 23px;
     transform: rotate(180deg);
+    @include fontH(
+      $font_size: $f_body_1,
+      $font_weight: $f_w_small,
+      $f_mobil: $f_body_1
+    );
   }
   .rotate_arrow {
     transform: rotate(270deg);
@@ -149,9 +175,9 @@ a {
   }
 }
 
-p {
-  font-size: 48px;
-}
+// p {
+//   font-size: 48px;
+// }
 
 @media (max-width: 350px) {
   section {
@@ -172,6 +198,9 @@ p {
     width: 300px !important;
     height: auto !important;
   }
+
+  // .heding {
+  // }
 }
 
 // .container_imgs {
