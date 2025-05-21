@@ -7,6 +7,11 @@ section {
   // border: 2px solid yellow;
   // margin-top: -650px;
   // overflow-x: hidden;
+  @include fontH(
+    $font_size: $f_body_8,
+    $font_weight: $f_w_small,
+    $f_media: $f_body_8
+  );
 
   @include layers(3);
   display: grid;
@@ -71,7 +76,7 @@ section {
 }
 
 .heding {
-  // @include fontH();
+  @include fontH();
 }
 
 .icons {

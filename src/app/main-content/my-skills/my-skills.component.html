@@ -14,7 +14,7 @@
       <div *ngFor="let skill of skills">
         <img [src]="skill.image" alt="skill image" />
 
-        <p>{{ skill.text }}</p>
+        <p class="skill_text">{{ skill.text }}</p>
       </div>
     </div>
   </div>
@@ -32,16 +32,21 @@
         verschiedene fropndent technologien wie zB. java script habe ich in
         meinen projeckten verwendet.
       </p>
-
-      <p>fähigkeiten ?</p>
+      <!-- <div class=""> -->
+      <div>
+        sie sind auf der suche nach
+        <p [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">anderen fähigkeiten</p>
+      </div>
       <p>
-        ich habe mich bei dieser webseit mit freude in angular eingearbeitet,
-        und sehe fiehl potenieal
+        diese webseite habe ich mit angular entwickelt beiser webseit habe ich
+        in angular (eingearbeitet)
       </p>
+      <p></p>
       <!-- </div> -->
 
       <div></div>
-      was habe ich für skills und framworks
+      was habe ich für skills und
+      <div>framworks</div>
     </div>
     <div class="button">
       <a href="#contact">Let's talk</a>

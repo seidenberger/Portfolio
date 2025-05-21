@@ -1,12 +1,12 @@
 @mixin fontH(
   $font_size: $font_h_l,
   $font_weight: $f_w_big,
-  $f_mobil: $f_s_m_h_1
+  $f_media: $f_body_1
 ) {
   font-size: $font_size;
   font-weight: $font_weight;
-  @media (max-width: 350px) {
-    font-size: $f_mobil;
+  @media (max-width: 380px) {
+    font-size: $f_media;
   }
 }
 
@@ -19,19 +19,15 @@ $font_h_l: 90px;
 $font_h_2: 64px;
 $font_h_3: 58px;
 
-$f_body_1: 23px;
-
-// font mobil small
-$f_s_m_h_1: 44px;
-$f_s_m_h_2: 32px;
-$f_s_m_h_3: 28px;
-
-// $f_body_mobil_1:
-
-@mixin fontSmall() {
-  font-size: 23px;
-  font-weight: 400;
-}
+$f_body_1: 44px;
+$f_body_2: 32px;
+$f_body_3: 28px;
+$f_body_4: 24px;
+$f_body_5: 23px;
+$f_body_6: 20px;
+$f_body_7: 18px;
+$f_body_8: 16px;
+$f_body_9: 14px;
 
 /* poppins-regular - latin */
 @font-face {
@@ -51,24 +47,3 @@ $f_s_m_h_3: 28px;
   src: url("./../../public/assets/fonts/poppins-v22-latin-700.woff2")
     format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
-
-// landingpage
-// im am
-//   font-weight: 400;
-//     font-size: 64px;
-//       font-family: "Poppins";
-
-//       name h1
-//   font-weight: 700;
-//     font-size: 90px;
-//       font-family: "Poppins";
-
-//       name and color
-//   font-weight: 400;
-//     font-size: 58px;
-//       font-family: "Poppins";
-
-//             email
-//   font-weight: 400;
-//     font-size: 23px;
-//       font-family: "Poppins";

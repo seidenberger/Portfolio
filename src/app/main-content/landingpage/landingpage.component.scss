@@ -97,7 +97,7 @@ section {
         @include fontH(
           $font_size: $font_h_2,
           $font_weight: $f_w_small,
-          $f_mobil: $f_s_m_h_2
+          $f_media: $f_body_2
         );
       }
       .heding {
@@ -107,7 +107,7 @@ section {
         @include fontH(
           $font_size: $font_h_3,
           $font_weight: $f_w_small,
-          $f_mobil: $f_s_m_h_3
+          $f_media: $f_body_3
         );
         color: $purple;
       }
@@ -125,7 +125,7 @@ section {
   @include fontH(
     $font_size: $font_h_3,
     $font_weight: $f_w_small,
-    $f_mobil: $f_s_m_h_3
+    $f_media: $f_body_3
   );
 }
 
@@ -160,9 +160,9 @@ section {
     font-size: 23px;
     transform: rotate(180deg);
     @include fontH(
-      $font_size: $f_body_1,
+      $font_size: $f_body_5,
       $font_weight: $f_w_small,
-      $f_mobil: $f_body_1
+      $f_media: $f_body_5
     );
   }
   .rotate_arrow {
@@ -190,13 +190,17 @@ section {
   }
 
   .img_person {
-    width: 300px !important;
-    height: auto !important;
+    width: 300px;
+    height: auto;
+    //     width: 300px !important;
+    // height: auto !important;
   }
 
   .img_shadows {
-    width: 300px !important;
-    height: auto !important;
+    // width: 300px !important;
+    // height: auto !important;
+    width: 300px;
+    height: auto;
   }
 
   // .heding {
