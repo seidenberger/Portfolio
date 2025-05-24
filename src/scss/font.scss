@@ -5,9 +5,14 @@
 ) {
   font-size: $font_size;
   font-weight: $font_weight;
-  @media (max-width: 380px) {
+  @media (max-width: 900px) {
     font-size: $f_media;
   }
+}
+
+@mixin fontL() {
+  font-size: $font_logo;
+  font-weight: $f_w_big;
 }
 
 // font weight
@@ -18,6 +23,7 @@ $f_w_small: 400;
 $font_h_l: 90px;
 $font_h_2: 64px;
 $font_h_3: 58px;
+$font_logo: 35px;
 
 $f_body_1: 44px;
 $f_body_2: 32px;

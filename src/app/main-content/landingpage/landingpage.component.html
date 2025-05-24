@@ -1,6 +1,4 @@
-<!-- <section class="font"> -->
 <section id="#home">
-  <!-- <header></header> -->
   <div id="landingpage" class="container_imgs">
     <div class="imgs">
       <div class="container_img_person">
@@ -16,19 +14,17 @@
     </div>
   </div>
 
-  <!-- <div class="container_overlay">
-    <div class="display"> -->
   <div class="container_name">
     <div class="column">
       <div class="d_flex_c">
-        <p class="rotate">{{ rotate }}</p>
-        <div>
-          <p class="heding">Theodor Seidenberger</p>
-          <p class="discription">FRONTEND DEVELOPER</p>
+        <span class="rotate">{{ rotate }}</span>
+        <div class="container_head">
+          <span class="head">Theodor Seidenberger</span>
+          <span class="discription">FRONTEND DEVELOPER</span>
+          <div class="container_butten">
+            <a class="button" href="#contact">{{ talk }}</a>
+          </div>
         </div>
-      </div>
-      <div>
-        <a class="button" href="#contact">{{ talk }}</a>
       </div>
     </div>
   </div>
@@ -40,7 +36,6 @@
       <div *ngFor="let iconsLandingpage of iconsLandingpage">
         <img class="icons" [src]="iconsLandingpage" alt="pictur" />
       </div>
-      <!-- <span class="icons">email icans</span> -->
       <a class="email" href="#contact">email icans</a>
     </div>
 
@@ -49,8 +44,5 @@
       <img class="rotate_arrow" src="assets/icons/arrow-down-line.png" alt="" />
     </div>
   </div>
-  <!-- </div>
-  </div> -->
 </section>
-
-<!-- class="rotate_arrow" -->
+<!-- portfolio übung schaten -->

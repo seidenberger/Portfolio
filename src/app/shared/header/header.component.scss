@@ -5,6 +5,7 @@
 
 button {
   @include CustomBtn();
+  @include textN();
 }
 
 header {
@@ -59,8 +60,7 @@ nav {
   gap: 20px;
   a {
     font-size: 28px;
-    text-decoration: none;
-    color: $white;
+    @include textN();
     padding: 20px;
   }
 }

@@ -1,22 +1,25 @@
 <section>
   <div class="border"></div>
-  <div class="container_header_outer">
-    <div class="container_header_inner">
-      <div>
-        <p>
+  <div class="container_outer">
+    <div class="container_inner">
+      <div class="container_footer">
+        <span class="logo">
           Th<span class="letter_e">e</span>odo<span class="letter_r">r </span>
-        </p>
+        </span>
+        <span class="content">Theodor Seidenberger 2025</span>
+        <div>
+          <img
+            *ngFor="let iconsLandingpage of iconsLandingpage"
+            class="icons"
+            [src]="iconsLandingpage"
+            alt="pictur"
+          />
+        </div>
+      </div>
+      <div>
         <a href="imprint" target="_blank" rel="noopener noreferrer"
           >Legel Notice</a
         >
-      </div>
-      <div>
-        <p>Theodor Seidenberger</p>
-      </div>
-      <div>
-        <div *ngFor="let iconsLandingpage of iconsLandingpage">
-          <img class="icons" [src]="iconsLandingpage" alt="pictur" />
-        </div>
       </div>
     </div>
   </div>

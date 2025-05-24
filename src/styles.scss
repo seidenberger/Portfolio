@@ -5,6 +5,16 @@ $p: 0px 100px 0px 100px;
 
 $p-left: 100px;
 
+$p-media: 0px 25px 0px 25px;
+
+@mixin responsivePadding($default, $media) {
+  padding: $default;
+
+  @media only screen and (max-width: 1100px) {
+    padding: $media;
+  }
+}
+
 @mixin max_Width() {
   max-width: 1440px;
   margin: auto;

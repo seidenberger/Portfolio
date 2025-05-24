@@ -7,7 +7,9 @@
     <div>
       <hr />
     </div>
-    <p>hier sind eineige meiner beste arbeiten zum aus probieren</p>
+    <p class="description">
+      hier sind eineige meiner wichten arbeiten zum aus probieren
+    </p>
   </div>
   <div class="container_img_shadows">
     <img
@@ -17,8 +19,8 @@
     />
   </div>
   <!-- <div> -->
-  <app-join class="join"></app-join>
-  <app-el-pollo-loco class="pollo_loco"></app-el-pollo-loco>
+  <!-- <app-join class="join"></app-join>
+  <app-el-pollo-loco class="pollo_loco"></app-el-pollo-loco> -->
 
   <!-- <section> -->
   <!-- <div class="container_project"> -->
@@ -33,8 +35,12 @@
         <img [src]="portfolio.image" alt="" />
       </div>
       <div class="container_text_project">
-        <p>{{ portfolio.head }}</p>
-        <p>{{ portfolio.skills }}</p>
+        <p class="head" [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
+          {{ portfolio.head }}
+        </p>
+        <p class="skill" [ngStyle]="{ color: 'rgb(112, 230, 28, 1)' }">
+          {{ portfolio.skills }}
+        </p>
         <!-- <p>{{ join_description }}</p> -->
         <!-- <p>{{ pollo_loco_description }}</p> -->
         <p>{{ getTranslation(portfolio.descriptionKey, currentLang) }}</p>

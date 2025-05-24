@@ -3,6 +3,11 @@
 @import "./../../../scss/mixin.scss";
 
 section {
+  @include fontH(
+    $font_size: $f_body_8,
+    $font_weight: $f_w_small,
+    $f_media: $f_body_8
+  );
   // border: 2px solid blue;
   display: grid;
   grid-template-rows: auto 1fr 50px 1fr;
@@ -39,7 +44,9 @@ section {
     @include hr($wi: 100%);
   }
   .heding {
-    // @include fontH();
+    @include fontH();
+  }
+  .description {
   }
 }
 
@@ -62,6 +69,27 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    .head {
+      @include fontH(
+        $font_size: $f_body_2,
+        // $font_weight: f_w_big,
+        $f_media: $f_body_2
+      );
+    }
+    .skill {
+      @include fontH(
+        $font_size: $f_body_5,
+        $font_weight: $f_w_small,
+        $f_media: $f_body_5
+      );
+    }
+    p {
+      @include fontH(
+        $font_size: $f_body_5,
+        $font_weight: $f_w_small,
+        $f_media: $f_body_5
+      );
+    }
     .button {
       display: flex;
       gap: 30px;
@@ -71,10 +99,12 @@ section {
 
 .live {
   @include customA($backc: $purple, $bColor: $purple);
+  @include textN();
 }
 
 .github {
   @include customA($backc: $blue);
+  @include textN();
 }
 
 .container_item.reverse {
