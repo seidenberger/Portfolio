@@ -18,19 +18,13 @@
       alt=""
     />
   </div>
-  <!-- <div> -->
-  <!-- <app-join class="join"></app-join>
-  <app-el-pollo-loco class="pollo_loco"></app-el-pollo-loco> -->
 
-  <!-- <section> -->
-  <!-- <div class="container_project"> -->
   <div
     *ngFor="let portfolio of portfolio; let i = index"
     class="container_item"
     [ngClass]="{ reverse: i % 2 !== 0 }"
   >
     <div class="container_project">
-      <!-- <div> -->
       <div class="container_img_project">
         <img [src]="portfolio.image" alt="" />
       </div>
@@ -41,8 +35,6 @@
         <p class="skill" [ngStyle]="{ color: 'rgb(112, 230, 28, 1)' }">
           {{ portfolio.skills }}
         </p>
-        <!-- <p>{{ join_description }}</p> -->
-        <!-- <p>{{ pollo_loco_description }}</p> -->
         <p>{{ getTranslation(portfolio.descriptionKey, currentLang) }}</p>
         <div class="button">
           <a

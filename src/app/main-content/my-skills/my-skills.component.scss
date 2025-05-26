@@ -1,6 +1,7 @@
 @import "./../../../styles.scss";
 @import "./../../../scss/layers.scss";
 @import "./../../../scss/mixin.scss";
+@import "./../../../scss/media.scss";
 
 section {
   margin-top: 50px;
@@ -15,6 +16,7 @@ section {
   grid-template-rows: auto 100px;
   width: 100%;
   grid-template-areas: "icon icon icon discription discription";
+  @include gridCandRows(auto auto);
 }
 
 .grid-container {

@@ -1,8 +1,10 @@
 @import "./../../../styles.scss";
 @import "./../../../scss/layers.scss";
 @import "./../../../scss/mixin.scss";
+@import "./../../../scss/media.scss";
 
 section {
+  padding: $p;
   @include fontH(
     $font_size: $f_body_8,
     $font_weight: $f_w_small,
@@ -11,6 +13,7 @@ section {
   // border: 2px solid blue;
   display: grid;
   grid-template-rows: auto 1fr 50px 1fr;
+
   .container_img_shadows {
     grid-row: 3 /4;
     overflow: visible;
@@ -36,10 +39,11 @@ section {
 
 .header {
   display: grid;
-  grid-template-columns: 100px auto 100px;
+  grid-template-columns: 100px auto 507px;
   // display: flex;
   align-items: center;
   justify-content: end;
+
   hr {
     @include hr($wi: 100%);
   }
@@ -47,20 +51,26 @@ section {
     @include fontH();
   }
   .description {
+    // grid-row: 2 / 3;
+    grid-column: 2/3;
   }
 }
 
 .container_project {
+  // .container_item {
   display: grid;
   grid-template-columns: 50% 50%;
   @include layers(1);
-
+  // @include gridCandRows(auto auto);
+  display: flex;
   .container_img_project {
     padding: $p;
     grid-column: 1 /2;
     img {
       width: 620px;
-      height: 340px;
+      // height: 340px;
+      height: auto;
+      @include maxW($max_w: 700px);
     }
   }
   .container_text_project {
@@ -118,5 +128,11 @@ section {
     .container_img_project {
       grid-column: 2 /3;
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .container_project {
+    flex-direction: column;
   }
 }

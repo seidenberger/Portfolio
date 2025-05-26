@@ -1,7 +1,7 @@
 @import "./../../../styles.scss";
 @import "./../../../scss/layers.scss";
 @import "./../../../scss/mixin.scss";
-// @import "./../../../scss/font.scss";
+@import "./../../../scss/media.scss";
 
 section {
   // @include fontH();
@@ -18,6 +18,7 @@ section {
   grid-template-areas:
     "person person name name"
     "icons icons icons icons";
+  @include gridCandRows(auto auto auto);
 }
 
 .container_icons {
@@ -146,11 +147,13 @@ section {
     .email {
       text-decoration: none;
       color: $white;
+      @include dNone();
     }
   }
 }
 
 .overlay_rotated {
+  @include dNone();
   display: flex;
   align-items: center;
   transform: rotate(90deg);
@@ -177,8 +180,9 @@ section {
 
 @media (max-width: 1200px) {
   section {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
+    // grid-template-columns: 1fr;
+    // grid-template-rows: auto auto auto;
+
     grid-template-areas:
       "person"
       "name"
@@ -198,4 +202,9 @@ section {
   .img_shadows {
     width: 300px;
   }
+
+  // .overlay_rotated,
+  // .email {
+  //   @include dNone();
+  // }
 }

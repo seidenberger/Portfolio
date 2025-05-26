@@ -1,5 +1,6 @@
 @import "./../../../styles.scss";
 @import "./../../../scss/layers.scss";
+@import "./../../../scss/media.scss";
 
 section {
   @include fontH(
@@ -7,16 +8,21 @@ section {
     $font_weight: $f_w_small,
     $f_media: $f_body_8
   );
-  // border: 2px solid bisque;
-  display: grid;
-  grid-template-columns: auto 140px;
-  grid-template-rows: 50px auto;
+  border: 2px solid red;
+  // @include gridCandRows(auto auto);
+  // display: grid;
+  // grid-template-columns: auto 140px;
+  // grid-template-rows: 50px auto;
 
   .container_carousel {
     grid-column: 1 /3;
     grid-row: 2 / 3;
     padding-left: 100px;
     @include layers(1);
+    display: flex;
+    flex-direction: row-reverse;
+    // flex-direction: column;
+    gap: 10px;
   }
   .container_img_shadows {
     @include layers(0);
@@ -31,6 +37,8 @@ section {
       transform: rotate(196deg);
       position: absolute;
       overflow: visible;
+      top: -100px;
+      right: -200px;
     }
   }
 }
@@ -39,8 +47,16 @@ section {
   display: grid;
   grid-template-columns: auto 276px 104px;
   align-items: center;
-  // overflow: hidden;
+  overflow: hidden;
+  display: flex;
+
   // display: flex;
+  // flex-direction: row;
+  // align-items: flex-start;
+  // justify-content: space-between;
+  // flex-wrap: wrap;
+  // gap: 20px;
+
   .border {
     width: auto;
     height: 272px;
@@ -81,7 +97,10 @@ section {
 }
 
 .container_img_carousel {
-  grid-column: 2 / 3;
+  // grid-column: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
   .img_carousel {
     height: 272px;
@@ -96,7 +115,7 @@ section {
 .line {
   border: none;
   height: 4px;
-  // width: 100%;
+  width: 100px;
   background-color: $purple;
   // grid-column: 5 /6;
   grid-column: 3 / 4;
@@ -117,4 +136,39 @@ section {
 
 button {
   text-decoration: none;
+}
+
+@media (max-width: 800px) {
+  .container_carousel {
+    flex-direction: column !important;
+    padding: $p-media;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .line {
+    width: 123px;
+  }
+  .container_img_carousel {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .img_carousel {
+    height: 144px;
+    width: 144px;
+  }
+  .container_img_shadows {
+    left: 450px;
+    top: -1000px;
+  }
+  .content {
+    img {
+      // grid-row: 1/2;
+      height: 68px;
+      width: 48px;
+    }
+  }
 }

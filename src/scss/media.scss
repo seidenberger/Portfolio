@@ -1,18 +1,18 @@
-// @media (min-width: 320px) {
-// }
+@mixin dNone() {
+  @media (max-width: 600px) {
+    display: none;
+  }
+}
 
-// @media screen and (max-width: 1440px) {
-//   section {
-//     overflow-x: hidden;
-//   }
-// }
-// @media(min-width: 1441) {
+@mixin gridCandRows($rows) {
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: $rows;
+  }
+}
 
-// }
-
-// @media (pointer: coarse) {
-//   .burger-button {
-//     font-size: 2rem;
-//     padding: 1rem;
-//   }
-// }
+@mixin maxW($max_w) {
+  @media (max-width: $max_w) {
+    width: 300px;
+  }
+}
