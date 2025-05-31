@@ -1,24 +1,33 @@
 @import "./../../../styles.scss";
 @import "./../../../scss/layers.scss";
 @import "./../../../scss/mixin.scss";
-// @import "./../../../scss/media.scss";
+@import "./../../../scss/media.scss";
 
 button {
   @include CustomBtn();
   @include textN();
 }
 
+section {
+  @include max_Width();
+}
+
 header {
+  /* max-width: 1440px; */
+  margin: auto;
+  width: 100vw;
+
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  // width: 100%;
   background-color: $blue;
   z-index: 6;
-  padding: 0 100px;
+  // padding: 0 100px;
+  @include padding();
   .header-inner {
-    @include max_Width();
-
+    // @include max_Width();
+    width: 100%;
     @include dFlex($jc: space-around, $g: 10);
   }
 }
@@ -80,7 +89,10 @@ nav {
   nav {
     display: none;
   }
-  header {
-    padding: 37px 25px 37px 0px;
-  }
+  // header {
+  //   padding: 37px 25px 37px 0px;
+  // }
+}
+
+@media (min-width: 320px) {
 }

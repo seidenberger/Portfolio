@@ -21,12 +21,19 @@ $p-media: 0px 25px 0px 25px;
   width: 100%;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0, auto;
+  margin: 0 auto;
   border: 0;
   padding: 0;
   background-color: $blue;
   color: $white;
+  // color: red;
   font-family: "Poppins";
   overflow-x: hidden;
   scroll-behavior: smooth;

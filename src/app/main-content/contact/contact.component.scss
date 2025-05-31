@@ -1,14 +1,15 @@
 @import "./../../../styles.scss";
 @import "./../../../scss/layers.scss";
 @import "./../../../scss/mixin.scss";
+@import "./../../../scss/media.scss";
 
 section {
+  height: 100vh;
   @include fontH(
     $font_size: $f_body_8,
     $font_weight: $f_w_small,
     $f_media: $f_body_8
   );
-  // border: 2px solid brown;
   display: grid;
   grid-template-columns: 535px auto auto 100px;
   grid-template-rows: auto auto;
@@ -19,36 +20,29 @@ section {
     grid-row: 2 /3;
   }
   .container_write_to {
-    padding: $p;
-    // snschreiben
+    @include padding();
     grid-column: 1 / 4;
     grid-row: 2 /3;
     @include layers(1);
   }
 }
 
-// .head {
 .line {
   grid-column: 1 /2;
   @include line($backc: $purple);
+  width: 20px;
 }
 p {
   grid-column: 2 /3;
 }
-// }
 
 .write_to {
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
   .text {
     width: 100%;
     grid-column: 1 /2;
     h3 {
-      @include fontH(
-        $font_size: $f_body_2,
-        // $font_weight: $f_w_small,
-        $f_media: $f_body_5
-      );
+      @include fontH($font_size: $f_body_2, $f_media: $f_body_5);
     }
   }
   .container_input {
@@ -65,14 +59,18 @@ p {
   height: 747px;
   width: 902px;
   left: -312px;
-  // transform: rotate(deg);
 }
 
-// beispiel
+.input {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 input[type="text"],
 select,
 textarea {
-  width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -80,6 +78,7 @@ textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
+  width: 300px;
 }
 
 input[type="submit"] {
@@ -89,10 +88,10 @@ input[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  width: 300px;
 }
 
 input[type="submit"]:hover {
-  // background-color: #45a049;
   @include CustomBtn($backc: red);
 }
 
@@ -116,3 +115,160 @@ input[type="submit"]:hover {
     );
   }
 }
+
+.contact_text {
+  width: 300px;
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 600px) {
+  .write_to {
+    flex-direction: column;
+    section {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (min-width: 320px) {
+  section {
+    grid-template-columns: 1fr;
+    border: 2px solid orange;
+  }
+}
+
+// @import "./../../../styles.scss";
+// @import "./../../../scss/layers.scss";
+// @import "./../../../scss/mixin.scss";
+// @import "./../../../scss/media.scss";
+
+// section {
+//   height: 100vh;
+//   @include fontH(
+//     $font_size: $f_body_8,
+//     $font_weight: $f_w_small,
+//     $f_media: $f_body_8
+//   );
+//   display: grid;
+//   grid-template-columns: 535px auto auto 100px;
+//   grid-template-rows: auto auto;
+
+//   .container_img_shadows {
+//     @include layers(0);
+//     grid-column: 1 / 2;
+//     grid-row: 2 /3;
+//   }
+//   .container_write_to {
+//     @include padding();
+//     grid-column: 1 / 4;
+//     grid-row: 2 /3;
+//     @include layers(1);
+//   }
+// }
+
+// .line {
+//   grid-column: 1 /2;
+//   @include line($backc: $purple);
+//   width: 20px;
+// }
+// p {
+//   grid-column: 2 /3;
+// }
+
+// .write_to {
+//   display: flex;
+//   .text {
+//     width: 100%;
+//     grid-column: 1 /2;
+//     h3 {
+//       @include fontH($font_size: $f_body_2, $f_media: $f_body_5);
+//     }
+//   }
+//   .container_input {
+//     width: 100%;
+//     grid-column: 2 /3;
+//   }
+// }
+
+// .heding {
+//   @include fontH();
+// }
+
+// .img {
+//   height: 747px;
+//   width: 902px;
+//   left: -312px;
+// }
+
+// .input {
+//   form {
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }
+
+// input[type="text"],
+// select,
+// textarea {
+//   padding: 12px;
+//   border: 1px solid #ccc;
+//   border-radius: 4px;
+//   box-sizing: border-box;
+//   margin-top: 6px;
+//   margin-bottom: 16px;
+//   resize: vertical;
+//   width: 300px;
+// }
+
+// input[type="submit"] {
+//   background-color: #04aa6d;
+//   color: white;
+//   padding: 12px 20px;
+//   border: none;
+//   border-radius: 4px;
+//   cursor: pointer;
+//   width: 300px;
+// }
+
+// input[type="submit"]:hover {
+//   @include CustomBtn($backc: red);
+// }
+
+// .container {
+//   border-radius: 5px;
+//   background-color: #f2f2f2;
+//   padding: 20px;
+// }
+
+// .policy {
+//   @include fontH(
+//     $font_size: $f_body_9,
+//     $font_weight: $f_w_small,
+//     $f_media: $f_body_9
+//   );
+//   p {
+//     @include fontH(
+//       $font_size: $f_body_9,
+//       $font_weight: $f_w_small,
+//       $f_media: $f_body_9
+//     );
+//   }
+// }
+
+// .contact_text {
+//   width: 300px;
+// }
+
+// @media (max-width: 1200px) {
+//   section {
+//     grid-template-columns: 1fr;
+//   }
+// }
+
+// @media (max-width: 600px) {
+//   .write_to {
+//     flex-direction: column;
+//   }
+// }

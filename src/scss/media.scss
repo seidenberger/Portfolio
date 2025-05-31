@@ -4,6 +4,17 @@
   }
 }
 
+@mixin padding($right: 100px, $left: 100px) {
+  // padding-top: $top;
+  padding-right: $right;
+  // padding-bottom: $bottom;
+  padding-left: $left;
+  @media (max-width: 600px) {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
 @mixin gridCandRows($rows) {
   @media (max-width: 1200px) {
     grid-template-columns: 1fr;

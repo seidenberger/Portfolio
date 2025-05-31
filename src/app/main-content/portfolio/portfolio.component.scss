@@ -4,7 +4,8 @@
 @import "./../../../scss/media.scss";
 
 section {
-  padding: $p;
+  @include padding();
+  // padding: $p;
   @include fontH(
     $font_size: $f_body_8,
     $font_weight: $f_w_small,
@@ -12,7 +13,7 @@ section {
   );
   // border: 2px solid blue;
   display: grid;
-  grid-template-rows: auto 1fr 50px 1fr;
+  grid-template-rows: 1fr;
 
   .container_img_shadows {
     grid-row: 3 /4;
@@ -26,20 +27,19 @@ section {
       position: absolute;
     }
   }
-  .join {
-    grid-row: 2 / 3;
-    // padding: $p;
-  }
+  // .join {
+  //   grid-row: 2 / 3;
+  // }
 
-  .pollo_loco {
-    grid-row: 4 / 5;
-    // padding: $p;
-  }
+  // .pollo_loco {
+  //   grid-row: 4 / 5;
+  // }
 }
 
 .header {
   display: grid;
-  grid-template-columns: 100px auto 507px;
+  // grid-template-columns: 100px auto 507px;
+  grid-template-columns: minmax(24px, 100px) 1fr minmax(100px, 507px);
   // display: flex;
   align-items: center;
   justify-content: end;
@@ -52,7 +52,7 @@ section {
   }
   .description {
     // grid-row: 2 / 3;
-    grid-column: 2/3;
+    grid-column: 1/4;
   }
 }
 
