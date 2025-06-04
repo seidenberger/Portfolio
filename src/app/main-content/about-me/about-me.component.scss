@@ -35,8 +35,9 @@ section {
     position: absolute;
     margin-top: -400px;
     img {
-      width: 572px;
-      height: 608px;
+      // width: 572px;
+      // height: 608px;
+      @include imgMedia();
     }
   }
 }
@@ -85,4 +86,10 @@ section {
 .icons {
   height: 48px;
   width: 48px;
+}
+
+@media (min-width: 320px) {
+  section {
+    margin-top: 250px;
+  }
 }

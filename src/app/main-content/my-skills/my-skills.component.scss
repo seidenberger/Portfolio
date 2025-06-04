@@ -12,19 +12,22 @@ section {
     $f_media: $f_body_8
   );
   display: grid;
-  grid-template-columns: 15% 15% auto 20% 20%;
-  grid-template-rows: auto 100px;
+  grid-template-columns: 15% 15% auto 1fr;
+  grid-template-rows: auto auto;
   width: 100%;
-  grid-template-areas: "icon icon icon discription discription";
+  grid-template-areas:
+    "icon icon icon container_header "
+    "icon icon icon container_butten";
   @include gridCandRows(auto auto);
 }
 
 .grid-container {
   display: grid;
-  grid-template-rows: 100px 100px 100px;
-  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 120px 120px 120px;
+  grid-template-columns: 88px 88px 88px 88px;
   gap: 10px;
-  padding: $p;
+  // padding: $p;
+  @include padding();
 }
 
 .icons {
@@ -32,35 +35,47 @@ section {
   // display: flex;
 }
 
-.discription {
-  grid-area: discription;
-  grid-area: discription;
-  display: grid;
-  grid-template-columns: 1fr 1fr 100px; // oder was du willst
-  grid-template-rows: auto auto 80px;
-  @include layers(1);
-}
+// .discription {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 100px;
+//   grid-template-rows: auto auto 80px;
+//   @include layers(1);
+// }
 
 .line {
-  grid-column: 3 /4;
-  grid-row: 1 / 2;
+  // grid-column: 3 /4;
+  // grid-row: 1 / 2;
+
   display: flex;
   align-items: center;
   hr {
-    @include hr($wi: 100%);
+    @include hr($wi: 64px);
   }
 }
 
-.heding {
-  @include fontH();
-  grid-column: 1 /3;
-  grid-row: 1 / 2;
+.container_header {
+  grid-area: container_header;
+
+  // grid-column: 1 /3;
+  // grid-row: 1 / 2;
+  @include layers(1);
   // @include fontH();
+  div {
+    display: flex;
+    justify-content: flex-end;
+    .head {
+      @include fontH();
+    }
+  }
+}
+
+.container_butten {
+  grid-area: container_butten;
 }
 
 .text {
-  grid-column: 1 /3;
-  grid-row: 2 / 3;
+  // grid-column: 1 /3;
+  // grid-row: 2 / 3;
   div {
     @include fontH(
       $font_size: $f_body_2,
@@ -71,8 +86,8 @@ section {
 }
 
 .button {
-  grid-column: 2 /3;
-  grid-row: 3 / 4;
+  // grid-column: 2 /3;
+  // grid-row: 3 / 4;
   a {
     @include fontH(
       $font_size: $f_body_5,
@@ -94,12 +109,13 @@ a {
 }
 
 // .img {
-
+//   width: 54px;
+//   height: 60px;
 // }
 
 .container_img_shadows {
-  grid-column: 1 / 2;
-  grid-row: 1 /3;
+  // grid-column: 1 / 2;
+  // grid-row: 1 /3;
   overflow: visible;
   position: relative;
   @include layers(0);
@@ -117,4 +133,29 @@ a {
     $font_weight: $f_w_small,
     $f_media: $f_body_9
   );
+}
+
+@media (max-width: 1200px) {
+  section {
+    grid-template-areas:
+      "container_header "
+      "icon"
+      " container_butten";
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    display: grid;
+    grid-template-rows: 88px 88px 88px 88px;
+    grid-template-columns: 100px 100px 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .head_text,
+  .container_butten {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
 }
