@@ -1,12 +1,16 @@
 @mixin fontH(
   $font_size: $font_h_l,
   $font_weight: $f_w_big,
-  $f_media: $f_body_1
+  $f_media: $f_body_1,
+  $f_media_small: $f_body_3
 ) {
   font-size: $font_size;
   font-weight: $font_weight;
   @media (max-width: 900px) {
     font-size: $f_media;
+  }
+  @media (max-width: 350px) {
+    font-size: $f_media_small;
   }
 }
 
