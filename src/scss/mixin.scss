@@ -17,7 +17,7 @@
 }
 
 @mixin customA($backc: $green, $bWidth: 1px, $bStyle: solid, $bColor: $green) {
-  font-size: 23px;
+  // font-size: 23px;
   border: $bWidth $bStyle $bColor;
   background-color: $backc;
   padding: 15px 30px 15px 30px;

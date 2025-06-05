@@ -9,7 +9,8 @@ section {
   @include fontH(
     $font_size: $f_body_8,
     $font_weight: $f_w_small,
-    $f_media: $f_body_8
+    $f_media: $f_body_8,
+    // $f_media_small: $f_body_7
   );
   // border: 2px solid blue;
   display: grid;
@@ -27,13 +28,6 @@ section {
       position: absolute;
     }
   }
-  // .join {
-  //   grid-row: 2 / 3;
-  // }
-
-  // .pollo_loco {
-  //   grid-row: 4 / 5;
-  // }
 }
 
 .header {
@@ -64,7 +58,7 @@ section {
   // @include gridCandRows(auto auto);
   display: flex;
   .container_img_project {
-    padding: $p;
+    // padding: $p;
     grid-column: 1 /2;
     img {
       width: 620px;
@@ -74,7 +68,6 @@ section {
     }
   }
   .container_text_project {
-    padding: $p;
     grid-column: 2 /3;
     display: flex;
     flex-direction: column;
@@ -97,10 +90,18 @@ section {
       @include fontH(
         $font_size: $f_body_5,
         $font_weight: $f_w_small,
-        $f_media: $f_body_5
+        $f_media: $f_body_8,
+
+        $f_media_small: $f_body_8
       );
     }
     .button {
+      @include fontH(
+        $font_size: $f_body_4,
+        $font_weight: $f_w_small,
+        $f_media: $f_body_5,
+        $f_media_small: $f_body_8
+      );
       display: flex;
       gap: 30px;
     }

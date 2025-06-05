@@ -19,12 +19,13 @@ section {
   grid-template-rows: 200px auto;
   justify-content: space-between;
   align-items: center;
+  @include padding();
   @include gridCandRows(auto auto auto);
   .discriptio {
     display: flex;
     flex-direction: column;
 
-    padding-left: $p-left;
+    // padding-left: $p-left;
   }
   .shadow {
     grid-column: 5 / 6;
