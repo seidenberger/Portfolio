@@ -1,13 +1,9 @@
 <section id="contact">
-  <div class="line"></div>
-  <p class="heding">Contact</p>
-  <div class="container_img_shadows">
-    <img
-      class="img img_shadows"
-      src="assets/shadows/33. Purple shadow Footer.png"
-      alt=""
-    />
+  <div class="head">
+    <div class="line"></div>
+    <p class="header">Contact</p>
   </div>
+
   <div class="container_write_to">
     <div class="write_to">
       <div class="text">
@@ -17,7 +13,7 @@
           massege butten grau// mit haken butten grau // huffer lila input
           signals
         </p>
-        <p>spioughsüseesaüohaäühahonayäbü</p>
+        <p>spioughsüsees</p>
       </div>
       <div class="container_input">
         <div class="input">
@@ -55,20 +51,31 @@
             @if (!message.valid && message.touched) {
             <span>pleas enter a message</span>
             }
-            <label for="box"></label>
-            <input type="checkbox" id="box" />
-            <div class="policy">
-              I've read the
-              <p [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
-                privacy policy
-              </p>
-              and agree to the porocessing of my data as outlined.
+            <div>
+              <label for="box"></label>
+              <input type="checkbox" id="box" />
+              <div class="policy">
+                I've read the
+                <p [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
+                  privacy policy
+                </p>
+                and agree to the porocessing of my data as outlined.
+              </div>
+              <input type="submit" value="send message :)" />
             </div>
-            <input type="submit" value="send message :)" />
           </form>
         </div>
-        <img src="assets/icons/Vector.png" alt="" />
+        <div class="arrow">
+          <img src="assets/icons/Vector.png" alt="" />
+        </div>
       </div>
     </div>
+  </div>
+  <div class="container_img_shadows">
+    <img
+      class="img img_shadows"
+      src="assets/shadows/33. Purple shadow Footer.png"
+      alt=""
+    />
   </div>
 </section>

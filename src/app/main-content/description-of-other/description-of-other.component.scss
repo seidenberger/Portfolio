@@ -4,6 +4,7 @@
 @import "./../../../scss/mixin.scss";
 
 section {
+  // overflow: hidden;
   height: 100vh;
   @include fontH(
     $font_size: $f_body_6,
@@ -38,8 +39,8 @@ section {
       height: 951px;
       width: 428px;
       transform: rotate(196deg);
-      position: absolute;
-      overflow: visible;
+      // position: absolute;
+      // overflow: visible;
       // top: -100px;
       // right: -200px;
     }
@@ -178,9 +179,16 @@ button {
   }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 380px) {
   .container_img_shadows {
     left: 300px;
     top: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .container_img_shadows {
+    top: -1000px;
+    left: 230px;
   }
 }
