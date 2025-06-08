@@ -55,7 +55,7 @@ section {
     img {
       width: 620px;
       height: auto;
-      @include maxW($max_w: 700px);
+      @include maxW($breakpoint_max_w: 700px, $m_width: 620px);
     }
   }
   .container_text_project {

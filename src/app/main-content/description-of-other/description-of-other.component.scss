@@ -5,7 +5,7 @@
 
 section {
   // overflow: hidden;
-  height: 100vh;
+  // height: 100vh;
   @include fontH(
     $font_size: $f_body_6,
     $font_weight: $f_w_small,
@@ -18,8 +18,8 @@ section {
   // grid-template-rows: 50px auto;
 
   .container_carousel {
-    grid-column: 1 /3;
-    grid-row: 2 / 3;
+    // grid-column: 1 /3;
+    // grid-row: 2 / 3;
     // padding-left: 100px;
 
     @include layers(1);
@@ -30,9 +30,10 @@ section {
   }
   .container_img_shadows {
     @include layers(0);
-    grid-column: 2 / 3;
-    grid-row: 1 /2;
-    top: -500px;
+    // grid-column: 2 / 3;
+    // grid-row: 1 /2;
+    top: -800px;
+    right: -1300px;
     // position: relative;
     // position: absolute;
     .img_shadows {
@@ -49,8 +50,8 @@ section {
 
 .carousel {
   @include padding();
-  display: grid;
-  grid-template-columns: auto 276px 104px;
+  // display: grid;
+  // grid-template-columns: auto 276px 104px;
   align-items: center;
   overflow: hidden;
   display: flex;
@@ -73,8 +74,8 @@ section {
 }
 
 .content {
-  display: grid;
-  grid-template-rows: 68px 112px 22px;
+  // display: grid;
+  // grid-template-rows: 68px 112px 22px;
   min-width: 200px;
   // text-align: center;
   img {
@@ -86,11 +87,11 @@ section {
     position: relative;
   }
   p {
-    grid-row: 2/3;
+    // grid-row: 2/3;
   }
 
   .container_signature {
-    grid-row: 3/4;
+    // grid-row: 3/4;
   }
   .signature {
     @include fontH(

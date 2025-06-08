@@ -1,5 +1,5 @@
-@mixin dNone() {
-  @media (max-width: 600px) {
+@mixin dNone($none: 600px) {
+  @media (max-width: $none) {
     display: none;
   }
 }
@@ -22,11 +22,12 @@
   }
 }
 
-@mixin maxW($max_w) {
-  @media (max-width: $max_w) {
+@mixin maxW($breakpoint_max_w, $m_width) {
+  @media (max-width: $breakpoint_max_w) {
     width: 100%;
     height: auto;
-    max-width: 620px;
+    // max-width: 620px;
+    max-width: $m_width;
   }
 }
 

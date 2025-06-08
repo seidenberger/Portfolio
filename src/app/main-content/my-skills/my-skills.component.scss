@@ -4,6 +4,7 @@
 @import "./../../../scss/media.scss";
 
 section {
+  @include layers(3);
   margin-top: 50px;
   // border: 2px solid yellow;
   @include fontH(
@@ -87,10 +88,13 @@ a {
   overflow: visible;
   position: relative;
   @include layers(0);
+  left: -300px;
+  top: -350px;
+
   .img_shadows {
     height: 951px;
     width: 428px;
-    left: -300px;
+    // left: -300px;
     position: absolute;
   }
 }
