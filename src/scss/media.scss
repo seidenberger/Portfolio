@@ -5,9 +5,7 @@
 }
 
 @mixin padding($right: 100px, $left: 100px) {
-  // padding-top: $top;
   padding-right: $right;
-  // padding-bottom: $bottom;
   padding-left: $left;
   @media (max-width: 600px) {
     padding-right: 25px;
@@ -26,14 +24,11 @@
   @media (max-width: $breakpoint_max_w) {
     width: 100%;
     height: auto;
-    // max-width: 620px;
     max-width: $m_width;
   }
 }
 
 @mixin imgMedia() {
-  // @media (max-width: 7000px) {
   width: 100%;
   height: auto;
-  // }
 }
