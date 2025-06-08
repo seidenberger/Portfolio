@@ -22,24 +22,22 @@ section {
   @include gridCandRows(auto auto);
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 88px 88px 88px 88px;
-  grid-template-rows: 120px 120px 120px;
-
-  gap: 10px;
-  @include padding();
-}
-
 .icons {
   grid-area: icon;
-}
+  .grid-container {
+    display: grid;
+    grid-template-columns: 88px 88px 88px 88px;
+    grid-template-rows: 120px 120px 120px;
 
-.line {
-  display: flex;
-  align-items: center;
-  hr {
-    @include hr($wi: 64px);
+    gap: 10px;
+    @include padding();
+    .skill_text {
+      @include fontH(
+        $font_size: $f_body_8,
+        $font_weight: $f_w_small,
+        $f_media: $f_body_9
+      );
+    }
   }
 }
 
@@ -55,18 +53,16 @@ section {
   }
 }
 
-.container_butten {
-  grid-area: container_butten;
+.line {
+  display: flex;
+  align-items: center;
+  hr {
+    @include hr($wi: 64px);
+  }
 }
 
-.text {
-  div {
-    @include fontH(
-      $font_size: $f_body_2,
-      $font_weight: $f_w_small,
-      $f_media: $f_body_8
-    );
-  }
+.container_butten {
+  grid-area: container_butten;
 }
 
 .button {
@@ -90,21 +86,11 @@ a {
   @include layers(0);
   left: -300px;
   top: -350px;
-
-  .img_shadows {
+  img {
     height: 951px;
     width: 428px;
-    // left: -300px;
     position: absolute;
   }
-}
-
-.skill_text {
-  @include fontH(
-    $font_size: $f_body_8,
-    $font_weight: $f_w_small,
-    $f_media: $f_body_9
-  );
 }
 
 @media (max-width: 1200px) {
@@ -119,8 +105,6 @@ a {
 @media (max-width: 900px) {
   .grid-container {
     display: grid;
-    // grid-template-rows: 88px 88px 88px 88px;
-    // grid-template-columns: 100px 100px 100px;
     grid-template-columns: 88px 88px 88px;
     grid-template-rows: 100px 100px 100px 100px;
   }
@@ -138,7 +122,5 @@ a {
   .grid-container {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto auto;
-    // grid-template-columns: 88px 88px 88px;
-    // grid-template-rows: 100px 100px 100px 100px;
   }
 }

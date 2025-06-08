@@ -3,13 +3,11 @@
 
 section {
   display: flex;
-
   @include layers(2);
   margin-top: -650px;
-}
-
-img {
-  width: 100%;
+  img {
+    width: 100%;
+  }
 }
 
 @media (min-width: 320px) {
