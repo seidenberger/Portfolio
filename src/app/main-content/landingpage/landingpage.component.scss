@@ -4,11 +4,6 @@
 @import "./../../../scss/media.scss";
 
 section {
-  @include fontH(
-    $font_size: $font_h_3,
-    $font_weight: $f_w_small,
-    $f_media: $f_body_3
-  );
   padding-top: 109px;
   border: 2px solid green;
   @include max_Width();
@@ -81,18 +76,20 @@ section {
         @include fontH(
           $font_size: $font_h_2,
           $font_weight: $f_w_small,
-          $f_media: $f_body_2
+          $f_media: $f_body_2,
+          $f_media_small: $f_body_2
         );
         margin: -30px;
       }
       .head {
-        @include fontH();
+        @include fontH($f_media_small: $f_body_2);
       }
       .discription {
         @include fontH(
           $font_size: $font_h_3,
           $font_weight: $f_w_small,
-          $f_media: $f_body_3
+          $f_media: $f_body_3,
+          $f_media_small: $f_body_4
         );
         color: $purple;
       }

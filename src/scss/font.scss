@@ -2,6 +2,7 @@
   $font_size: $font_h_l,
   $font_weight: $f_w_big,
   $f_media: $f_body_1,
+  $breakpoint: $breakpoint-xs,
   $f_media_small: $f_body_8
 ) {
   font-size: $font_size;
@@ -9,7 +10,7 @@
   @media (max-width: 900px) {
     font-size: $f_media;
   }
-  @media (max-width: 380px) {
+  @media (max-width: $breakpoint) {
     font-size: $f_media_small;
   }
 }
@@ -38,6 +39,9 @@ $f_body_6: 20px;
 $f_body_7: 18px;
 $f_body_8: 16px;
 $f_body_9: 14px;
+
+// max-width
+$breakpoint-xs: 380px;
 
 /* poppins-regular - latin */
 @font-face {

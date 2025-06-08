@@ -33,15 +33,28 @@ section {
     @include layers(4);
     overflow: visible;
     // position: relative;
-    position: absolute;
+    // position: absolute;
     margin-top: -400px;
     img {
-      // width: 572px;
-      // height: 608px;
+      width: 572px;
+      height: 608px;
       @include imgMedia();
+      position: absolute;
     }
   }
 }
+
+// .container_img_shadows {
+//     overflow: visible;
+//     // position: relative;
+//     z-index: 0;
+//     position: relative;
+// .img_shadows{
+//     height: 951px;
+//     width: 428px;
+//     left: -300px;
+//     position: absolute;
+// }
 
 .border_line {
   @include dNone();
@@ -54,14 +67,6 @@ section {
     // height: 4px;
     // background-color: $green;
   }
-}
-
-.head {
-  height: 435px;
-  width: 435px;
-  border-radius: 50%;
-  object-fit: contain;
-  border: 4px solid $green;
 }
 
 .discriptio {
@@ -78,15 +83,29 @@ section {
   @include dNone();
   grid-column: 4 /5;
   grid-row: 2 / 3;
+  img {
+    height: 435px;
+    width: 435px;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 4px solid $green;
+  }
 }
 
-.heding {
-  @include fontH();
+.head {
+  @include fontH($f_media_small: $f_body_2);
 }
 
 .icons {
-  height: 48px;
-  width: 48px;
+  height: 32px;
+  width: 26px;
+}
+
+@media (max-width: 380px) {
+  .shadow {
+    grid-column: 1 / 2;
+    // grid-row: 2 / 2;
+  }
 }
 
 @media (min-width: 320px) {

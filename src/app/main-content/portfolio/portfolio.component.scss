@@ -79,7 +79,7 @@ section {
         $font_weight: $f_w_small,
         $f_media: $f_body_8,
 
-        $f_media_small: $f_body_8
+        // $f_media_small: $f_body_8
       );
     }
     .button {
@@ -87,7 +87,7 @@ section {
         $font_size: $f_body_4,
         $font_weight: $f_w_small,
         $f_media: $f_body_5,
-        $f_media_small: $f_body_8
+        // $f_media_small: $f_body_8
       );
       display: flex;
       gap: 30px;
