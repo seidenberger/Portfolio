@@ -184,12 +184,16 @@ section {
 }
 
 @media (max-width: 600px) {
-  .img_person {
-    width: 300px;
+  .container_img_person {
+    img {
+      width: 300px;
+    }
   }
 
-  .img_shadows {
-    width: 300px;
+  .container_img_shadows {
+    img {
+      width: 300px;
+    }
   }
 }
 

@@ -77,11 +77,24 @@ section {
   width: 26px;
 }
 
+@media (max-width: 1600px) {
+  section {
+    margin-top: -450px;
+  }
+}
+
+@media (max-width: 1400px) {
+  section {
+    margin-top: -250px;
+  }
+}
+
 @media (max-width: 1200px) {
   section {
     grid-template-areas:
       "shadow"
       "discriptio picture line";
+    margin-top: 300px;
   }
 }
 
