@@ -7,8 +7,8 @@
   gap: $g;
 }
 
-@mixin CustomBtn($backc: $blue) {
-  border: 1px solid $green;
+@mixin CustomBtn($backc: $blue, $border_c: $green) {
+  border: 1px solid $border_c;
   border-radius: 10px;
 
   background-color: $backc;

@@ -10,6 +10,7 @@ button {
 
 section {
   @include max_Width();
+  position: fixed;
 }
 
 header {
@@ -17,12 +18,13 @@ header {
   margin: auto;
   width: 100vw;
 
-  position: fixed;
+  // position: fixed;
   top: 0;
   left: 0;
   // width: 100%;
   background-color: $blue;
-  z-index: 6;
+  // z-index: 11;
+  @include layers(11);
   // padding: 0 100px;
   @include padding();
   .header-inner {
@@ -63,35 +65,57 @@ header {
   }
 }
 
-nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  a {
-    font-size: 28px;
-    @include textN();
-    padding: 20px;
-  }
-}
+// nav {
+//   display: flex;
+//   align-items: center;
+//   gap: 20px;
+//   a {
+//     font-size: 28px;
+//     @include textN();
+//     padding: 20px;
+//   }
+// }
 
 .burger {
   height: 28px;
   width: 30px;
 }
 
+// .mobil {
+//   height: 100vh;
+//   // height: 200px;
+//   background-color: red;
+// }
+nav.mobil {
+  display: flex;
+  justify-content: center; /* horizontal zentrieren */
+  align-items: center; /* vertikal zentrieren (wenn Höhe gesetzt) */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* damit es die ganze Höhe einnimmt */
+  background-color: $dark_grey;
+  @include layers(10);
+}
+
 @media only screen and (min-width: 1001px) {
   .burger {
+    display: none;
+  }
+  .mobil {
     display: none;
   }
 }
 
 @media only screen and (max-width: 1000px) {
-  nav {
+  // nav {
+  //   display: none;
+  // }
+
+  .desktop {
     display: none;
   }
-  // header {
-  //   padding: 37px 25px 37px 0px;
-  // }
 }
 
 @media (min-width: 320px) {

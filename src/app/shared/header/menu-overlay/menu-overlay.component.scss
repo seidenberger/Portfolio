@@ -1,0 +1,15 @@
+@import "./../../../../styles.scss";
+@import "./../../../../scss/layers.scss";
+@import "./../../../../scss/mixin.scss";
+@import "./../../../../scss/media.scss";
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  a {
+    font-size: 28px;
+    @include textN();
+    padding: 20px;
+  }
+}

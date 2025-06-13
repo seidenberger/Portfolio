@@ -72,8 +72,10 @@ header {
 input[type="text"],
 select,
 textarea {
+  background-color: $blue;
+  color: $white;
   padding: 12px;
-  border: 1px solid #ccc;
+  border: 2px solid $purple;
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 6px;
@@ -84,8 +86,15 @@ textarea {
   min-width: 100px;
 }
 
+input[type="text"]::placeholder,
+select::placeholder,
+textarea::placeholder {
+  color: $white;
+  opacity: 1;
+}
+
 input[type="submit"] {
-  background-color: #04aa6d;
+  background-color: $grey;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -97,7 +106,37 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  @include CustomBtn($backc: red);
+  @include CustomBtn($backc: $purple, $border_c: $purple);
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: $blue;
+  border: 2px solid $green;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="checkbox"]::after {
+  content: "✓";
+  display: block;
+  width: 16px;
+  height: 16px;
+  font-size: 14px;
+  color: $green;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+input[type="checkbox"]:checked::after {
+  opacity: 1;
 }
 
 .policy {

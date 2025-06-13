@@ -1,3 +1,35 @@
+<section>
+  <header>
+    <div class="header-inner">
+      <a href="#home" class="logo"
+        >Th<span class="letter_e">e</span>odo<span class="letter_r">r </span>
+      </a>
+      <!-- <div (click)="toggelMenu()" class="burger">
+      <img src="assets/icons/Property 1=burger.png" alt="" />
+    </div> -->
+      <button (click)="toggelMenu()" class="burger">
+        <img src="assets/icons/Property 1=burger.png" alt="" />
+      </button>
+
+      <nav class="desktop"><app-menu-overlay></app-menu-overlay></nav>
+
+      <!-- <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <div>
+        <button (click)="switchLang('de')">DE</button>
+
+        <button (click)="switchLang('en')">EN</button>
+      </div>
+    </nav> -->
+    </div>
+  </header>
+  @if (showMenu) {
+  <nav class="mobil"><app-menu-overlay></app-menu-overlay></nav>
+
+  }
+</section>
 <!-- <section>
   <div class="container_header_outer">
     <div class="container_header_inner">
@@ -20,23 +52,3 @@
     </div>
   </div>
 </section> -->
-
-<header>
-  <div class="header-inner">
-    <a href="#home" class="logo"
-      >Th<span class="letter_e">e</span>odo<span class="letter_r">r </span>
-    </a>
-    <div class="burger">
-      <img src="assets/icons/Property 1=burger.png" alt="" />
-    </div>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#portfolio">Portfolio</a>
-      <div>
-        <button (click)="switchLang('de')">DE</button>
-        <button (click)="switchLang('en')">EN</button>
-      </div>
-    </nav>
-  </div>
-</header>
