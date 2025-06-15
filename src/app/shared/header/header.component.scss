@@ -10,25 +10,19 @@ button {
 
 section {
   @include max_Width();
-  position: fixed;
+  //   @include layers(11);
 }
 
 header {
-  /* max-width: 1440px; */
+  @include layers(11);
   margin: auto;
   width: 100vw;
-
-  // position: fixed;
+  position: fixed;
   top: 0;
   left: 0;
-  // width: 100%;
   background-color: $blue;
-  // z-index: 11;
-  @include layers(11);
-  // padding: 0 100px;
   @include padding();
   .header-inner {
-    // @include max_Width();
     width: 100%;
     @include dFlex($jc: space-around, $g: 10);
   }
@@ -65,38 +59,19 @@ header {
   }
 }
 
-// nav {
-//   display: flex;
-//   align-items: center;
-//   gap: 20px;
-//   a {
-//     font-size: 28px;
-//     @include textN();
-//     padding: 20px;
-//   }
-// }
-
 .burger {
   height: 28px;
   width: 30px;
 }
 
-// .mobil {
-//   height: 100vh;
-//   // height: 200px;
-//   background-color: red;
-// }
-nav.mobil {
-  display: flex;
-  justify-content: center; /* horizontal zentrieren */
-  align-items: center; /* vertikal zentrieren (wenn Höhe gesetzt) */
+.mobil {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh; /* damit es die ganze Höhe einnimmt */
+  height: 100vh;
   background-color: $dark_grey;
-  @include layers(10);
+  @include layers(10, $posi: fixed);
 }
 
 @media only screen and (min-width: 1001px) {
@@ -109,10 +84,6 @@ nav.mobil {
 }
 
 @media only screen and (max-width: 1000px) {
-  // nav {
-  //   display: none;
-  // }
-
   .desktop {
     display: none;
   }
