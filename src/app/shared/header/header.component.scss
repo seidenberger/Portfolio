@@ -4,8 +4,9 @@
 @import "./../../../scss/media.scss";
 
 button {
-  @include CustomBtn();
-  @include textN();
+  background-color: $dark_blue;
+  // @include CustomBtn();
+  // @include textN();
 }
 
 section {
@@ -59,10 +60,10 @@ header {
   }
 }
 
-.burger {
-  height: 28px;
-  width: 30px;
-}
+// .burger {
+//   height: 28px;
+//   width: 30px;
+// }
 
 .mobil {
   position: fixed;

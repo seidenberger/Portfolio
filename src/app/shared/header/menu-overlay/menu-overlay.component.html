@@ -1,10 +1,27 @@
 <nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#portfolio">Portfolio</a>
+  <a href="#about" (click)="closeMenu()">About</a>
+  <a href="#skills" (click)="closeMenu()">Skills</a>
+  <a href="#portfolio" (click)="closeMenu()">Portfolio</a>
   <div>
-    <button (click)="switchLang('de')">DE</button>
-
-    <button (click)="switchLang('en')">EN</button>
+    <button
+      (click)="switchLang('de')"
+      [ngClass]="{
+        'btn-active': isActive('de'),
+        'btn-inactive': !isActive('de')
+      }"
+    >
+      DE
+    </button>
+    <p>/</p>
+    <!-- <button (click)="switchLang('de')">DE</button> -->
+    <button
+      (click)="switchLang('en')"
+      [ngClass]="{
+        'btn-active': isActive('en'),
+        'btn-inactive': !isActive('en')
+      }"
+    >
+      EN
+    </button>
   </div>
 </nav>

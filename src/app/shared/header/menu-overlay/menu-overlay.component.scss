@@ -14,11 +14,52 @@ nav {
   }
 }
 
+div {
+  display: flex;
+  gap: 10px;
+  button {
+    border: 1px solid $green;
+  }
+}
+
+.btn-active {
+  background-color: $green;
+  color: $white;
+}
+
+.btn-inactive {
+  background-color: $blue;
+  color: $white;
+}
+
+@media (min-width: 1001px) {
+  p {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   nav {
     justify-content: center;
     flex-direction: column;
     height: 100vh;
     width: 100vw;
+  }
+
+  button {
+    // border: none;
+    border: 1px solid $dark_grey;
+  }
+
+  .btn-active {
+    // border: 1px solid $dark_grey;
+    background-color: $dark_grey;
+    color: $green;
+  }
+
+  .btn-inactive {
+    // border: 1px solid $dark_grey;
+    background-color: $dark_grey;
+    color: $white;
   }
 }
