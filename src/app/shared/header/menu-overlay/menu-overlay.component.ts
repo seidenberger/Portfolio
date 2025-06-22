@@ -1,10 +1,12 @@
-import { Component, OnDestroy, OnInit, signal } from '@angular/core';
+import { Component, OnDestroy, OnInit, signal, Input, Output, EventEmitter } from '@angular/core';
 import { TranslationService } from '../../../translation.service';
 import { Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { log } from 'node:console';
 
 @Component({
   selector: 'app-menu-overlay',
+    standalone: true,
   imports: [    CommonModule],
   templateUrl: './menu-overlay.component.html',
   styleUrl: './menu-overlay.component.scss'
@@ -12,7 +14,7 @@ import { CommonModule } from '@angular/common';
 export class MenuOverlayComponent  implements OnInit, OnDestroy{
   activeLang = signal<'de' | 'en'>('de');
   
-showMenu = true; 
+// showMenu = true; 
 
       about= '';
       skill= '';
@@ -23,6 +25,21 @@ showMenu = true;
 
   constructor(public translationService: TranslationService) {}
 
+  // @Input() show = f''alse;  // bekommt den Wert vom Parent
+
+  
+    @Output() closed = new EventEmitter<void>();
+
+  closeMenu() {
+      console.log('closeMenu() in MenuOverlayComponent aufgerufen'); 
+    this.closed.emit();
+  }
+
+
+  // handleClose() {
+  //    // Damit Header reagieren kann
+  // }
+
   ngOnInit(): void {
     this.updateTexts(); // Initiale Texte
     this.sub = this.translationService.lang$.subscribe(() => {
@@ -31,7 +48,7 @@ showMenu = true;
   }
 
   ngOnDestroy(): void {
-    this.sub.unsubscribe(); // Speicher aufräumen
+    this.sub.unsubscribe(); // Speicher aufräumen 
   }
 
   updateTexts() {
@@ -54,11 +71,6 @@ showMenu = true;
     // console.log('Aktive Sprache war:', this.isActive());
   }
 
-  closeMenu() {
-    console.log(this.showMenu);
-  this.showMenu = false;
-  console.log(this.showMenu);
-}
 }
 
 
