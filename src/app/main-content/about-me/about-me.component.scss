@@ -31,6 +31,10 @@ section {
   }
 }
 
+.head {
+  scroll-margin-top: 100px;
+}
+
 .shadow {
   grid-area: shadow;
   @include layers(4);

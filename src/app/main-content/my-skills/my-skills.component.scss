@@ -4,6 +4,7 @@
 @import "./../../../scss/media.scss";
 
 section {
+  scroll-margin-top: 100px;
   @include layers(3);
   margin-top: 50px;
   // border: 2px solid yellow;

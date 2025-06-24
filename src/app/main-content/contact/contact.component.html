@@ -1,4 +1,4 @@
-<section id="contact">
+<section>
   <div class="grid-wrapper">
     <div class="container_img_shadows">
       <img
@@ -10,7 +10,7 @@
   </div>
   <header>
     <div class="line"></div>
-    <p>Contact</p>
+    <p id="contact">Contact</p>
   </header>
 
   <div class="container_write_to">
@@ -35,19 +35,34 @@
               name="name"
               placeholder="Your Name"
               required
+              #name="ngModel"
             />
+            @if(!name.valid && name.touched) {
+            <span>Bitte Name einfügen</span>
+            }
 
             <label for="email"></label>
             <input
               [(ngModel)]="contactData.email"
-              type="text"
+              type="email"
               id="email"
               name="email"
               placeholder="Your Mail"
               required
               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+              #email="ngModel"
             /><label for=""></label>
-
+            @if(!email.valid && email.touched) {
+            <span>Bitte Email einfügen</span>
+            }
+            <!-- <div *ngIf="email.invalid && email.touched">
+              <span *ngIf="email.errors?.['required']"
+                >E-Mail ist erforderlich.</span
+              >
+              <span *ngIf="email.errors?.['pattern']"
+                >E-Mail ist ungültig.</span
+              > -->
+            <!-- </div> -->
             <label for="message"></label>
             <textarea
               #message="ngModel"
@@ -62,15 +77,30 @@
             }
             <div>
               <label for="box"></label>
-              <input type="checkbox" id="box" />
+              <input
+                type="checkbox"
+                id="privacy"
+                name="privacy"
+                [(ngModel)]="contactData.privacyAccepted"
+                #privacy="ngModel"
+                required
+              />
               <div class="policy">
                 I've read the
                 <p [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
                   privacy policy
                 </p>
-                and agree to the porocessing of my data as outlined. &#9745;
+                and agree to the porocessing of my data as outlined.
+              </div>
+              <div class="fill_1out_hint" *ngIf="showPrivacyError">
+                Please accept the privacy policy
               </div>
               <input type="submit" value="send message :)" />
+              <!-- <input
+                type="submit"
+                value="send message :)"
+                [disabled]="contactForm.invalid"
+              /> -->
             </div>
           </form>
         </div>

@@ -70,6 +70,7 @@ header {
 }
 
 input[type="text"],
+input[type="email"],
 select,
 textarea {
   background-color: $blue;
@@ -87,6 +88,7 @@ textarea {
 }
 
 input[type="text"]::placeholder,
+input[type="email"]::placeholder,
 select::placeholder,
 textarea::placeholder {
   color: $white;
@@ -137,6 +139,10 @@ input[type="checkbox"]::after {
 
 input[type="checkbox"]:checked::after {
   opacity: 1;
+}
+
+.fill_1out_hint {
+  color: $red;
 }
 
 .policy {
