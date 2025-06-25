@@ -43,7 +43,7 @@ export class ContactComponent {
 
 
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://theodor-seidenberger.de/sendMail.php',
