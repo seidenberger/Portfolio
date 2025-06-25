@@ -85,6 +85,17 @@
                 #privacy="ngModel"
                 required
               />
+              <!-- @if (!privacy.valid && privacy.touched) {
+              <span> Please accept the privacy policy</span>
+              } -->
+
+              <div
+                class="fill_1out_hint"
+                *ngIf="showError && !contactData.privacyAccepted"
+              >
+                Please accept the privacy policy
+              </div>
+
               <div class="policy">
                 I've read the
                 <p [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
@@ -92,15 +103,11 @@
                 </p>
                 and agree to the porocessing of my data as outlined.
               </div>
-              <div class="fill_1out_hint" *ngIf="showPrivacyError">
-                Please accept the privacy policy
-              </div>
-              <input type="submit" value="send message :)" />
-              <!-- <input
+              <input
                 type="submit"
                 value="send message :)"
                 [disabled]="contactForm.invalid"
-              /> -->
+              />
             </div>
           </form>
         </div>

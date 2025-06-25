@@ -21,9 +21,9 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class ContactComponent {
 
-  http = inject(HttpClient)
+  http = inject(HttpClient);
 
-  showPrivacyError = false; 
+  showError = false; 
 
   contactData = {
     name: "",
@@ -46,7 +46,7 @@ export class ContactComponent {
   mailTest = true;
 
   post = {
-    endPoint: 'http://https://theodor-seidenberger.de///sendMail.php',
+    endPoint: 'https://theodor-seidenberger.de/sendMail.php',
     // endPoint: 'https://deineDomain.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
@@ -59,6 +59,7 @@ export class ContactComponent {
 
   onSubmit(ngForm: NgForm) {
      console.log(this.contactData);
+
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
@@ -75,8 +76,8 @@ export class ContactComponent {
 
       ngForm.resetForm();
     }
-  }
 
+  }
 
 
 
