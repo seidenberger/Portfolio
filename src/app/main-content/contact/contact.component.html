@@ -10,19 +10,19 @@
   </div>
   <header>
     <div class="line"></div>
-    <p id="contact">Contact</p>
+    <span id="contact">Contact</span>
   </header>
 
   <div class="container_write_to">
     <div class="write_to">
       <div class="text">
         <h3>got a poroblem to solve</h3>
-        <p class="contact_text">
+        <span class="contact_text">
           lila border your name // schreiben grüner border ohne haken unter
           massege butten grau// mit haken butten grau // huffer lila input
           signals
-        </p>
-        <p>spioughsüsees</p>
+        </span>
+        <span>spioughsüsees</span>
       </div>
       <div class="container_input">
         <div class="input">
@@ -76,43 +76,49 @@
             <span>pleas enter a message</span>
             }
             <div>
-              <label for="box"></label>
-              <input
-                type="checkbox"
-                id="privacy"
-                name="privacy"
-                [(ngModel)]="contactData.privacyAccepted"
-                #privacy="ngModel"
-                required
-              />
-              <!-- @if (!privacy.valid && privacy.touched) {
+              <div class="container_box">
+                <label for="box"></label>
+                <input
+                  type="checkbox"
+                  id="privacy"
+                  name="privacy"
+                  [(ngModel)]="contactData.privacyAccepted"
+                  #privacy="ngModel"
+                  required
+                />
+                <!-- @if (!privacy.valid && privacy.touched) {
               <span> Please accept the privacy policy</span>
               } -->
 
-              <div
-                class="fill_1out_hint"
-                *ngIf="showError && !contactData.privacyAccepted"
-              >
-                Please accept the privacy policy
-              </div>
+                <div
+                  class="fill_1out_hint"
+                  *ngIf="showError && !contactData.privacyAccepted"
+                >
+                  Please accept the privacy policy
+                </div>
 
-              <div class="policy">
-                I've read the
-                <p [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
-                  privacy policy
-                </p>
-                and agree to the porocessing of my data as outlined.
+                <div class="policy">
+                  I've read the
+                  <span [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
+                    privacy policy
+                  </span>
+                  and agree to the porocessing of my data as outlined.
+                </div>
               </div>
-              <input
-                type="submit"
-                value="send message :)"
-                [disabled]="contactForm.invalid"
-              />
+              <div class="form_butten">
+                <input
+                  type="submit"
+                  value="send message :)"
+                  [disabled]="contactForm.invalid"
+                />
+              </div>
             </div>
           </form>
         </div>
-        <div class="arrow">
-          <img src="assets/icons/Vector.png" alt="" />
+        <div class="container_arrow">
+          <div class="arrow">
+            <img src="assets/icons/Vector.png" alt="" />
+          </div>
         </div>
       </div>
     </div>

@@ -54,6 +54,10 @@ section {
   }
 }
 
+.head_text {
+  @include padding();
+}
+
 .line {
   display: flex;
   align-items: center;
@@ -64,6 +68,7 @@ section {
 
 .container_butten {
   grid-area: container_butten;
+  @include padding();
 }
 
 .button {

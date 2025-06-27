@@ -60,10 +60,10 @@ header {
   }
 }
 
-// .burger {
-//   height: 28px;
-//   width: 30px;
-// }
+.burger {
+  all: unset;
+  cursor: pointer;
+}
 
 .mobil {
   position: fixed;

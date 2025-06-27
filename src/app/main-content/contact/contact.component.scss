@@ -3,6 +3,8 @@
 @import "./../../../scss/mixin.scss";
 @import "./../../../scss/media.scss";
 
+$form-gap: 20px;
+
 section {
   @include fontH(
     $font_size: $f_body_8,
@@ -145,6 +147,10 @@ input[type="checkbox"]:checked::after {
   color: $red;
 }
 
+.form_butten {
+  @include dFlex($g: $form-gap);
+}
+
 .policy {
   @include fontH(
     $font_size: $f_body_9,
@@ -162,6 +168,28 @@ input[type="checkbox"]:checked::after {
 
 .contact_text {
   width: 300px;
+}
+
+.container_box {
+  display: flex;
+}
+
+.container_arrow {
+  display: flex;
+  justify-content: flex-end;
+  .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    border: 2px solid $white;
+    div {
+      width: 24px;
+      height: 24px;
+    }
+  }
 }
 
 @media (max-width: 600px) {
@@ -184,19 +212,5 @@ input[type="checkbox"]:checked::after {
 @media (min-width: 320px) {
   .container_img_shadows {
     left: -600px;
-  }
-}
-
-.arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 39px;
-  height: 39px;
-  border-radius: 50%;
-  border: 2px solid $white;
-  div {
-    width: 24px;
-    height: 24px;
   }
 }

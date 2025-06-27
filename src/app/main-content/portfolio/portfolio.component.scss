@@ -50,7 +50,7 @@ section {
 .container_project {
   display: grid;
   grid-template-columns: 50% 50%;
-  // @include layers(1);
+  @include layers(1);
   display: flex;
   .container_img_project {
     grid-column: 1 /2;
