@@ -42,7 +42,7 @@ header {
     width: 20px;
     grid-area: head;
   }
-  p {
+  span {
     @include fontH();
     grid-area: head;
   }
@@ -75,11 +75,12 @@ input[type="text"],
 input[type="email"],
 select,
 textarea {
-  background-color: $blue;
+  @include CustomBtn($backc: $blue, $border_c: $purple, $padding: 15px 25px);
+  // background-color: $blue;
   color: $white;
-  padding: 12px;
-  border: 2px solid $purple;
-  border-radius: 4px;
+  // padding: 12px;
+  // border: 2px solid $purple;
+  // border-radius: 4px;
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
@@ -87,6 +88,7 @@ textarea {
   overflow: hidden;
   max-width: 617px;
   min-width: 100px;
+  outline: none;
 }
 
 input[type="text"]::placeholder,
@@ -97,12 +99,24 @@ textarea::placeholder {
   opacity: 1;
 }
 
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+  @include CustomBtn($backc: $blue, $border_c: $green, $padding: 15px 25px);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  @include CustomBtn($backc: $blue, $border_c: $green, $padding: 15px 25px);
+}
+
 input[type="submit"] {
   // background-color: $grey;
   color: white;
-  @include CustomBtn($backc: $grey, $border_c: $grey, $padding: 15px 30px);
+  @include CustomBtn($backc: $grey, $border_c: $grey, $padding: 15px 25px);
   border: none;
-  border-radius: 10px;
+  // border-radius: 10px;
   cursor: pointer;
   width: auto;
   min-width: 100px;
@@ -110,7 +124,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  @include CustomBtn($backc: $purple, $border_c: $purple, $padding: 15px 30px);
+  @include CustomBtn($backc: $purple, $border_c: $purple, $padding: 15px 25px);
 }
 
 input[type="checkbox"] {
@@ -190,6 +204,18 @@ input[type="checkbox"]:checked::after {
       height: 24px;
     }
   }
+}
+
+.enabled-button {
+  background-color: #4caf50; /* Grün */
+  color: white;
+  cursor: pointer;
+}
+
+.disabled-button {
+  background-color: #ccc; /* Grau */
+  color: #666;
+  cursor: not-allowed;
 }
 
 @media (max-width: 600px) {

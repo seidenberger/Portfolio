@@ -2,16 +2,24 @@
 @import "./../../../scss/layers.scss";
 
 section {
-  display: flex;
+  // display: flex;
+  position: relative;
   @include layers(2);
-  margin-top: -650px;
+  // margin-top: -650px;
+
+  position: sticky;
+  bottom: 80px;
   img {
     width: 100%;
+    // position: sticky;
+    // bottom: 650px;
+    // width: 100%;
+    display: block;
   }
 }
 
 @media (min-width: 320px) {
   section {
-    margin-top: -450px;
+    // margin-top: -450px;
   }
 }

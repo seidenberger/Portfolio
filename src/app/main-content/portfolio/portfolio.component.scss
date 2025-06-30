@@ -39,7 +39,7 @@ section {
   hr {
     @include hr($wi: 100%);
   }
-  .heding {
+  .head {
     @include fontH();
   }
   .description {
