@@ -39,7 +39,9 @@ export class ContactComponent {
 // }
 
   
-
+logPrivacy() {
+  console.log(this.contactData.privacyAccepted);
+}
 
 
 
@@ -58,6 +60,7 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
+    console.log(this.contactData.privacyAccepted);
      console.log(this.contactData);
 
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {

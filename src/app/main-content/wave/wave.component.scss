@@ -6,6 +6,8 @@ section {
   position: relative;
   @include layers(2);
   // margin-top: -650px;
+  margin-top: calc(-65vh + 50px);
+  overflow: hidden;
 
   position: sticky;
   bottom: 80px;
@@ -18,8 +20,14 @@ section {
   }
 }
 
-@media (min-width: 320px) {
+@media (max-width: 600px) {
   section {
-    // margin-top: -450px;
+    margin-top: calc(-55vh + 50px);
+  }
+}
+
+@media (max-width: 400px) {
+  section {
+    margin-top: calc(-50vh + 50px);
   }
 }

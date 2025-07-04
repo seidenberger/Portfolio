@@ -76,11 +76,7 @@ input[type="email"],
 select,
 textarea {
   @include CustomBtn($backc: $blue, $border_c: $purple, $padding: 15px 25px);
-  // background-color: $blue;
   color: $white;
-  // padding: 12px;
-  // border: 2px solid $purple;
-  // border-radius: 4px;
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
@@ -112,11 +108,9 @@ textarea:focus {
 }
 
 input[type="submit"] {
-  // background-color: $grey;
   color: white;
   @include CustomBtn($backc: $grey, $border_c: $grey, $padding: 15px 25px);
-  border: none;
-  // border-radius: 10px;
+  border: none !important;
   cursor: pointer;
   width: auto;
   min-width: 100px;
@@ -124,7 +118,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  @include CustomBtn($backc: $purple, $border_c: $purple, $padding: 15px 25px);
+  @include CustomBtn($backc: $purple, $border_c: $purple, $padding: 20px 30px);
 }
 
 input[type="checkbox"] {
@@ -206,16 +200,16 @@ input[type="checkbox"]:checked::after {
   }
 }
 
-.enabled-button {
-  background-color: #4caf50; /* Grün */
-  color: white;
-  cursor: pointer;
-}
-
-.disabled-button {
-  background-color: #ccc; /* Grau */
+.button-disabled {
+  background-color: #ccc;
   color: #666;
   cursor: not-allowed;
+}
+
+.button-enabled {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {

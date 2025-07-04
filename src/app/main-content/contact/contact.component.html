@@ -12,7 +12,6 @@
     <div class="line"></div>
     <span id="contact">Contact</span>
   </header>
-
   <div class="container_write_to">
     <div class="write_to">
       <div class="text">
@@ -86,10 +85,6 @@
                   #privacy="ngModel"
                   required
                 />
-                <!-- @if (!privacy.valid && privacy.touched) {
-              <span> Please accept the privacy policy</span>
-              } -->
-
                 <div
                   class="fill_1out_hint"
                   *ngIf="showError && !contactData.privacyAccepted"
@@ -105,12 +100,47 @@
                   and agree to the porocessing of my data as outlined.
                 </div>
               </div>
-              <div class="form_butten">
+
+              <!-- <div class="form_butten">
                 <input
                   type="submit"
                   value="send message :)"
                   [disabled]="contactForm.invalid"
+
+                                    [ngClass]="{
+                    'button-disabled': !contactData.privacyAccepted,
+                    'button-enabled': contactData.privacyAccepted
+                  }"
+                /> -->
+
+              <!-- <div class="form_butten">
+                <input
+                  type="submit"
+                  value="send message :)"
+                  [disabled]="
+                    !contactData.privacyAccepted || contactForm.invalid
+                  "
+                  [ngStyle]="{
+                    'background-color': !contactData.privacyAccepted
+                      ? 'red'
+                      : 'inherit',
+                    color: !contactData.privacyAccepted ? 'white' : 'inherit'
+                  }"
+                /> -->
+
+              <div class="form_butten">
+                <input
+                  type="submit"
+                  value="send message :)"
+                  [disabled]="
+                    !contactData.privacyAccepted || contactForm.invalid
+                  "
+                  [ngStyle]="{
+           'background-color': contactData.privacyAccepted ? 'rgb(112, 230, 28, 1)' : 'rgb(65, 72, 86)',
+           '  border': 'none !important',
+                  }"
                 />
+                <!-- </div> -->
               </div>
             </div>
           </form>

@@ -12,15 +12,18 @@
 
   <div class="container_name">
     <div class="column">
-      <div class="d_flex_c">
+      <article class="d_flex_c">
         <span class="rotate">{{ rotate }}</span>
         <div class="container_head">
           <span class="head">Theodor Seidenberger</span>
           <span class="discription">FRONTEND DEVELOPER</span>
         </div>
-      </div>
+      </article>
+
       <div class="container_butten">
-        <a href="#contact">{{ talk }}</a>
+        <aside>
+          <a href="#contact">{{ talk }}</a>
+        </aside>
       </div>
     </div>
   </div>
@@ -32,7 +35,9 @@
       <div *ngFor="let iconsLandingpage of iconsLandingpage">
         <img class="icons" [src]="iconsLandingpage" alt="pictur" />
       </div>
-      <a href="#contact">email icans</a>
+      <address>
+        <address><a href="#contact">email icans</a></address>
+      </address>
     </div>
 
     <div class="overlay_rotated">
