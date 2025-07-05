@@ -61,6 +61,7 @@ section {
 }
 
 .head_text {
+  margin: 32px 0;
   @include padding();
 }
 
@@ -75,9 +76,17 @@ section {
 .container_butten {
   grid-area: container_butten;
   @include padding();
+  margin: 32px 0;
+  .another_skill {
+    margin-bottom: 16px;
+  }
 }
 
 .button {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0;
+
   a {
     @include fontH(
       $font_size: $f_body_5,

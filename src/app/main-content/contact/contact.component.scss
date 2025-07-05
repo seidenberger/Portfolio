@@ -6,6 +6,7 @@
 $form-gap: 20px;
 
 section {
+  margin-top: 50px;
   @include fontH(
     $font_size: $f_body_8,
     $font_weight: $f_w_small,
@@ -157,6 +158,7 @@ input[type="checkbox"]:checked::after {
 
 .form_butten {
   @include dFlex($g: $form-gap);
+  margin-top: 16px;
 }
 
 .policy {
@@ -180,11 +182,13 @@ input[type="checkbox"]:checked::after {
 
 .container_box {
   display: flex;
+  gap: 8px;
 }
 
 .container_arrow {
   display: flex;
   justify-content: flex-end;
+  margin: 32px 0;
   .arrow {
     display: flex;
     align-items: center;
@@ -200,17 +204,17 @@ input[type="checkbox"]:checked::after {
   }
 }
 
-.button-disabled {
-  background-color: #ccc;
-  color: #666;
-  cursor: not-allowed;
-}
+// .button-disabled {
+//   background-color: #ccc;
+//   color: #666;
+//   cursor: not-allowed;
+// }
 
-.button-enabled {
-  background-color: #4caf50;
-  color: white;
-  cursor: pointer;
-}
+// .button-enabled {
+//   background-color: #4caf50;
+//   color: white;
+//   cursor: pointer;
+// }
 
 @media (max-width: 600px) {
   .write_to {

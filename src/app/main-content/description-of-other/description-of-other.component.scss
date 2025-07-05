@@ -4,6 +4,7 @@
 @import "./../../../scss/mixin.scss";
 
 section {
+  margin-top: 50px;
   position: relative;
   // overflow: hidden;
   @include fontH(
