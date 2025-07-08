@@ -4,12 +4,6 @@
       <img class="img" [src]="mySkillJosn" alt="pictur" />
     </div> -->
     <div class="grid-container">
-      <!-- <div *ngFor="let skill of skills"> -->
-      <!-- <img class="skill_img" [src]="skill.image" alt="skill image" /> -->
-
-      <!-- <p class="skill_text">{{ skill.text }}</p> -->
-      <!-- </div> -->
-
       <figure *ngFor="let skill of skills">
         <img class="skill_img" [src]="skill.image" alt="skill image" />
         <figcaption class="skill_text">{{ skill.text }}</figcaption>

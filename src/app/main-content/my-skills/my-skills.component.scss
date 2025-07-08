@@ -31,7 +31,7 @@ section {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
 
-    gap: 10px;
+    gap: 32px;
     @include padding();
     .skill_img {
       width: 54px;
@@ -44,8 +44,34 @@ section {
         $f_media: $f_body_9,
         $f_media_small: $f_body_9
       );
+      word-break: break-word;
+      max-width: 100px;
+      text-align: center;
     }
   }
+}
+
+// neu
+figure {
+  gap: 10px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.skill_img:hover {
+  animation: slide-in 0.8s linear infinite alternate;
 }
 
 .container_header {

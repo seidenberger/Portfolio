@@ -18,10 +18,10 @@ export const translations :  {
       rotate: "Ich Bin",
       talk: "Lass uns reden",
       scroll: "nach unten",
-      way: "was fürt mich in die it",
+      way: "Ich will lösungsorientiert an IT lösungen arbeiten die die geselschaft gerechter und Benuzrefreundlicher machen",
       place: "ich komme aus weilheim und siuche ein aus gewogensse feverhältnis zwischen home(offic)",
-      enthusiasm: "begeisterung",
-      solutions: "problem lösen",
+      enthusiasm: "Meine intersse an der IT wurde mit dem resperi pi geweckt wo ich kleine programme geschrieben habe, und das schöne man lernt nie aus",
+      solutions: "Es fallen mir oft verbeserungs vorschläge auf wenn ich proramme benutze die ich dann verbessern will. Im Team kommt man gemeinsam zu einem guten Konzept.",
       join_description: "dies app ist an enin kanban bord angelegt und wurde im them mit insgesmat 4 personen entwickelt.",
       pollo_loco_description: "ein 2 d jump and run spiel das objecktorientiertes programmieren gebaut wurde. hilf dem schnelln pepe coins zu sammeln und tabasko flaschen, und rüste dich für den end kampf mit dem big hunn."
       },
