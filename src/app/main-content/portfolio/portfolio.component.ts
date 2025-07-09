@@ -16,6 +16,7 @@ import { Subscription } from 'rxjs';
 export class PortfolioComponent implements OnInit, OnDestroy {
   portfolio = portfolio;
 
+  descriptionPortfoli= '';
   join_description= '';
   pollo_loco_description= '';
 
@@ -38,9 +39,10 @@ export class PortfolioComponent implements OnInit, OnDestroy {
   
   updateTexts() {
     // debugger
+     this.descriptionPortfoli = this.translationService.translate('descriptionPortfoli');
     this.join_description = this.translationService.translate('join_description');
     this.pollo_loco_description = this.translationService.translate('pollo_loco_description');
-    // this.scroll = this.translationService.translate('scroll');
+   
     
   }
   
