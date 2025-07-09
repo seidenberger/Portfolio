@@ -1,7 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ElPolloLocoComponent } from './el-pollo-loco/el-pollo-loco.component';
-import { JoinComponent } from './join/join.component';
 import { portfolio } from './portfolio-json';
 import { translations } from '../../translations';
 import { TranslationService } from '../../translation.service';
@@ -9,8 +7,7 @@ import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [ElPolloLocoComponent, 
-            JoinComponent, 
+  imports: [ 
             CommonModule
   ],
   templateUrl: './portfolio.component.html',
