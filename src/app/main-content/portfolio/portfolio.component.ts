@@ -32,6 +32,8 @@ export class PortfolioComponent implements OnInit, OnDestroy {
       this.updateTexts(); // Reagiere auf Sprachwechsel
     });
   }
+
+  
   
   ngOnDestroy(): void {
     this.sub.unsubscribe(); // Speicher aufräumen
@@ -45,6 +47,8 @@ export class PortfolioComponent implements OnInit, OnDestroy {
    
     
   }
+
+  
   
   switchLang(lang: 'de' | 'en') {
     this.translationService.setLanguage(lang);

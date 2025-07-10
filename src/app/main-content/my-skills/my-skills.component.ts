@@ -18,7 +18,10 @@ export class MySkillsComponent extends BaseTranslatedComponent{
 
   headSkills = '';
   allSkills = '';
-  // pollo_loco_description = '';
+  otherSkills = '';
+anotherSkill = '';
+enthusiasmSkills = '';
+buttonSkill = '';
 
   constructor(public override translationService: TranslationService) {
     super(translationService);
@@ -26,6 +29,10 @@ export class MySkillsComponent extends BaseTranslatedComponent{
 
   protected override updateTexts() {
     this.headSkills = this.translationService.translate('headSkills');
-    // this.pollo_loco_description = this.translationService.translate('pollo_loco_description');
+    this.allSkills = this.translationService.translate('allSkills');
+    this.otherSkills = this.translationService.translate('otherSkills');
+    this.anotherSkill = this.translationService.translate('anotherSkill');
+    this.enthusiasmSkills = this.translationService.translate('enthusiasmSkills');
+  this.buttonSkill = this.translationService.translate('buttonSkill');
   }
 }

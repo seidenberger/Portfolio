@@ -27,27 +27,28 @@
   <div class="container_butten">
     <!-- <div> -->
     <p class="another_skill">
-      sie sind auf der suche nach
-      <span [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }"
-        >anderen fähigkeiten</span
-      >
+      {{ otherSkills }}
+
+      <span [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
+        {{ anotherSkill }}
+      </span>
+      ?
     </p>
     <!-- </div> -->
     <!-- <span> -->
     <p>
-      diese webseite habe ich mit angular entwickelt beiser webseit habe ich in
-      angular (eingearbeitet)
+      {{ enthusiasmSkills }}
     </p>
     <!-- </span> -->
 
-    <p>was habe ich für skills und framworks</p>
+    <!-- <p>was habe ich für skills und framworks</p> -->
 
     <!-- <div></div> -->
 
     <!-- <div></div> -->
 
     <div class="button">
-      <a href="#contact">Let's talk</a>
+      <a href="#contact">{{ buttonSkill }} </a>
     </div>
   </div>
   <div class="container_img_shadows">
