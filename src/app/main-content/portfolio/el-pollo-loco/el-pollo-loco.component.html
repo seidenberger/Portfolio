@@ -1,20 +1,26 @@
-<!-- <section>
-  <div class="container_img_project">
-    <img src="assets/img/portfolio/Pollo loco 1.png" alt="" />
-  </div>
-  <div class="container_text_project">
-    <head>
-      El pollo loco
-    </head>
-    <p>JavaScript | HTML | CSS</p>
-    <p>
-      ein 2 d jump and run spiel das objecktorientiertes programmieren gebaut
-      wurde. hilf dem schnelln pepe coins zu sammeln und tabasko flaschen, und
-      rüste dich für den end kampf mit dem big hunn.
-    </p>
-    <div class="button">
-      <a href="https://el-pollo-loco.theodor-seidenberger.de/">Live test</a>
-      <a href="">Github</a>
+<section>
+  <div class="container_project" [class.reverse]="reverse">
+    <div class="container_img_project">
+      <img src="assets/img/portfolio/PolloLoco.png" alt="" />
+    </div>
+    <div class="container_text_project">
+      <p class="head" [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
+        El pollo loco
+      </p>
+      <p class="skill" [ngStyle]="{ color: 'rgb(112, 230, 28, 1)' }">
+        JavaScript | HTML | CSS
+      </p>
+      <p>{{ pollo_loco_description }}</p>
+      <div class="button">
+        <a
+          class="live"
+          href="https://el-pollo-loco.theodor-seidenberger.de/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Live test</a
+        >
+        <a class="github" href="">Github</a>
+      </div>
     </div>
   </div>
-</section> -->
+</section>

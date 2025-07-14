@@ -4,12 +4,12 @@ import { portfolio } from './portfolio-json';
 import { translations } from '../../translations';
 import { TranslationService } from '../../translation.service';
 import { Subscription } from 'rxjs';
+import { JoinComponent } from './join/join.component';
+import { ElPolloLocoComponent } from './el-pollo-loco/el-pollo-loco.component';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [ 
-            CommonModule
-  ],
+  imports: [CommonModule, JoinComponent, ElPolloLocoComponent],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })

@@ -16,13 +16,14 @@
       alt=""
     />
   </div>
-
-  <div
+  <app-join></app-join>
+  <app-el-pollo-loco [reverse]="true"></app-el-pollo-loco>
+  <!-- <div
     *ngFor="let portfolio of portfolio; let i = index"
     class="container_item"
     [ngClass]="{ reverse: i % 2 !== 0 }"
-  >
-    <div class="container_project">
+  > -->
+  <!-- <div class="container_project">
       <div class="container_img_project">
         <img [src]="portfolio.image" alt="" />
       </div>
@@ -45,6 +46,6 @@
           <a class="github" href="">Github</a>
         </div>
       </div>
-    </div>
-  </div>
+    </div> -->
+  <!-- </div> -->
 </section>
