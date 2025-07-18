@@ -1,8 +1,12 @@
+export interface descriptionItem {
+    textkey: string 
+}
+
 export const carousel =   [
     {
      "image": 'assets/img/description/übung/IMG_0547.JPG', 
     
-      "text": "test 1 lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia expedita vero doloremque dolorem voluptatem nisi ",
+      "textkey": 'textone' ,
         "signature": "max team Partner"
     },
     {
