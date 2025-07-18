@@ -1,33 +1,13 @@
 import { Component } from '@angular/core';
-// import { DescriptionOneComponent } from './description-one/description-one.component';
-// import { DescriptionTwoComponent } from './description-two/description-two.component';
-// import { DescriptionThreeComponent } from './description-three/description-three.component';
-// import { RouterLink } from '@angular/router';
 import { carousel } from './description-jaso';
 import { CommonModule } from '@angular/common';
-// import {
-//   CarouselComponent,
-//   CarouselControlComponent,
-//   CarouselIndicatorsComponent,
-//   CarouselInnerComponent,
-//   CarouselItemComponent
-// } from '@coreui/angular';
+import { DescriptionOneComponent } from './description-one/description-one.component';
+
 
 @Component({
   selector: 'app-description-of-other',
   imports: [
-    CommonModule
-    // RouterLink,
-    // DescriptionOneComponent,
-    // DescriptionTwoComponent,
-    // DescriptionThreeComponent
-    
-    
-    // CarouselComponent,
-    // CarouselIndicatorsComponent,
-    // CarouselInnerComponent,
-    // CarouselItemComponent,
-    // CarouselControlComponent,
+    CommonModule, DescriptionOneComponent
   ],
   templateUrl: './description-of-other.component.html',
   styleUrl: './description-of-other.component.scss'
