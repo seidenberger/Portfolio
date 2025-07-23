@@ -95,6 +95,11 @@ section {
   }
 }
 
+.container_signature {
+  display: flex;
+  flex-direction: column;
+}
+
 .navigator {
   display: flex;
   align-items: center;

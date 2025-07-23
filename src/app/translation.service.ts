@@ -4,21 +4,6 @@ import { translations, TranslationKey } from './translations';
 
 
 
-
-//\protfolio\portfolio>npm install @ngx-translate/core
-
-// up to date, audited 947 packages in 22s
-
-// 157 packages are looking for funding
-//   run `npm fund` for details
-
-// 5 moderate severity vulnerabilities
-
-// To address all issues, run:
-//   npm audit fix
-
-// Run `npm audit` for details.
-
 @Injectable({
   providedIn: 'root'
 })
@@ -43,9 +28,5 @@ export class TranslationService {
   translate(key: TranslationKey): string {
     return translations[this.currentLang][key];
   } 
-
-  // getTranslation(key: string, lang: string): string {
-  //   return translations[lang][key] || '';
-  // }
 }
    

@@ -2,7 +2,7 @@
 // sobald du die Sprache im Header umschaltest, kannst du den TranslationService nutzen,
 //  um eine reaktive Aktualisierung durchzuführen. Hierzu könntest du BehaviorSubject aus rxjs verwenden, 
 // um den aktuellen Sprachwert zu beobachten.
-export type TranslationKey = 'about' | 'skill' | 'portfolio' | 'rotate' | 'talk' | 'scroll' | 'way' | 'place' |'enthusiasm' | 'solutions' | 'headSkills' | 'allSkills' | 'otherSkills' | 'anotherSkill' | 'enthusiasmSkills' | 'buttonSkill' | 'descriptionPortfoli' | 'textone' | 'work' | 'join_description' | 'pollo_loco_description' ;
+export type TranslationKey = 'uebung' | 'about' | 'skill' | 'portfolio' | 'rotate' | 'talk' | 'scroll' | 'way' | 'place' |'enthusiasm' | 'solutions' | 'headSkills' | 'allSkills' | 'otherSkills' | 'anotherSkill' | 'enthusiasmSkills' | 'buttonSkill' | 'descriptionPortfoli' | 'textOne' |  'textTwo' | 'textThree' |'work' | 'join_description' | 'pollo_loco_description' ;
 
 
 
@@ -12,6 +12,7 @@ export const translations :  {
   } = {
 
     de: {
+
       about: "Über mich",
       skill: "Fähigkeiten",
       portfolio: "portfolio",
@@ -29,7 +30,10 @@ export const translations :  {
       enthusiasmSkills: "      diese webseite habe ich mit angular entwickelt beiser webseit habe ich in angular (eingearbeitet)",
       buttonSkill: "Lass uns konntakt aufnehmen ",
       descriptionPortfoli: "  hier sind die grösten projeckte zum aus probieren",
-      textone: "test 1 lorem Lorem ipsum",
+      uebung: "DE  hallo ich ne übung ",
+      textone: "DE 1 lorem Lorem ipsum",
+      textTwo: "DE 2222",
+      textThree: "De 33333",
       work: "DE",
       join_description: "dies app ist an ein kanban bord angelegt und wurde im Team mit insgesmat 4 personen entwickelt.",
       pollo_loco_description: "ein 2 d jump and run spiel das objecktorientiertes programmieren gebaut wurde. hilf dem schnelln pepe coins zu sammeln und tabasko flaschen, und rüste dich für den end kampf mit dem big hunn.",
@@ -53,6 +57,10 @@ export const translations :  {
         enthusiasmSkills: "EN",
         buttonSkill: "Let's talk",
         descriptionPortfoli: "EN",
+        uebung: "EN   übunung en",
+        textOne: "test 1 EN",
+        textTwo: "EN 222",
+        textThree: "EN 333",
         work: "EN",
         join_description: "EN",
         pollo_loco_description: "EN"

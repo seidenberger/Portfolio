@@ -16,12 +16,18 @@
       <div class="border">
         <div class="content">
           <div>
-            <!-- <img src="assets/img/description/Frame 281@2x.png" alt="" /> -->
+            <img src="assets/img/description/Frame 281@2x.png" alt="" />
           </div>
-          <!-- <p>{{ currentItem.text }}</p> -->
+          <!-- <p>{{ currentItem.uebung }}</p> -->
+
           <div class="container_signature">
-            <hr />
-            <p class="signature">{{ currentItem.signature }}</p>
+            <!-- <p>{{ uebung }}</p> -->
+            <p>{{ currentText }}</p>
+            <div>
+              <!-- <hr /> -->
+              <div class="line"></div>
+              <p class="signature">{{ currentItem.signature }}</p>
+            </div>
           </div>
           <app-description-one></app-description-one>
         </div>
@@ -33,13 +39,10 @@
       <button (click)="prev()" [disabled]="currentIndex === 0">
         <img src="assets/img/description/Property 1=links.png" alt="" />
       </button>
-      <div *ngFor="let carousel of carousel; let i = index">
+      <div *ngFor="let carousel of items; let i = index">
         <div class="circle" [ngClass]="{ active: i === currentIndex }"></div>
       </div>
-      <button
-        (click)="next()"
-        [disabled]="currentIndex === carousel.length - 1"
-      >
+      <button (click)="next()" [disabled]="currentIndex === items.length - 1">
         <img src="assets/img/description/Property 1=rechts.png" alt="" />
       </button>
     </div>
