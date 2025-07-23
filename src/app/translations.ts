@@ -31,7 +31,7 @@ export const translations :  {
       buttonSkill: "Lass uns konntakt aufnehmen ",
       descriptionPortfoli: "  hier sind die grösten projeckte zum aus probieren",
       uebung: "DE  hallo ich ne übung ",
-      textone: "DE 1 lorem Lorem ipsum",
+      textOne: "DE 1 lorem Lorem ipsum",
       textTwo: "DE 2222",
       textThree: "De 33333",
       work: "DE",

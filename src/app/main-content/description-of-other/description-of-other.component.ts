@@ -19,9 +19,7 @@ import { TranslationKey } from '../../translations';
 })
 
 export class DescriptionOfOtherComponent extends BaseTranslatedComponent{
-  // protected override updateTexts(): void {
-  //   throw new Error('Method not implemented.');
-  // }
+
 
   items =  descriptionItems;
   currentText ='';
@@ -33,11 +31,6 @@ export class DescriptionOfOtherComponent extends BaseTranslatedComponent{
     super(translationService)
   }
 
-    //   protected override updateTexts() {
-    //   this.uebung  = this.translationService.translate('uebung');
-    // console.log('Aktives Bild:', this.currentIndex, 'Key:', this.currentItem.textKey);
-
-    // }
 
     updateTexts() {
   const key = this.currentItem.textKey as TranslationKey;
@@ -52,12 +45,14 @@ export class DescriptionOfOtherComponent extends BaseTranslatedComponent{
   next() {
     if (this.currentIndex < this.items.length - 1) {
       this.currentIndex++;
+      this.updateTexts();
     }
   }
   
   prev() {
     if (this.currentIndex > 0) {
       this.currentIndex--;
+      this.updateTexts();
     } 
   }
 
