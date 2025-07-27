@@ -1,13 +1,25 @@
 <section id="skills">
   <div class="icons">
-    <!-- <div *ngFor="let mySkillJosn of mySkillJosn">
-      <img class="img" [src]="mySkillJosn" alt="pictur" />
-    </div> -->
     <div class="grid-container">
       <figure *ngFor="let skill of skills">
-        <img class="skill_img" [src]="skill.image" alt="skill image" />
+        <!-- <img
+          [src]="skill.image"
+          [class.active]="skill.active"
+          [class.inactive]="!skill.active"
+          alt="skill image"
+        /> -->
+        <div class="skill_img_color">
+          <img
+            class="skill_img"
+            [ngClass]="skill.active ? 'active' : 'inactive'"
+            [src]="skill.image"
+            alt="skill image"
+          />
+        </div>
+
         <figcaption class="skill_text">{{ skill.text }}</figcaption>
       </figure>
+      <!-- <pre>{{ skills | json }}</pre> -->
     </div>
   </div>
   <div class="container_header">
@@ -19,13 +31,16 @@
     </div>
 
     <div class="head_text">
+      <img
+        class="skill_img active"
+        src="assets/img/skills/Property 1=html.png"
+      />
       <p>
         {{ allSkills }}
       </p>
     </div>
   </div>
   <div class="container_butten">
-    <!-- <div> -->
     <p class="another_skill">
       {{ otherSkills }}
 
@@ -34,18 +49,9 @@
       </span>
       ?
     </p>
-    <!-- </div> -->
-    <!-- <span> -->
     <p>
       {{ enthusiasmSkills }}
     </p>
-    <!-- </span> -->
-
-    <!-- <p>was habe ich für skills und framworks</p> -->
-
-    <!-- <div></div> -->
-
-    <!-- <div></div> -->
 
     <div class="button">
       <a href="#contact">{{ buttonSkill }} </a>

@@ -1,46 +1,57 @@
 export const mySkills =   [
     {
       "image": 'assets/img/skills/Property 1=html.png',
-      "text": "HTML"
+      "text": "HTML",
+    active: true
     },
     {
         "image": 'assets/img/skills/Property 1=css.png',
-        "text": "CSS"
+        "text": "CSS",
+        active: true
     },
     {
         "image": 'assets/img/skills/Property 1=JavScript.png',
-        "text": "JavaScript"
+        "text": "JavaScript",
+     active: true
     },
     {
         "image": 'assets/img/skills/Property 1=Typescript.png',
-        "text": "TypeScript"
+        "text": "TypeScript",
+     active: true
     },
     {
         "image": 'assets/img/skills/Property 1=Angular.png',
-        "text": "Angular"
+        "text": "Angular",
+     active: true
     },
     {
         "image": 'assets/img/skills/Property 1=Firebase.png',
-        "text": "Firebase"
+        "text": "Firebase",
+     active: true
     },
     {
         "image": 'assets/img/skills/Property 1=Git.png',
-        "text": "Git"
+        "text": "Git",
+     active: true
     },
     {
         "image": 'assets/img/skills/Property 1=Api.png',
-        "text": "Rest Api"
+        "text": "Rest Api",
+     active: true
     },
     {
         "image": 'assets/img/skills/Property 1=Scrum.png',
-        "text": "Scrum"
+        "text": "Scrum",
+     active: true
     },
     {
         "image": 'assets/img/skills/Property 1=Material Design.png',
-        "text": "Material  Design"
+        "text": "Material  Design",
+     active: true
     },
     {
         "image": 'assets/img/skills/Property 1=Continually learning.png',
-        "text": "Continually learning"
+        "text": "Continually learning",
+     active: false
     } 
   ]

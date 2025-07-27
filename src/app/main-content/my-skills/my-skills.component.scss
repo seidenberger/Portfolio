@@ -70,9 +70,27 @@ figure {
   }
 }
 
+// .skill_img:hover {
+//   animation: slide-in 0.8s linear infinite alternate;
+// }
+
 .skill_img:hover {
   animation: slide-in 0.8s linear infinite alternate;
 }
+.skill_img.inactive:hover {
+  animation: none;
+}
+
+.skill_img.inactive {
+  filter: grayscale(100%) sepia(100%) hue-rotate(250deg) saturate(500%)
+    brightness(0.7);
+}
+
+// .skill_img_color::after {
+//   background-color: green;
+//   position: absolute;
+// background-color: $purple;
+// }
 
 .container_header {
   grid-area: container_header;

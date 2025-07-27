@@ -35,4 +35,12 @@ buttonSkill = '';
     this.enthusiasmSkills = this.translationService.translate('enthusiasmSkills');
   this.buttonSkill = this.translationService.translate('buttonSkill');
   }
+
+  // images = this.skills.map(img => ({
+  //   ...img,
+  //   active: img.active !== false // alles außer false wird true
+  // }));
+
+  
+
 }
