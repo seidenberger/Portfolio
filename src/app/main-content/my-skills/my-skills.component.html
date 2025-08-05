@@ -11,13 +11,18 @@
         <div class="skill_img_color">
           <img
             class="skill_img"
-            [ngClass]="skill.active ? 'active' : 'inactive'"
             [src]="skill.image"
             alt="skill image"
+            [ngClass]="skill.active ? 'active' : 'inactive'"
           />
         </div>
 
-        <figcaption class="skill_text">{{ skill.text }}</figcaption>
+        <figcaption
+          class="skill_text"
+          [ngClass]="skill.active ? 'active' : 'inactive'"
+        >
+          {{ skill.text }}
+        </figcaption>
       </figure>
       <!-- <pre>{{ skills | json }}</pre> -->
     </div>
@@ -31,10 +36,10 @@
     </div>
 
     <div class="head_text">
-      <img
+      <!-- <img
         class="skill_img active"
         src="assets/img/skills/Property 1=html.png"
-      />
+      /> -->
       <p>
         {{ allSkills }}
       </p>

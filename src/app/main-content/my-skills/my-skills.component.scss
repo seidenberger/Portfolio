@@ -7,12 +7,13 @@ section {
   scroll-margin-top: 100px;
   @include layers(3);
   margin-top: 50px;
-  // border: 2px solid yellow;
+  border: 2px solid yellow;
   @include fontH(
     $font_size: $f_body_8,
     $font_weight: $f_w_small,
     $f_media: $f_body_8
   );
+  @include padding();
   display: grid;
   grid-template-columns: 15% 15% auto 1fr;
   grid-template-rows: auto auto;
@@ -32,7 +33,7 @@ section {
     grid-template-rows: auto auto auto;
 
     gap: 32px;
-    @include padding();
+    // @include padding();
     .skill_img {
       width: 54px;
       height: 60px;
@@ -77,13 +78,18 @@ figure {
 .skill_img:hover {
   animation: slide-in 0.8s linear infinite alternate;
 }
+
 .skill_img.inactive:hover {
   animation: none;
+  color: $white;
 }
 
-.skill_img.inactive {
-  filter: grayscale(100%) sepia(100%) hue-rotate(250deg) saturate(500%)
-    brightness(0.7);
+.skill_text.inactive {
+  color: $purple;
+}
+
+.skill_text.inactive:hover {
+  color: $white;
 }
 
 // .skill_img_color::after {
@@ -181,17 +187,40 @@ a {
     padding-right: 25px;
     padding-left: 25px;
   }
+
+  .icons {
+    .grid-container {
+      .skill_img {
+        width: 34px;
+        height: 48px;
+      }
+    }
+  }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1300px) {
   .icons {
     .grid-container {
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: auto auto auto auto;
     }
   }
-  .skill_img {
+  // .skill_img {
+  //   width: 48px;
+  //   height: 48px;
+  // }
+}
+
+@media (max-width: 480px) {
+  figure {
     width: 48px;
-    height: 48px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .icons {
+    .grid-container {
+      column-gap: 4px;
+    }
   }
 }
