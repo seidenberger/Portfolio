@@ -1,14 +1,12 @@
 <section id="skills">
   <div class="icons">
     <div class="grid-container">
-      <figure *ngFor="let skill of skills">
-        <!-- <img
-          [src]="skill.image"
-          [class.active]="skill.active"
-          [class.inactive]="!skill.active"
-          alt="skill image"
-        /> -->
-        <div class="skill_img_color">
+      <!-- <figure
+        class="container"
+        *ngFor="let skill of skills; let i = index"
+        [class.active]="skill.active"
+      >
+        <div class="skill_img_box1">
           <img
             class="skill_img"
             [src]="skill.image"
@@ -18,13 +16,30 @@
         </div>
 
         <figcaption
-          class="skill_text"
+          class="text_box2"
           [ngClass]="skill.active ? 'active' : 'inactive'"
         >
           {{ skill.text }}
         </figcaption>
+      </figure> -->
+
+      <figure
+        *ngFor="let skill of skills; let i = index"
+        (mouseenter)="onHover(i, skill.active)"
+        (mouseleave)="onLeave(i)"
+      >
+        <div
+          class="skill_img_box1"
+          [class.move-up]="hoverIndex === i && skill.active"
+        >
+          <img class="skill_img" [src]="skill.image" alt="skill image" />
+          <!-- <img class="skill_img" [src]="hoverImage && hoverIndex === null && i === hoveredFalseIndex ? hoverImage : skill.image" alt="skill image" /> -->
+        </div>
+
+        <figcaption [ngClass]="skill.active ? 'active' : 'inactive'">
+          {{ skill.text }}
+        </figcaption>
       </figure>
-      <!-- <pre>{{ skills | json }}</pre> -->
     </div>
   </div>
   <div class="container_header">
@@ -36,10 +51,6 @@
     </div>
 
     <div class="head_text">
-      <!-- <img
-        class="skill_img active"
-        src="assets/img/skills/Property 1=html.png"
-      /> -->
       <p>
         {{ allSkills }}
       </p>

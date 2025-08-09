@@ -62,6 +62,15 @@ figure {
   justify-content: center;
 }
 
+.skill_img_box1.move-up {
+  animation: slide-in 0.8s linear infinite alternate;
+}
+
+figcaption {
+  // color: $purple;
+  color: $white;
+}
+
 @keyframes slide-in {
   0% {
     transform: translateY(0);
@@ -71,32 +80,21 @@ figure {
   }
 }
 
-// .skill_img:hover {
-//   animation: slide-in 0.8s linear infinite alternate;
-// }
-
-.skill_img:hover {
+.move-up.active {
   animation: slide-in 0.8s linear infinite alternate;
 }
 
-.skill_img.inactive:hover {
-  animation: none;
+.text_box2.inactive {
   color: $white;
 }
 
-.skill_text.inactive {
+figcaption.inactive {
   color: $purple;
 }
 
-.skill_text.inactive:hover {
+figcaption.inactive:hover {
   color: $white;
 }
-
-// .skill_img_color::after {
-//   background-color: green;
-//   position: absolute;
-// background-color: $purple;
-// }
 
 .container_header {
   grid-area: container_header;
@@ -223,4 +221,11 @@ a {
       column-gap: 4px;
     }
   }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }

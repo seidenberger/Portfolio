@@ -13,6 +13,8 @@ import { TranslationService } from '../../translation.service';
 export class MySkillsComponent extends BaseTranslatedComponent{
   skills = mySkills;
 
+hoverIndex: number | null = null;
+hoverImage: string | null = null;
 
 
 
@@ -36,11 +38,25 @@ buttonSkill = '';
   this.buttonSkill = this.translationService.translate('buttonSkill');
   }
 
-  // images = this.skills.map(img => ({
-  //   ...img,
-  //   active: img.active !== false // alles außer false wird true
-  // }));
 
+onHover(index: number, truh: boolean) {
+  if (truh) {
+    this.hoverIndex = index;
+    //  this.hoverImage = null;
+  }    else {
+    this.hoverIndex = null; 
+    //  this.hoverImage = 'assets/img/placeholder.png';
+  }
+}
+
+onLeave(index: number) {
+  if (this.hoverIndex === index) {
+    this.hoverIndex = null;
+  }
+    this.hoverImage = null;
+
+
+}
   
 
 }

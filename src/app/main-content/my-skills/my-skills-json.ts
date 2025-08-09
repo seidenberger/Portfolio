@@ -49,12 +49,8 @@ export const mySkills =   [
         "text": "Material  Design",
      active: true
     },
-    // {
-    //     "image": 'assets/img/skills/Property 1=Continually learning.png',
-    //     "text": "Continually learning",
-    //  active: false
-    // },
         {
+            "imagew": 'assets/img/skills/Property 1=Continually learning.png',
         "image": 'assets/img/skills/Capa_1.png',
         "text": "Continually learning",
      active: false

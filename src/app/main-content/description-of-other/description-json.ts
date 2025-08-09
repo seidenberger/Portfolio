@@ -1,15 +1,10 @@
-// export interface DescriptionItem {
-//       image: string;
-//     textKey: string ;
-//     signature: string
-// }
+
 
 export const descriptionItems =   [
-    // export const descriptionItems: DescriptionItem[] =   [
+
     {
      "image": 'assets/img/description/übung/IMG_0547.JPG', 
-    
-      "textKey": 'textOne' ,
+        "textKey": 'textOne' ,
         "signature": "max team Partner"
     },
     {
@@ -24,6 +19,3 @@ export const descriptionItems =   [
     }
 ]
 
-// "text": "2 test 2   nobis voluptas ipsa vitae repellat, ipsum harum unde assumenda odit. Nesciunt soluta voluptatem voluptate cum.",
-
-// "text": "test 3 ",

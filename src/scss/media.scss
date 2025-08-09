@@ -4,10 +4,10 @@
   }
 }
 
-@mixin padding($right: 100px, $left: 100px) {
+@mixin padding($right: 100px, $left: 100px, $width: 600px) {
   padding-right: $right;
   padding-left: $left;
-  @media (max-width: 600px) {
+  @media (max-width: $width) {
     padding-right: 25px;
     padding-left: 25px;
   }
