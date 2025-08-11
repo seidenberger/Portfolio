@@ -37,7 +37,7 @@ section {
 
 .shadow {
   grid-area: shadow;
-  @include layers(4);
+  @include layers($layers: 0);
   overflow: visible;
   margin-top: -400px;
   img {
@@ -48,6 +48,7 @@ section {
 }
 
 .border_line {
+  @include layers(1);
   @include dNone();
   grid-area: line;
   .line {

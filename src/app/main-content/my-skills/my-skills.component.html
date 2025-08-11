@@ -25,6 +25,7 @@
 
       <figure
         *ngFor="let skill of skills; let i = index"
+        [ngClass]="skill.active ? 'active' : 'inactive'"
         (mouseenter)="onHover(i, skill.active)"
         (mouseleave)="onLeave(i)"
       >
@@ -32,8 +33,11 @@
           class="skill_img_box1"
           [class.move-up]="hoverIndex === i && skill.active"
         >
-          <img class="skill_img" [src]="skill.image" alt="skill image" />
-          <!-- <img class="skill_img" [src]="hoverImage && hoverIndex === null && i === hoveredFalseIndex ? hoverImage : skill.image" alt="skill image" /> -->
+          <img
+            class="skill_img"
+            [src]="hoverIndex === i && hoverImage ? hoverImage : skill.image"
+            alt="skill image"
+          />
         </div>
 
         <figcaption [ngClass]="skill.active ? 'active' : 'inactive'">

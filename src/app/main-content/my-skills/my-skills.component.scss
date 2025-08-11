@@ -5,7 +5,7 @@
 
 section {
   scroll-margin-top: 100px;
-  @include layers(3);
+  // @include layers(3);
   margin-top: 50px;
   border: 2px solid yellow;
   @include fontH(
@@ -22,9 +22,11 @@ section {
     "icon icon icon container_header "
     "icon icon icon container_butten";
   @include gridCandRows(auto auto);
+  // @include layers($layers: 1);
 }
 
 .icons {
+  @include layers(1);
   grid-area: icon;
   .grid-container {
     display: grid;
@@ -66,11 +68,6 @@ figure {
   animation: slide-in 0.8s linear infinite alternate;
 }
 
-figcaption {
-  // color: $purple;
-  color: $white;
-}
-
 @keyframes slide-in {
   0% {
     transform: translateY(0);
@@ -88,12 +85,16 @@ figcaption {
   color: $white;
 }
 
-figcaption.inactive {
+figure.inactive {
   color: $purple;
 }
 
-figcaption.inactive:hover {
+figure.inactive:hover {
   color: $white;
+}
+
+figure.inactive:hover img {
+  filter: brightness(0) invert(1); // Weiß
 }
 
 .container_header {
@@ -122,6 +123,7 @@ figcaption.inactive:hover {
 }
 
 .container_butten {
+  @include layers(1);
   grid-area: container_butten;
   @include padding();
   margin: 32px 0;
@@ -170,14 +172,6 @@ a {
       " container_butten";
   }
 }
-
-// @media (max-width: 900px) {
-//   .grid-container {
-//     display: grid;
-//     grid-template-columns: 88px 88px 88px;
-//     grid-template-rows: 100px 100px 100px 100px;
-//   }
-// }
 
 @media (max-width: 600px) {
   .head_text,

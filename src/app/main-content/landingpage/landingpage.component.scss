@@ -45,7 +45,9 @@ section {
 
 .container_img_shadows {
   display: contents;
+  // @include layers(1);
   img {
+    // @include layers(1);
     height: auto;
     max-width: 690px;
     max-height: 671px;
@@ -147,6 +149,7 @@ section {
 }
 
 .overlay_rotated {
+  @include layers(8);
   @include dNone();
   display: flex;
   align-items: center;

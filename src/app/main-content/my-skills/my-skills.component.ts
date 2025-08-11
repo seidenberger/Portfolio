@@ -40,12 +40,13 @@ buttonSkill = '';
 
 
 onHover(index: number, truh: boolean) {
+  //  console.log('onHover aufgerufen', { index, truh });
   if (truh) {
     this.hoverIndex = index;
     //  this.hoverImage = null;
   }    else {
     this.hoverIndex = null; 
-    //  this.hoverImage = 'assets/img/placeholder.png';
+    //  this.hoverImage = 'assets/img/skills/Property 1=Continually learning.png';
   }
 }
 
@@ -54,8 +55,6 @@ onLeave(index: number) {
     this.hoverIndex = null;
   }
     this.hoverImage = null;
-
-
 }
   
 
