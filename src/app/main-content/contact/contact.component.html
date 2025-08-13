@@ -10,25 +10,24 @@
   </div>
   <header>
     <div class="line"></div>
-    <span id="contact">Contact</span>
+    <span id="contact">{{ contact }} </span>
   </header>
   <div class="container_write_to">
     <div class="write_to">
       <div class="text">
-        <h3>got a poroblem to solve?</h3>
-        <!-- <span class="contact_text">
-          lila border your name // schreiben grüner border ohne haken unter
-          massege butten grau// mit haken butten grau // huffer lila input
-          signals
-        </span> -->
-
+        <h3>
+          {{ solve }}
+        </h3>
         <p>
-          sie suche ferstärkung im team ich biin der rischtige / wie ist ihre
-          programier sprache / was ist ihr kern gescheft
+          {{ reinforcement }}
         </p>
         <p>
+          <!-- wayMessage -->
           wir finden eine lösung Sie suchenn ein frontend developer?
-          <strong>Kontacktiere Mich! / lass uns unterhalten!</strong>
+          <strong>
+            <!-- entertain  -->
+            Kontacktiere Mich! / lass uns unterhalten!</strong
+          >
         </p>
         <!-- <span>spioughsüsees</span> -->
       </div>
@@ -46,7 +45,10 @@
               #name="ngModel"
             />
             @if(!name.valid && name.touched) {
-            <span>Bitte Name einfügen</span>
+            <span>
+              <!-- pleaseName -->
+              Bitte Name einfügen</span
+            >
             }
 
             <label for="email"></label>
@@ -61,7 +63,10 @@
               #email="ngModel"
             /><label for=""></label>
             @if(!email.valid && email.touched) {
-            <span>Bitte Email einfügen</span>
+            <span>
+              <!-- pleaseEmail -->
+              Bitte Email einfügen</span
+            >
             }
             <!-- <div *ngIf="email.invalid && email.touched">
               <span *ngIf="email.errors?.['required']"
@@ -81,7 +86,10 @@
               required
             ></textarea>
             @if (!message.valid && message.touched) {
-            <span>pleas enter a message</span>
+            <span>
+              <!-- pleaseMassage -->
+              pleas enter a message</span
+            >
             }
             <div>
               <div class="container_box">
@@ -98,15 +106,19 @@
                   class="fill_1out_hint"
                   *ngIf="showError && !contactData.privacyAccepted"
                 >
+                  <!-- pleaseAccept -->
                   Please accept the privacy policy
                 </div>
 
                 <div class="policy">
+                  <!-- policyRead -->
                   I've read the
                   <span [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
+                    <!-- policyPolicy -->
                     privacy policy
                   </span>
-                  and agree to the porocessing of my data as outlined.
+                  policyAgree and agree to the porocessing of my data as
+                  outlined.
                 </div>
               </div>
 

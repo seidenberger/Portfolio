@@ -2,7 +2,7 @@
 // sobald du die Sprache im Header umschaltest, kannst du den TranslationService nutzen,
 //  um eine reaktive Aktualisierung durchzuführen. Hierzu könntest du BehaviorSubject aus rxjs verwenden, 
 // um den aktuellen Sprachwert zu beobachten.
-export type TranslationKey = 'uebung' | 'about' | 'skill' | 'portfolio' | 'rotate' | 'talk' | 'scroll' | 'way' | 'place' |'enthusiasm' | 'solutions' | 'headSkills' | 'allSkills' | 'otherSkills' | 'anotherSkill' | 'enthusiasmSkills' | 'buttonSkill' | 'descriptionPortfoli' | 'textOne' |  'textTwo' | 'textThree' |'work' | 'join_description' | 'pollo_loco_description' ;
+export type TranslationKey = 'uebung' | 'about' | 'skill' | 'portfolio' | 'rotate' | 'talk' | 'scroll' | 'way' | 'place' |'enthusiasm' | 'solutions' | 'headSkills' | 'allSkills' | 'otherSkills' | 'anotherSkill' | 'enthusiasmSkills' | 'buttonSkill' | 'descriptionPortfoli' | 'textOne' |  'textTwo' | 'textThree' |'work' | 'join_description' | 'pollo_loco_description' | 'contact' | 'solve' | 'reinforcement' | 'wayMessage' | 'entertain'  | 'yourName' | 'pleaseName' | 'yourMail' | 'pleaseEmail' | 'yourMassage' | 'pleaseMassage' | 'pleaseAccept' | 'policyRead' | 'policyPolicy' | 'policyAgree' | 'sendMessage' ;
 
 
 
@@ -37,6 +37,22 @@ export const translations :  {
       work: "DE",
       join_description: "dies app ist an ein kanban bord angelegt und wurde im Team mit insgesmat 4 personen entwickelt.",
       pollo_loco_description: "ein 2 d jump and run spiel das objecktorientiertes programmieren gebaut wurde. hilf dem schnelln pepe coins zu sammeln und tabasko flaschen, und rüste dich für den end kampf mit dem big hunn.",
+      contact: "Kontakt",
+      solve: "Problem zu lössen?",
+      reinforcement : "sie suche ferstärkung im team ich biin der rischtige / wie ist ihre          programier sprache / was ist ihr kern gescheft",
+      wayMessage: "DE",
+      entertain: "DE",
+      // yourName: "DE",
+      pleaseName: "DE",
+      // yourMail: "DE",
+      pleaseEmail: "DE",
+      // yourMassage: "DE",
+      pleaseMassage: "DE",
+      pleaseAccept: "DE",
+      policyRead: "DE",
+      policyPolicy: "DE",
+      policyAgree: "DE",
+      // sendMessage: "DE",
 
       },
     en: {
@@ -63,6 +79,22 @@ export const translations :  {
         textThree: "EN 333",
         work: "EN",
         join_description: "EN",
-        pollo_loco_description: "EN"
+        pollo_loco_description: "EN",
+        contact: "Contact",
+        solve: "got a poroblem to solve?",
+        reinforcemen: "EN",
+        wayMessage: "EN",
+        entertain: "EN",
+        // yourName: "EN",
+        pleaseName: "EN",
+        // yourMail: "EN",
+        pleaseEmail: "EN",
+        // yourMassage: "EN",
+        pleaseMassage: "EN",
+        pleaseAccept: "EN",
+        policyRead: "EN",
+        policyPolicy: "EN",
+        policyAgree: "EN",
+        // sendMessage: "EN",
       }
   };  

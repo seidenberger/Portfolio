@@ -3,9 +3,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 
 import { FormsModule, NgForm } from '@angular/forms'; 
-
-
-
+import { BaseTranslatedComponent } from '../../base-translated.component';
+import { TranslationService } from '../../translation.service';
 
 @Component({
   selector: 'app-contact',
@@ -19,11 +18,16 @@ import { FormsModule, NgForm } from '@angular/forms';
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent {
+export class ContactComponent extends BaseTranslatedComponent{
 
   http = inject(HttpClient);
 
   showError = false; 
+  mailTest = false;
+
+  constructor(public override translationService: TranslationService) {
+    super(translationService)
+  }
 
   contactData = {
     name: "",
@@ -32,20 +36,49 @@ export class ContactComponent {
      privacyAccepted: false
   }
 
-//   onSubmit(ngForm: NgForm) {
-//     if(ngForm.valid && ngForm.submitted){
-//     console.log(this.contactData)
-//   }
-// }
+  contact= '';
+  solve= '';
+  reinforcement= '';
+  wayMessage= '';
+  entertain= '';
+// yourName= '';
+  pleaseName= '';
+  // yourMail= '';
+  pleaseEmail= '';
+  // yourMassage= '';
+  pleaseMassage= '';
+  pleaseAccept= '';
+  policyRead= '';
+  policyPolicy= '';
+  policyAgree= '';
+//  sendMessage= '';
 
-  
+
 logPrivacy() {
   console.log(this.contactData.privacyAccepted);
 }
 
+updateTexts() {
+  // debugger
+  this.contact = this.translationService.translate('contact');
+  this.solve = this.translationService.translate('solve');
+  this.reinforcement = this.translationService.translate('reinforcement');
+  this.wayMessage = this.translationService.translate('wayMessage');
+  this.entertain = this.translationService.translate('entertain');
+  // this.yourName = this.translationService.translate('yourName');
+  this.pleaseName = this.translationService.translate('pleaseName');
+  // this.yourMail = this.translationService.translate('yourMail');
+  this.pleaseEmail = this.translationService.translate('pleaseEmail');
+  // this.yourMassage = this.translationService.translate('yourMassage');
+  this.pleaseMassage = this.translationService.translate('pleaseMassage');
+  this.pleaseAccept = this.translationService.translate('pleaseAccept');
+  this.policyRead = this.translationService.translate('policyRead');
+  this.policyPolicy = this.translationService.translate('policyPolicy');
+  this.policyAgree = this.translationService.translate('policyAgree');
+  // this.sendMessage = this.translationService.translate('sendMessage');
+  
+}
 
-
-  mailTest = false;
 
   post = {
     endPoint: 'https://theodor-seidenberger.de/sendMail.php',
@@ -84,20 +117,5 @@ logPrivacy() {
 
 
 
-//   onSubmit(form: NgForm) {
-//   console.log("läuft");
-//   console.log(this.contactData)
 
-//   console.log(this.showPrivacyError)
-//   if (!this.contactData.privacyAccepted) {
-//     this.showPrivacyError = true;
-//     return; // breche ab
-//   } 
-
-//   if (form.valid) {
-//     this.showPrivacyError = false;
-//     console.log('Formular erfolgreich gesendet', this.contactData);
-//     // Weiterer Code hier ...
-//   }
-// }
 } 
