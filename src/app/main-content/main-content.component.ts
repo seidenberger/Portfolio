@@ -22,22 +22,5 @@ import { WaveComponent } from './wave/wave.component';
   styleUrl: './main-content.component.scss'
 })
 export class MainContentComponent {
-// implements OnInit 
 
-  // constructor(private responsive: BreakpointObserver) {
-  
-  // }
-  
-  // ngOnInit() {
-  
-  //   this.responsive.observe(Breakpoints.HandsetLandscape)
-  //     .subscribe(result => {
-
-  //       if (result.matches) {
-  //         console.log("screens matches HandsetLandscape");
-  //       }
-
-  // });
-    
-  // }
 }

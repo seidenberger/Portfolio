@@ -15,7 +15,7 @@ export const translations :  {
 
       about: "Über mich",
       skill: "Fähigkeiten",
-      portfolio: "portfolio",
+      portfolio: "Portfolio",
       rotate: "Ich Bin",
       talk: "Lass uns reden",
       scroll: "nach unten",
@@ -42,7 +42,7 @@ export const translations :  {
     en: {
         about: "About me",
         skill: "Skills", 
-        portfolio: "portfolio",
+        portfolio: "Portfolio",
         rotate: "I am",
         talk: "Let's talk",
         scroll: "scroll down",

@@ -4,9 +4,6 @@
       <a href="#home" class="logo"
         >Th<span class="letter_e">e</span>odo<span class="letter_r">r </span>
       </a>
-      <!-- <div (click)="toggelMenu()" class="burger">
-      <img src="assets/icons/Property 1=burger.png" alt="" />
-    </div> -->
       <button (click)="toggelMenu()" class="burger">
         <img src="assets/icons/Property 1=burger.png" alt="" />
       </button>
@@ -18,9 +15,7 @@
   </header>
   @if (showMenu) {
   <div class="mobil" *ngIf="showMenu">
-    <!-- <nav> -->
     <app-menu-overlay (closed)="onOverlayClosed()"></app-menu-overlay>
-    <!-- </nav> -->
   </div>
 
   }

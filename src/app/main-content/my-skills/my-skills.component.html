@@ -1,28 +1,6 @@
 <section id="skills">
   <div class="icons">
     <div class="grid-container">
-      <!-- <figure
-        class="container"
-        *ngFor="let skill of skills; let i = index"
-        [class.active]="skill.active"
-      >
-        <div class="skill_img_box1">
-          <img
-            class="skill_img"
-            [src]="skill.image"
-            alt="skill image"
-            [ngClass]="skill.active ? 'active' : 'inactive'"
-          />
-        </div>
-
-        <figcaption
-          class="text_box2"
-          [ngClass]="skill.active ? 'active' : 'inactive'"
-        >
-          {{ skill.text }}
-        </figcaption>
-      </figure> -->
-
       <figure
         *ngFor="let skill of skills; let i = index"
         [ngClass]="skill.active ? 'active' : 'inactive'"

@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslationService } from '../../translation.service';
-import { Subscription } from 'rxjs';
+import { BaseTranslatedComponent } from '../../base-translated.component';
 
 @Component({
   selector: 'app-landingpage',
@@ -11,15 +11,17 @@ import { Subscription } from 'rxjs';
   templateUrl: './landingpage.component.html',
   styleUrl: './landingpage.component.scss'
 })
-export class LandingpageComponent implements OnInit, OnDestroy{ 
+export class LandingpageComponent extends BaseTranslatedComponent{ 
 
   rotate= '';
   talk= '';
   scroll= '';
   
-  private sub!: Subscription;
+  // private sub!: Subscription;
 
-  constructor(public translationService: TranslationService) {}
+  constructor(public override translationService: TranslationService) {
+    super(translationService)
+  }
 
 iconsLandingpage: string[] = [
   'assets/icons/Property 1=Default.png',
@@ -28,16 +30,16 @@ iconsLandingpage: string[] = [
 
 ]
 
-ngOnInit(): void {
-  this.updateTexts(); // Initiale Texte
-  this.sub = this.translationService.lang$.subscribe(() => {
-    this.updateTexts(); // Reagiere auf Sprachwechsel
-  });
-}
+// ngOnInit(): void {
+//   this.updateTexts(); // Initiale Texte
+//   this.sub = this.translationService.lang$.subscribe(() => {
+//     this.updateTexts(); // Reagiere auf Sprachwechsel
+//   });
+// }
 
-ngOnDestroy(): void {
-  this.sub.unsubscribe(); // Speicher aufräumen
-}
+// ngOnDestroy(): void {
+//   this.sub.unsubscribe(); // Speicher aufräumen
+// }
 
 updateTexts() {
   // debugger
@@ -47,9 +49,9 @@ updateTexts() {
   
 }
 
-switchLang(lang: 'de' | 'en') {
-  this.translationService.setLanguage(lang);
-  console.log(lang);
-}
+// switchLang(lang: 'de' | 'en') {
+//   this.translationService.setLanguage(lang);
+//   console.log(lang);
+// }
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslationService } from '../../translation.service';
 import { Subscription } from 'rxjs';
+import { BaseTranslatedComponent } from '../../base-translated.component';
 
 @Component({
   selector: 'app-about-me',
@@ -8,27 +9,29 @@ import { Subscription } from 'rxjs';
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
 })
-export class AboutMeComponent implements OnInit, OnDestroy{
+export class AboutMeComponent extends BaseTranslatedComponent{
 
   about= '';
   way= '';
   place= '';
   enthusiasm= '';
   solutions= '';
-  private sub!: Subscription;
+  // private sub!: Subscription;
 
-  constructor(public translationService: TranslationService) {}
-
-  ngOnInit(): void {
-    this.updateTexts(); // Initiale Texte
-    this.sub = this.translationService.lang$.subscribe(() => {
-      this.updateTexts(); // Reagiere auf Sprachwechsel
-    });
+  constructor(public override translationService: TranslationService) {
+    super(translationService)
   }
+
+  // ngOnInit(): void {
+  //   this.updateTexts(); // Initiale Texte
+  //   this.sub = this.translationService.lang$.subscribe(() => {
+  //     this.updateTexts(); // Reagiere auf Sprachwechsel
+  //   });
+  // }
   
-  ngOnDestroy(): void {
-    this.sub.unsubscribe(); // Speicher aufräumen
-  }
+  // ngOnDestroy(): void {
+  //   this.sub.unsubscribe(); // Speicher aufräumen
+  // }
   
   updateTexts() {
     // debugger
@@ -40,8 +43,8 @@ export class AboutMeComponent implements OnInit, OnDestroy{
     this.solutions = this.translationService.translate('solutions');
   }
   
-  switchLang(lang: 'de' | 'en') {
-    this.translationService.setLanguage(lang);
-    console.log(lang);
-  }
+  // switchLang(lang: 'de' | 'en') {
+  //   this.translationService.setLanguage(lang);
+  //   console.log(lang);
+  // }
 }

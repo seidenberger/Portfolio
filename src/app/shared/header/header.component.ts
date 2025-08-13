@@ -21,6 +21,7 @@ export class HeaderComponent {
 
   onOverlayClosed() {
     this.showMenu = false;
+    console.log('showMenu :', )
   }
 
 }
