@@ -28,3 +28,4 @@ export abstract class BaseTranslatedComponent implements OnInit, OnDestroy {
 
   protected abstract updateTexts(): void;
 }
+

@@ -13,8 +13,6 @@ import { log } from 'node:console';
 })
 export class MenuOverlayComponent  implements OnInit, OnDestroy{
   activeLang = signal<'de' | 'en'>('de');
-  
-// showMenu = true; 
 
       about= '';
       skill= '';
@@ -23,10 +21,9 @@ export class MenuOverlayComponent  implements OnInit, OnDestroy{
 
   isDEActive = signal(false);
 
-  constructor(public translationService: TranslationService) {}
-
-  // @Input() show = f''alse;  // bekommt den Wert vom Parent
-
+  constructor(public translationService: TranslationService) {
+     this.activeLang.set(this.translationService.getLanguage());
+  }
   
     @Output() closed = new EventEmitter<void>();
 
@@ -36,19 +33,16 @@ export class MenuOverlayComponent  implements OnInit, OnDestroy{
   }
 
 
-  // handleClose() {
-  //    // Damit Header reagieren kann
-  // }
 
   ngOnInit(): void {
-    this.updateTexts(); // Initiale Texte
+    this.updateTexts(); 
     this.sub = this.translationService.lang$.subscribe(() => {
-      this.updateTexts(); // Reagiere auf Sprachwechsel
+      this.updateTexts(); 
     });
   }
 
   ngOnDestroy(): void {
-    this.sub.unsubscribe(); // Speicher aufräumen 
+    this.sub.unsubscribe(); 
   }
 
   updateTexts() {

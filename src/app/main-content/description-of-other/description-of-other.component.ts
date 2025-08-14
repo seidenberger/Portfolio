@@ -35,7 +35,7 @@ export class DescriptionOfOtherComponent extends BaseTranslatedComponent{
     updateTexts() {
   const key = this.currentItem.textKey as TranslationKey;
   this.currentText = this.translationService.translate(key);
-  console.log('updateTexts  Aktives Bild:', this.currentIndex, 'Key:', key, 'Text:', this.currentText);
+  // console.log('updateTexts  Aktives Bild:', this.currentIndex, 'Key:', key, 'Text:', this.currentText);
 }
 
   get currentItem() {
