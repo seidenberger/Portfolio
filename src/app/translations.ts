@@ -2,7 +2,7 @@
 // sobald du die Sprache im Header umschaltest, kannst du den TranslationService nutzen,
 //  um eine reaktive Aktualisierung durchzuführen. Hierzu könntest du BehaviorSubject aus rxjs verwenden, 
 // um den aktuellen Sprachwert zu beobachten.
-export type TranslationKey = 'uebung' | 'about' | 'skill' | 'portfolio' | 'rotate' | 'talk' | 'scroll' | 'way' | 'place' |'enthusiasm' | 'solutions' | 'headSkills' | 'allSkills' | 'otherSkills' | 'anotherSkill' | 'enthusiasmSkills' | 'buttonSkill' | 'descriptionPortfoli' | 'textOne' |  'textTwo' | 'textThree' |'work' | 'join_description' | 'pollo_loco_description' | 'contact' | 'solve' | 'reinforcement' | 'wayMessage' | 'entertain'  | 'yourName' | 'pleaseName' | 'yourMail' | 'pleaseEmail' | 'yourMassage' | 'pleaseMassage' | 'pleaseAccept' | 'policyRead' | 'policyPolicy' | 'policyAgree' | 'sendMessage' ;
+export type TranslationKey = 'uebung' | 'about' | 'skill' | 'portfolio' | 'rotate' | 'talk' | 'scroll' | 'way' | 'place' |'enthusiasm' | 'solutions' | 'headSkills' | 'allSkills' | 'otherSkills' | 'anotherSkill' | 'enthusiasmSkills' | 'buttonSkill' | 'descriptionPortfoli' | 'textOne' |  'textTwo' | 'textThree' |'work' | 'join_description' | 'pollo_loco_description' | 'contact' | 'solve' | 'reinforcement' | 'wayMessage' | 'entertain'  | 'yourName' | 'pleaseName' | 'yourMail' | 'pleaseEmail' | 'yourMassage' | 'pleaseMassage' | 'pleaseAccept' | 'policyRead' | 'policyPolicy' | 'policyAgree' | 'sendMessage' | 'legelNotice';
 
 
 
@@ -40,19 +40,20 @@ export const translations :  {
       contact: "Kontakt",
       solve: "Problem zu lössen?",
       reinforcement : "sie suche ferstärkung im team ich biin der rischtige / wie ist ihre          programier sprache / was ist ihr kern gescheft",
-      wayMessage: "DE",
-      entertain: "DE",
-      // yourName: "DE",
-      pleaseName: "DE",
-      // yourMail: "DE",
-      pleaseEmail: "DE",
-      // yourMassage: "DE",
+      wayMessage: "wir finden eine lösung Sie suchenn ein frontend developer?",
+      entertain: "Kontacktiere Mich! / lass uns unterhalten!",
+      yourName: "Dein Name",
+      pleaseName: "Bitte Name einfügen",
+      yourMail: "Deine E mail",
+      pleaseEmail: "Bitte Email einfügen",
+      yourMassage: "hier kann deine nachricht stehen ",
       pleaseMassage: "DE",
       pleaseAccept: "DE",
       policyRead: "DE",
       policyPolicy: "DE",
       policyAgree: "DE",
-      // sendMessage: "DE",
+      sendMessage: "sende die nachricht :)",
+      legelNotice: "DE",
 
       },
     en: {
@@ -85,16 +86,17 @@ export const translations :  {
         reinforcemen: "EN",
         wayMessage: "EN",
         entertain: "EN",
-        // yourName: "EN",
+        yourName: "Your Name",
         pleaseName: "EN",
-        // yourMail: "EN",
+        yourMail: "Your Mail",
         pleaseEmail: "EN",
-        // yourMassage: "EN",
-        pleaseMassage: "EN",
-        pleaseAccept: "EN",
-        policyRead: "EN",
-        policyPolicy: "EN",
-        policyAgree: "EN",
-        // sendMessage: "EN",
+        yourMassage: "Your Massage",
+        pleaseMassage: "pleas enter a message",
+        pleaseAccept: "Please accept the privacy policy",
+        policyRead: "I've read the",
+        policyPolicy: "privacy policy",
+        policyAgree: "policyAgree and agree to the porocessing of my data as outlined.",
+        sendMessage: "send message :)",
+        legelNotice: "Legel Notice"
       }
   };  

@@ -22,12 +22,10 @@
           {{ reinforcement }}
         </p>
         <p>
-          <!-- wayMessage -->
-          wir finden eine lösung Sie suchenn ein frontend developer?
+          {{ wayMessage }}
           <strong>
-            <!-- entertain  -->
-            Kontacktiere Mich! / lass uns unterhalten!</strong
-          >
+            {{ entertain }}
+          </strong>
         </p>
         <!-- <span>spioughsüsees</span> -->
       </div>
@@ -40,15 +38,12 @@
               type="text"
               id="name"
               name="name"
-              placeholder="Your Name"
+              placeholder=" {{ yourName }}"
               required
               #name="ngModel"
             />
             @if(!name.valid && name.touched) {
-            <span>
-              <!-- pleaseName -->
-              Bitte Name einfügen</span
-            >
+            <span> {{ pleaseName }}</span>
             }
 
             <label for="email"></label>
@@ -57,16 +52,13 @@
               type="email"
               id="email"
               name="email"
-              placeholder="Your Mail"
+              placeholder="{{ yourMail }}"
               required
               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
               #email="ngModel"
             /><label for=""></label>
             @if(!email.valid && email.touched) {
-            <span>
-              <!-- pleaseEmail -->
-              Bitte Email einfügen</span
-            >
+            <span> {{ pleaseEmail }}</span>
             }
             <!-- <div *ngIf="email.invalid && email.touched">
               <span *ngIf="email.errors?.['required']"
@@ -82,14 +74,13 @@
               [(ngModel)]="contactData.message"
               id="message"
               name="message"
-              placeholder="Your Massage"
+              placeholder=" {{ yourMassage }}"
               required
             ></textarea>
             @if (!message.valid && message.touched) {
             <span>
-              <!-- pleaseMassage -->
-              pleas enter a message</span
-            >
+              {{ pleaseMassage }}
+            </span>
             }
             <div>
               <div class="container_box">
@@ -106,53 +97,22 @@
                   class="fill_1out_hint"
                   *ngIf="showError && !contactData.privacyAccepted"
                 >
-                  <!-- pleaseAccept -->
-                  Please accept the privacy policy
+                  {{ pleaseAccept }}
                 </div>
 
                 <div class="policy">
-                  <!-- policyRead -->
-                  I've read the
+                  {{ policyRead }}
+
                   <span [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
-                    <!-- policyPolicy -->
-                    privacy policy
+                    {{ policyPolicy }}
                   </span>
-                  policyAgree and agree to the porocessing of my data as
-                  outlined.
+                  {{ policyAgree }}
                 </div>
               </div>
-
-              <!-- <div class="form_butten">
-                <input
-                  type="submit"
-                  value="send message :)"
-                  [disabled]="contactForm.invalid"
-
-                                    [ngClass]="{
-                    'button-disabled': !contactData.privacyAccepted,
-                    'button-enabled': contactData.privacyAccepted
-                  }"
-                /> -->
-
-              <!-- <div class="form_butten">
-                <input
-                  type="submit"
-                  value="send message :)"
-                  [disabled]="
-                    !contactData.privacyAccepted || contactForm.invalid
-                  "
-                  [ngStyle]="{
-                    'background-color': !contactData.privacyAccepted
-                      ? 'red'
-                      : 'inherit',
-                    color: !contactData.privacyAccepted ? 'white' : 'inherit'
-                  }"
-                /> -->
-
               <div class="form_butten">
                 <input
                   type="submit"
-                  value="send message :)"
+                  value="{{ sendMessage }}"
                   [disabled]="
                     !contactData.privacyAccepted || contactForm.invalid
                   "

@@ -41,17 +41,17 @@ export class ContactComponent extends BaseTranslatedComponent{
   reinforcement= '';
   wayMessage= '';
   entertain= '';
-// yourName= '';
+yourName= '';
   pleaseName= '';
-  // yourMail= '';
+  yourMail= '';
   pleaseEmail= '';
-  // yourMassage= '';
+  yourMassage= '';
   pleaseMassage= '';
   pleaseAccept= '';
   policyRead= '';
   policyPolicy= '';
   policyAgree= '';
-//  sendMessage= '';
+ sendMessage= '';
 
 
 logPrivacy() {
@@ -65,17 +65,17 @@ updateTexts() {
   this.reinforcement = this.translationService.translate('reinforcement');
   this.wayMessage = this.translationService.translate('wayMessage');
   this.entertain = this.translationService.translate('entertain');
-  // this.yourName = this.translationService.translate('yourName');
+  this.yourName = this.translationService.translate('yourName');
   this.pleaseName = this.translationService.translate('pleaseName');
-  // this.yourMail = this.translationService.translate('yourMail');
+  this.yourMail = this.translationService.translate('yourMail');
   this.pleaseEmail = this.translationService.translate('pleaseEmail');
-  // this.yourMassage = this.translationService.translate('yourMassage');
+  this.yourMassage = this.translationService.translate('yourMassage');
   this.pleaseMassage = this.translationService.translate('pleaseMassage');
   this.pleaseAccept = this.translationService.translate('pleaseAccept');
   this.policyRead = this.translationService.translate('policyRead');
   this.policyPolicy = this.translationService.translate('policyPolicy');
   this.policyAgree = this.translationService.translate('policyAgree');
-  // this.sendMessage = this.translationService.translate('sendMessage');
+  this.sendMessage = this.translationService.translate('sendMessage');
   
 }
 
