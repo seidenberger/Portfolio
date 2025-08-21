@@ -1,0 +1,26 @@
+<div class="overlay_icons">
+  <div>
+    <hr />
+  </div>
+  <a
+    *ngFor="let buttonImgs of buttonImgs; let i = index"
+    [href]="isExternal(buttonImgs.link) ? buttonImgs.link : undefined"
+    [routerLink]="!isExternal(buttonImgs.link) ? buttonImgs.link : undefined"
+    [target]="isExternal(buttonImgs.link) ? '_blank' : undefined"
+  >
+    <!-- <a href=""></a> -->
+    <img class="icons" [src]="buttonImgs.image" alt="pictur" />
+  </a>
+
+  <ng-container *ngFor="let btn of buttonImgs">
+    <!-- Externe Links -->
+    <a *ngIf="isExternal(btn.link)" [href]="btn.link" target="_blank">
+      <img class="icons" [src]="btn.image" alt="picture" />
+    </a>
+
+    <!-- Interne Links -->
+    <a *ngIf="!isExternal(btn.link)" [routerLink]="btn.link">
+      <img class="icons" [src]="btn.image" alt="picture" />
+    </a>
+  </ng-container>
+</div>

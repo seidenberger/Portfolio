@@ -1,0 +1,22 @@
+@import "./../../../styles.scss";
+@import "./../../../scss/layers.scss";
+@import "./../../../scss/mixin.scss";
+@import "./../../../scss/media.scss";
+
+// src/styles.scss
+.overlay_icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  hr {
+    @include hr();
+  }
+  .icons {
+    padding: 0 10px;
+  }
+  a {
+    text-decoration: none;
+    color: $white;
+    @include dNone();
+  }
+}

@@ -130,23 +130,31 @@ section {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  .overlay_icons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    hr {
-      @include hr();
-    }
-    .icons {
-      padding: 0 10px;
-    }
-    a {
-      text-decoration: none;
-      color: $white;
-      @include dNone();
-    }
-  }
 }
+
+a {
+  text-decoration: none;
+  color: $white;
+  @include dNone();
+}
+
+// .container_icons {
+//   display: flex;
+//   align-items: flex-end;
+//   justify-content: space-between;
+//   .overlay_icons {
+//     display: flex;
+//     align-items: center;
+//     gap: 10px;
+//     hr {
+//       @include hr();
+//     }
+//     .icons {
+//       padding: 0 10px;
+//     }
+
+//   }
+// }
 
 .overlay_rotated {
   @include layers(8);
