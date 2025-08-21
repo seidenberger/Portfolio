@@ -18,7 +18,7 @@ export const buttonImgs = [
         "image": 'assets/icons/Property 1=Default.png',
     },
     {
-        "link": '/contact',
+        "link": '#contact',
         "image": 'assets/icons/Property 1=Default (1).png',
     },
     {
