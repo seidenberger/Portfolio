@@ -103,9 +103,17 @@
                 <div class="policy">
                   {{ policyRead }}
 
-                  <span [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
+                  <!-- <span [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
                     {{ policyPolicy }}
-                  </span>
+                  </span> -->
+                  <a
+                    href="imprint"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }"
+                  >
+                    {{ policyPolicy }}
+                  </a>
                   {{ policyAgree }}
                 </div>
               </div>

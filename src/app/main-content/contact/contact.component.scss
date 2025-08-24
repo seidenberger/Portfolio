@@ -204,6 +204,10 @@ input[type="checkbox"]:checked::after {
   }
 }
 
+a {
+  text-decoration: none;
+}
+
 // .button-disabled {
 //   background-color: #ccc;
 //   color: #666;
