@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { buttonImgs } from './button-img-json';
 import { RouterModule } from '@angular/router';
@@ -12,13 +12,10 @@ import { RouterModule } from '@angular/router';
 export class ButtonImgComponent {
 
 buttonImgs = buttonImgs;
+  @Input() show = false; // standardmäßig aus
+  // buttonImgs = buttonImgs;
+// show = true;''
 
-// iconsLandingpage: string[] = [
-//   'assets/icons/Property 1=Default.png',
-//  'assets/icons/Property 1=Default (1).png',
-//  'assets/icons/Property 1=Default (2).png',
-
-// ]
 isExternal(url: string): boolean {
   return url.startsWith('http://') || url.startsWith('https://');
 }

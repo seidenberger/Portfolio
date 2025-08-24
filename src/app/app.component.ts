@@ -12,7 +12,7 @@ import { TranslationKey } from './translations';
   selector: 'app-root',
   imports: [RouterOutlet, 
             // MainContentComponent,  
-            HeaderComponent, 
+            // HeaderComponent, 
             FooterComponent,
             // WaveComponent
           ],

@@ -138,26 +138,8 @@ a {
   @include dNone();
 }
 
-// .container_icons {
-//   display: flex;
-//   align-items: flex-end;
-//   justify-content: space-between;
-//   .overlay_icons {
-//     display: flex;
-//     align-items: center;
-//     gap: 10px;
-//     hr {
-//       @include hr();
-//     }
-//     .icons {
-//       padding: 0 10px;
-//     }
-
-//   }
-// }
-
 .overlay_rotated {
-  @include layers(8);
+  // @include layers(8);
   @include dNone();
   display: flex;
   align-items: center;
@@ -165,6 +147,7 @@ a {
   gap: 8px;
   padding-bottom: -20px;
   .discription_page {
+    @include layers(8);
     font-size: 23px;
     transform: rotate(180deg);
     @include fontH(
@@ -174,6 +157,7 @@ a {
     );
   }
   .rotate_arrow {
+    @include layers(8);
     transform: rotate(270deg);
     transform-origin: center;
 

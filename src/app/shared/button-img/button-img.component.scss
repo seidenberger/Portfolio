@@ -20,3 +20,9 @@
     @include dNone();
   }
 }
+
+a {
+  text-decoration: none;
+  color: $white;
+  @include dNone();
+}

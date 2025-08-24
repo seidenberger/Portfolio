@@ -50,10 +50,10 @@ export const translations :  {
       pleaseMassage: "DE",
       pleaseAccept: "DE",
       policyRead: "DE",
-      policyPolicy: "DE",
+      policyPolicy: "Datenschutz",
       policyAgree: "DE",
       sendMessage: "sende die nachricht :)",
-      legelNotice: "DE",
+      legelNotice: "Rechlicher Hinweis ",
 
       },
     en: {
