@@ -12,9 +12,7 @@ import { RouterModule } from '@angular/router';
 export class ButtonImgComponent {
 
 buttonImgs = buttonImgs;
-  @Input() show = false; // standardmäßig aus
-  // buttonImgs = buttonImgs;
-// show = true;''
+  @Input() show = false;
 
 isExternal(url: string): boolean {
   return url.startsWith('http://') || url.startsWith('https://');

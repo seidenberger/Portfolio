@@ -1,10 +1,13 @@
 import { Routes } from '@angular/router';
 import { MainContentComponent } from './main-content/main-content.component';
-import { ImprintComponent } from './imprint/imprint.component';
+import { ImpressumComponent } from './info/impressum/impressum.component';
+import { PrivacyPolicyComponent } from './info/privacy-policy/privacy-policy.component';
+// import { ImprintComponent } from './imprint/imprint.component';
 
 export const routes: Routes = [
   { path: '', component: MainContentComponent },
-  { path: 'imprint', component:  ImprintComponent},
+  { path: 'impressum', component:  ImpressumComponent},
+  { path: 'privacy-policy', component: PrivacyPolicyComponent}
 ];
 
 

@@ -2,7 +2,6 @@
 @import "./../../../scss/layers.scss";
 
 section {
-  // display: flex;
   position: relative;
   @include layers(2);
   // margin-top: -650px;
@@ -13,12 +12,18 @@ section {
   bottom: 80px;
   img {
     width: 100%;
-    // position: sticky;
-    // bottom: 650px;
-    // width: 100%;
+
     display: block;
   }
 }
+
+@media (min-width: 1900px) {
+  section {
+    margin-top: calc(-90vh + 50px);
+  }
+}
+
+// @ von 1440 bis 1900
 
 @media (max-width: 600px) {
   section {
