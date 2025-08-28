@@ -3,9 +3,20 @@
     <hr />
   </div>
   <ng-container *ngFor="let btn of buttonImgs">
-    <a [href]="btn.link">
-      <img [src]="btn.image" class="icons" />
+    <a
+      *ngIf="btn.external; else internalLink"
+      [href]="btn.link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img [src]="btn.image" [alt]="btn.link" />
     </a>
+
+    <ng-template #internalLink>
+      <a [href]="btn.link">
+        <img [src]="btn.image" class="icons" />
+      </a>
+    </ng-template>
   </ng-container>
   <address *ngIf="show">
     <address><a style="color: red" href="#contact">email icans</a></address>

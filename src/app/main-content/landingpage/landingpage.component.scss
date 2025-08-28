@@ -4,7 +4,8 @@
 @import "./../../../scss/media.scss";
 
 section {
-  padding-top: 109px;
+  // padding-top: 109px;
+  padding-top: 40px;
   // border: 2px solid green;
   @include max_Width();
   height: 100vh;
@@ -168,6 +169,12 @@ section {
 address {
   font-style: normal;
   font-family: inherit;
+}
+
+@media (min-width: 1201px) {
+  section {
+    padding-top: 80px;
+  }
 }
 
 @media (max-width: 1200px) {

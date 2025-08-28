@@ -4,7 +4,7 @@ export const portfolio =   [
       "head": "Join",
       "skills": "JavaScript | HTML | CSS | Firebase",
       "button_live": "https://join.theodor-seidenberger.de/",
-      "button_github": "",
+      "button_github": "https://github.com/kaix6/Join",
       descriptionKey: 'join_description'
     },
     {
@@ -12,7 +12,7 @@ export const portfolio =   [
         "head": "El pollo loco",
         "skills": "JavaScript | HTML | CSS",
         "button_live": "https://el-pollo-loco.theodor-seidenberger.de/",
-        "button_github": "",
+        "button_github": "https://github.com/seidenberger/El-pollo-loco",
            descriptionKey: 'pollo_loco_description'
       },
 
