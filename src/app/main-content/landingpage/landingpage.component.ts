@@ -24,12 +24,7 @@ export class LandingpageComponent extends BaseTranslatedComponent{
     super(translationService)
   }
 
-// iconsLandingpage: string[] = [
-//   'assets/icons/Property 1=Default.png',
-//  'assets/icons/Property 1=Default (1).png',
-//  'assets/icons/Property 1=Default (2).png',
 
-// ]
 
 updateTexts() {
   // debugger

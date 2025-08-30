@@ -13,14 +13,7 @@ import { ButtonImgComponent } from '../button-img/button-img.component';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent extends BaseTranslatedComponent{
-// iconsLandingpage: string[] = [
-//   'assets/icons/Property 1=Default.png',
-//  'assets/icons/Property 1=Default (1).png',
-//  'assets/icons/Property 1=Default (2).png',
 
-// ]
-
-// @Input() show = true;
 
  constructor(public override translationService: TranslationService) {
     super(translationService)
