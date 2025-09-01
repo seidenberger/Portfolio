@@ -1,11 +1,11 @@
 export const mySkills =   [
     {
-      "image": 'assets/img/skills/Property 1=html.png',
+      "image": 'assets/img/skills/html.png',
       "text": "HTML",
     active: true
     },
     {
-        "image": 'assets/img/skills/Property 1=css.png',
+        "image": 'assets/img/skills/css.png',
         "text": "CSS",
         active: true
     },
@@ -20,22 +20,22 @@ export const mySkills =   [
      active: true
     },
     {
-        "image": 'assets/img/skills/Property 1=Angular.png',
+        "image": 'assets/img/skills/angular.png',
         "text": "Angular",
      active: true
     },
     {
-        "image": 'assets/img/skills/Property 1=Firebase.png',
+        "image": 'assets/img/skills/firebase.png',
         "text": "Firebase",
      active: true
     },
     {
-        "image": 'assets/img/skills/Property 1=Git.png',
+        "image": 'assets/img/skills/git.png',
         "text": "Git",
      active: true
     },
     {
-        "image": 'assets/img/skills/Property 1=Api.png',
+        "image": 'assets/img/skills/api.png',
         "text": "Rest Api",
      active: true
     },
@@ -50,8 +50,8 @@ export const mySkills =   [
      active: true
     },
         {
-            "imagew": 'assets/img/skills/Property 1=Continually learning.png',
-        "image": 'assets/img/skills/Capa_1.png',
+            "imagew": 'assets/img/skills/continually-learning.png',
+        "image": 'assets/img/skills/learning.png',
         "text": "Continually learning",
      active: false
     } 
