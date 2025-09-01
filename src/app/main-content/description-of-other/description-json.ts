@@ -8,7 +8,7 @@ export const descriptionItems =   [
         "signature": "max team Partner"
     },
     {
-        "image": 'assets/img/description/übung/WIN_20250223_21_13_37_Pro.jpg',
+        "image": 'assets/img/description/übung/IMG_0544.JPG',
         "textKey": 'textTwo' ,
         "signature": "musterman team Partner"
     },

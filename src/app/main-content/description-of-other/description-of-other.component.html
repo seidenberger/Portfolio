@@ -15,7 +15,7 @@
     <div class="carousel">
       <div class="border">
         <div>
-          <img src="assets/img/description/Frame 281@2x.png" alt="" />
+          <img src="assets/img/description/goose-feet.png" alt="goose-feet" />
         </div>
         <div class="content">
           <div class="container_signature">
@@ -33,13 +33,13 @@
   <div>
     <div class="navigator">
       <button (click)="prev()" [disabled]="currentIndex === 0">
-        <img src="assets/img/description/Property 1=links.png" alt="" />
+        <img src="assets/img/description/left.png" alt="left" />
       </button>
       <div *ngFor="let carousel of items; let i = index">
         <div class="circle" [ngClass]="{ active: i === currentIndex }"></div>
       </div>
       <button (click)="next()" [disabled]="currentIndex === items.length - 1">
-        <img src="assets/img/description/Property 1=rechts.png" alt="" />
+        <img src="assets/img/description/right-side.png" alt="right-side" />
       </button>
     </div>
   </div>
