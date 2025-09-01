@@ -8,7 +8,9 @@ section {
   padding-top: 40px;
   // border: 2px solid green;
   @include max_Width();
-  height: 100vh;
+  // neu margin
+  height: calc(100vh - 53px);
+  // height: 100vh;
   width: 100%;
   background-color: $blue;
   display: grid;
@@ -26,6 +28,8 @@ section {
 }
 
 .container_imgs {
+  // neu margin
+  height: 60vh;
   display: grid;
   place-items: center;
   .imgs {
