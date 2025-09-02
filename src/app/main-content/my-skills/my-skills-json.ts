@@ -10,12 +10,12 @@ export const mySkills =   [
         active: true
     },
     {
-        "image": 'assets/img/skills/Property 1=JavScript.png',
+        "image": 'assets/img/skills/JavScript.png',
         "text": "JavaScript",
      active: true
     },
     {
-        "image": 'assets/img/skills/Property 1=Typescript.png',
+        "image": 'assets/img/skills/typescript.png',
         "text": "TypeScript",
      active: true
     },
@@ -40,12 +40,12 @@ export const mySkills =   [
      active: true
     },
     {
-        "image": 'assets/img/skills/Property 1=Scrum.png',
+        "image": 'assets/img/skills/scrum.png',
         "text": "Scrum",
      active: true
     },
     {
-        "image": 'assets/img/skills/Property 1=Material Design.png',
+        "image": 'assets/img/skills/material-design.png',
         "text": "Material  Design",
      active: true
     },
