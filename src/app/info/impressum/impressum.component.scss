@@ -35,6 +35,21 @@ hr {
   width: 40vw;
 }
 
+h1 {
+  @include fontH(
+    $font_size: $font_h_2,
+    $font_weight: $f_w_small,
+    $f_media: $f_body_2,
+    $f_media_small: $f_body_2
+  );
+  color: $green;
+}
+
+a {
+  color: $purple;
+  text-decoration: none;
+}
+
 h2 {
   @include fontH(
     $font_size: $font_h_3,
