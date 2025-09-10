@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslationService } from '../../translation.service';
-import { Subscription } from 'rxjs';
+// import { Subscription } from 'rxjs';'
 import { BaseTranslatedComponent } from '../../base-translated.component';
 
 @Component({
@@ -22,16 +22,6 @@ export class AboutMeComponent extends BaseTranslatedComponent{
     super(translationService)
   }
 
-  // ngOnInit(): void {
-  //   this.updateTexts(); // Initiale Texte
-  //   this.sub = this.translationService.lang$.subscribe(() => {
-  //     this.updateTexts(); // Reagiere auf Sprachwechsel
-  //   });
-  // }
-  
-  // ngOnDestroy(): void {
-  //   this.sub.unsubscribe(); // Speicher aufräumen
-  // }
   
   updateTexts() {
     // debugger
@@ -43,8 +33,5 @@ export class AboutMeComponent extends BaseTranslatedComponent{
     this.solutions = this.translationService.translate('solutions');
   }
   
-  // switchLang(lang: 'de' | 'en') {
-  //   this.translationService.setLanguage(lang);
-  //   console.log(lang);
-  // }
+
 }

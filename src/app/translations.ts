@@ -53,7 +53,22 @@ export const translations :  {
       policyPolicy: "Datenschutz",
       policyAgree: "DE",
       sendMessage: "sende die nachricht :)",
+
+      
       legelNotice: "Rechlicher Hinweis ",
+      responsible:"",
+      // address
+      // telephone
+      // noteWebsite
+      // noteWebsiteOne
+      // noteWebsiteTwo
+      // created
+      // privacyPolicy
+      // responsibleDSGVO
+      
+
+
+      
 
       },
     en: {
