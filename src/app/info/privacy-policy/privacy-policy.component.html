@@ -1,6 +1,7 @@
-<!-- <app-privacy-policy-de></app-privacy-policy-de>
-<app-privacy-policy-en></app-privacy-policy-en> -->
-<ng-container [ngSwitch]="currentLang">
-  <app-privacy-policy-de *ngSwitchCase="'de'"></app-privacy-policy-de>
-  <app-privacy-policy-en *ngSwitchCase="'en'"></app-privacy-policy-en>
-</ng-container>
+@let lang = (lang$ | async); @switch (lang) { @case ('de') {
+<app-privacy-policy-de />
+} @case ('en') {
+<app-privacy-policy-en />
+} @default {
+<p>Language not supported</p>
+} }

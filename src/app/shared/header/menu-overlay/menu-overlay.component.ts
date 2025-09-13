@@ -1,8 +1,7 @@
-import { Component, OnDestroy, OnInit, signal, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnDestroy, OnInit, signal, Output, EventEmitter } from '@angular/core';
 import { TranslationService } from '../../../translation.service';
 import { Subscription } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { log } from 'node:console';
 
 @Component({
   selector: 'app-menu-overlay',
