@@ -2,7 +2,7 @@
 // sobald du die Sprache im Header umschaltest, kannst du den TranslationService nutzen,
 //  um eine reaktive Aktualisierung durchzuführen. Hierzu könntest du BehaviorSubject aus rxjs verwenden, 
 // um den aktuellen Sprachwert zu beobachten.
-export type TranslationKey = 'uebung' | 'about' | 'skill' | 'portfolio' | 'rotate' | 'talk' | 'scroll' | 'way' | 'place' |'enthusiasm' | 'solutions' | 'headSkills' | 'allSkills' | 'otherSkills' | 'anotherSkill' | 'enthusiasmSkills' | 'buttonSkill' | 'descriptionPortfoli' | 'textOne' |  'textTwo' | 'textThree' |'work' | 'join_description' | 'pollo_loco_description' | 'contact' | 'solve' | 'reinforcement' | 'wayMessage' | 'entertain'  | 'yourName' | 'pleaseName' | 'yourMail' | 'pleaseEmail' | 'yourMassage' | 'pleaseMassage' | 'pleaseAccept' | 'policyRead' | 'policyPolicy' | 'policyAgree' | 'sendMessage' | 'legelNotice';
+export type TranslationKey = 'uebung' | 'about' | 'skill' | 'portfolio' | 'rotate' | 'talk' | 'scroll' | 'way' | 'place' |'enthusiasm' | 'solutions' | 'headSkills' | 'allSkills' | 'otherSkills' | 'anotherSkill' | 'enthusiasmSkills' | 'buttonSkill' | 'descriptionPortfoli' | 'textOne' |  'textTwo' | 'textThree' |'work' | 'join_description' | 'pollo_loco_description' | 'contact' | 'solve' | 'reinforcement' | 'wayMessage' | 'entertain'  | 'yourName' | 'pleaseName' | 'yourMail' | 'pleaseEmail' | 'yourMassage' | 'pleaseMassage' | 'pleaseAccept' | 'policyRead' | 'policyPolicy' | 'policyAgree' | 'sendMessage' | 'legelNotice' | 'responsible' |'address' | 'telephone' | 'noteWebsite' | 'noteWebsiteOne' | 'noteWebsiteTwo' | 'created' | 'privacyPolicy' | 'responsibleDSGVO';
 
 
 
@@ -31,10 +31,9 @@ export const translations :  {
       buttonSkill: "Lass uns Kontakt aufnehmen", 
       descriptionPortfoli: "Hier sind meine größten Projekte zum ausprobieren.",
       uebung: "DE  hallo ich ne übung ",
-      textOne: "DE 1 lorem Lorem ipsum",
-      textTwo: "DE 222reeeeeeeeeeeeeeeeeee errrrrrrrrrrrrrrrrrrrr2",
-      textThree: "De 33333",
-      work: "DE",
+      textOne: "EINS hier kann dein fedback stehen",
+      textTwo: "ZWEI hier kann dein fedback stehen",
+      textThree: "DREI hier kann dein fedback stehen",
       join_description: "Diese App ist an einem Kanban Board angelehnt und wurde in meinem Team mit insgesamt 4 Personen entwickelt.",
       pollo_loco_description: "Ein 2D Jump and Run Spiel das mit objektorientiertem programmieren gebaut wurde. Hilf dem schnellen Pepe Coins und Tabascoflaschen zu sammeln. Rüste dich für den entscheidenden Kampf mit dem großen Huhn.",
       contact: "Kontakt",
@@ -52,19 +51,17 @@ export const translations :  {
       policyRead: "DE",
       policyPolicy: "Datenschutz",
       policyAgree: "DE",
-      sendMessage: "sende die nachricht :)",
-
-      
+      sendMessage: "sende die nachricht :)",  
       legelNotice: "Rechlicher Hinweis ",
-      responsible:"",
-      // address
-      // telephone
-      // noteWebsite
-      // noteWebsiteOne
-      // noteWebsiteTwo
-      // created
-      // privacyPolicy
-      // responsibleDSGVO
+      responsible: "Verantwortlicher",
+      address:"Postanschrift",
+      telephone:"Telefon",
+      noteWebsite:"Hinweise zur Website",
+      noteWebsiteOne:"Dieses Impressum wurde mit Hilfe des",
+      noteWebsiteTwo:"Impressums-Generators der activeMind AG",
+      created:"erstellt",
+      privacyPolicy:"",
+      responsibleDSGVO:"",
       
 
 
@@ -112,6 +109,15 @@ export const translations :  {
         policyPolicy: "privacy policy",
         policyAgree: "policyAgree and agree to the porocessing of my data as outlined.",
         sendMessage: "send message :)",
-        legelNotice: "Legel Notice"
+        legelNotice: "Legel Notice",
+        responsible: "",
+        address:"",
+        telephone:"",
+        noteWebsite:"",
+        noteWebsiteOne:"",
+        noteWebsiteTwo:"",
+        created:"",
+        privacyPolicy:"",
+        responsibleDSGVO:"",
       }
   };  

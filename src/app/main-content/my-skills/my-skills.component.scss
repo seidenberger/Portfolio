@@ -7,7 +7,7 @@ section {
   scroll-margin-top: 100px;
   // @include layers(3);
   margin-top: 50px;
-  border: 2px solid yellow;
+  // border: 2px solid yellow;
   @include fontH(
     $font_size: $f_body_8,
     $font_weight: $f_w_small,

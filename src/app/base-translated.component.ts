@@ -2,7 +2,7 @@ import { OnDestroy, OnInit, Directive } from '@angular/core';
 import { TranslationService } from './translation.service';
 import { Subscription } from 'rxjs';
 
-@Directive() // Damit Angular diese abstrakte Komponente nicht als eigenständige Komponente behandelt
+@Directive() 
 export abstract class BaseTranslatedComponent implements OnInit, OnDestroy {
   currentLang: string = 'de';
   protected sub!: Subscription;
@@ -10,7 +10,7 @@ export abstract class BaseTranslatedComponent implements OnInit, OnDestroy {
   constructor(public translationService: TranslationService) {}
 
   ngOnInit(): void {
-    this.updateTexts(); // Initiale Texte laden
+    this.updateTexts();
     this.sub = this.translationService.lang$.subscribe(() => {
       this.updateTexts(); // Bei Sprachwechsel aktualisieren
     });
