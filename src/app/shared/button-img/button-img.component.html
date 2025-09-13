@@ -2,22 +2,18 @@
   <div *ngIf="show">
     <hr />
   </div>
-  <ng-container *ngFor="let btn of buttonImgs">
-    <a
-      *ngIf="btn.external; else internalLink"
-      [href]="btn.link"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+
+  <div>
+    @if (show) { } @for (btn of buttonImgs; track btn) { @if (btn.external) {
+    <a [href]="btn.link" target="_blank" rel="noopener noreferrer">
       <img [src]="btn.image" [alt]="btn.link" />
     </a>
-
-    <ng-template #internalLink>
-      <a [href]="btn.link">
-        <img [src]="btn.image" class="icons" />
-      </a>
-    </ng-template>
-  </ng-container>
+    } @else {
+    <a [href]="btn.link">
+      <img [src]="btn.image" class="icons" />
+    </a>
+    } }
+  </div>
   <address *ngIf="show">
     <address><a style="color: red" href="#contact">email icans</a></address>
   </address>
