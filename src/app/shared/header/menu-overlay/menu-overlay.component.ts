@@ -28,7 +28,7 @@ export class MenuOverlayComponent  implements OnInit, OnDestroy{
 
   closeMenu() {
       console.log('closeMenu() in MenuOverlayComponent aufgerufen'); 
-    this.closed.emit();
+    this.closed.emit();  
   }
 
 

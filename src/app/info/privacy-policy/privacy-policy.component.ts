@@ -23,5 +23,24 @@ export class PrivacyPolicyComponent {
 
   constructor(private translationService: TranslationService) {
     this.lang$ = this.translationService.lang$;
+
+      const savedLang = sessionStorage.getItem('lang') as 'de' | 'en' | null;
+  if (savedLang) {
+    this.translationService.setLanguage(savedLang); // Setzt die gespeicherte Sprache
   }
+  }
+
+
+  // lang$: Observable<'de' | 'en'>;
+  //   currentLang: string;
+
+  // constructor(private translationService: TranslationService) {
+  //   this.currentLang = this.translationService.getLanguage();
+  //  this.lang$ = this.translationService.lang$;
+  // }
+
+  // setLang(lang: 'en' | 'de') {
+  //   this.translationService.setLanguage(lang);
+  //   this.currentLang = lang;
+  // }
 }

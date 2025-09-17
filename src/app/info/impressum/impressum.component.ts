@@ -36,8 +36,8 @@ updateTexts() {
   this.noteWebsite = this.translationService.translate('noteWebsite');
   this.noteWebsiteTwo = this.translationService.translate('noteWebsiteTwo');
   this.created = this.translationService.translate('created');
-  this.privacyPolicy = this.translationService.translate('privacyPolicy');
-  this.responsibleDSGVO = this.translationService.translate('responsibleDSGVO');
+  // this.privacyPolicy = this.translationService.translate('privacyPolicy');
+  // this.responsibleDSGVO = this.translationService.translate('responsibleDSGVO');
   // this. = this.translationService.translate('');
   // this. = this.translationService.translate('');
   // this.talk = this.translationService.translate('talk');

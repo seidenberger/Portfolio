@@ -2,7 +2,7 @@
 // sobald du die Sprache im Header umschaltest, kannst du den TranslationService nutzen,
 //  um eine reaktive Aktualisierung durchzuführen. Hierzu könntest du BehaviorSubject aus rxjs verwenden, 
 // um den aktuellen Sprachwert zu beobachten.
-export type TranslationKey = 'uebung' | 'about' | 'skill' | 'portfolio' | 'rotate' | 'talk' | 'scroll' | 'way' | 'place' |'enthusiasm' | 'solutions' | 'headSkills' | 'allSkills' | 'otherSkills' | 'anotherSkill' | 'enthusiasmSkills' | 'buttonSkill' | 'descriptionPortfoli' | 'textOne' |  'textTwo' | 'textThree' |'work' | 'join_description' | 'pollo_loco_description' | 'contact' | 'solve' | 'reinforcement' | 'wayMessage' | 'entertain'  | 'yourName' | 'pleaseName' | 'yourMail' | 'pleaseEmail' | 'yourMassage' | 'pleaseMassage' | 'pleaseAccept' | 'policyRead' | 'policyPolicy' | 'policyAgree' | 'sendMessage' | 'legelNotice' | 'responsible' |'address' | 'telephone' | 'noteWebsite' | 'noteWebsiteOne' | 'noteWebsiteTwo' | 'created' | 'privacyPolicy' | 'responsibleDSGVO';
+export type TranslationKey = 'uebung' | 'about' | 'skill' | 'portfolio' | 'rotate' | 'talk' | 'scroll' | 'way' | 'place' |'enthusiasm' | 'solutions' | 'headSkills' | 'allSkills' | 'otherSkills' | 'anotherSkill' | 'enthusiasmSkills' | 'buttonSkill' | 'descriptionPortfoli' | 'textOne' |  'textTwo' | 'textThree' |'work' | 'join_description' | 'pollo_loco_description' | 'contact' | 'solve' | 'reinforcement' | 'wayMessage' | 'entertain'  | 'yourName' | 'pleaseName' | 'yourMail' | 'pleaseEmail' | 'yourMassage' | 'pleaseMassage' | 'pleaseAccept' | 'policyRead' | 'policyPolicy' | 'policyAgree' | 'sendMessage' | 'legelNotice' | 'responsible' |'address' | 'telephone' | 'noteWebsite' | 'noteWebsiteOne' | 'noteWebsiteTwo' | 'created';
 
 
 
@@ -37,21 +37,23 @@ export const translations :  {
       join_description: "Diese App ist an einem Kanban Board angelehnt und wurde in meinem Team mit insgesamt 4 Personen entwickelt.",
       pollo_loco_description: "Ein 2D Jump and Run Spiel das mit objektorientiertem programmieren gebaut wurde. Hilf dem schnellen Pepe Coins und Tabascoflaschen zu sammeln. Rüste dich für den entscheidenden Kampf mit dem großen Huhn.",
       contact: "Kontakt",
-      solve: "Problem zu lössen?",
-      reinforcement : "sie suche ferstärkung im team ich biin der rischtige / wie ist ihre          programier sprache / was ist ihr kern gescheft",
-      wayMessage: "wir finden eine lösung Sie suchenn ein frontend developer?",
-      entertain: "Kontacktiere Mich! / lass uns unterhalten!",
+      solve: "Lust auf ein Kennenlernen?",
+      // reinforcement : "1sie suche ferstärkung im team ich biin der rischtige / wie ist ihre          programier sprache / was ist ihr kern gescheft",
+      reinforcement : "Wenn meine Projekte Ihr Interesse geweckt haben,",
+      wayMessage: " würde ich mich freuen Ihre Kontaktdaten zu erhalten.",
+      // wayMessage: "als frontend developer?",
+      // entertain: "Kontaktieren sie Mich! ",
       yourName: "Dein Name",
-      pleaseName: "Bitte Name einfügen",
+           pleaseName: "Bitte Name einfügen",
       yourMail: "Deine E mail",
       pleaseEmail: "Bitte Email einfügen",
-      yourMassage: "hier kann deine nachricht stehen ",
-      pleaseMassage: "DE",
-      pleaseAccept: "DE",
-      policyRead: "DE",
+      yourMassage: "Hier kann deine Nachricht stehen ",
+      pleaseMassage: "Bitte schreibe eine Nachricht",
+      pleaseAccept: "Bitte stimme dem Datenschutz zu.",
+      policyRead: "Ich habe denn",
       policyPolicy: "Datenschutz",
-      policyAgree: "DE",
-      sendMessage: "sende die nachricht :)",  
+      policyAgree: "gelesen und stimme der Verarbeitung meiner Daten wie geschrieben zu.",
+      sendMessage: "sende deine Nachricht :)",  
       legelNotice: "Rechlicher Hinweis ",
       responsible: "Verantwortlicher",
       address:"Postanschrift",
@@ -60,8 +62,7 @@ export const translations :  {
       noteWebsiteOne:"Dieses Impressum wurde mit Hilfe des",
       noteWebsiteTwo:"Impressums-Generators der activeMind AG",
       created:"erstellt",
-      privacyPolicy:"",
-      responsibleDSGVO:"",
+
       
 
 
@@ -96,8 +97,8 @@ export const translations :  {
         contact: "Contact",
         solve: "got a poroblem to solve?",
         reinforcemen: "EN",
-        wayMessage: "EN",
-        entertain: "EN",
+        // wayMessage: "EN",
+        // entertain: "EN",
         yourName: "Your Name",
         pleaseName: "EN",
         yourMail: "Your Mail",
@@ -108,7 +109,7 @@ export const translations :  {
         policyRead: "I've read the",
         policyPolicy: "privacy policy",
         policyAgree: "policyAgree and agree to the porocessing of my data as outlined.",
-        sendMessage: "send message :)",
+        sendMessage: "send your message :)",
         legelNotice: "Legel Notice",
         responsible: "",
         address:"",

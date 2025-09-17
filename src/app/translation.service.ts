@@ -10,6 +10,7 @@ import { translations, TranslationKey } from './translations';
 export class TranslationService {
 
   constructor() { }
+  
   private currentLang: 'en' | 'de' = 'de'; 
 
   private langSubject = new BehaviorSubject<'en' | 'de'>(this.currentLang);
