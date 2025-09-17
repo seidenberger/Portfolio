@@ -31,16 +31,4 @@ export class PrivacyPolicyComponent {
   }
 
 
-  // lang$: Observable<'de' | 'en'>;
-  //   currentLang: string;
-
-  // constructor(private translationService: TranslationService) {
-  //   this.currentLang = this.translationService.getLanguage();
-  //  this.lang$ = this.translationService.lang$;
-  // }
-
-  // setLang(lang: 'en' | 'de') {
-  //   this.translationService.setLanguage(lang);
-  //   this.currentLang = lang;
-  // }
 }
