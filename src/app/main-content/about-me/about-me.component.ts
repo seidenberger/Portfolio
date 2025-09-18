@@ -16,7 +16,6 @@ export class AboutMeComponent extends BaseTranslatedComponent{
   place= '';
   enthusiasm= '';
   solutions= '';
-  // private sub!: Subscription;
 
   constructor(public override translationService: TranslationService) {
     super(translationService)
@@ -24,7 +23,6 @@ export class AboutMeComponent extends BaseTranslatedComponent{
 
   
   updateTexts() {
-    // debugger
     this.about = this.translationService.translate('about');
     
     this.way = this.translationService.translate('way');
