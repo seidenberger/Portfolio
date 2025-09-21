@@ -3,15 +3,17 @@ import { Component} from '@angular/core';
 // import { Subscription } from 'rxjs';
 import { MenuOverlayComponent } from './menu-overlay/menu-overlay.component';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { BaseTranslatedComponent } from '../../base-translated.component';
 
 @Component({
   selector: 'app-header',
     standalone: true,
-  imports: [MenuOverlayComponent, CommonModule], 
+  imports: [MenuOverlayComponent, CommonModule,     RouterLink], 
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent extends BaseTranslatedComponent{
   showMenu = false;  
 
   toggelMenu() {
@@ -23,5 +25,7 @@ export class HeaderComponent {
     this.showMenu = false;
     console.log('showMenu :', )
   }
+
+  updateTexts() {}
 
 }

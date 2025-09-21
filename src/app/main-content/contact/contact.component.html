@@ -106,13 +106,17 @@
                   <!-- <span [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
                     {{ policyPolicy }}
                   </span> -->
-                  <a
+                  <a [routerLink]="['/', currentLang, 'privacy-policy']">
+                    {{ policyPolicy }}
+                  </a>
+
+                  <!-- <a
                     href="privacy-policy"
                     rel="noopener noreferrer"
                     [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }"
                   >
                     {{ policyPolicy }}
-                  </a>
+                  </a> -->
                   {{ policyAgree }}
                 </div>
               </div>

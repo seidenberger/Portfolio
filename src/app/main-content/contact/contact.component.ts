@@ -5,16 +5,15 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms'; 
 import { BaseTranslatedComponent } from '../../base-translated.component';
 import { TranslationService } from '../../translation.service';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-contact',
   imports: [
     CommonModule,
-    FormsModule
-
-
-
-  ],
+    FormsModule,
+    RouterLink
+],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

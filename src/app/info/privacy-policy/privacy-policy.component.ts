@@ -8,6 +8,7 @@ import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-privacy-policy',
+  
   imports: [PrivacyPolicyDeComponent,
     PrivacyPolicyEnComponent,
     CommonModule,
@@ -36,20 +37,7 @@ export class PrivacyPolicyComponent implements OnDestroy {
 
 
 
-// export class PrivacyPolicyComponent extends BaseTranslatedComponent {
 
-
-//   constructor(public override translationService: TranslationService) {
-//     super(translationService)
-//   }
-//     updateTexts() {}
-//     lang$ = new BehaviorSubject<'de' | 'en'>('de');
-// currentLang = signal<'de' | 'en'>('de');
-
-// setLanguage(lang: 'de' | 'en') {
-//   this.lang$.next(lang);
-//   this.currentLang.set(lang);
-// }
 }
 
 
