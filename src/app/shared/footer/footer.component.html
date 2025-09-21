@@ -20,7 +20,8 @@
         <app-button-img></app-button-img>
       </div>
       <div>
-        <a href="impressum" rel="noopener noreferrer">{{ legelNotice }}</a>
+        <a [routerLink]="['/', currentLang, 'impressum']">{{ legelNotice }}</a>
+        <!-- <a href="impressum" rel="noopener noreferrer">{{ legelNotice }}</a> -->
       </div>
     </div>
   </div>

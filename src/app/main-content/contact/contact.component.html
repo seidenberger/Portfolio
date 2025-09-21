@@ -27,7 +27,6 @@
             {{ entertain }}
           </strong>
         </p>
-        <!-- <span>spioughsüsees</span> -->
       </div>
       <div class="container_input">
         <div class="input">
@@ -60,14 +59,7 @@
             @if(!email.valid && email.touched) {
             <span> {{ pleaseEmail }}</span>
             }
-            <!-- <div *ngIf="email.invalid && email.touched">
-              <span *ngIf="email.errors?.['required']"
-                >E-Mail ist erforderlich.</span
-              >
-              <span *ngIf="email.errors?.['pattern']"
-                >E-Mail ist ungültig.</span
-              > -->
-            <!-- </div> -->
+
             <label for="message"></label>
             <textarea
               #message="ngModel"
@@ -102,21 +94,9 @@
 
                 <div class="policy">
                   {{ policyRead }}
-
-                  <!-- <span [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
-                    {{ policyPolicy }}
-                  </span> -->
                   <a [routerLink]="['/', currentLang, 'privacy-policy']">
                     {{ policyPolicy }}
                   </a>
-
-                  <!-- <a
-                    href="privacy-policy"
-                    rel="noopener noreferrer"
-                    [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }"
-                  >
-                    {{ policyPolicy }}
-                  </a> -->
                   {{ policyAgree }}
                 </div>
               </div>
@@ -132,7 +112,6 @@
            '  border': 'none !important',
                   }"
                 />
-                <!-- </div> -->
               </div>
             </div>
           </form>

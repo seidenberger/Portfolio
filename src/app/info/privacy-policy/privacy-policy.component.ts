@@ -42,14 +42,3 @@ export class PrivacyPolicyComponent implements OnDestroy {
 
 
 
-
-  // lang$: Observable<'de' | 'en'>;
-
-  // constructor(private translationService: TranslationService) {
-  //   this.lang$ = this.translationService.lang$;
-
-  //     const savedLang = sessionStorage.getItem('lang') as 'de' | 'en' | null;
-  // if (savedLang) {
-  //   this.translationService.setLanguage(savedLang); // Setzt die gespeicherte Sprache
-  // }
-  // }
