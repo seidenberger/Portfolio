@@ -1,0 +1,52 @@
+@import "./../../../styles.scss";
+@import "./../../../scss/layers.scss";
+@import "./../../../scss/mixin.scss";
+@import "./../../../scss/media.scss";
+
+div {
+  display: flex;
+  gap: 10px;
+  button {
+    border: 1px solid $green;
+    // @include CustomBtn($backc: $green, $border_c: $green, $padding: 5px 8px);
+    padding: 5px 8px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+
+.btn-active {
+  background-color: $green;
+  color: $white;
+}
+
+.btn-inactive {
+  background-color: $blue;
+  color: $white;
+}
+
+@media (min-width: 1001px) {
+  p {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  div {
+    button {
+      border: none;
+    }
+  }
+
+  .btn-active {
+    // border: 1px solid $dark_grey;
+    background-color: $dark_grey;
+    color: $green;
+  }
+
+  .btn-inactive {
+    // border: 1px solid $dark_grey;
+    background-color: $dark_grey;
+    color: $white;
+  }
+}

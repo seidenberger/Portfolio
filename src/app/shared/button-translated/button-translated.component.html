@@ -1,0 +1,21 @@
+<div>
+  <button
+    (click)="switchLang('de')"
+    [ngClass]="{
+      'btn-active': isActive('de'),
+      'btn-inactive': !isActive('de')
+    }"
+  >
+    DE
+  </button>
+  <p>/</p>
+  <button
+    (click)="switchLang('en')"
+    [ngClass]="{
+      'btn-active': isActive('en'),
+      'btn-inactive': !isActive('en')
+    }"
+  >
+    EN
+  </button>
+</div>

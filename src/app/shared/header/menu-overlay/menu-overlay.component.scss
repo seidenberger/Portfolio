@@ -14,33 +14,33 @@ nav {
   }
 }
 
-div {
-  display: flex;
-  gap: 10px;
-  button {
-    border: 1px solid $green;
-    // @include CustomBtn($backc: $green, $border_c: $green, $padding: 5px 8px);
-    padding: 5px 8px;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-}
+// div {
+//   display: flex;
+//   gap: 10px;
+//   button {
+//     border: 1px solid $green;
+//     // @include CustomBtn($backc: $green, $border_c: $green, $padding: 5px 8px);
+//     padding: 5px 8px;
+//     border-radius: 10px;
+//     cursor: pointer;
+//   }
+// }
 
-.btn-active {
-  background-color: $green;
-  color: $white;
-}
+// .btn-active {
+//   background-color: $green;
+//   color: $white;
+// }
 
-.btn-inactive {
-  background-color: $blue;
-  color: $white;
-}
+// .btn-inactive {
+//   background-color: $blue;
+//   color: $white;
+// }
 
-@media (min-width: 1001px) {
-  p {
-    display: none;
-  }
-}
+// @media (min-width: 1001px) {
+//   p {
+//     display: none;
+//   }
+// }
 
 @media only screen and (max-width: 1000px) {
   nav {
@@ -49,21 +49,21 @@ div {
     height: 100vh;
     width: 100vw;
   }
-  div {
-    button {
-      border: none;
-    }
-  }
+  // div {
+  //   button {
+  //     border: none;
+  //   }
+  // }
 
-  .btn-active {
-    // border: 1px solid $dark_grey;
-    background-color: $dark_grey;
-    color: $green;
-  }
+  // .btn-active {
+  //   // border: 1px solid $dark_grey;
+  //   background-color: $dark_grey;
+  //   color: $green;
+  // }
 
-  .btn-inactive {
-    // border: 1px solid $dark_grey;
-    background-color: $dark_grey;
-    color: $white;
-  }
+  // .btn-inactive {
+  //   // border: 1px solid $dark_grey;
+  //   background-color: $dark_grey;
+  //   color: $white;
+  // }
 }
