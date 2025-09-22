@@ -1,12 +1,10 @@
 @import "./../../styles.scss";
 @import "./../../scss/color.scss";
 
-// .container_ header {
-//   background-color: $blue;
-// }
-// section {
-//   background-color: #141d2f;
-// }
+body {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
 
 div {
   @include max_Width();

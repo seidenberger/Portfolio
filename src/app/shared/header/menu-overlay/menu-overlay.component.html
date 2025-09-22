@@ -1,35 +1,21 @@
-<!-- <nav> -->
 <nav>
-  <a href="#about" (click)="closeMenu()">{{ about }}</a>
-  <!-- <a
-    [routerLink]="['/', currentLang, '']"
+  <a
+    [routerLink]="['/', translationService.getLanguage()]"
     fragment="about"
     (click)="closeMenu()"
     >{{ about }}</a
-  > -->
-  <a href="#skills" (click)="closeMenu()">{{ skill }}</a>
-
-  <a href="#portfolio" (click)="closeMenu()">{{ portfolio }}</a>
+  >
+  <a
+    [routerLink]="['/', translationService.getLanguage()]"
+    fragment="skill"
+    (click)="closeMenu()"
+    >{{ skill }}</a
+  >
+  <a
+    [routerLink]="['/', translationService.getLanguage()]"
+    fragment="portfolio"
+    (click)="closeMenu()"
+    >{{ portfolio }}</a
+  >
   <app-button-translated></app-button-translated>
-  <!-- <div>
-    <button
-      (click)="switchLang('de')"
-      [ngClass]="{
-        'btn-active': isActive('de'),
-        'btn-inactive': !isActive('de')
-      }"
-    >
-      DE
-    </button>
-    <p>/</p>
-    <button
-      (click)="switchLang('en')"
-      [ngClass]="{
-        'btn-active': isActive('en'),
-        'btn-inactive': !isActive('en')
-      }"
-    >
-      EN
-    </button>
-  </div> -->
 </nav>

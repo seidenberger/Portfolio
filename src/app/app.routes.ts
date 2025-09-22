@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { MainContentComponent } from './main-content/main-content.component';
 import { ImpressumComponent } from './info/impressum/impressum.component';
 import { PrivacyPolicyComponent } from './info/privacy-policy/privacy-policy.component';
+import { AppComponent } from './app.component';
 
 
 // export const routes: Routes = [
@@ -14,12 +15,12 @@ import { PrivacyPolicyComponent } from './info/privacy-policy/privacy-policy.com
 
 export const routes: Routes = [
   {
-    path: ':lang', // <-- Sprachprefix in der URL
+    path: ':lang', 
     children: [
       { path: '', component: MainContentComponent },
       { path: 'impressum', component: ImpressumComponent },
       { path: 'privacy-policy', component: PrivacyPolicyComponent },
     ]  
   },
-  { path: '**', redirectTo: 'de' } // Fallback auf DE
+  { path: '**', redirectTo: 'de' } 
 ];
