@@ -6,7 +6,8 @@ section {
   @include layers(2);
   // neu heigh
   // height: 45vh;
-  margin-top: calc(-20vh + 55px);
+  // margin-top: calc(-20vh + 55px);
+  margin-top: calc(-50% + 10px);
   // margin-top: -650px;
   // margin-top: calc(-65vh + 50px);
   overflow: hidden;
@@ -20,14 +21,17 @@ section {
   }
 }
 
-@media (min-width: 1900px) {
+@media (min-width: 1921px) {
   section {
-    margin-top: calc(-90vh + 50px);
+    margin-top: calc(-50% + 10px);
   }
 }
 
-// @ von 1440 bis 1900
-// margin-top: calc(-65vh + 50px);
+@media (max-width: 1920px) {
+  section {
+    margin-top: calc(-60vh + 5px);
+  }
+}
 
 @media (max-width: 600px) {
   section {

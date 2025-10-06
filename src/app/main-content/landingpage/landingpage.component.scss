@@ -77,8 +77,8 @@ section {
       flex-direction: row;
       align-items: center;
       .rotate {
-        margin-bottom: 20%;
-        transform: rotate(270deg);
+        // margin-bottom: 20%;
+        transform: rotate(270deg) translate(-20%, -30%);
         gap: 20px;
         white-space: nowrap;
         @include fontH(
@@ -87,7 +87,7 @@ section {
           $f_media: $f_body_2,
           $f_media_small: $f_body_2
         );
-        margin: -30px;
+        // margin: -30px;
       }
     }
   }

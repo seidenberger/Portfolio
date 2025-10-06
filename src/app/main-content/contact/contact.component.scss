@@ -119,7 +119,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  @include CustomBtn($backc: $purple, $border_c: $purple, $padding: 20px 30px);
+  @include CustomBtn($backc: $purple, $border_c: $purple, $padding: 15px 25px);
 }
 
 input[type="checkbox"] {
