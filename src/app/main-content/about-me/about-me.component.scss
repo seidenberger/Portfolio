@@ -5,7 +5,9 @@
 
 section {
   // border: 2px solid yellow;
-  margin-top: -650px;
+  // margin-top: -650px;
+  margin-top: calc(30vh);
+
   @include fontH(
     $font_size: $f_body_8,
     $font_weight: $f_w_small,
@@ -83,33 +85,36 @@ section {
   width: 26px;
 }
 
-@media (max-width: 1600px) {
-  section {
-    margin-top: -450px;
-  }
-}
+// @media (max-width: 1600px) {
+//   section {
+//     // margin-top: -450px;
+//     // margin-top: calc(5%);
+//     // width: calc(100% - 100px);
+//   }
+// }
 
-@media (max-width: 1400px) {
-  section {
-    margin-top: -250px;
-  }
-}
+// @media (max-width: 1400px) {
+//   section {
+//     width: calc(100% - 100px);
+//     // margin-top: -250px;
+//   }
+// }
 
-@media (max-width: 1200px) {
-  section {
-    grid-template-areas:
-      "shadow"
-      "discriptio picture line";
-    margin-top: 300px;
-  }
-}
+// @media (max-width: 1200px) {
+//   section {
+//     grid-template-areas:
+//       "shadow"
+//       "discriptio picture line";
+//     margin-top: 300px;
+//   }
+// }
 
-@media (max-width: 380px) {
-  section {
-    grid-template-areas:
-      "shadow"
-      "discriptio";
-    // neu margin
-    margin-top: calc(45vh - 53px);
-  }
-}
+// @media (max-width: 380px) {
+//   section {
+//     grid-template-areas:
+//       "shadow"
+//       "discriptio";
+//     // neu margin
+//     margin-top: calc(45vh - 53px);
+//   }
+// }
