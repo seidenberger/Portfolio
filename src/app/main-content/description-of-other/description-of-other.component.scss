@@ -75,8 +75,8 @@ section {
     grid-column: 1 / 2;
     img {
       grid-row: 1/2;
-      height: 97px;
-      width: 68px;
+      height: 68px;
+      width: 97px;
       top: -50px;
       left: -45px;
       position: relative;
@@ -170,6 +170,16 @@ section {
       width: 48px;
     }
   }
+  .carousel {
+    .border {
+      img {
+        top: -80px;
+        left: -20px;
+        height: 48px;
+        width: 68px;
+      }
+    }
+  }
 }
 
 @media (max-width: 380px) {
@@ -183,5 +193,15 @@ section {
   .container_img_shadows {
     top: -1000px;
     left: 230px;
+  }
+  .carousel {
+    .border {
+      img {
+        top: -80px;
+        left: -20px;
+        height: 48px;
+        width: 68px;
+      }
+    }
   }
 }

@@ -62,12 +62,13 @@ section {
 }
 
 .container_name {
+  margin-top: -70px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   grid-area: name;
   @include layers(4);
-  @include padding();
+  // @include padding();
   .column {
     display: flex;
     flex-direction: column;
@@ -212,10 +213,21 @@ address {
   .rotated-label {
     margin-right: 25px;
   }
+
+  .container_icons {
+    padding-top: 20px;
+  }
 }
 
 @media (max-width: 350px) {
   section {
+    padding-top: 50px;
+  }
+  .container_icons {
     padding-top: 20px;
+  }
+  .container_head {
+    position: relative;
+    right: 20px;
   }
 }
