@@ -98,7 +98,11 @@ section {
   display: flex;
   flex-direction: column;
   .head {
-    @include fontH($f_media_small: $f_body_2);
+    @include fontH(
+      $f_media_small: $f_body_2,
+      // $breakpoint: 1200px,
+      // $f_media_small: $font_h_3
+    );
   }
   .discription {
     @include fontH(

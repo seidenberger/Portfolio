@@ -100,14 +100,14 @@ section {
 //   }
 // }
 
-// @media (max-width: 1200px) {
-//   section {
-//     grid-template-areas:
-//       "shadow"
-//       "discriptio picture line";
-//     margin-top: 300px;
-//   }
-// }
+@media (max-width: 1200px) {
+  section {
+    grid-template-areas:
+      "shadow"
+      "discriptio picture line";
+    margin-top: 300px;
+  }
+}
 
 // @media (max-width: 380px) {
 //   section {
