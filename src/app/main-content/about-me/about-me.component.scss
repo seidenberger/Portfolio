@@ -6,7 +6,8 @@
 section {
   // border: 2px solid yellow;
   // margin-top: -650px;
-  margin-top: calc(30vh);
+  // margin-top: calc(3vh);
+  margin-top: calc(30vh - 53px);
 
   @include fontH(
     $font_size: $f_body_8,
@@ -85,36 +86,63 @@ section {
   width: 26px;
 }
 
-// @media (max-width: 1600px) {
-//   section {
-//     // margin-top: -450px;
-//     // margin-top: calc(5%);
-//     // width: calc(100% - 100px);
-//   }
-// }
+@media (min-width: 1901px) {
+  section {
+    margin-top: calc(-40vh - 53px);
+  }
+}
 
-// @media (max-width: 1400px) {
-//   section {
-//     width: calc(100% - 100px);
-//     // margin-top: -250px;
-//   }
-// }
+@media (max-width: 1900px) {
+  section {
+    margin-top: calc(-10vh - 53px);
+  }
+}
+
+@media (max-width: 1600px) {
+  section {
+    margin-top: calc(-50vh - 53px);
+  }
+}
+
+@media (max-width: 1400px) {
+  section {
+    margin-top: calc(-30vh - 53px);
+  }
+}
 
 @media (max-width: 1200px) {
   section {
     grid-template-areas:
       "shadow"
       "discriptio picture line";
-    margin-top: 300px;
+    margin-top: calc(10vh - 53px);
   }
 }
 
-// @media (max-width: 380px) {
-//   section {
-//     grid-template-areas:
-//       "shadow"
-//       "discriptio";
-//     // neu margin
-//     margin-top: calc(45vh - 53px);
-//   }
-// }
+@media (max-width: 900px) {
+  section {
+    margin-top: calc(10vh - 53px);
+  }
+}
+
+@media (max-width: 700px) {
+  section {
+    margin-top: calc(20vh - -53px);
+    // margin-top: clamp(-40vh, -20vh, 30vh);
+  }
+}
+
+@media (max-width: 380px) {
+  section {
+    grid-template-areas:
+      "shadow"
+      "discriptio";
+    margin-top: calc(30vh - 53px);
+  }
+}
+
+@media (min-width: 320px) and (max-width: 379px) {
+  section {
+    margin-top: calc(50vh - 53px);
+  }
+}

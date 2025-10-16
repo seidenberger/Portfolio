@@ -129,6 +129,8 @@ figure.inactive:hover img {
   margin: 32px 0;
   .another_skill {
     margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
   }
 }
 

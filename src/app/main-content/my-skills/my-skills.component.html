@@ -39,14 +39,15 @@
     </div>
   </div>
   <div class="container_butten">
-    <p class="another_skill">
+    <div class="another_skill">
       {{ otherSkills }}
-
-      <span [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
-        {{ anotherSkill }}
-      </span>
-      ?
-    </p>
+      <div>
+        <span [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
+          {{ anotherSkill }}
+        </span>
+        ?
+      </div>
+    </div>
     <p>
       {{ enthusiasmSkills }}
     </p>
