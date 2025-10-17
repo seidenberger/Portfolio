@@ -6,7 +6,7 @@ import { TranslationService } from '../../translation.service';
   selector: 'app-impressum',
   imports: [],
   templateUrl: './impressum.component.html',
-  styleUrl: './impressum.component.scss'
+  styleUrl: './../legal.scss'
 })
 export class ImpressumComponent extends BaseTranslatedComponent {
 

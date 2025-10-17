@@ -4,15 +4,10 @@
 // um den aktuellen Sprachwert zu beobachten.
 export type TranslationKey = 'uebung' | 'about' | 'skill' | 'portfolio' | 'rotate' | 'talk' | 'scroll' | 'way' | 'place' |'enthusiasm' | 'solutions' | 'headSkills' | 'allSkills' | 'otherSkills' | 'anotherSkill' | 'enthusiasmSkills' | 'buttonSkill' | 'descriptionPortfoli' | 'textOne' |  'textTwo' | 'textThree' |'work' | 'join_description' | 'pollo_loco_description' | 'contact' | 'solve' | 'reinforcement' | 'wayMessage' | 'entertain'  | 'yourName' | 'pleaseName' | 'yourMail' | 'pleaseEmail' | 'yourMassage' | 'pleaseMassage' | 'pleaseAccept' | 'policyRead' | 'policyPolicy' | 'policyAgree' | 'sendMessage' | 'legelNotice' | 'responsible' |'address' | 'telephone' | 'noteWebsite' | 'noteWebsiteOne' | 'noteWebsiteTwo' | 'created';
 
-
-
 export const translations :  {
   [lang: string]: { [key: string]: string }
-
   } = {
-
     de: {
-
       about: "Über mich",
       skill: "Fähigkeiten",
       portfolio: "Portfolio",
@@ -30,7 +25,7 @@ export const translations :  {
       enthusiasmSkills: "Für diese Webseite habe ich mich z.B. in Angular eingearbeitet.",
       buttonSkill: "Lass uns Kontakt aufnehmen", 
       descriptionPortfoli: "Hier sind meine größten Projekte zum ausprobieren.",
-      uebung: "DE  hallo ich ne übung ",
+      // uebung: "Hallo ich ne übung ",
       textOne: "EINS hier kann dein fedback stehen",
       textTwo: "ZWEI hier kann dein fedback stehen",
       textThree: "DREI hier kann dein fedback stehen",
@@ -44,7 +39,7 @@ export const translations :  {
       // wayMessage: "als frontend developer?",
       // entertain: "Kontaktieren sie Mich! ",
       yourName: "Dein Name",
-           pleaseName: "Bitte Name einfügen",
+      pleaseName: "Bitte Name einfügen",
       yourMail: "Deine E mail",
       pleaseEmail: "Bitte Email einfügen",
       yourMassage: "Hier kann deine Nachricht stehen ",
@@ -62,13 +57,9 @@ export const translations :  {
       noteWebsiteOne:"Dieses Impressum wurde mit Hilfe des",
       noteWebsiteTwo:"Impressums-Generators der activeMind AG",
       created:"erstellt",
-
-      
-
-
-      
-
+       
       },
+
     en: {
         about: "About me",
         skill: "Skills", 
@@ -76,33 +67,34 @@ export const translations :  {
         rotate: "I am",
         talk: "Let's talk",
         scroll: "scroll down",
-        way: "EN",
-        place: "EN",
-        enthusiasm: "EN",
-        solutions: "EN",
+        way: "EN  I'm a career changer in software development. My goal is to develop software that solves problems and makes them usable for people.",
+        place: "EN  I was born in Weilheim, so I would like to shape my future in an office in the region.",
+        enthusiasm: "EN  My interest in IT began with the Raspberry PI.",
+        solutions: "EN  Thanks to my creativity, I often find new solutions that I enjoy discussing and implementing together with a team.",
         headSkills: "My skills",
-        allSkills: "EN",
-        otherSkills: "EN",
+        allSkills: "EN In my projects I used various frontend technologies such as JavaScript.",
+        otherSkills: "EN  You will be",
         anotherSkill: "another Skill",
-        enthusiasmSkills: "EN",
+        enthusiasmSkills: "EN  For this website, for example, I familiarized myself with Angular.",
         buttonSkill: "Let's talk",
-        descriptionPortfoli: "EN",
-        uebung: "EN   übunung en",
-        textOne: "test 1 EN",
-        textTwo: "EN 222",
-        textThree: "EN 333",
-        work: "EN",
-        join_description: "EN",
-        pollo_loco_description: "EN",
+        descriptionPortfoli: "EN  Here are my biggest projects to try out.",
+        // uebung: "EN   übunung en",
+        textOne: "EN  ONE here can be your feedback",
+        textTwo: "EN two here can be your feedback",
+        textThree: "EN three here can be your feedback",
+        // work: "EN",
+        join_description: "EN  This app is based on a Kanban board and was developed by my team of four people.",
+        pollo_loco_description: "EN  A 2D jump-and-run game built with object-oriented programming. Help the speedy Pepe collect coins and bottles of Tabasco. Prepare yourself for the decisive battle against the giant chicken.",
         contact: "Contact",
-        solve: "got a poroblem to solve?",
-        reinforcemen: "EN",
-        // wayMessage: "EN",
+        solve: "Want to get to know us?",
+        // reinforcement 
+        reinforcement: "EN  If my projects have aroused your interest,",
+        wayMessage: "EN  I would be happy to receive your contact details.",
         // entertain: "EN",
         yourName: "Your Name",
-        pleaseName: "EN",
+        pleaseName: "Please insert name",
         yourMail: "Your Mail",
-        pleaseEmail: "EN",
+        pleaseEmail: "EN  Please insert email",
         yourMassage: "Your Massage",
         pleaseMassage: "pleas enter a message",
         pleaseAccept: "Please accept the privacy policy",
@@ -111,14 +103,14 @@ export const translations :  {
         policyAgree: "policyAgree and agree to the porocessing of my data as outlined.",
         sendMessage: "send your message :)",
         legelNotice: "Legel Notice",
-        responsible: "",
-        address:"",
-        telephone:"",
-        noteWebsite:"",
-        noteWebsiteOne:"",
-        noteWebsiteTwo:"",
-        created:"",
-        privacyPolicy:"",
-        responsibleDSGVO:"",
+        responsible: "Person responsible",
+        address:"Postal address",
+        telephone:"Phone",
+        noteWebsite:"Information about the website",
+        noteWebsiteOne:"This imprint was created with the help of",
+        noteWebsiteTwo:"Imprint generator of activeMind AG",
+        created:"created",
+        // privacyPolicy:"",
+        // responsibleDSGVO:"",
       }
   };  
