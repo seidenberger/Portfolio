@@ -17,10 +17,6 @@ export class ButtonTranslatedComponent implements OnInit, OnDestroy{
   constructor(public translationService: TranslationService) {
      this.activeLang.set(this.translationService.getLanguage());
   }
-
-      // @Output() closed = new EventEmitter<void>();
-
-
         ngOnInit(): void {
     this.updateTexts(); 
     this.sub = this.translationService.lang$.subscribe(() => {
@@ -42,6 +38,5 @@ export class ButtonTranslatedComponent implements OnInit, OnDestroy{
 
   isActive(lang: 'de' | 'en') {
     return this.activeLang() === lang;
-    // console.log('Aktive Sprache war:', this.isActive());
   }
 }

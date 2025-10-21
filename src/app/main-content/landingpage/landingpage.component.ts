@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslationService } from '../../translation.service';
 import { BaseTranslatedComponent } from '../../base-translated.component';

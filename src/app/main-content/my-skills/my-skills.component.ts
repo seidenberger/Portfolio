@@ -18,9 +18,9 @@ hoverImage: string | null = null;
 
 
 
-  headSkills = '';
-  allSkills = '';
-  otherSkills = '';
+headSkills = '';
+allSkills = '';
+otherSkills = '';
 anotherSkill = '';
 enthusiasmSkills = '';
 buttonSkill = '';
@@ -40,13 +40,10 @@ buttonSkill = '';
 
 
 onHover(index: number, truh: boolean) {
-  //  console.log('onHover aufgerufen', { index, truh });
   if (truh) {
     this.hoverIndex = index;
-    //  this.hoverImage = null;
   }    else {
     this.hoverIndex = null; 
-    //  this.hoverImage = 'assets/img/skills/Property 1=Continually learning.png';
   }
 }
 
@@ -56,6 +53,4 @@ onLeave(index: number) {
   }
     this.hoverImage = null;
 }
-  
-
 }

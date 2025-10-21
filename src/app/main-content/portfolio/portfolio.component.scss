@@ -12,7 +12,6 @@ section {
     $font_weight: $f_w_small,
     $f_media: $f_body_8
   );
-  // border: 2px solid blue;
   display: grid;
   grid-template-rows: 1fr;
   .container_img_shadows {
@@ -48,13 +47,10 @@ section {
 }
 
 .container_project {
-  // display: grid;
-
   grid-template-columns: 50% 50%;
   @include layers(1);
   display: flex;
   .container_img_project {
-    // grid-column: 1 /2;
     img {
       width: 620px;
       height: auto;
@@ -62,7 +58,6 @@ section {
     }
   }
   .container_text_project {
-    // grid-column: 2 /3;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,9 +76,7 @@ section {
       @include fontH(
         $font_size: $f_body_5,
         $font_weight: $f_w_small,
-        $f_media: $f_body_8,
-
-        // $f_media_small: $f_body_8
+        $f_media: $f_body_8
       );
     }
     .button {
@@ -91,8 +84,7 @@ section {
       @include fontH(
         $font_size: $f_body_4,
         $font_weight: $f_w_small,
-        $f_media: $f_body_5,
-        // $f_media_small: $f_body_8
+        $f_media: $f_body_5
       );
       display: flex;
       gap: 30px;
@@ -118,18 +110,6 @@ section {
   @include customA($backc: $blue);
   @include textN();
 }
-
-// .container_item.reverse {
-//   .container_project {
-//     .container_text_project {
-//       grid-column: 1 /2;
-//       grid-row: 1 / 2;
-//     }
-//     .container_img_project {
-//       grid-column: 2 /3;
-//     }
-//   }
-// }
 
 @media (max-width: 1200px) {
   .container_project {

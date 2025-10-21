@@ -5,9 +5,7 @@
 
 section {
   scroll-margin-top: 100px;
-  // @include layers(3);
   margin-top: 50px;
-  // border: 2px solid yellow;
   @include fontH(
     $font_size: $f_body_8,
     $font_weight: $f_w_small,
@@ -22,7 +20,6 @@ section {
     "icon icon icon container_header "
     "icon icon icon container_butten";
   @include gridCandRows(auto auto);
-  // @include layers($layers: 1);
 }
 
 .icons {
@@ -30,12 +27,9 @@ section {
   grid-area: icon;
   .grid-container {
     display: grid;
-
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
-
     gap: 32px;
-    // @include padding();
     .skill_img {
       width: 54px;
       height: 60px;
@@ -54,7 +48,6 @@ section {
   }
 }
 
-// neu
 figure {
   gap: 10px;
   width: 150px;
@@ -94,7 +87,7 @@ figure.inactive:hover {
 }
 
 figure.inactive:hover img {
-  filter: brightness(0) invert(1); // Weiß
+  filter: brightness(0) invert(1);
 }
 
 .container_header {
@@ -199,10 +192,6 @@ a {
       grid-template-rows: auto auto auto auto;
     }
   }
-  // .skill_img {
-  //   width: 48px;
-  //   height: 48px;
-  // }
 }
 
 @media (max-width: 480px) {

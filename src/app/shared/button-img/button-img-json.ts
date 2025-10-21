@@ -3,7 +3,6 @@ export const buttonImgs = [
         {
         "link": 'https://www.github.com/seidenberger',
         "image": 'assets/icons/github.png',
-        // "image": 'assets/icons/Property 1=Default.png',
         external: true
     },
 
