@@ -16,7 +16,7 @@ import { Subscription } from 'rxjs';
   ],
   templateUrl: './privacy-policy.component.html',
     
-  styleUrl: './../impressum/impressum.component.scss'
+  styleUrl: './../legal.scss'
 })
 
 export class PrivacyPolicyComponent implements OnDestroy {

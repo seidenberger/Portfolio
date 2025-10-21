@@ -27,7 +27,6 @@ export class ImpressumComponent extends BaseTranslatedComponent {
     }
 
 updateTexts() {
-  // debugger
   this.legelNotice = this.translationService.translate('legelNotice');
   this.responsible = this.translationService.translate('responsible');
   this.address = this.translationService.translate('address');
@@ -36,12 +35,6 @@ updateTexts() {
   this.noteWebsite = this.translationService.translate('noteWebsite');
   this.noteWebsiteTwo = this.translationService.translate('noteWebsiteTwo');
   this.created = this.translationService.translate('created');
-  // this.privacyPolicy = this.translationService.translate('privacyPolicy');
-  // this.responsibleDSGVO = this.translationService.translate('responsibleDSGVO');
-  // this. = this.translationService.translate('');
-  // this. = this.translationService.translate('');
-  // this.talk = this.translationService.translate('talk');
-  // this.scroll = this.translationService.translate('scroll');
   
 }
     
