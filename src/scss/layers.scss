@@ -1,9 +1,4 @@
-// @mixin layers() {
-//   z-index: 4;
-// }
-
 @mixin layers($layers, $posi: relative) {
   z-index: $layers;
-  // position: relative;
   position: $posi;
 }
