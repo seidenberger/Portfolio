@@ -8,12 +8,6 @@ section {
     $font_weight: $f_w_small,
     $f_media: $f_body_5
   );
-
-  // @include max_Width();
-  // padding: $p;
-
-  // align-items: center;
-  // border: 2px solid burlywood;
   @include layers(2);
   background-color: $black;
   background-color: #141d2f;
@@ -21,8 +15,6 @@ section {
     @include max_Width();
     width: 100vw;
     .container_inner {
-      // @include max_Width();
-      // padding: $p;
       @include responsivePadding($p, $p-media);
       display: flex;
       flex-direction: column;
@@ -35,7 +27,6 @@ section {
 .logo {
   font-size: 35px;
   font-weight: 700;
-  // @include fontL();
   > .letter_e {
     position: relative;
     display: inline-block;
@@ -74,13 +65,9 @@ section {
 
 .border {
   @include line();
-
-  // height: 4px;''
-  // background-color: $green;
 }
 
 a {
-  // text-decoration: none;
   @include textN();
   @include fontH(
     $font_size: $f_body_8,
@@ -92,17 +79,12 @@ a {
 img {
   width: 30px;
   height: 30px;
-  // display: flex;
   gap: 21px;
 }
 
 @media only screen and (max-width: 1100px) {
-  .container_outer {
-    // width: 100vh;
-  }
   .container_inner {
     align-items: center;
-    // padding: $p-media;
   }
   .container_footer {
     align-items: center;
@@ -110,9 +92,6 @@ img {
     div {
       padding: 10px;
     }
-  }
-  .border {
-    // width: 100vh;
   }
   .logo {
     padding: 10px;

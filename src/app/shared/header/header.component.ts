@@ -1,6 +1,4 @@
 import { Component} from '@angular/core';
-// import { TranslationService } from '../../translation.service';
-// import { Subscription } from 'rxjs';
 import { MenuOverlayComponent } from './menu-overlay/menu-overlay.component';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
