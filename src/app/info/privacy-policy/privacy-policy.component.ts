@@ -4,7 +4,6 @@ import { PrivacyPolicyEnComponent } from './privacy-policy-en/privacy-policy-en.
 import { TranslationService } from '../../translation.service';
 import { CommonModule} from '@angular/common';
 import { Subscription } from 'rxjs';
-// import { BaseTranslatedComponent } from '../../base-translated.component';
 
 @Component({
   selector: 'app-privacy-policy',
