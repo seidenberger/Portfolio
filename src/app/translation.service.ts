@@ -12,17 +12,11 @@ import { translations, TranslationKey } from './translations';
 
 export class TranslationService {
 
-  // private static counter = 0;
 
   private currentLang: 'en' | 'de' = 'de';
 
 
-  constructor() { 
-    //   console.log('TranslationService wurde erstellt, aktuelle Sprache:', this.currentLang);
-    //       TranslationService.counter++;
-    // console.log('TranslationService Instanz Nr.', TranslationService.counter, 
-    //             'mit Sprache:', this.currentLang);
-  }
+  constructor() {}
   
 
   private langSubject = new BehaviorSubject<'en' | 'de'>(this.currentLang);

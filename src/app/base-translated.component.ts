@@ -12,13 +12,13 @@ export abstract class BaseTranslatedComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.updateTexts();
     this.sub = this.translationService.lang$.subscribe(() => {
-      this.updateTexts(); // Bei Sprachwechsel aktualisieren
+      this.updateTexts(); 
     });
   }
 
   ngOnDestroy(): void {
     if (this.sub) {
-      this.sub.unsubscribe(); // Speicher aufräumen
+      this.sub.unsubscribe(); 
     }
   }
 

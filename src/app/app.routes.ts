@@ -22,10 +22,3 @@ export const routes: Routes = [
 ];
 
 
-
-// export const routes: Routes = [
-//   { path: '', component: MainContentComponent },
-//   { path: 'impressum', component:  ImpressumComponent},
-//   { path: 'privacy-policy', component: PrivacyPolicyComponent},
-
-// ];
