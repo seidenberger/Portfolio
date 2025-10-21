@@ -58,7 +58,6 @@ logPrivacy() {
 }
 
 updateTexts() {
-  // debugger
   this.contact = this.translationService.translate('contact');
   this.solve = this.translationService.translate('solve');
   this.reinforcement = this.translationService.translate('reinforcement');
@@ -81,7 +80,6 @@ updateTexts() {
 
   post = {
     endPoint: 'https://theodor-seidenberger.de/sendMail.php',
-    // endPoint: 'https://deineDomain.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {

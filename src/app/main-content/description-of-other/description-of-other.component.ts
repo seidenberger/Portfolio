@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-// import { carousel } from './description-jaso';
-// import { descriptionItems } from './description-json;
 import { descriptionItems } from './description-json';
 import { CommonModule } from '@angular/common';
 import { DescriptionOneComponent } from './description-one/description-one.component';
@@ -35,7 +33,6 @@ export class DescriptionOfOtherComponent extends BaseTranslatedComponent{
     updateTexts() {
   const key = this.currentItem.textKey as TranslationKey;
   this.currentText = this.translationService.translate(key);
-  // console.log('updateTexts  Aktives Bild:', this.currentIndex, 'Key:', key, 'Text:', this.currentText);
 }
 
   get currentItem() {

@@ -18,21 +18,16 @@ export class LandingpageComponent extends BaseTranslatedComponent{
   talk= '';
   scroll= '';
   
-  // private sub!: Subscription;
 
   constructor(public override translationService: TranslationService) {
     super(translationService)
   }
 
 
-
 updateTexts() {
-  // debugger
   this.rotate = this.translationService.translate('rotate');
   this.talk = this.translationService.translate('talk');
   this.scroll = this.translationService.translate('scroll');
   
 }
-
-
 }

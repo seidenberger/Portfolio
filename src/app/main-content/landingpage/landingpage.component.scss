@@ -4,13 +4,9 @@
 @import "./../../../scss/media.scss";
 
 section {
-  // padding-top: 109px;
   padding-top: 40px;
-  // border: 2px solid green;
   @include max_Width();
-  // neu margin
   height: calc(100vh - 53px);
-  // height: 100vh;
   width: 100%;
   background-color: $blue;
   display: grid;
@@ -28,7 +24,6 @@ section {
 }
 
 .container_imgs {
-  // neu margin
   height: 60vh;
   display: grid;
   place-items: center;
@@ -50,9 +45,7 @@ section {
 
 .container_img_shadows {
   display: contents;
-  // @include layers(1);
   img {
-    // @include layers(1);
     height: auto;
     max-width: 690px;
     max-height: 671px;
@@ -69,7 +62,6 @@ section {
   justify-content: flex-end;
   grid-area: name;
   @include layers(4);
-  // @include padding();
   .column {
     display: flex;
     flex-direction: column;
@@ -79,7 +71,6 @@ section {
       flex-direction: row;
       align-items: center;
       .rotate {
-        // margin-bottom: 20%;
         transform: rotate(270deg) translate(-20%, -30%);
         gap: 20px;
         white-space: nowrap;
@@ -89,7 +80,6 @@ section {
           $f_media: $f_body_2,
           $f_media_small: $f_body_2
         );
-        // margin: -30px;
       }
     }
   }
@@ -99,11 +89,7 @@ section {
   display: flex;
   flex-direction: column;
   .head {
-    @include fontH(
-      $f_media_small: $f_body_2,
-      // $breakpoint: 1200px,
-      // $f_media_small: $font_h_3
-    );
+    @include fontH($f_media_small: $f_body_2);
   }
   .discription {
     @include fontH(
@@ -143,12 +129,6 @@ section {
   align-items: flex-end;
   justify-content: space-between;
 }
-
-// a {
-//   text-decoration: none;
-//   color: $white;
-//   @include dNone();
-// }
 
 .overlay_rotated {
   @include dNone();
