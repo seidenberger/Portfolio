@@ -122,6 +122,10 @@ input[type="submit"]:hover {
   @include CustomBtn($backc: $purple, $border_c: $purple, $padding: 15px 25px);
 }
 
+.privacy-policy {
+  color: $purple;
+}
+
 input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;

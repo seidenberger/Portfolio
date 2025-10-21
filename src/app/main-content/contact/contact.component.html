@@ -77,14 +77,16 @@
             <div>
               <div class="container_box">
                 <label for="box"></label>
-                <input
-                  type="checkbox"
-                  id="privacy"
-                  name="privacy"
-                  [(ngModel)]="contactData.privacyAccepted"
-                  #privacy="ngModel"
-                  required
-                />
+                <div class="check">
+                  <input
+                    type="checkbox"
+                    id="privacy"
+                    name="privacy"
+                    [(ngModel)]="contactData.privacyAccepted"
+                    #privacy="ngModel"
+                    required
+                  />
+                </div>
                 <div
                   class="fill_1out_hint"
                   *ngIf="showError && !contactData.privacyAccepted"
@@ -94,7 +96,10 @@
 
                 <div class="policy">
                   {{ policyRead }}
-                  <a [routerLink]="['/', currentLang, 'privacy-policy']">
+                  <a
+                    [routerLink]="['/', currentLang, 'privacy-policy']"
+                    class="privacy-policy"
+                  >
                     {{ policyPolicy }}
                   </a>
                   {{ policyAgree }}
