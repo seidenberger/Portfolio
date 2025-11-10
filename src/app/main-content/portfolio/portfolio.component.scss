@@ -4,7 +4,7 @@
 @import "./../../../scss/media.scss";
 
 section {
-  scroll-margin-top: 100px;
+  // scroll-margin-top: 100px;
 
   @include padding();
   @include fontH(
@@ -27,6 +27,10 @@ section {
       position: absolute;
     }
   }
+}
+
+.portfolio {
+  margin-top: 100px;
 }
 
 .header {

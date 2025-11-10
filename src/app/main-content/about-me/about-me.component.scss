@@ -4,7 +4,8 @@
 @import "./../../../scss/media.scss";
 
 section {
-  margin-top: calc(30vh - 53px);
+  margin-top: 100px;
+  // margin-top: calc(30vh - 53px);
 
   @include fontH(
     $font_size: $f_body_8,
@@ -89,17 +90,17 @@ section {
   }
 }
 
-@media (max-width: 1900px) {
-  section {
-    margin-top: calc(-10vh - 53px);
-  }
-}
+// @media (max-width: 1900px) {
+//   section {
+//     margin-top: calc(-10vh - 53px);
+//   }
+// }
 
-@media (max-width: 1600px) {
-  section {
-    margin-top: calc(-50vh - 53px);
-  }
-}
+// @media (max-width: 1600px) {
+//   section {
+//     margin-top: calc(-50vh - 53px);
+//   }
+// }
 
 @media (max-width: 1400px) {
   section {

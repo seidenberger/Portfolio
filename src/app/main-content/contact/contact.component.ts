@@ -48,7 +48,7 @@ yourName= '';
   pleaseMassage= '';
   pleaseAccept= '';
   policyRead= '';
-  policyPolicy= '';
+  policyPolicy= ''; 
   policyAgree= '';
  sendMessage= '';
 
