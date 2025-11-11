@@ -84,11 +84,11 @@ section {
   width: 26px;
 }
 
-@media (min-width: 1901px) {
-  section {
-    margin-top: calc(-40vh - 53px);
-  }
-}
+// @media (min-width: 1901px) {
+//   section {
+//     margin-top: calc(-40vh - 53px);
+//   }
+// }
 
 // @media (max-width: 1900px) {
 //   section {
@@ -102,11 +102,11 @@ section {
 //   }
 // }
 
-@media (max-width: 1400px) {
-  section {
-    margin-top: calc(-30vh - 53px);
-  }
-}
+// @media (max-width: 1400px) {
+//   section {
+//     margin-top: calc(-30vh - 53px);
+//   }
+// }
 
 @media (max-width: 1200px) {
   section {
@@ -123,23 +123,23 @@ section {
   }
 }
 
-@media (max-width: 700px) {
-  section {
-    margin-top: calc(20vh - -53px);
-  }
-}
+// @media (max-width: 700px) {
+//   section {
+//     margin-top: calc(20vh - -53px);
+//   }
+// }
 
 @media (max-width: 380px) {
   section {
     grid-template-areas:
       "shadow"
       "discriptio";
-    margin-top: calc(30vh - 53px);
+    // margin-top: calc(30vh - 53px);
   }
 }
 
-@media (min-width: 320px) and (max-width: 379px) {
-  section {
-    margin-top: calc(50vh - 53px);
-  }
-}
+// @media (min-width: 320px) and (max-width: 379px) {
+//   section {
+//     margin-top: calc(50vh - 53px);
+//   }
+// }

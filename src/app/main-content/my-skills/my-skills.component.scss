@@ -4,8 +4,8 @@
 @import "./../../../scss/media.scss";
 
 section {
-  scroll-margin-top: 100px;
-  margin-top: 50px;
+  margin-top: 100px;
+  // margin-top: 50px;
   @include fontH(
     $font_size: $f_body_8,
     $font_weight: $f_w_small,

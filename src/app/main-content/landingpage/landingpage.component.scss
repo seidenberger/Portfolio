@@ -188,19 +188,23 @@ address {
   .imgs {
     grid-template-columns: 1fr;
   }
-}
-
-@media (max-width: 600px) {
   .container_img_person {
     img {
+      content: url("/assets/background/wave-and-body-responsive.png");
       width: 300px;
     }
+  }
+
+  @media (max-width: 600px) {
   }
 
   .container_img_shadows {
     img {
       width: 300px;
     }
+  }
+  .container_imgs {
+    place-items: start;
   }
 }
 
