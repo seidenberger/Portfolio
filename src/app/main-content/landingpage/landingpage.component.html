@@ -1,40 +1,45 @@
 <section id="#home">
-  <div id="landingpage" class="container_imgs">
-    <div class="imgs">
-      <div class="container_img_person">
-        <!-- <img src="assets/img/body.png" alt="" /> -->
-        <!-- <img src="assets/background/wave-and-body.png" alt="" /> -->
-        <img src="assets/background/wave-and-body 2.png" alt="" />
-      </div>
-      <div class="container_img_shadows">
-        <!-- <img src="assets/background/photo-shadows.png" alt="" /> -->
-      </div>
-    </div>
+  <div id="landingpage" class="background">
+    <img src="assets/background/wave-and-body2.png" class="img-big" />
+    <!-- <img
+      src="assets/background/wave-and-body-responsive.png"
+      alt=""
+      class="img-small"
+    /> -->
   </div>
 
-  <div class="container_name">
-    <div class="column">
-      <article class="d_flex_c">
-        <span class="rotate">{{ rotate }}</span>
-        <div class="container_head">
-          <span class="head">Theodor Seidenberger</span>
-          <span class="discription">FRONTEND DEVELOPER</span>
+  <!-- <div class="test"> -->
+  <div class="wrapper">
+    <div class="container_name">
+      <div class="column">
+        <article>
+          <span class="rotate">{{ rotate }}</span>
+          <div class="container_head">
+            <span class="head">Theodor</span>
+            <span class="head">Seidenberger</span>
+            <span class="discription">FRONTEND DEVELOPER</span>
+          </div>
+        </article>
+
+        <div class="container_butten">
+          <aside>
+            <a href="#contact">{{ talk }}</a>
+          </aside>
         </div>
-      </article>
-
-      <div class="container_butten">
-        <aside>
-          <a href="#contact">{{ talk }}</a>
-        </aside>
+      </div>
+    </div>
+    <div class="container_icons">
+      <app-button-img [show]="true"></app-button-img>
+      <div class="overlay_rotated">
+        <p class="discription_page">{{ scroll }}</p>
+        <img
+          class="rotate_arrow"
+          src="assets/icons/arrow-down-line.png"
+          alt=""
+        />
       </div>
     </div>
   </div>
-  <div class="container_icons">
-    <app-button-img [show]="true"></app-button-img>
-    <div class="overlay_rotated">
-      <p class="discription_page">{{ scroll }}</p>
-      <img class="rotate_arrow" src="assets/icons/arrow-down-line.png" alt="" />
-    </div>
-  </div>
+  <!-- </div> -->
 </section>
 <!-- <img src="assets/img/wave-and-body.png" alt="" /> -->

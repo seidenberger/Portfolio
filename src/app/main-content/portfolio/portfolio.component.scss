@@ -33,20 +33,38 @@ section {
   margin-top: 100px;
 }
 
-.header {
-  display: grid;
-  grid-template-columns: minmax(24px, 100px) 1fr minmax(100px, 507px);
-  align-items: center;
+header {
+  display: flex;
+  align-items: flex-end;
   justify-content: end;
+  flex-direction: column;
+  // text-align: right;
+}
+
+.header_line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: max-content;
   @include layers(1);
-  hr {
-    @include hr($wi: 100%);
+  .hr_left {
+    // width: 100px;
+    position: relative;
+    @include hr();
   }
   .head {
     @include fontH();
   }
+  .hr_right {
+    // width: 100px;
+    position: relative;
+    @include hr($wi: 300px);
+  }
   .description {
     grid-column: 1/4;
+    text-align: right;
+    width: max-content;
+    align-self: flex-start;
   }
 }
 

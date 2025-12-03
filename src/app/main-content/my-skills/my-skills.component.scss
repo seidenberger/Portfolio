@@ -11,7 +11,7 @@ section {
     $font_weight: $f_w_small,
     $f_media: $f_body_8
   );
-  @include padding();
+  @include padding($right: 0px);
   display: grid;
   grid-template-columns: 15% 15% auto 1fr;
   grid-template-rows: auto auto;
@@ -96,9 +96,10 @@ figure.inactive:hover img {
 .container_header {
   grid-area: container_header;
   @include layers(1);
-  div {
+  .placement {
     display: flex;
     justify-content: flex-end;
+    gap: 10px;
     .head {
       @include fontH();
     }
