@@ -44,7 +44,8 @@ header {
     grid-area: head;
   }
   span {
-    @include fontH();
+    // @include fontH();
+    @include fontH($f_media_small: $f_body_2);
     grid-area: head;
   }
 }

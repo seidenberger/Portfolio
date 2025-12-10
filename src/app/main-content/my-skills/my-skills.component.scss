@@ -105,7 +105,8 @@ figure.inactive:hover img {
     justify-content: flex-end;
     gap: 10px;
     .head {
-      @include fontH();
+      // @include fontH();
+      @include fontH($f_media_small: $f_body_2);
     }
   }
 }
@@ -129,6 +130,11 @@ figure.inactive:hover img {
   @include padding();
   margin: 32px 0;
   .another_skill {
+    @include fontH(
+      $font_size: $f_body_2,
+      $font_weight: $f_w_big,
+      $f_media: $f_body_4
+    );
     margin-bottom: 16px;
     display: flex;
     flex-direction: column;

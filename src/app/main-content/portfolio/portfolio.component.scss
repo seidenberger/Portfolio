@@ -53,7 +53,8 @@ header {
     @include hr();
   }
   .head {
-    @include fontH();
+    // @include fontH();
+    @include fontH($f_media_small: $f_body_2);
   }
   .hr_right {
     // width: 100px;
