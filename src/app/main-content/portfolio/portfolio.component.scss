@@ -61,7 +61,6 @@ header {
     @include hr($wi: 300px);
   }
   .description {
-    grid-column: 1/4;
     text-align: right;
     width: max-content;
     align-self: flex-start;

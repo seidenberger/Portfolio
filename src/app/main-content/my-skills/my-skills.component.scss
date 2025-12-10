@@ -60,6 +60,10 @@ figure {
   }
 }
 
+figcaption {
+  text-align: center;
+}
+
 .skill_img_box1.move-up {
   animation: slide-in 0.8s linear infinite alternate;
 }

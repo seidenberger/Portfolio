@@ -68,7 +68,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 100px;
+    // margin-right: 100px;
     article {
       display: flex;
       flex-direction: row;
@@ -144,6 +144,7 @@ section {
   @include dNone();
   display: flex;
   align-items: center;
+  transform-origin: 100% 0%;
   transform: rotate(90deg);
   gap: 8px;
   padding-bottom: -20px;
@@ -162,7 +163,7 @@ section {
 
     width: 20px;
     height: auto;
-    margin-right: 80px;
+    // margin-right: 80px;
   }
 }
 
