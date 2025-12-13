@@ -38,9 +38,11 @@ section {
 header {
   display: flex;
   align-items: center;
+  gap: 10px;
   .line {
     @include line($backc: $purple);
-    width: 20px;
+    max-width: 500px;
+    max-width: 40%;
     grid-area: head;
   }
   span {
@@ -115,6 +117,14 @@ input[type="submit"] {
   border: none !important;
   cursor: pointer;
   width: auto;
+  font-size: 23px;
+  font-weight: 400;
+
+  @include fontH(
+    $font_size: $f_body_5,
+    $font_weight: $f_w_small,
+    $f_media: $f_body_3
+  );
 }
 
 input[type="submit"]:hover {

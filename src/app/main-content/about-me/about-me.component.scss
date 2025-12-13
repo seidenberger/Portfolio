@@ -6,14 +6,14 @@
 section {
   margin-top: 100px;
   // margin-top: calc(30vh - 53px);
-
+  @include layers(3);
   @include fontH(
     $font_size: $f_body_8,
     $font_weight: $f_w_small,
     $f_media: $f_body_8
   );
 
-  @include layers(3);
+  // @include layers(3);
   display: grid;
   grid-template-columns: 20% 20% 1fr auto minmax(100px, 267px);
   grid-template-rows: 20px auto;

@@ -8,17 +8,17 @@ section {
 
   height: calc(100vh - 53px);
   width: 100%;
-  background-color: $blue;
+  // background-color: $blue;
 
   @include gridCandRows(auto auto auto);
   padding-right: 100px;
+  // background: url("/assets/background/wave-and-body3.png");
 }
 
 .background {
   position: absolute;
   overflow: hidden;
 
-  // background-image: url("../public/assets/background/wave-and-body2.png");
   img {
     height: auto;
     display: block;
