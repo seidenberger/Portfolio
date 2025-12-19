@@ -117,9 +117,6 @@ input[type="submit"] {
   border: none !important;
   cursor: pointer;
   width: auto;
-  font-size: 23px;
-  font-weight: 400;
-
   @include fontH(
     $font_size: $f_body_5,
     $font_weight: $f_w_small,
@@ -187,6 +184,11 @@ input[type="checkbox"]:checked::after {
       $f_media: $f_body_9
     );
   }
+}
+
+a:hover {
+  // @include line($backc: $purple);
+  text-decoration: underline;
 }
 
 .contact_text {

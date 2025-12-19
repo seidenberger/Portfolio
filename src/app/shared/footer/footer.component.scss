@@ -74,6 +74,34 @@ a {
     $font_weight: $f_w_small,
     $f_media: $f_body_8
   );
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%; /* Hälfte des Textes */
+  height: 2px; /* 2px dick */
+  background-color: $purple;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+@media (hover: hover) {
+  a:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+/* verhindert "hängenden" Fokus nach Klick */
+a:focus::after,
+a:active::after {
+  transform: scaleX(0);
 }
 
 img {
