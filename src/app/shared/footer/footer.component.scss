@@ -84,8 +84,8 @@ a::after {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 50%; /* Hälfte des Textes */
-  height: 2px; /* 2px dick */
+  width: 50%;
+  height: 2px;
   background-color: $purple;
   transform: scaleX(0);
   transform-origin: left;
@@ -98,7 +98,6 @@ a::after {
   }
 }
 
-/* verhindert "hängenden" Fokus nach Klick */
 a:focus::after,
 a:active::after {
   transform: scaleX(0);
