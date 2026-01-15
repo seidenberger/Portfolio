@@ -11,6 +11,10 @@ div {
     padding: 5px 8px;
     border-radius: 10px;
     cursor: pointer;
+    &:hover {
+      background-color: $purple;
+      border: 1px solid $purple;
+    }
   }
 }
 

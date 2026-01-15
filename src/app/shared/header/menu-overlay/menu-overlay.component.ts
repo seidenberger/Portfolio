@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { ButtonTranslatedComponent } from '../../button-translated/button-translated.component';
 import { TranslationService } from '../../../translation.service';
 import { RouterLink } from '@angular/router';
+import { ClickUnderlinedService } from '../../../core/click-underlined.service';
+
 
 @Component({
   selector: 'app-menu-overlay',
     standalone: true,
-  imports: [    CommonModule, ButtonTranslatedComponent, RouterLink ],
+  imports: [    CommonModule, ButtonTranslatedComponent, RouterLink],
   templateUrl: './menu-overlay.component.html',
   styleUrl: './menu-overlay.component.scss'
 })
@@ -22,8 +24,17 @@ export class MenuOverlayComponent
       private sub!: Subscription;
 
 
-  constructor(public translationService: TranslationService) {
+  constructor(public translationService: TranslationService,
+      public clickService: ClickUnderlinedService
+  ) {
   }
+
+  setActive(item: string) {
+  this.clickService.setActive(item);
+  this.closeMenu();
+}
+
+  // menuState = inject(MenuStateService);
   
     @Output() closed = new EventEmitter<void>();
 

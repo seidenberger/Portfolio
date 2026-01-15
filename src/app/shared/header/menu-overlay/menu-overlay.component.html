@@ -1,4 +1,4 @@
-<nav>
+<!-- <nav>
   <a
     [routerLink]="['/', translationService.getLanguage()]"
     fragment="about"
@@ -17,5 +17,36 @@
     (click)="closeMenu()"
     >{{ portfolio }}</a
   >
+  <app-button-translated></app-button-translated>
+</nav> -->
+
+<nav>
+  <a
+    [routerLink]="['/', translationService.getLanguage()]"
+    fragment="about"
+    (click)="setActive('about')"
+    [class.click]="clickService.activeItem() === 'about'"
+  >
+    {{ about }}
+  </a>
+
+  <a
+    [routerLink]="['/', translationService.getLanguage()]"
+    fragment="skill"
+    (click)="setActive('skill')"
+    [class.click]="clickService.activeItem() === 'skill'"
+  >
+    {{ skill }}
+  </a>
+
+  <a
+    [routerLink]="['/', translationService.getLanguage()]"
+    fragment="portfolio"
+    (click)="setActive('portfolio')"
+    [class.click]="clickService.activeItem() === 'portfolio'"
+  >
+    {{ portfolio }}
+  </a>
+
   <app-button-translated></app-button-translated>
 </nav>
