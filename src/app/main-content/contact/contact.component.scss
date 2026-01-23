@@ -171,6 +171,11 @@ input[type="checkbox"]:checked::after {
   margin-top: 16px;
 }
 
+.form_butten :hover {
+  background-color: $purple;
+  transform: scale(1.3);
+}
+
 .policy {
   @include fontH(
     $font_size: $f_body_9,

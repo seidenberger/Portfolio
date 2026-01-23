@@ -4,7 +4,9 @@
 @import "./../../../scss/media.scss";
 
 section {
-  margin-top: 100px;
+  padding: 100px 0 0 0;
+  // scroll-margin-top: 300px;
+  // margin-top: 100px;
   // margin-top: calc(30vh - 53px);
   @include layers(3);
   @include fontH(
@@ -34,9 +36,9 @@ section {
   }
 }
 
-.head {
-  scroll-margin-top: 100px;
-}
+// .head {
+//   scroll-margin-top: 300px;
+// }
 
 .shadow {
   grid-area: shadow;
@@ -145,8 +147,8 @@ figure {
   }
 }
 
-// @media (min-width: 320px) and (max-width: 379px) {
-//   section {
-//     margin-top: calc(50vh - 53px);
-//   }
-// }
+@media (min-width: 320px) and (max-width: 379px) {
+  section {
+    margin-top: calc(50vh - 53px);
+  }
+}

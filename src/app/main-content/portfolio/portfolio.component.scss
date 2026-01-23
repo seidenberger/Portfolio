@@ -5,7 +5,7 @@
 
 section {
   // scroll-margin-top: 100px;
-
+  padding: 100px 0 0 0;
   @include padding();
   @include fontH(
     $font_size: $f_body_8,
