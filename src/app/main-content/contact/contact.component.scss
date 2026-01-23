@@ -46,7 +46,6 @@ header {
     grid-area: head;
   }
   span {
-    // @include fontH();
     @include fontH($f_media_small: $f_body_2);
     grid-area: head;
   }
@@ -192,7 +191,6 @@ input[type="checkbox"]:checked::after {
 }
 
 a:hover {
-  // @include line($backc: $purple);
   text-decoration: underline;
 }
 

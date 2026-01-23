@@ -4,7 +4,6 @@
 section {
   position: relative;
   @include layers(1);
-  // margin-top: calc(-50% + 10px);
   height: calc(100vh - 53px);
   overflow: hidden;
   position: sticky;

@@ -4,7 +4,6 @@
 @import "./../../../scss/media.scss";
 
 section {
-  // scroll-margin-top: 100px;
   padding: 100px 0 0 0;
   @include padding();
   @include fontH(
@@ -38,7 +37,6 @@ header {
   align-items: flex-end;
   justify-content: end;
   flex-direction: column;
-  // text-align: right;
 }
 
 .header_line {
@@ -49,16 +47,13 @@ header {
   @include layers(1);
   gap: 10px;
   .hr_left {
-    // width: 100px;
     position: relative;
     @include hr();
   }
   .head {
-    // @include fontH();
     @include fontH($f_media_small: $f_body_2);
   }
   .hr_right {
-    // width: 100px;
     position: relative;
     @include hr($wi: 300px);
   }

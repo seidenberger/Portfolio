@@ -5,8 +5,6 @@
 
 section {
   padding: 100px 0 0 0;
-  // margin-top: 100px;
-  // margin-top: 50px;
   @include fontH(
     $font_size: $f_body_8,
     $font_weight: $f_w_small,
@@ -106,7 +104,6 @@ figure.inactive:hover img {
     justify-content: flex-end;
     gap: 10px;
     .head {
-      // @include fontH();
       @include fontH($f_media_small: $f_body_2);
     }
   }
@@ -141,11 +138,6 @@ figure.inactive:hover img {
       $f_media: $f_body_4
     );
     margin-bottom: 16px;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: flex-end;
-    // align-items: flex-end;
-
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -163,7 +155,6 @@ figure.inactive:hover img {
   display: flex;
   justify-content: center;
   margin: 32px 0;
-  // display: flex;
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
@@ -186,7 +177,6 @@ a {
 a:hover {
   transition: all 0.2s ease;
   background-color: $purple;
-  // padding: 20px 35px;
 }
 
 .container_img_shadows {

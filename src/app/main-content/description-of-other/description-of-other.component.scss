@@ -6,13 +6,11 @@
 section {
   margin-top: 50px;
   position: relative;
-  // overflow: hidden;
   @include fontH(
     $font_size: $f_body_6,
     $font_weight: $f_w_small,
     $f_media: $f_body_8
   );
-  // border: 2px solid red;
   .container_carousel {
     @include layers(1);
     display: flex;
@@ -43,7 +41,6 @@ section {
     @include layers(0);
     top: -500px;
     left: 1300px;
-    // overflow: hidden;
     position: relative;
     img {
       height: 951px;
@@ -66,7 +63,6 @@ button {
 
 .carousel {
   @include padding();
-  // @include padding($width: 700px);
   align-items: center;
   overflow: hidden;
   display: flex;
@@ -103,10 +99,6 @@ button {
 .container_signature {
   display: flex;
   flex-direction: column;
-  // width: 450px;
-  // div {
-  //       flex-direction: column;
-  // }
 }
 
 .navigator {
@@ -137,9 +129,6 @@ button {
   .container_carousel {
     flex-direction: column !important;
   }
-  // .container_signature {
-  //   width: auto;
-  // }
 }
 
 @media (max-width: 600px) {

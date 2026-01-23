@@ -6,13 +6,7 @@ body {
   scroll-padding-top: 100px;
 }
 
-section {
-  // background-color: rgb(203, 218, 204);
-  // margin: auto;
-}
-
 div {
-  // background-color: rgb(97, 211, 105);
   @include max_Width();
   margin: auto;
 }
