@@ -68,11 +68,14 @@ header {
   grid-template-columns: 50% 50%;
   @include layers(1);
   display: flex;
+  width: 620px;
   .container_img_project {
     img {
-      width: 620px;
       height: auto;
-      @include maxW($breakpoint_max_w: 700px, $m_width: 620px);
+
+      // max-width: 100%;
+      // height: auto;
+      // @include maxW($breakpoint_max_w: 700px, $m_width: 620px);
     }
   }
   .container_text_project {
@@ -145,5 +148,41 @@ header {
 @media (max-width: 1200px) {
   .container_project {
     flex-direction: column;
+  }
+
+  @media (min-width: 1000px) {
+    // .container_project {
+    .container_project {
+      .container_img_project {
+        img {
+          // flex-direction: column;
+          max-width: 620px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    // .container_project {
+    .container_project {
+      .container_img_project {
+        img {
+          // flex-direction: column;
+          max-width: 380px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    // .container_project {
+    .container_project {
+      .container_img_project {
+        img {
+          // flex-direction: column;
+          max-width: 300px;
+        }
+      }
+    }
   }
 }

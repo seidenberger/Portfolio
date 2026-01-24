@@ -5,10 +5,6 @@ import { routes } from './app/app.routes';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 
 
-// bootstrapApplication(AppComponent, appConfig)
-  // .catch((err) => console.error(err));
-
-
 
 bootstrapApplication(AppComponent, {
   providers: [

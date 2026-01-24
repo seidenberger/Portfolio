@@ -4,7 +4,7 @@
 @import "./../../../scss/media.scss";
 
 section {
-  padding-top: 40px;
+  padding-top: 140px;
 
   height: calc(100vh - 53px);
   width: 100%;
@@ -13,22 +13,26 @@ section {
 }
 
 .background {
+  // border: 1px solid #d32a2a;
   position: absolute;
   overflow: hidden;
+  width: 100vw;
 
   img {
     height: auto;
     display: block;
-    width: 100vw;
+
     object-fit: cover;
     object-position: left center;
+    // height: 100vh;
+    width: 100%;
   }
 }
 
-.test {
-  @include max_Width();
-  margin: auto;
-}
+// .test {
+//   @include max_Width();
+//   margin: auto;
+// }
 
 .wrapper {
   max-width: 1440px;

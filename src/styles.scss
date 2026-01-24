@@ -17,7 +17,6 @@ $p-media: 0px 25px 0px 25px;
 
 @mixin max_Width() {
   max-width: 1440px;
-  // margin: auto;
   width: 100%;
 }
 
@@ -33,9 +32,7 @@ body {
 }
 
 body {
-  // margin: 0 auto;
   border: 0;
-  // padding: 0;
   background-color: $blue;
   color: $white;
   font-family: "Poppins";

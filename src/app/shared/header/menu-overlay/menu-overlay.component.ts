@@ -34,7 +34,6 @@ export class MenuOverlayComponent
   this.closeMenu();
 }
 
-  // menuState = inject(MenuStateService);
   
     @Output() closed = new EventEmitter<void>();
 
