@@ -5,7 +5,8 @@
 
 section {
   padding: 100px 0 0 0;
-  @include padding();
+  // @include padding();
+  padding: 0 20px;
   @include fontH(
     $font_size: $f_body_8,
     $font_weight: $f_w_small,
@@ -68,20 +69,18 @@ header {
   grid-template-columns: 50% 50%;
   @include layers(1);
   display: flex;
-  width: 620px;
+
+  max-width: 1200px;
   .container_img_project {
     img {
       height: auto;
-
-      // max-width: 100%;
-      // height: auto;
-      // @include maxW($breakpoint_max_w: 700px, $m_width: 620px);
     }
   }
   .container_text_project {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     .head {
       margin: 8px 0;
       @include fontH($font_size: $f_body_2, $f_media: $f_body_2);
@@ -151,12 +150,13 @@ header {
   }
 
   @media (min-width: 1000px) {
-    // .container_project {
     .container_project {
       .container_img_project {
         img {
-          // flex-direction: column;
+          width: 100%;
+          height: auto;
           max-width: 620px;
+          display: block;
         }
       }
     }

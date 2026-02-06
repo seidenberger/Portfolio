@@ -3,6 +3,10 @@
 @import "./../../../../scss/mixin.scss";
 @import "./../../../../scss/media.scss";
 
+* {
+  box-sizing: border-box;
+}
+
 nav {
   display: flex;
   align-items: center;
