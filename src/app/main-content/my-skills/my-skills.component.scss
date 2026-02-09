@@ -122,7 +122,8 @@ figure.inactive:hover img {
   display: flex;
   align-items: center;
   hr {
-    @include hr($wi: 64px);
+    // @include hr($wi: 64px);
+    @include hr($min: 64px, $ideal: 30vw, $max: 64px);
   }
 }
 

@@ -35,7 +35,7 @@ section {
 
 header {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: end;
   flex-direction: column;
 }
@@ -43,8 +43,11 @@ header {
 .header_line {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  width: max-content;
+  justify-content: flex-end;
+  // width: max-content;
+
+  width: 100%;
+  max-width: 100%;
   @include layers(1);
   gap: 10px;
   .hr_left {
@@ -55,13 +58,16 @@ header {
     @include fontH($f_media_small: $f_body_2);
   }
   .hr_right {
-    position: relative;
-    @include hr($wi: 300px);
+    // position: relative;
+    // @include hr($wi: 300px);
+    @include hr($min: 80px, $ideal: 30vw, $max: 300px);
   }
   .description {
-    text-align: right;
-    width: max-content;
-    align-self: flex-start;
+    // text-align: right;
+    // padding-right: 100px;
+    width: 100%;
+    max-width: 100%;
+    // align-self: flex-start;
   }
 }
 
@@ -159,6 +165,12 @@ header {
           display: block;
         }
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    section {
+      display: block;
     }
   }
 
