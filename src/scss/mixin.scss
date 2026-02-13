@@ -30,7 +30,7 @@
   width: 100%;
 }
 
-@mixin hr($min: 180px, $ideal: 30vw, $max: 100px) {
+@mixin hr($min: 80px, $ideal: 30vw, $max: 100px) {
   // @mixin hr($wi: 100px) {
   border: none;
   height: 4px;
