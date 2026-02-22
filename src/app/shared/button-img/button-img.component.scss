@@ -14,8 +14,10 @@
     padding: 0 10px;
   }
   address {
-    text-decoration: none;
-    color: $white;
-    @include dNone();
+    .email {
+      text-decoration: none;
+      color: $white;
+      @include dNone();
+    }
   }
 }

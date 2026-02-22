@@ -4,17 +4,22 @@
   </div>
 
   <div>
-    @if (show) { } @for (btn of buttonImgs; track btn) { @if (btn.external) {
-    <a [href]="btn.link" target="_blank" rel="noopener noreferrer">
-      <img [src]="btn.image" [alt]="btn.link" />
-    </a>
-    } @else {
-    <a [href]="btn.link">
-      <img [src]="btn.image" class="icons" />
-    </a>
-    } }
+    @if (show) {}
+    @for (btn of buttonImgs; track btn) {
+      @if (btn.external) {
+        <a [href]="btn.link" target="_blank" rel="noopener noreferrer">
+          <img [src]="btn.image" [alt]="btn.link" />
+        </a>
+      } @else {
+        <a [href]="btn.link">
+          <img [src]="btn.image" class="icons" />
+        </a>
+      }
+    }
   </div>
   <address *ngIf="show">
-    <address><a style="color: red" href="#contact">email icans</a></address>
+    <address>
+      <a class="email" href="#contact">contact&#64;theodor-seidenberger.de</a>
+    </address>
   </address>
 </div>
