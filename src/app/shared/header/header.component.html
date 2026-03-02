@@ -14,9 +14,8 @@
     </div>
   </header>
   @if (showMenu) {
-  <div class="mobil" *ngIf="showMenu">
-    <app-menu-overlay (closed)="onOverlayClosed()"></app-menu-overlay>
-  </div>
-
+    <div class="mobil" *ngIf="showMenu">
+      <app-menu-overlay (closed)="onOverlayClosed()"></app-menu-overlay>
+    </div>
   }
 </section>

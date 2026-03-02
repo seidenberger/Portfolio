@@ -6,10 +6,12 @@
 div {
   display: flex;
   gap: 10px;
+  align-items: center;
   button {
     border: 1px solid $green;
     padding: 5px 8px;
     border-radius: 10px;
+    // min-width: 40#px;
     cursor: pointer;
     &:hover {
       background-color: $purple;
@@ -29,7 +31,7 @@ div {
 }
 
 @media (min-width: 1001px) {
-  p {
+  span {
     display: none;
   }
 }

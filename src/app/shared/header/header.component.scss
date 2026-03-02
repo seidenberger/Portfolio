@@ -9,7 +9,8 @@ button {
 }
 
 section {
-  @include max_Width();
+  // @include max_Width();
+  max-width: 1440px;
 }
 
 header {
@@ -23,6 +24,7 @@ header {
   @include padding();
   .header-inner {
     width: 100%;
+    // @include dFlex($jc: space-between, $g: 10);
     @include dFlex($jc: space-around, $g: 10);
   }
 }

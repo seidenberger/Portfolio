@@ -15,7 +15,8 @@ nav {
     font-size: 28px;
     @include textN();
     margin: 20px;
-
+    min-width: 120px;
+    text-align: center;
     &:hover {
       color: $green;
     }
