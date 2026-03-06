@@ -9,23 +9,31 @@ button {
 }
 
 section {
+  display: flex;
   // @include max_Width();
-  max-width: 1440px;
+  // max-width: 1440px;
+
+  // max-width: 1440px;
+  // margin: auto;
 }
 
 header {
   @include layers(11);
   margin: auto;
-  width: 100vw;
+  // width: 100vw;
+  width: 100%;
+
   position: fixed;
   top: 0;
   left: 0;
   background-color: $blue;
   @include padding();
   .header-inner {
-    width: 100%;
-    // @include dFlex($jc: space-between, $g: 10);
-    @include dFlex($jc: space-around, $g: 10);
+    max-width: 1440px;
+    margin: auto;
+
+    @include dFlex($jc: space-between, $g: 10);
+    // @include dFlex($jc: space-around, $g: 10);
   }
 }
 
