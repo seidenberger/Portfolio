@@ -28,7 +28,11 @@
 
         <div class="container_butten">
           <aside>
-            <a href="#contact">{{ talk }}</a>
+            <a
+              [routerLink]="['/', translationService.getLanguage()]"
+              fragment="contact"
+              >{{ talk }}</a
+            >
           </aside>
         </div>
       </div>

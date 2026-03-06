@@ -53,7 +53,11 @@
     </p>
 
     <div class="button">
-      <a href="#contact">{{ buttonSkill }} </a>
+      <a
+        [routerLink]="['/', translationService.getLanguage()]"
+        fragment="contact"
+        >{{ buttonSkill }}
+      </a>
     </div>
   </div>
   <div class="container_img_shadows">

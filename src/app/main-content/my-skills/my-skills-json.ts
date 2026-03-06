@@ -36,7 +36,7 @@ export const mySkills =   [
     },
     {
         "image": 'assets/img/skills/api.png',
-        "text": "Rest Api",
+        "text": "REST API",
      active: true
     },
     {

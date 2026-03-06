@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { TranslationService } from '../../translation.service';
 import { BaseTranslatedComponent } from '../../base-translated.component';
 import { ButtonImgComponent } from '../../shared/button-img/button-img.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-landingpage',
   imports: [
-     CommonModule, ButtonImgComponent
+     CommonModule, ButtonImgComponent,RouterLink
   ],
   templateUrl: './landingpage.component.html',
   styleUrl: './landingpage.component.scss'

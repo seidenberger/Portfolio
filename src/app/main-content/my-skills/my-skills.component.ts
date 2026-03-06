@@ -3,10 +3,11 @@ import { Component } from '@angular/core';
 import { mySkills } from './my-skills-json';
 import { BaseTranslatedComponent } from '../../base-translated.component';
 import { TranslationService } from '../../translation.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-my-skills',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink ],
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss'
 })
