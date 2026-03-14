@@ -59,6 +59,10 @@ figure {
   gap: 10px;
 }
 
+figcaption {
+  overflow-wrap: break-word;
+}
+
 .picture {
   @include dNone($none: 1200px);
   grid-area: picture;
@@ -78,6 +82,23 @@ figure {
 .icons {
   height: 32px;
   width: 26px;
+  // margin: 20px;
+  padding: 40px;
+}
+
+.icons-default:hover {
+  height: 46px;
+  width: 46px;
+  // margin: 0;
+}
+
+.box-hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
 }
 
 @media (max-width: 1200px) {
