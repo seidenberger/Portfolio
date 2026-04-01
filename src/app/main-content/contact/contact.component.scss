@@ -227,6 +227,13 @@ a:hover {
 a {
   text-decoration: none;
 }
+.hover-img {
+  content: url("/assets/icons/go_up_butten_default.svg");
+}
+
+.hover-img {
+  content: url("/assets/icons/go_up_butten_hover.svg");
+}
 
 @media (max-width: 600px) {
   .write_to {

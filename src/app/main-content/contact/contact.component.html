@@ -41,8 +41,8 @@
               required
               #name="ngModel"
             />
-            @if(!name.valid && name.touched) {
-            <span> {{ pleaseName }}</span>
+            @if (!name.valid && name.touched) {
+              <span> {{ pleaseName }}</span>
             }
 
             <label for="email"></label>
@@ -56,8 +56,8 @@
               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
               #email="ngModel"
             /><label for=""></label>
-            @if(!email.valid && email.touched) {
-            <span> {{ pleaseEmail }}</span>
+            @if (!email.valid && email.touched) {
+              <span> {{ pleaseEmail }}</span>
             }
 
             <label for="message"></label>
@@ -70,9 +70,9 @@
               required
             ></textarea>
             @if (!message.valid && message.touched) {
-            <span>
-              {{ pleaseMassage }}
-            </span>
+              <span>
+                {{ pleaseMassage }}
+              </span>
             }
             <div>
               <div class="container_box">
@@ -113,8 +113,10 @@
                     !contactData.privacyAccepted || contactForm.invalid
                   "
                   [ngStyle]="{
-           'background-color': contactData.privacyAccepted ? 'rgb(112, 230, 28, 1)' : 'rgb(182, 182, 182, 1)',
-           '  border': 'none !important',
+                    'background-color': contactData.privacyAccepted
+                      ? 'rgb(112, 230, 28, 1)'
+                      : 'rgb(182, 182, 182, 1)',
+                    '  border': 'none !important',
                   }"
                 />
               </div>
@@ -125,8 +127,19 @@
           <a
             [routerLink]="['/', translationService.getLanguage()]"
             fragment="landingpage"
-            ><img src="assets/icons/arrow.png" alt="arrow"
-          /></a>
+          >
+            <!-- <img
+              src="assets/icons/go_up_butten_default.svg"
+              alt="arrow"
+              class="hover-img"
+            /> -->
+            <img
+              [src]="imageSrc"
+              (mouseenter)="onHover()"
+              (mouseleave)="onLeave()"
+              alt="arrow"
+            />
+          </a>
         </div>
       </div>
     </div>

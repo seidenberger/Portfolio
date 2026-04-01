@@ -110,9 +110,19 @@ updateTexts() {
       ngForm.resetForm();
     }
 
+
+
   }
 
+    imageSrc = 'assets/icons/go_up_button_default.svg';
 
+onHover() {
+  this.imageSrc = 'assets/icons/go_up_button_hover.svg';
+}
+
+onLeave() {
+  this.imageSrc = 'assets/icons/go_up_button_default.svg';
+}
 
 
 } 
