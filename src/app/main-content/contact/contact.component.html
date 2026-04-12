@@ -32,45 +32,67 @@
         <div class="input">
           <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
             <label for="name"></label>
-            <input
-              [(ngModel)]="contactData.name"
-              type="text"
-              id="name"
-              name="name"
-              placeholder=" {{ yourName }}"
-              required
-              #name="ngModel"
-            />
+            <div class="input_box">
+              <input
+                [(ngModel)]="contactData.name"
+                type="text"
+                id="name"
+                name="name"
+                placeholder=" {{ yourName }}"
+                required
+                #name="ngModel"
+              />
+              <img
+                class="img_required"
+                src="assets/img/contact/attention.svg"
+                alt="required"
+              />
+            </div>
             @if (!name.valid && name.touched) {
-              <span> {{ pleaseName }}</span>
+              <span class="required"> {{ pleaseName }}</span>
             }
 
             <label for="email"></label>
-            <input
-              [(ngModel)]="contactData.email"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="{{ yourMail }}"
-              required
-              pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-              #email="ngModel"
-            /><label for=""></label>
+            <div class="input_box">
+              <input
+                [(ngModel)]="contactData.email"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="{{ yourMail }}"
+                required
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                #email="ngModel"
+              />
+              <img
+                class="img_required"
+                src="assets/img/contact/attention.svg"
+                alt="required"
+              />
+            </div>
+            <label for=""></label>
             @if (!email.valid && email.touched) {
-              <span> {{ pleaseEmail }}</span>
+              <span class="required"> {{ pleaseEmail }}</span>
             }
 
             <label for="message"></label>
-            <textarea
-              #message="ngModel"
-              [(ngModel)]="contactData.message"
-              id="message"
-              name="message"
-              placeholder=" {{ yourMassage }}"
-              required
-            ></textarea>
+            <div class="input_box">
+              <textarea
+                #message="ngModel"
+                [(ngModel)]="contactData.message"
+                id="message"
+                name="message"
+                placeholder=" {{ yourMassage }}"
+                required
+              ></textarea>
+              <img
+                class="img_required"
+                src="assets/img/contact/attention.svg"
+                alt="required"
+              />
+            </div>
             @if (!message.valid && message.touched) {
-              <span>
+              <span class="required">
                 {{ pleaseMassage }}
               </span>
             }
@@ -88,7 +110,7 @@
                   />
                 </div>
                 <div
-                  class="fill_1out_hint"
+                  class="fill_1out_hint required"
                   *ngIf="showError && !contactData.privacyAccepted"
                 >
                   {{ pleaseAccept }}

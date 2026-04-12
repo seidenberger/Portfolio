@@ -53,6 +53,25 @@ header {
   }
 }
 
+.required {
+  color: $red;
+}
+
+.input_box {
+  position: relative;
+  // width: 300px;
+}
+
+.img_required {
+  position: absolute;
+  right: 10px;
+  top: 40%;
+  transform: translateY(-50%);
+
+  border: none;
+  border-radius: 50%;
+}
+
 .write_to {
   display: flex;
   .text {
@@ -90,6 +109,11 @@ textarea {
   max-width: 617px;
   min-width: 100px;
   outline: none;
+
+  width: 100%;
+  padding: 10px 45px 10px 10px; /* Platz für Button */
+  // border-radius: 25px;
+  // border: 1px solid #ccc;
 }
 
 input[type="text"]::placeholder,
