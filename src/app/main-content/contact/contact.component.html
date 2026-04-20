@@ -42,11 +42,13 @@
                 required
                 #name="ngModel"
               />
-              <img
-                class="img_required"
-                src="assets/img/contact/attention.svg"
-                alt="required"
-              />
+              @if (!name.valid && name.touched) {
+                <img
+                  class="img_required"
+                  src="assets/img/contact/attention.svg"
+                  alt="required"
+                />
+              }
             </div>
             @if (!name.valid && name.touched) {
               <span class="required"> {{ pleaseName }}</span>

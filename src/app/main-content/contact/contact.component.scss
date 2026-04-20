@@ -57,21 +57,6 @@ header {
   color: $red;
 }
 
-.input_box {
-  position: relative;
-  // width: 300px;
-}
-
-.img_required {
-  position: absolute;
-  right: 10px;
-  top: 40%;
-  transform: translateY(-50%);
-
-  border: none;
-  border-radius: 50%;
-}
-
 .write_to {
   display: flex;
   .text {
@@ -95,25 +80,44 @@ header {
   }
 }
 
+.input_box {
+  @include CustomBtn($border_c: $purple, $padding: 10px 15px);
+  // position: relative;
+  display: flex;
+  align-items: center;
+  // width: 300px;
+  // border: 10px;
+  border-radius: 10px;
+  border-style: solid;
+}
+
 input[type="text"],
 input[type="email"],
 select,
 textarea {
-  @include CustomBtn($backc: $blue, $border_c: $purple, $padding: 15px 25px);
+  @include CustomBtn($backc: $blue, $border_c: $purple, $padding: 10px 15px);
   color: $white;
   box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
+  // margin-top: 6px;
+  // margin-bottom: 16px;
   resize: none;
   overflow: hidden;
   max-width: 617px;
   min-width: 100px;
   outline: none;
-
+  padding: 10px;
   width: 100%;
-  padding: 10px 45px 10px 10px; /* Platz für Button */
-  // border-radius: 25px;
-  // border: 1px solid #ccc;
+  border: none;
+}
+
+.img_required {
+  // position: absolute;
+  right: 10px;
+  top: 40%;
+  // transform: translateY(-50%);
+
+  border: none;
+  border-radius: 50%;
 }
 
 input[type="text"]::placeholder,
@@ -124,21 +128,25 @@ textarea::placeholder {
   opacity: 1;
 }
 
-input[type="text"]:hover,
-input[type="email"]:hover,
-textarea:hover {
-  @include CustomBtn($backc: $blue, $border_c: $green, $padding: 15px 25px);
+.input_box:hover
+
+// input[type="text"]:hover,
+// input[type="email"]:hover,
+// textarea:hover
+{
+  @include CustomBtn($backc: $blue, $border_c: $green, $padding: 10px 15px);
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  @include CustomBtn($backc: $blue, $border_c: $green, $padding: 15px 25px);
+// input[type="text"]:focus,
+// input[type="email"]:focus,
+// textarea:focus
+.input_box:focus {
+  @include CustomBtn($backc: $blue, $border_c: $green, $padding: 10px 15px);
 }
 
 input[type="submit"] {
   color: white;
-  @include CustomBtn($backc: $grey, $border_c: $grey, $padding: 15px 25px);
+  @include CustomBtn($backc: $grey, $border_c: $grey, $padding: 10px 15px);
   border: none !important;
   cursor: pointer;
   width: auto;
@@ -150,7 +158,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  @include CustomBtn($backc: $purple, $border_c: $purple, $padding: 15px 25px);
+  @include CustomBtn($backc: $purple, $border_c: $purple, $padding: 10px 15px);
 }
 
 .privacy-policy {
