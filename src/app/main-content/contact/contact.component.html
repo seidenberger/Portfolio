@@ -66,11 +66,13 @@
                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                 #email="ngModel"
               />
-              <img
-                class="img_required"
-                src="assets/img/contact/attention.svg"
-                alt="required"
-              />
+              @if (!email.valid && email.touched) {
+                <img
+                  class="img_required"
+                  src="assets/img/contact/attention.svg"
+                  alt="required"
+                />
+              }
             </div>
             <label for=""></label>
             @if (!email.valid && email.touched) {
@@ -87,11 +89,13 @@
                 placeholder=" {{ yourMassage }}"
                 required
               ></textarea>
-              <img
-                class="img_required"
-                src="assets/img/contact/attention.svg"
-                alt="required"
-              />
+              @if (!message.valid && message.touched) {
+                <img
+                  class="img_required"
+                  src="assets/img/contact/attention.svg"
+                  alt="required"
+                />
+              }
             </div>
             @if (!message.valid && message.touched) {
               <span class="required">
