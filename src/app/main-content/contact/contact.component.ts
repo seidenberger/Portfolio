@@ -125,4 +125,7 @@ onLeave() {
 }
 
 
+logName(nameField: any) {
+  console.log(nameField.valid);
+}
 } 

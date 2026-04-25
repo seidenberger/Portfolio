@@ -55,6 +55,15 @@ header {
 
 .required {
   color: $red;
+  display: flex;
+  justify-content: center;
+  min-height: 30px;
+  // opacity: 0;
+  // transition: opacity 0.3s;
+}
+
+.check {
+  display: flex;
 }
 
 .write_to {

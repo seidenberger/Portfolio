@@ -104,42 +104,51 @@
             }
             <div>
               <div class="container_box">
-                <label for="box"></label>
-                <div class="check">
-                  <input
-                    type="checkbox"
-                    id="privacy"
-                    name="privacy"
-                    [(ngModel)]="contactData.privacyAccepted"
-                    #privacy="ngModel"
-                    required
-                  />
-                </div>
-                <div
+                <div class="privacy_box">
+                  <label for="box"></label>
+
+                  <div class="check">
+                    <input
+                      type="checkbox"
+                      id="privacy"
+                      name="privacy"
+                      [(ngModel)]="contactData.privacyAccepted"
+                      #privacy="ngModel"
+                      required
+                    />
+
+                    <!-- <div
                   class="fill_1out_hint required"
                   *ngIf="showError && !contactData.privacyAccepted"
-                >
-                  {{ pleaseAccept }}
-                </div>
+                > -->
 
-                <div class="policy">
-                  {{ policyRead }}
-                  <a
-                    [routerLink]="['/', currentLang, 'privacy-policy']"
-                    class="privacy-policy"
-                  >
-                    {{ policyPolicy }}
-                  </a>
-                  {{ policyAgree }}
+                    <!-- {{ pleaseAccept }} -->
+                    <!-- </div> -->
+
+                    <div class="policy">
+                      {{ policyRead }}
+                      <a
+                        [routerLink]="['/', currentLang, 'privacy-policy']"
+                        class="privacy-policy"
+                      >
+                        {{ policyPolicy }}
+                      </a>
+                      {{ policyAgree }}
+                    </div>
+                  </div>
+
+                  @if (!privacy.valid && privacy.touched) {
+                    <span class="required">
+                      {{ pleaseAccept }}
+                    </span>
+                  }
                 </div>
               </div>
               <div class="form_butten">
                 <input
                   type="submit"
                   value="{{ sendMessage }}"
-                  [disabled]="
-                    !contactData.privacyAccepted || contactForm.invalid
-                  "
+                  [disabled]="contactForm.invalid"
                   [ngStyle]="{
                     'background-color': contactData.privacyAccepted
                       ? 'rgb(112, 230, 28, 1)'
