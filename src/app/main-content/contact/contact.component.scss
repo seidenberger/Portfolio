@@ -57,13 +57,18 @@ header {
   color: $red;
   display: flex;
   justify-content: center;
-  min-height: 30px;
+
   // opacity: 0;
   // transition: opacity 0.3s;
 }
 
 .check {
   display: flex;
+  gap: 10px;
+}
+
+.invisible {
+  min-height: 30px;
 }
 
 .write_to {

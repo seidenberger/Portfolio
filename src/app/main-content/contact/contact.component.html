@@ -42,6 +42,7 @@
                 required
                 #name="ngModel"
               />
+
               @if (!name.valid && name.touched) {
                 <img
                   class="img_required"
@@ -50,10 +51,11 @@
                 />
               }
             </div>
-            @if (!name.valid && name.touched) {
-              <span class="required"> {{ pleaseName }}</span>
-            }
-
+            <div class="invisible">
+              @if (!name.valid && name.touched) {
+                <span class="required"> {{ pleaseName }}</span>
+              }
+            </div>
             <label for="email"></label>
             <div class="input_box">
               <input
@@ -75,10 +77,11 @@
               }
             </div>
             <label for=""></label>
-            @if (!email.valid && email.touched) {
-              <span class="required"> {{ pleaseEmail }}</span>
-            }
-
+            <div class="invisible">
+              @if (!email.valid && email.touched) {
+                <span class="required"> {{ pleaseEmail }}</span>
+              }
+            </div>
             <label for="message"></label>
             <div class="input_box">
               <textarea
@@ -97,11 +100,13 @@
                 />
               }
             </div>
-            @if (!message.valid && message.touched) {
-              <span class="required">
-                {{ pleaseMassage }}
-              </span>
-            }
+            <div class="invisible">
+              @if (!message.valid && message.touched) {
+                <span class="required">
+                  {{ pleaseMassage }}
+                </span>
+              }
+            </div>
             <div>
               <div class="container_box">
                 <div class="privacy_box">
@@ -136,12 +141,13 @@
                       {{ policyAgree }}
                     </div>
                   </div>
-
-                  @if (!privacy.valid && privacy.touched) {
-                    <span class="required">
-                      {{ pleaseAccept }}
-                    </span>
-                  }
+                  <div class="invisible">
+                    @if (!privacy.valid && privacy.touched) {
+                      <span class="required">
+                        {{ pleaseAccept }}
+                      </span>
+                    }
+                  </div>
                 </div>
               </div>
               <div class="form_butten">
