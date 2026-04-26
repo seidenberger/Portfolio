@@ -53,7 +53,7 @@ export const translations :  {
       // requiredEmail:"",
       // requiredMessage:"",
       // requiredPolicy:"",
-       messageSent:"Nachricht gesendet",
+       messageSend:"Nachricht gesendet",
       },
 
     en: {
@@ -106,7 +106,7 @@ export const translations :  {
         // requiredEmail:"Your email is required",
         // requiredMessage:"Your message is empty",
         // requiredPolicy:"Pleas accept the privacy policy",
-        messageSent:"Message sent",
+        messageSend:"Message send",
 
       }
   };  

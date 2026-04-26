@@ -51,6 +51,7 @@ yourName= '';
   policyPolicy= ''; 
   policyAgree= '';
  sendMessage= '';
+ messageSend= '';
 
 
 logPrivacy() {

@@ -219,6 +219,14 @@ input[type="checkbox"]:checked::after {
   }
 }
 
+.sent {
+  @include fontH(
+    $font_size: $f_body_9,
+    $font_weight: $f_w_small,
+    $f_media: $f_body_9
+  );
+}
+
 a:hover {
   text-decoration: underline;
 }
