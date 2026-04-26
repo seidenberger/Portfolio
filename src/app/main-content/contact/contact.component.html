@@ -120,14 +120,6 @@
                   required
                 />
 
-                <!-- <div
-                  class="fill_1out_hint required"
-                  *ngIf="showError && !contactData.privacyAccepted"
-                > -->
-
-                <!-- {{ pleaseAccept }} -->
-                <!-- </div> -->
-
                 <div class="policy">
                   {{ policyRead }}
                   <a
@@ -164,24 +156,11 @@
           </div>
         </div>
       </form>
-      <!-- <div class="invisible">
-                    @if (!form_butten.valid && privacy.touched) {
-                      <span class="required">
-                        {{ pleaseAccept }}
-                      </span>
-                    }
-                  </div>
-        </div> -->
       <div class="container_arrow">
         <a
           [routerLink]="['/', translationService.getLanguage()]"
           fragment="landingpage"
         >
-          <!-- <img
-              src="assets/icons/go_up_butten_default.svg"
-              alt="arrow"
-              class="hover-img"
-            /> -->
           <img
             [src]="imageSrc"
             (mouseenter)="onHover()"
@@ -192,5 +171,4 @@
       </div>
     </div>
   </div>
-  <!-- </div> -->
 </section>
