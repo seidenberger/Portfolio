@@ -49,7 +49,7 @@
             />
           }
         </div>
-        <div class="invisible">
+        <div class="folder_teach">
           @if (!name.valid && name.touched) {
             <span class="required"> {{ pleaseName }}</span>
           }
@@ -75,7 +75,7 @@
           }
         </div>
         <label for=""></label>
-        <div class="invisible">
+        <div class="folder_teach">
           @if (!email.valid && email.touched) {
             <span class="required"> {{ pleaseEmail }}</span>
           }
@@ -98,7 +98,7 @@
             />
           }
         </div>
-        <div class="invisible">
+        <div class="folder_teach">
           @if (!message.valid && message.touched) {
             <span class="required">
               {{ pleaseMassage }}
@@ -131,7 +131,7 @@
                   {{ policyAgree }}
                 </div>
               </div>
-              <div class="invisible">
+              <div class="folder_teach">
                 @if (!privacy.valid && privacy.touched) {
                   <span class="required">
                     {{ pleaseAccept }}
@@ -154,9 +154,12 @@
               }"
             />
           </div>
-          <div class="invisible">
+          <div class="folder_teach invisible">
             <span class="sent">{{ messageSend }}</span>
           </div>
+          <!-- <div [class.invisiblemessage]="!messageSend">
+            <span class="sent">{{ messageSend }}</span>
+          </div> -->
         </div>
       </form>
       <div class="container_arrow">

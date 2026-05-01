@@ -64,10 +64,6 @@ header {
   gap: 10px;
 }
 
-.invisible {
-  min-height: 30px;
-}
-
 .write_to {
   display: flex;
   .text {
@@ -158,6 +154,14 @@ input[type="submit"]:hover {
 
 .privacy-policy {
   color: $purple;
+}
+
+.invisible {
+  display: none;
+}
+
+.folder_teach {
+  min-height: 30px;
 }
 
 input[type="checkbox"] {

@@ -75,6 +75,7 @@ updateTexts() {
   this.policyPolicy = this.translationService.translate('policyPolicy');
   this.policyAgree = this.translationService.translate('policyAgree');
   this.sendMessage = this.translationService.translate('sendMessage');
+  this.messageSend = this.translationService.translate('messageSend');
   
 }
 
