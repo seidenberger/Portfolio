@@ -5,9 +5,9 @@
         <hr class="hr_left" />
       </div>
       <p class="head">Portfolio</p>
-      <div>
-        <hr class="hr_right" />
-      </div>
+      <!-- <div> -->
+      <hr class="hr_right" />
+      <!-- </div> -->
     </div>
     <p class="description">{{ descriptionPortfoli }}</p>
   </header>
@@ -19,6 +19,10 @@
       alt=""
     />
   </div>
-  <app-join></app-join>
-  <app-el-pollo-loco [reverse]="reverse"></app-el-pollo-loco>
+  <main>
+    <div>
+      <app-join></app-join>
+      <app-el-pollo-loco [reverse]="reverse"></app-el-pollo-loco>
+    </div>
+  </main>
 </section>

@@ -11,27 +11,30 @@ section {
     $font_weight: $f_w_small,
     $f_media: $f_body_8
   );
-  .container_carousel {
-    @include layers(1);
+  main {
     display: flex;
-    flex-direction: row-reverse;
-    gap: 10px;
-    div {
+    justify-content: center;
+    .container_carousel {
+      @include layers(1);
       display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      .img_carousel {
-        height: 272px;
-        width: 272px;
-        border-radius: 50%;
-        border: 4px solid $purple;
-        object-fit: contain;
-        @include layers(2);
+      flex-direction: row-reverse;
+      gap: 10px;
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .img_carousel {
+          height: 272px;
+          width: 272px;
+          border-radius: 50%;
+          border: 4px solid $purple;
+          object-fit: contain;
+          @include layers(2);
+        }
       }
     }
   }
 }
-
 .grid-wrapper {
   display: grid;
   grid-template-columns: 1fr;

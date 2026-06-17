@@ -16,12 +16,13 @@ $p-media: 0px 25px 0px 25px;
 }
 
 @mixin max_Width() {
-  max-width: 1440px;
-  width: 100%;
+  // max-width: 1440px;
+  // width: 100%;
 }
 
 * {
-  margin: 0;
+  // margin: 0;
+  // margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
 }
@@ -30,6 +31,7 @@ html,
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  margin: 0 auto;
 }
 
 body {
@@ -53,4 +55,8 @@ body {
 
 .head {
   scroll-margin-top: 5rem;
+}
+
+header {
+  width: 100%;
 }

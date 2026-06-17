@@ -71,6 +71,10 @@ header {
   }
 }
 
+main {
+  display: flex;
+  justify-content: center;
+}
 .container_project {
   grid-template-columns: 50% 50%;
   @include layers(1);

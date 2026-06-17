@@ -23,10 +23,12 @@ export class ContactComponent extends BaseTranslatedComponent{
 
   showError = false; 
   mailTest = false;
+  mailSent = false;
 
   constructor(public override translationService: TranslationService) {
     super(translationService)
   }
+  
 
   contactData = {
     name: "",
@@ -91,10 +93,47 @@ updateTexts() {
     },
   };
 
-  onSubmit(ngForm: NgForm) {
-    console.log(this.contactData.privacyAccepted);
-     console.log(this.contactData);
+  // onSubmit(ngForm: NgForm) {
+  //   console.log(this.contactData.privacyAccepted);
+  //    console.log(this.contactData);
 
+  //   if (ngForm.submitted && ngForm.form.valid ) {
+  //     this.http.post(this.post.endPoint, this.post.body(this.contactData))
+  //       .subscribe({
+  //         next: (response) => {
+  //           //  this.mailSent = true;
+
+  //           ngForm.resetForm();
+  //         //             setTimeout(() => {
+  //         //   this.mailSent = false;
+  //         // }, 3000);
+  //         },
+  //         error: (error) => {
+  //           console.error(error);
+  //         },
+          
+  //         complete: () => console.info('send post complete'),
+  //       });
+  //   } 
+
+
+
+  // }
+
+
+
+//  post = {
+//     endPoint: 'https://deineDomain.de/sendMail.php',
+//     body: (payload: any) => JSON.stringify(payload),
+//     options: {
+//       headers: {
+//         'Content-Type': 'text/plain',
+//         responseType: 'text',
+//       },
+//     },
+//   };
+
+  onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
@@ -111,10 +150,10 @@ updateTexts() {
 
       ngForm.resetForm();
     }
-
-
-
   }
+
+
+
 
     imageSrc = 'assets/icons/go_up_button_default.svg';
 
@@ -129,5 +168,17 @@ onLeave() {
 
 logName(nameField: any) {
   console.log(nameField.valid);
+}
+
+// mailSent = false;
+loading = false;
+
+sendMail() {
+  this.loading = true;
+
+  setTimeout(() => {
+    this.loading = false;
+    this.mailSent = true;
+  }, 1500);
 }
 } 

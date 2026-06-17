@@ -5,7 +5,7 @@
 
 section {
   padding: 100px 0 0 0;
-  @include layers(3);
+  // @include layers(3);
   @include fontH(
     $font_size: $f_body_8,
     $font_weight: $f_w_small,
@@ -66,6 +66,7 @@ figcaption {
 .picture {
   @include dNone($none: 1200px);
   grid-area: picture;
+  @include layers(4);
   img {
     height: 435px;
     width: 435px;

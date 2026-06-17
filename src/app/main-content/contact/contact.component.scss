@@ -13,10 +13,16 @@ section {
     $f_media: $f_body_8
   );
   @include gridCandRows(auto auto);
-
-  .container_write_to {
-    @include padding();
-    @include layers(1);
+  main {
+    display: flex;
+    justify-content: center;
+    .container_write_to {
+      @include padding();
+      @include layers(1);
+      max-width: 1440px;
+      // display: flex;
+      // justify-content: center;
+    }
   }
 }
 

@@ -12,156 +12,161 @@
     <div class="line"></div>
     <span id="contact">{{ contact }} </span>
   </header>
-  <div class="container_write_to">
-    <div class="write_to">
-      <div class="text">
-        <h3>
-          {{ solve }}
-        </h3>
-        <p>
-          {{ reinforcement }}
-        </p>
-        <p>
-          {{ wayMessage }}
-          <strong>
-            {{ entertain }}
-          </strong>
-        </p>
-      </div>
-      <form action="contactForm">
-        <label for="name"></label>
-        <div class="input_box">
-          <input
-            [(ngModel)]="contactData.name"
-            type="text"
-            id="name"
-            name="name"
-            placeholder=" {{ yourName }}"
-            required
-            #name="ngModel"
-          />
-
-          @if (!name.valid && name.touched) {
-            <img
-              class="img_required"
-              src="assets/img/contact/attention.svg"
-              alt="required"
+  <main>
+    <div class="container_write_to">
+      <div class="write_to">
+        <div class="text">
+          <h3>
+            {{ solve }}
+          </h3>
+          <p>
+            {{ reinforcement }}
+          </p>
+          <p>
+            {{ wayMessage }}
+            <strong>
+              {{ entertain }}
+            </strong>
+          </p>
+        </div>
+        <form action="contactForm">
+          <label for="name"></label>
+          <div class="input_box">
+            <input
+              [(ngModel)]="contactData.name"
+              type="text"
+              id="name"
+              name="name"
+              placeholder=" {{ yourName }}"
+              required
+              #name="ngModel"
             />
-          }
-        </div>
-        <div class="folder_teach">
-          @if (!name.valid && name.touched) {
-            <span class="required"> {{ pleaseName }}</span>
-          }
-        </div>
-        <label for="email"></label>
-        <div class="input_box">
-          <input
-            [(ngModel)]="contactData.email"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="{{ yourMail }}"
-            required
-            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-            #email="ngModel"
-          />
-          @if (!email.valid && email.touched) {
-            <img
-              class="img_required"
-              src="assets/img/contact/attention.svg"
-              alt="required"
-            />
-          }
-        </div>
-        <label for=""></label>
-        <div class="folder_teach">
-          @if (!email.valid && email.touched) {
-            <span class="required"> {{ pleaseEmail }}</span>
-          }
-        </div>
-        <label for="message"></label>
-        <div class="input_box">
-          <textarea
-            #message="ngModel"
-            [(ngModel)]="contactData.message"
-            id="message"
-            name="message"
-            placeholder=" {{ yourMassage }}"
-            required
-          ></textarea>
-          @if (!message.valid && message.touched) {
-            <img
-              class="img_required"
-              src="assets/img/contact/attention.svg"
-              alt="required"
-            />
-          }
-        </div>
-        <div class="folder_teach">
-          @if (!message.valid && message.touched) {
-            <span class="required">
-              {{ pleaseMassage }}
-            </span>
-          }
-        </div>
-        <div>
-          <div class="container_box">
-            <div class="privacy_box">
-              <label for="box"></label>
 
-              <div class="check">
-                <input
-                  type="checkbox"
-                  id="privacy"
-                  name="privacy"
-                  [(ngModel)]="contactData.privacyAccepted"
-                  #privacy="ngModel"
-                  required
-                />
+            @if (!name.valid && name.touched) {
+              <img
+                class="img_required"
+                src="assets/img/contact/attention.svg"
+                alt="required"
+              />
+            }
+          </div>
+          <div class="folder_teach">
+            @if (!name.valid && name.touched) {
+              <span class="required"> {{ pleaseName }}</span>
+            }
+          </div>
+          <label for="email"></label>
+          <div class="input_box">
+            <input
+              [(ngModel)]="contactData.email"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="{{ yourMail }}"
+              required
+              pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+              #email="ngModel"
+            />
+            @if (!email.valid && email.touched) {
+              <img
+                class="img_required"
+                src="assets/img/contact/attention.svg"
+                alt="required"
+              />
+            }
+          </div>
+          <label for=""></label>
+          <div class="folder_teach">
+            @if (!email.valid && email.touched) {
+              <span class="required"> {{ pleaseEmail }}</span>
+            }
+          </div>
+          <label for="message"></label>
+          <div class="input_box">
+            <textarea
+              #message="ngModel"
+              [(ngModel)]="contactData.message"
+              id="message"
+              name="message"
+              placeholder=" {{ yourMassage }}"
+              required
+            ></textarea>
+            @if (!message.valid && message.touched) {
+              <img
+                class="img_required"
+                src="assets/img/contact/attention.svg"
+                alt="required"
+              />
+            }
+          </div>
+          <div class="folder_teach">
+            @if (!message.valid && message.touched) {
+              <span class="required">
+                {{ pleaseMassage }}
+              </span>
+            }
+          </div>
+          <div>
+            <div class="container_box">
+              <div class="privacy_box">
+                <label for="box"></label>
 
-                <div class="policy">
-                  {{ policyRead }}
-                  <a
-                    [routerLink]="['/', currentLang, 'privacy-policy']"
-                    class="privacy-policy"
-                  >
-                    {{ policyPolicy }}
-                  </a>
-                  {{ policyAgree }}
+                <div class="check">
+                  <input
+                    type="checkbox"
+                    id="privacy"
+                    name="privacy"
+                    [(ngModel)]="contactData.privacyAccepted"
+                    #privacy="ngModel"
+                    required
+                  />
+
+                  <div class="policy">
+                    {{ policyRead }}
+                    <a
+                      [routerLink]="['/', currentLang, 'privacy-policy']"
+                      class="privacy-policy"
+                    >
+                      {{ policyPolicy }}
+                    </a>
+                    {{ policyAgree }}
+                  </div>
+                </div>
+                <div class="folder_teach">
+                  @if (!privacy.valid && privacy.touched) {
+                    <span class="required">
+                      {{ pleaseAccept }}
+                    </span>
+                  }
                 </div>
               </div>
-              <div class="folder_teach">
-                @if (!privacy.valid && privacy.touched) {
-                  <span class="required">
-                    {{ pleaseAccept }}
-                  </span>
-                }
-              </div>
             </div>
-          </div>
-          <div class="form_butten">
-            <input
-              type="submit"
-              value="{{ sendMessage }}"
-              name="form_butten"
-              [disabled]="!contactData.privacyAccepted"
-              [ngStyle]="{
-                'background-color': contactData.privacyAccepted
-                  ? 'rgb(112, 230, 28, 1)'
-                  : 'rgb(182, 182, 182, 1)',
-                '  border': 'none !important',
-              }"
-            />
-          </div>
-          <div class="folder_teach invisible">
-            <span class="sent">{{ messageSend }}</span>
-          </div>
-          <!-- <div [class.invisiblemessage]="!messageSend">
+            <div class="form_butten">
+              <input
+                type="submit"
+                value="{{ sendMessage }}"
+                name="form_butten"
+                [disabled]="!contactData.privacyAccepted"
+                [ngStyle]="{
+                  'background-color': contactData.privacyAccepted
+                    ? 'rgb(112, 230, 28, 1)'
+                    : 'rgb(182, 182, 182, 1)',
+                  '  border': 'none !important',
+                }"
+              />
+            </div>
+            <div class="folder_teach invisible">
+              <span class="sent">{{ messageSend }}</span>
+            </div>
+            <!-- <p *ngIf="mailSent" class="success-msg">
+             Deine Nachricht wurde gesendet!
+          </p> -->
+            <!-- <div [class.invisiblemessage]="!messageSend">
             <span class="sent">{{ messageSend }}</span>
           </div> -->
-        </div>
-      </form>
+          </div>
+        </form>
+      </div>
       <div class="container_arrow">
         <a
           [routerLink]="['/', translationService.getLanguage()]"
@@ -176,5 +181,5 @@
         </a>
       </div>
     </div>
-  </div>
+  </main>
 </section>
