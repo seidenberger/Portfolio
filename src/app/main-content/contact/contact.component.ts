@@ -82,8 +82,49 @@ updateTexts() {
 }
 
 
-  post = {
-    endPoint: 'https://theodor-seidenberger.de/sendMail.php',
+  // post = {
+  //   endPoint: 'https://theodor-seidenberger.de/sendMail.php',
+  //   body: (payload: any) => JSON.stringify(payload),
+  //   options: {
+  //     headers: {
+  //       'Content-Type': 'text/plain',
+  //       responseType: 'text',
+  //     },
+  //   },
+  // };
+
+  onSubmit(ngForm: NgForm) {
+    console.log(this.contactData.privacyAccepted);
+     console.log(this.contactData);
+
+    if (ngForm.submitted && ngForm.form.valid ) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+        .subscribe({
+          next: (response) => {
+            //  this.mailSent = true;
+
+            ngForm.resetForm();
+          //             setTimeout(() => {
+          //   this.mailSent = false;
+          // }, 3000);
+          },
+          error: (error) => {
+            console.error(error);
+          },
+          
+          complete: () => console.info('send post complete'),
+        });
+    } 
+
+
+
+  }
+
+
+
+ post = {
+  endPoint: 'https://theodor-seidenberger.de/sendMail.php',
+    // endPoint: 'https://deineDomain.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -94,63 +135,23 @@ updateTexts() {
   };
 
   // onSubmit(ngForm: NgForm) {
-  //   console.log(this.contactData.privacyAccepted);
-  //    console.log(this.contactData);
-
-  //   if (ngForm.submitted && ngForm.form.valid ) {
+  //   if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
   //     this.http.post(this.post.endPoint, this.post.body(this.contactData))
   //       .subscribe({
   //         next: (response) => {
-  //           //  this.mailSent = true;
 
   //           ngForm.resetForm();
-  //         //             setTimeout(() => {
-  //         //   this.mailSent = false;
-  //         // }, 3000);
   //         },
   //         error: (error) => {
   //           console.error(error);
   //         },
-          
   //         complete: () => console.info('send post complete'),
   //       });
-  //   } 
+  //   } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
-
-
+  //     ngForm.resetForm();
+  //   }
   // }
-
-
-
-//  post = {
-//     endPoint: 'https://deineDomain.de/sendMail.php',
-//     body: (payload: any) => JSON.stringify(payload),
-//     options: {
-//       headers: {
-//         'Content-Type': 'text/plain',
-//         responseType: 'text',
-//       },
-//     },
-//   };
-
-  onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-
-            ngForm.resetForm();
-          },
-          error: (error) => {
-            console.error(error);
-          },
-          complete: () => console.info('send post complete'),
-        });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
-      ngForm.resetForm();
-    }
-  }
 
 
 
