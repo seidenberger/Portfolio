@@ -4,6 +4,7 @@
 @import "./../../../scss/media.scss";
 
 section {
+  @include max_Width();
   padding: 100px 0 0 0;
   @include fontH(
     $font_size: $f_body_8,
@@ -28,7 +29,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
-    gap: 32px;
+    // gap: 32px;
     .skill_img {
       width: 54px;
       height: 60px;
@@ -49,7 +50,7 @@ section {
 
 figure {
   gap: 10px;
-  width: 150px;
+  // width: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;

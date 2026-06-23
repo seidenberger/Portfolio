@@ -7,6 +7,6 @@ body {
 }
 
 div {
-  @include max_Width();
+  // @include max_Width();
   margin: auto;
 }

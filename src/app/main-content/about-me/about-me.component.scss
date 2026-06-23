@@ -5,6 +5,9 @@
 
 section {
   padding: 100px 0 0 0;
+  max-width: 1440px;
+  margin: 0 auto;
+  @include max_Width();
   // @include layers(3);
   @include fontH(
     $font_size: $f_body_8,

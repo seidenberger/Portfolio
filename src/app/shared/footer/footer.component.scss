@@ -12,7 +12,7 @@ section {
   background-color: $black;
   background-color: #141d2f;
   .container_outer {
-    @include max_Width();
+    // @include max_Width();
     width: 100vw;
     .container_inner {
       @include responsivePadding($p, $p-media);
