@@ -100,12 +100,14 @@ figure.inactive:hover img {
 .container_header {
   grid-area: container_header;
   @include layers(1);
+
   .placement {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
     .head {
       @include fontH($f_media_small: $f_body_2);
+      margin: 0;
     }
   }
 }
