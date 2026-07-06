@@ -5,6 +5,7 @@
 
 section {
   padding: 100px 0 0 0;
+  @include max_Width();
   // @include padding();
   padding: 0 20px;
   @include fontH(
@@ -61,6 +62,7 @@ header {
     // position: relative;
     // @include hr($wi: 300px);
     @include hr($min: 80px, $ideal: 30vw, $max: 300px);
+    // width: 100vw;
   }
   .description {
     // text-align: right;

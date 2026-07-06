@@ -108,6 +108,7 @@ figure.inactive:hover img {
     .head {
       @include fontH($f_media_small: $f_body_2);
       margin: 0;
+      line-height: 90px;
     }
   }
 }
@@ -127,6 +128,7 @@ figure.inactive:hover img {
   hr {
     // @include hr($wi: 64px);
     @include hr($min: 64px, $ideal: 30vw, $max: 64px);
+    width: 100vw;
   }
 }
 

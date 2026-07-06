@@ -28,6 +28,7 @@
   height: 4px;
   background-color: $backc;
   width: 100%;
+  width: 100vw;
 }
 
 @mixin hr($min: 80px, $ideal: 30vw, $max: 100px) {

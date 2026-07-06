@@ -53,6 +53,7 @@ section {
   grid-area: line;
   .line {
     @include line();
+    width: 100vw;
   }
 }
 
