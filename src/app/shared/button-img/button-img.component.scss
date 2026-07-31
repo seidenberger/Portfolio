@@ -9,6 +9,15 @@
   gap: 10px;
   hr {
     @include hr();
+    // position:absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: calc((100vw - 1440px) / 2 + 100px);
+  }
+  nav {
+    margin: auto;
   }
   a {
     padding: 0 10px;

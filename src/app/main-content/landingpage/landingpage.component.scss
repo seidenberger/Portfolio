@@ -40,8 +40,6 @@ section {
 // }
 
 .wrapper {
-  max-width: 1440px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -49,6 +47,8 @@ section {
 }
 
 .container_name {
+  max-width: 1440px;
+  margin: 0 auto;
   @include layers(4);
   flex: 1;
   display: flex;
@@ -128,6 +128,8 @@ section {
 }
 
 .overlay_rotated {
+  max-width: 1440px;
+  margin: 0 auto;
   @include dNone();
   display: flex;
   align-items: center;

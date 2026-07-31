@@ -51,6 +51,8 @@ header {
   max-width: 100%;
   @include layers(1);
   gap: 10px;
+  left: 50%;
+  // transform: translateX(-20%);
   .hr_left {
     position: relative;
     @include hr();
@@ -61,8 +63,9 @@ header {
   .hr_right {
     // position: relative;
     // @include hr($wi: 300px);
-    @include hr($min: 80px, $ideal: 30vw, $max: 300px);
-    // width: 100vw;
+    @include hr();
+    width: 100vw;
+    // transform: translateX(-20%);
   }
   .description {
     // text-align: right;

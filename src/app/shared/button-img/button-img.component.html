@@ -1,9 +1,10 @@
 <div class="overlay_icons">
-  <div *ngIf="show">
-    <hr />
-  </div>
+  <!-- <div *ngIf="show"> -->
+  <hr />
+  <!-- </div> -->
 
-  <div>
+  <!-- <div> -->
+  <nav>
     @if (show) {}
     @for (btn of buttonImgs; track btn) {
       @if (btn.external) {
@@ -16,7 +17,8 @@
         </a>
       }
     }
-  </div>
+    <!-- </div> -->
+  </nav>
   <address *ngIf="show">
     <address>
       <a class="email" href="#contact">contact&#64;theodor-seidenberger.de</a>

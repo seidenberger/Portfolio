@@ -15,25 +15,27 @@
   </div>
 
   <div class="wrapper">
-    <div class="container_name">
-      <div class="column">
-        <article>
-          <span class="rotate">{{ rotate }}</span>
-          <div class="container_head">
-            <span class="head">Theodor</span>
-            <span class="head">Seidenberger</span>
-            <span class="discription">FRONTEND DEVELOPER</span>
-          </div>
-        </article>
+    <div>
+      <div class="container_name">
+        <div class="column">
+          <article>
+            <span class="rotate">{{ rotate }}</span>
+            <div class="container_head">
+              <span class="head">Theodor</span>
+              <span class="head">Seidenberger</span>
+              <span class="discription">FRONTEND DEVELOPER</span>
+            </div>
+          </article>
 
-        <div class="container_butten">
-          <aside>
-            <a
-              [routerLink]="['/', translationService.getLanguage()]"
-              fragment="contact"
-              >{{ talk }}</a
-            >
-          </aside>
+          <div class="container_butten">
+            <aside>
+              <a
+                [routerLink]="['/', translationService.getLanguage()]"
+                fragment="contact"
+                >{{ talk }}</a
+              >
+            </aside>
+          </div>
         </div>
       </div>
     </div>
