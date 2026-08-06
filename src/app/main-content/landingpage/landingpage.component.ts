@@ -11,13 +11,14 @@ import { RouterLink } from '@angular/router';
      CommonModule, ButtonImgComponent,RouterLink
   ],
   templateUrl: './landingpage.component.html',
-  styleUrl: './landingpage.component.scss'
+  styleUrl: './landing.component.scss'
+  // styleUrl: './landingpage.component.scss'
 })
 export class LandingpageComponent extends BaseTranslatedComponent{ 
 
   rotate= '';
   talk= '';
-  scroll= '';
+  scroll= ''; 
   
 
   constructor(public override translationService: TranslationService) {
