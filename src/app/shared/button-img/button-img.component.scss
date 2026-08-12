@@ -10,18 +10,9 @@
   align-items: center;
   gap: 10px;
   hr {
-    // @include hr();
-    // position: absolute;
-    // left: 0;
-    // top: 50%;
-    // transform: translateY(-50%);
-    // width: 40px;
-    // width: calc((100vw - 1440px) / 2 + 100px);
-
     @include line($backc: $purple);
-    max-width: 500px;
-    max-width: 40%;
     grid-area: head;
+    width: 80px;
   }
   nav {
     margin: auto;
@@ -34,24 +25,23 @@
       text-decoration: none;
       color: $white;
       @include dNone();
-      // font-family: "Poppins";
       font-style: "Poppins";
     }
   }
 }
 
-// @media (min-width: 576px) {
-//   .overlay_icons {
-//     hr {
-//       width: calc((100vw - 1440px) / 2 + 100px);
-//     }
-//   }
-// }
-
 @media (min-width: 576px) {
   .overlay_icons {
     hr {
-      width: 80px;
+      width: 100px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .overlay_icons {
+    hr {
+      width: calc((100vw - 1440px) / 2 + 100px);
     }
   }
 }
