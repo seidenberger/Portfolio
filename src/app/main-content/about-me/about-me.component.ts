@@ -7,6 +7,7 @@ import { BaseTranslatedComponent } from '../../base-translated.component';
   imports: [],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'
+  // styleUrl: './about.component.scss'
 })
 export class AboutMeComponent extends BaseTranslatedComponent{
 
