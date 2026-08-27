@@ -11,10 +11,7 @@ section {
     $font_weight: $f_w_small,
     $f_media: $f_body_8
   );
-  @include padding($right: 0px, $left: 0px);
-
-  // @include padding($right: 0px);
-
+  @include padding($right: 0px);
   display: grid;
   grid-template-columns: 15% 15% auto 1fr;
   grid-template-rows: auto auto;
@@ -30,8 +27,7 @@ section {
   grid-area: icon;
   .grid-container {
     display: grid;
-    // grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     // gap: 32px;
     .skill_img {
@@ -53,8 +49,6 @@ section {
 }
 
 figure {
-  width: 48px;
-
   gap: 10px;
   // width: 150px;
   display: flex;
@@ -133,20 +127,16 @@ figure.inactive:hover img {
   align-items: center;
   hr {
     // @include hr($wi: 64px);
-
-    @include hr();
+    @include hr($min: 64px, $ideal: 30vw, $max: 64px);
+    width: 100vw;
   }
 }
 
 .container_butten {
-  //   padding-right: 25px;
-  //   padding-left: 25px;
-
   @include layers(1);
   grid-area: container_butten;
   @include padding();
   margin: 32px 0;
-
   .another_skill {
     @include fontH(
       $font_size: $f_body_2,
@@ -209,22 +199,6 @@ a:hover {
   }
 }
 
-.container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-@media (min-width: 400px) {
-  .line {
-    hr {
-      @include hr($min: 64px, $ideal: 30vw, $max: 64px);
-      // width: 100vw;
-    }
-  }
-}
-
 @media (max-width: 1200px) {
   section {
     grid-template-areas:
@@ -251,14 +225,14 @@ a:hover {
   }
 }
 
-// @media (max-width: 1300px) {
-//   .icons {
-//     .grid-container {
-//       grid-template-columns: 1fr 1fr 1fr;
-//       grid-template-rows: auto auto auto auto;
-//     }
-//   }
-// }
+@media (max-width: 1300px) {
+  .icons {
+    .grid-container {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto auto auto auto;
+    }
+  }
+}
 
 @media (max-width: 480px) {
   figure {
@@ -266,10 +240,17 @@ a:hover {
   }
 }
 
-// @media (max-width: 1400px) {
-//   .icons {
-//     .grid-container {
-//       column-gap: 4px;
-//     }
-//   }
-// }
+@media (max-width: 1400px) {
+  .icons {
+    .grid-container {
+      column-gap: 4px;
+    }
+  }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
