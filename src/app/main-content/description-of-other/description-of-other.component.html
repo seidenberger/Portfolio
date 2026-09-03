@@ -19,32 +19,34 @@
               <img
                 src="assets/img/description/goose-feet.png"
                 alt="goose-feet"
-              />
-            </div>
-            <div class="content">
-              <div class="container_signature">
-                <p>{{ currentText }}</p>
-                <div>
-                  <div class="line"></div>
-                  <p class="signature">{{ currentItem.signature }}</p>
-                </div>
+                />
               </div>
-              <app-description-one></app-description-one>
+              <div class="content">
+                <div class="container_signature">
+                  <p>{{ currentText }}</p>
+                  <div>
+                    <div class="line"></div>
+                    <p class="signature">{{ currentItem.signature }}</p>
+                  </div>
+                </div>
+                <app-description-one></app-description-one>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="navigator">
-        <button (click)="prev()" [disabled]="currentIndex === 0">
-          <img src="assets/img/description/left.png" alt="left" />
-        </button>
-        <div *ngFor="let carousel of items; let i = index">
-          <div class="circle" [ngClass]="{ active: i === currentIndex }"></div>
+        <div class="navigator">
+          <button (click)="prev()" [disabled]="currentIndex === 0">
+            <img src="assets/img/description/left.png" alt="left" />
+          </button>
+          @for (carousel of items; track carousel; let i = $index) {
+            <div>
+              <div class="circle" [ngClass]="{ active: i === currentIndex }"></div>
+            </div>
+          }
+          <button (click)="next()" [disabled]="currentIndex === items.length - 1">
+            <img src="assets/img/description/right-side.png" alt="right-side" />
+          </button>
         </div>
-        <button (click)="next()" [disabled]="currentIndex === items.length - 1">
-          <img src="assets/img/description/right-side.png" alt="right-side" />
-        </button>
       </div>
-    </div>
-  </main>
-</section>
+    </main>
+  </section>

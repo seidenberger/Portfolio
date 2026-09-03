@@ -1,13 +1,13 @@
 import { Component} from '@angular/core';
 import { MenuOverlayComponent } from './menu-overlay/menu-overlay.component';
-import { CommonModule } from '@angular/common';
+
 import { RouterLink } from '@angular/router';
 import { BaseTranslatedComponent } from '../../base-translated.component';
 
 @Component({
   selector: 'app-header',
     standalone: true,
-  imports: [MenuOverlayComponent, CommonModule,     RouterLink], 
+  imports: [MenuOverlayComponent, RouterLink], 
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

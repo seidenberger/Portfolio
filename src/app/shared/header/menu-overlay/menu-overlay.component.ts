@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit, signal, Output, EventEmitter } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { CommonModule } from '@angular/common';
+
 import { ButtonTranslatedComponent } from '../../button-translated/button-translated.component';
 import { TranslationService } from '../../../translation.service';
 import { RouterLink } from '@angular/router';
@@ -10,7 +10,7 @@ import { ClickUnderlinedService } from '../../../core/click-underlined.service';
 @Component({
   selector: 'app-menu-overlay',
     standalone: true,
-  imports: [    CommonModule, ButtonTranslatedComponent, RouterLink],
+  imports: [ButtonTranslatedComponent, RouterLink],
   templateUrl: './menu-overlay.component.html',
   styleUrl: './menu-overlay.component.scss'
 })

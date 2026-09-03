@@ -1,4 +1,9 @@
-<ng-container [ngSwitch]="currentLang">
-  <app-privacy-policy-de *ngSwitchCase="'de'"></app-privacy-policy-de>
-  <app-privacy-policy-en *ngSwitchCase="'en'"></app-privacy-policy-en>
-</ng-container>
+
+@switch (currentLang) {
+  @case ('de') {
+    <app-privacy-policy-de></app-privacy-policy-de>
+  }
+  @case ('en') {
+    <app-privacy-policy-en></app-privacy-policy-en>
+  }
+}

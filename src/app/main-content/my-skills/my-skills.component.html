@@ -1,66 +1,66 @@
 <section id="skills">
   <div class="icons">
     <div class="grid-container">
-      <figure
-        *ngFor="let skill of skills; let i = index"
-        [ngClass]="skill.active ? 'active' : 'inactive'"
-        (mouseenter)="onHover(i, skill.active)"
-        (mouseleave)="onLeave(i)"
-      >
-        <div
-          class="skill_img_box1"
-          [class.move-up]="hoverIndex === i && skill.active"
-        >
-          <img
-            class="skill_img"
-            [src]="hoverIndex === i && hoverImage ? hoverImage : skill.image"
-            alt="skill image"
-          />
+      @for (skill of skills; track skill; let i = $index) {
+        <figure
+          [ngClass]="skill.active ? 'active' : 'inactive'"
+          (mouseenter)="onHover(i, skill.active)"
+          (mouseleave)="onLeave(i)"
+          >
+          <div
+            class="skill_img_box1"
+            [class.move-up]="hoverIndex === i && skill.active"
+            >
+            <img
+              class="skill_img"
+              [src]="hoverIndex === i && hoverImage ? hoverImage : skill.image"
+              alt="skill image"
+              />
+            </div>
+            <figcaption [ngClass]="skill.active ? 'active' : 'inactive'">
+              {{ skill.text }}
+            </figcaption>
+          </figure>
+        }
+      </div>
+    </div>
+    <div class="container_header">
+      <div class="placement">
+        <p class="head">{{ headSkills }}</p>
+        <div class="line">
+          <hr />
         </div>
+      </div>
 
-        <figcaption [ngClass]="skill.active ? 'active' : 'inactive'">
-          {{ skill.text }}
-        </figcaption>
-      </figure>
-    </div>
-  </div>
-  <div class="container_header">
-    <div class="placement">
-      <p class="head">{{ headSkills }}</p>
-      <div class="line">
-        <hr />
+      <div class="head_text">
+        <p>
+          {{ allSkills }}
+        </p>
       </div>
     </div>
-
-    <div class="head_text">
+    <div class="container_butten">
+      <div class="another_skill">
+        {{ otherSkills }}
+        <div>
+          <span [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
+            {{ anotherSkill }}
+          </span>
+          ?
+        </div>
+      </div>
       <p>
-        {{ allSkills }}
+        {{ enthusiasmSkills }}
       </p>
-    </div>
-  </div>
-  <div class="container_butten">
-    <div class="another_skill">
-      {{ otherSkills }}
-      <div>
-        <span [ngStyle]="{ color: 'rgb(151, 71, 255, 1)' }">
-          {{ anotherSkill }}
-        </span>
-        ?
+
+      <div class="button">
+        <a
+          [routerLink]="['/', translationService.getLanguage()]"
+          fragment="contact"
+          >{{ buttonSkill }}
+        </a>
       </div>
     </div>
-    <p>
-      {{ enthusiasmSkills }}
-    </p>
-
-    <div class="button">
-      <a
-        [routerLink]="['/', translationService.getLanguage()]"
-        fragment="contact"
-        >{{ buttonSkill }}
-      </a>
+    <div class="container_img_shadows">
+      <img src="assets/shadows/green-shadow-skills-portfolio.png" alt="" />
     </div>
-  </div>
-  <div class="container_img_shadows">
-    <img src="assets/shadows/green-shadow-skills-portfolio.png" alt="" />
-  </div>
-</section>
+  </section>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { TranslationService } from '../../translation.service';
 import { BaseTranslatedComponent } from '../../base-translated.component';
 import { ButtonImgComponent } from '../../shared/button-img/button-img.component';
@@ -8,8 +8,9 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-landingpage',
   imports: [
-     CommonModule, ButtonImgComponent,RouterLink
-  ],
+    ButtonImgComponent,
+    RouterLink
+],
   templateUrl: './landingpage.component.html',
   styleUrl: './landing.component.scss'
   // styleUrl: './landingpage.component.scss'

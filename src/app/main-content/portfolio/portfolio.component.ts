@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { TranslationService } from '../../translation.service';
 import { JoinComponent } from './join/join.component';
 import { ElPolloLocoComponent } from './el-pollo-loco/el-pollo-loco.component';
@@ -8,7 +8,7 @@ import { BaseTranslatedComponent } from '../../base-translated.component';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [CommonModule, JoinComponent, ElPolloLocoComponent],
+  imports: [JoinComponent, ElPolloLocoComponent],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss'
 })
