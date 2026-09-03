@@ -182,4 +182,14 @@ sendMail() {
     this.mailSent = true;
   }, 1500);
 }
+
+get formIsValid(): boolean {
+  return !!(
+    this.contactData.name &&
+    this.contactData.email &&
+    this.contactData.message &&
+    this.contactData.privacyAccepted
+  );
+}
+
 } 

@@ -170,35 +170,39 @@ input[type="submit"]:hover {
   min-height: 30px;
 }
 
-input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-  background-color: $blue;
-  border: 2px solid $green;
-  height: 24px;
-  width: 24px;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.checkbox {
+  display: none;
 }
 
-input[type="checkbox"]::after {
-  content: "✓";
-  display: block;
-  width: 16px;
-  height: 16px;
-  font-size: 14px;
-  color: $green;
-  position: absolute;
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
+// input[type="checkbox"] {
+//   appearance: none;
+//   -webkit-appearance: none;
+//   background-color: $blue;
+//   border: 2px solid $green;
+//   height: 24px;
+//   width: 24px;
+//   cursor: pointer;
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
 
-input[type="checkbox"]:checked::after {
-  opacity: 1;
-}
+// input[type="checkbox"]::after {
+//   content: "✓";
+//   display: block;
+//   width: 16px;
+//   height: 16px;
+//   font-size: 14px;
+//   color: $green;
+//   position: absolute;
+//   opacity: 0;
+//   transition: opacity 0.2s ease;
+// }
+
+// input[type="checkbox"]:checked::after {
+//   opacity: 1;
+// }
 
 .fill_1out_hint {
   color: $red;

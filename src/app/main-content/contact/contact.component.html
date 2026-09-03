@@ -112,7 +112,18 @@
                 <label for="box"></label>
 
                 <div class="check">
+                  <!-- <input
+                    type="checkbox"
+                    id="privacy"
+                    name="privacy"
+                    [(ngModel)]="contactData.privacyAccepted"
+                    #privacy="ngModel"
+                    required
+                  /> -->
+
+                  <!-- <div class="check">  -->
                   <input
+                    class="checkbox"
                     type="checkbox"
                     id="privacy"
                     name="privacy"
@@ -120,6 +131,20 @@
                     #privacy="ngModel"
                     required
                   />
+                  <label for="privacy" class="custom-checkbox">
+                    <img
+                      [src]="
+                        contactData.privacyAccepted
+                          ? 'assets/img/contact/checked.svg'
+                          : 'assets/img/contact/default.svg'
+                      "
+                      [alt]="
+                        contactData.privacyAccepted
+                          ? 'Ausgewählt'
+                          : 'Nicht ausgewählt'
+                      "
+                    />
+                  </label>
 
                   <div class="policy">
                     {{ policyRead }}
@@ -146,11 +171,20 @@
                 type="submit"
                 value="{{ sendMessage }}"
                 name="form_butten"
-                [disabled]="!contactData.privacyAccepted"
+                [disabled]="
+                  !contactData.name ||
+                  !contactData.email ||
+                  !contactData.message ||
+                  !contactData.privacyAccepted
+                "
                 [ngStyle]="{
-                  'background-color': contactData.privacyAccepted
-                    ? 'rgb(112, 230, 28, 1)'
-                    : 'rgb(182, 182, 182, 1)',
+                  'background-color':
+                    name.valid &&
+                    email.valid &&
+                    message.valid &&
+                    contactData.privacyAccepted
+                      ? 'rgb(112, 230, 28, 1)'
+                      : 'rgb(182, 182, 182, 1)',
                   '  border': 'none !important',
                 }"
               />
