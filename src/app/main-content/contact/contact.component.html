@@ -29,7 +29,8 @@
             </strong>
           </p>
         </div>
-        <form action="contactForm">
+        <!-- <form action="contactForm"> -->
+        <form #ngForm="ngForm" (ngSubmit)="onSubmit(ngForm)">
           <label for="name"></label>
           <div class="input_box">
             <input
@@ -166,6 +167,13 @@
                 </div>
               </div>
             </div>
+            <!-- <div class="form_butten">
+              <input
+                type="submit"
+                value="{{ sendMessage }}"
+                name="form_butten"
+              />
+            </div> -->
             <div class="form_butten">
               <input
                 type="submit"

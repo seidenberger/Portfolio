@@ -93,33 +93,69 @@ updateTexts() {
   //   },
   // };
 
-  onSubmit(ngForm: NgForm) {
-    console.log(this.contactData.privacyAccepted);
-     console.log(this.contactData);
+  // onSubmit(ngForm: NgForm) {
+  //   console.log(this.contactData.privacyAccepted);
+  //    console.log(this.contactData);
 
-    if (ngForm.submitted && ngForm.form.valid ) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
-        .subscribe({
-          next: (response) => {
-            //  this.mailSent = true;
+  //   if (ngForm.submitted && ngForm.form.valid ) {
+  //     this.http.post(this.post.endPoint, this.post.body(this.contactData))
+  //       .subscribe({
+  //         next: (response) => {
+  //           //  this.mailSent = true;
 
-            ngForm.resetForm();
-          //             setTimeout(() => {
-          //   this.mailSent = false;
-          // }, 3000);
-          },
-          error: (error) => {
-            console.error(error);
-          },
+  //           ngForm.resetForm();
+  //         //             setTimeout(() => {
+  //         //   this.mailSent = false;
+  //         // }, 3000);
+  //         },
+  //         error: (error) => {
+  //           console.error(error);
+  //         },
           
-          complete: () => console.info('send post complete'),
-        });
-    } 
+  //         complete: () => console.info('send post complete'),
+  //       });
+  //   } 
 
 
 
+  // }
+
+
+  onSubmit(ngForm: NgForm) {
+  console.log('SUBMIT wurde aufgerufen');
+  console.log('Formular gültig:', ngForm.form.valid);
+  console.log('Contact Data:', this.contactData);
+
+  if (ngForm.submitted && ngForm.form.valid) {
+
+    console.log('POST wird gesendet an:', this.post.endPoint);
+
+    this.http.post(
+      this.post.endPoint,
+      this.post.body(this.contactData),
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    ).subscribe({
+      next: (response) => {
+        console.log('PHP Antwort:', response);
+        ngForm.resetForm();
+      },
+
+      error: (error) => {
+        console.error('POST FEHLER:', error);
+      },
+
+      complete: () => {
+        console.info('send post complete');
+      }
+    });
+  } else {
+    console.log('POST NICHT gesendet – Formular ist ungültig');
   }
-
+}
 
 
  post = {
@@ -183,13 +219,6 @@ sendMail() {
   }, 1500);
 }
 
-get formIsValid(): boolean {
-  return !!(
-    this.contactData.name &&
-    this.contactData.email &&
-    this.contactData.message &&
-    this.contactData.privacyAccepted
-  );
-}
+
 
 } 
