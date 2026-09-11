@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-
 import { FormsModule, NgForm } from '@angular/forms'; 
 import { BaseTranslatedComponent } from '../../base-translated.component';
 import { TranslationService } from '../../translation.service';
@@ -12,8 +11,7 @@ import { RouterLink } from "@angular/router";
   imports: [
     CommonModule,
     FormsModule,
-    RouterLink
-],
+    RouterLink,],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
@@ -82,43 +80,6 @@ updateTexts() {
 }
 
 
-  // post = {
-  //   endPoint: 'https://theodor-seidenberger.de/sendMail.php',
-  //   body: (payload: any) => JSON.stringify(payload),
-  //   options: {
-  //     headers: {
-  //       'Content-Type': 'text/plain',
-  //       responseType: 'text',
-  //     },
-  //   },
-  // };
-
-  // onSubmit(ngForm: NgForm) {
-  //   console.log(this.contactData.privacyAccepted);
-  //    console.log(this.contactData);
-
-  //   if (ngForm.submitted && ngForm.form.valid ) {
-  //     this.http.post(this.post.endPoint, this.post.body(this.contactData))
-  //       .subscribe({
-  //         next: (response) => {
-  //           //  this.mailSent = true;
-
-  //           ngForm.resetForm();
-  //         //             setTimeout(() => {
-  //         //   this.mailSent = false;
-  //         // }, 3000);
-  //         },
-  //         error: (error) => {
-  //           console.error(error);
-  //         },
-          
-  //         complete: () => console.info('send post complete'),
-  //       });
-  //   } 
-
-
-
-  // }
 
 
   onSubmit(ngForm: NgForm) {
@@ -150,6 +111,11 @@ updateTexts() {
 
       complete: () => {
         console.info('send post complete');
+ this. mailSent = true;
+          setTimeout(() => {
+    this. mailSent = false;
+  }, 5000);
+  
       }
     });
   } else {
@@ -160,7 +126,6 @@ updateTexts() {
 
  post = {
   endPoint: 'https://theodor-seidenberger.de/sendMail.php',
-    // endPoint: 'https://deineDomain.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -169,27 +134,6 @@ updateTexts() {
       },
     },
   };
-
-  // onSubmit(ngForm: NgForm) {
-  //   if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-  //     this.http.post(this.post.endPoint, this.post.body(this.contactData))
-  //       .subscribe({
-  //         next: (response) => {
-
-  //           ngForm.resetForm();
-  //         },
-  //         error: (error) => {
-  //           console.error(error);
-  //         },
-  //         complete: () => console.info('send post complete'),
-  //       });
-  //   } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
-  //     ngForm.resetForm();
-  //   }
-  // }
-
-
 
 
     imageSrc = 'assets/icons/go_up_button_default.svg';
@@ -207,18 +151,25 @@ logName(nameField: any) {
   console.log(nameField.valid);
 }
 
-// mailSent = false;
+// 
 loading = false;
 
-sendMail() {
-  this.loading = true;
+// sendMail() {
+//   this.loading = true;
 
-  setTimeout(() => {
-    this.loading = false;
-    this.mailSent = true;
-  }, 1500);
-}
-
+//   setTimeout(() => {
+//     this.loading = false;
+//     this.mailSent = true;
+//   }, 1500);
+// }
+// sendEmail() {
+//   this.emailService.sendEmail().subscribe({
+//     complete: () => {
+//       console.info('send post complete');
+//       this.mailSent = true;
+//     }
+//   });
+// }
 
 
 } 

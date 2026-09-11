@@ -144,8 +144,8 @@ textarea::placeholder {
 input[type="submit"] {
   color: white;
   @include CustomBtn($backc: $grey, $border_c: $grey, $padding: 10px 15px);
-  border: none !important;
-  cursor: pointer;
+  // border: none !important;
+  // cursor: pointer;
   width: auto;
   @include fontH(
     $font_size: $f_body_5,
@@ -154,9 +154,13 @@ input[type="submit"] {
   );
 }
 
-input[type="submit"]:hover {
+input[type="submit"] {
   @include CustomBtn($backc: $purple, $border_c: $purple, $padding: 10px 15px);
 }
+
+// input[type="submit"]:hover {
+//   @include CustomBtn($backc: $purple, $border_c: $purple, $padding: 10px 15px);
+// }
 
 .privacy-policy {
   color: $purple;
@@ -210,7 +214,8 @@ input[type="submit"]:hover {
 
 .form_butten {
   @include dFlex($g: $form-gap);
-  margin-top: 16px;
+  // margin-top: 16px;
+  padding: 16px 0;
 }
 
 // .form_butten :hover {
@@ -218,15 +223,15 @@ input[type="submit"]:hover {
 //   transform: scale(1.3);
 // }
 
-.form_butten:not(:disabled) {
-  // background-color: blue;
-  transform: scale(1.3);
-}
+// .form_butten:not(:disabled) {
+//   // background-color: blue;
+//   transform: scale(1.3);
+// }
 
-.form_butten:not(:disabled):hover {
-  // background-color: yellowgreen;
-  transform: scale(1.3);
-}
+// .form_butten:not(:disabled):hover {
+//   // background-color: yellowgreen;
+//   transform: scale(1.3);
+// }
 
 .policy {
   @include fontH(
@@ -243,12 +248,12 @@ input[type="submit"]:hover {
   }
 }
 
-.sent {
-  @include fontH(
-    $font_size: $f_body_9,
-    $font_weight: $f_w_small,
-    $f_media: $f_body_9
-  );
+.messageSend {
+  color: $green;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  gap: 8px;
 }
 
 a:hover {

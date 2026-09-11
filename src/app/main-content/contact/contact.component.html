@@ -193,19 +193,29 @@
                     contactData.privacyAccepted
                       ? 'rgb(112, 230, 28, 1)'
                       : 'rgb(182, 182, 182, 1)',
-                  '  border': 'none !important',
+                  border: 'none',
+                  cursor: 'pointer',
                 }"
               />
             </div>
-            <div class="folder_teach invisible">
-              <span class="sent">{{ messageSend }}</span>
+            <div class="folder_teach">
+              @if (mailSent) {
+                <span class="messageSend"
+                  >{{ messageSend }}
+                  <img src="assets/img/contact/finished.svg" alt="" />
+                </span>
+              }
+              <span class="messageSend"
+                >{{ messageSend }}
+                <img src="assets/img/contact/finished.svg" alt="" />
+              </span>
             </div>
             <!-- <p *ngIf="mailSent" class="success-msg">
              Deine Nachricht wurde gesendet!
           </p> -->
             <!-- <div [class.invisiblemessage]="!messageSend">
-            <span class="sent">{{ messageSend }}</span>
-          </div> -->
+              <span class="sent">{{ messageSend }}</span>
+            </div> -->
           </div>
         </form>
       </div>
