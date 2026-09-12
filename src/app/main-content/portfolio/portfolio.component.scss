@@ -35,6 +35,8 @@ section {
 }
 
 header {
+  @include layers(2);
+
   display: flex;
   align-items: center;
   justify-content: end;
@@ -70,21 +72,26 @@ header {
   .description {
     // text-align: right;
     // padding-right: 100px;
+    text-shadow: 1px 1px 2px $black;
     width: 100%;
     max-width: 100%;
+    @include layers(2);
+
     // align-self: flex-start;
   }
 }
 
 main {
+  // @include layers(4);
+
   display: flex;
   justify-content: center;
 }
 .container_project {
   grid-template-columns: 50% 50%;
-  @include layers(1);
+  @include layers(2);
   display: flex;
-
+  text-shadow: 1px 1px 2px $black;
   max-width: 1200px;
   .container_img_project {
     img {

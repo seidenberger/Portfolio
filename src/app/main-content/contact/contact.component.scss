@@ -218,6 +218,14 @@ input[type="submit"] {
   padding: 16px 0;
 }
 
+.form_butten input {
+  cursor: pointer;
+}
+
+.form_butten input:disabled {
+  cursor: not-allowed;
+}
+
 // .form_butten :hover {
 //   background-color: $purple;
 //   transform: scale(1.3);
