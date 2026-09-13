@@ -42,18 +42,28 @@
               required
               #name="ngModel"
             />
-
-            @if ((!name.valid && name.touched) || submitted) {
+            <p class="required">
               <img
                 class="img_required"
                 src="assets/img/contact/attention.svg"
                 alt="required"
               />
+            </p>
+            @if (showNameError) {
+              <p class="required">
+                <img
+                  class="img_required"
+                  src="assets/img/contact/attention.svg"
+                  alt="required"
+                />
+              </p>
             }
           </div>
           <div class="folder_teach">
-            @if ((!name.valid && name.touched) || submitted) {
-              <span class="required"> {{ pleaseName }}</span>
+            @if (showNameError) {
+              <p class="required">
+                <span class="required"> {{ pleaseName }}</span>
+              </p>
             }
           </div>
           <label for="email"></label>
@@ -68,7 +78,7 @@
               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
               #email="ngModel"
             />
-            @if ((!email.valid && email.touched) || submitted) {
+            @if (showEmailError) {
               <img
                 class="img_required"
                 src="assets/img/contact/attention.svg"
@@ -78,7 +88,7 @@
           </div>
           <label for=""></label>
           <div class="folder_teach">
-            @if ((!email.valid && email.touched) || submitted) {
+            @if (showEmailError) {
               <span class="required"> {{ pleaseEmail }}</span>
             }
           </div>
@@ -92,7 +102,7 @@
               placeholder=" {{ yourMassage }}"
               required
             ></textarea>
-            @if ((!message.valid && message.touched) || submitted) {
+            @if (showMessageError) {
               <img
                 class="img_required"
                 src="assets/img/contact/attention.svg"
@@ -101,7 +111,7 @@
             }
           </div>
           <div class="folder_teach">
-            @if ((!message.valid && message.touched) || submitted) {
+            @if (showMessageError) {
               <span class="required">
                 {{ pleaseMassage }}
               </span>
@@ -163,7 +173,7 @@
                  
                 -->
                 <div class="folder_teach">
-                  @if ((!privacy.valid && privacy.touched) || submitted) {
+                  @if (showPrivacyError) {
                     <p class="required">
                       {{ pleaseAccept }}
                     </p>

@@ -40,7 +40,7 @@ export class ContactComponent extends BaseTranslatedComponent{
   reinforcement= '';
   wayMessage= '';
   entertain= '';
-yourName= '';
+  yourName= '';
   pleaseName= '';
   yourMail= '';
   pleaseEmail= '';
@@ -50,8 +50,13 @@ yourName= '';
   policyRead= '';
   policyPolicy= ''; 
   policyAgree= '';
- sendMessage= '';
- messageSend= '';
+  sendMessage= '';
+  messageSend= '';
+  submitted = false;
+  showNameError = false;
+  showEmailError = false;
+showMessageError = false;
+showPrivacyError = false;
 
 
 logPrivacy() {
@@ -79,27 +84,58 @@ updateTexts() {
   
 }
 
-submitted = false;
+
+
+
+private checkRequiredFields(): boolean {
+
+  this.showNameError = false;
+  this.showEmailError = false;
+  this.showMessageError = false;
+  this.showPrivacyError = false;
+
+  let valid = true;
+
+    if (!this.contactData.name) {
+    this.showNameError = true;
+    valid = false;
+  }
+
+   if (!this.contactData.email) {
+    this.showEmailError = true;
+    valid = false;
+  }
+
+  if (!this.contactData.message) {
+    this.showMessageError = true;
+    valid = false;
+  }
+
+  if (!this.contactData.privacyAccepted) {
+    this.showPrivacyError = true;
+    valid = false;
+  }
+
+    if (!valid) {
+    setTimeout(() => {
+      this.showNameError = false;
+            this.showEmailError = false;
+      this.showMessageError = false;
+      this.showPrivacyError = false;
+          }, 5000);
+  }
+
+  return valid;
+}
+
+
 
 onSubmit(ngForm: NgForm) {
-
-
-  if (
-    !this.contactData.name ||
-    !this.contactData.email ||
-    !this.contactData.message ||
-    !this.contactData.privacyAccepted
-  ) {
-
-  this.submitted = true;
-    
-  setTimeout(() => {
-    this.submitted = false;
-  }, 5000);
-
+  if (!this.checkRequiredFields()) {
     return;
-    
   }
+
+
 
 
 
@@ -140,47 +176,6 @@ onSubmit(ngForm: NgForm) {
 }
 
 
-//   onSubmit(ngForm: NgForm) {
-//   console.log('SUBMIT wurde aufgerufen');
-//   console.log('Formular gültig:', ngForm.form.valid);
-//   console.log('Contact Data:', this.contactData);
-  
-
-//   if (ngForm.submitted && ngForm.form.valid) {
-
-//     console.log('POST wird gesendet an:', this.post.endPoint);
-
-//     this.http.post(
-//       this.post.endPoint,
-//       this.post.body(this.contactData),
-//       {
-//         headers: {
-//           'Content-Type': 'application/json'
-//         }
-//       }
-//     ).subscribe({
-//       next: (response) => {
-//         console.log('PHP Antwort:', response);
-//         ngForm.resetForm();
-//       },
-
-//       error: (error) => {
-//         console.error('POST FEHLER:', error);
-//       },
-
-//       complete: () => {
-//         console.info('send post complete');
-//  this. mailSent = true;
-//           setTimeout(() => {
-//     this. mailSent = false;
-//   }, 5000);
-  
-//       }
-//     });
-//   } else {
-//     console.log('POST NICHT gesendet – Formular ist ungültig');
-//   }
-// }
 
 
  post = {
@@ -213,22 +208,7 @@ logName(nameField: any) {
 // 
 loading = false;
 
-// sendMail() {
-//   this.loading = true;
 
-//   setTimeout(() => {
-//     this.loading = false;
-//     this.mailSent = true;
-//   }, 1500);
-// }
-// sendEmail() {
-//   this.emailService.sendEmail().subscribe({
-//     complete: () => {
-//       console.info('send post complete');
-//       this.mailSent = true;
-//     }
-//   });
-// }
 
 
 } 
