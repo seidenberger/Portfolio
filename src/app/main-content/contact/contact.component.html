@@ -43,7 +43,7 @@
               #name="ngModel"
             />
 
-            @if (!name.valid && name.touched) {
+            @if ((!name.valid && name.touched) || submitted) {
               <img
                 class="img_required"
                 src="assets/img/contact/attention.svg"
@@ -52,7 +52,7 @@
             }
           </div>
           <div class="folder_teach">
-            @if (!name.valid && name.touched) {
+            @if ((!name.valid && name.touched) || submitted) {
               <span class="required"> {{ pleaseName }}</span>
             }
           </div>
@@ -68,7 +68,7 @@
               pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
               #email="ngModel"
             />
-            @if (!email.valid && email.touched) {
+            @if ((!email.valid && email.touched) || submitted) {
               <img
                 class="img_required"
                 src="assets/img/contact/attention.svg"
@@ -78,7 +78,7 @@
           </div>
           <label for=""></label>
           <div class="folder_teach">
-            @if (!email.valid && email.touched) {
+            @if ((!email.valid && email.touched) || submitted) {
               <span class="required"> {{ pleaseEmail }}</span>
             }
           </div>
@@ -92,7 +92,7 @@
               placeholder=" {{ yourMassage }}"
               required
             ></textarea>
-            @if (!message.valid && message.touched) {
+            @if ((!message.valid && message.touched) || submitted) {
               <img
                 class="img_required"
                 src="assets/img/contact/attention.svg"
@@ -101,7 +101,7 @@
             }
           </div>
           <div class="folder_teach">
-            @if (!message.valid && message.touched) {
+            @if ((!message.valid && message.touched) || submitted) {
               <span class="required">
                 {{ pleaseMassage }}
               </span>
@@ -163,12 +163,15 @@
                  
                 -->
                 <div class="folder_teach">
-                  @if (!privacy.valid && privacy.touched) {
-                    <span class="required">
+                  @if ((!privacy.valid && privacy.touched) || submitted) {
+                    <p class="required">
                       {{ pleaseAccept }}
-                    </span>
+                    </p>
                   }
                 </div>
+                <!-- <div class="folder_teach">
+                  <p class="required">{{ pleaseAccept }}</p>
+                </div> -->
               </div>
             </div>
             <div class="form_butten">
@@ -176,12 +179,6 @@
                 type="submit"
                 value="{{ sendMessage }}"
                 name="form_butten"
-                [disabled]="
-                  !contactData.name ||
-                  !contactData.email ||
-                  !contactData.message ||
-                  !contactData.privacyAccepted
-                "
                 [ngStyle]="{
                   'background-color':
                     name.valid &&
@@ -202,6 +199,8 @@
                 </span>
               }
             </div>
+
+            <div class="folder_teach"></div>
           </div>
         </form>
       </div>

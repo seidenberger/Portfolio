@@ -79,15 +79,32 @@ updateTexts() {
   
 }
 
+submitted = false;
+
+onSubmit(ngForm: NgForm) {
+
+
+  if (
+    !this.contactData.name ||
+    !this.contactData.email ||
+    !this.contactData.message ||
+    !this.contactData.privacyAccepted
+  ) {
+
+  this.submitted = true;
+    
+  setTimeout(() => {
+    this.submitted = false;
+  }, 5000);
+
+    return;
+    
+  }
 
 
 
-  onSubmit(ngForm: NgForm) {
-  console.log('SUBMIT wurde aufgerufen');
-  console.log('Formular gültig:', ngForm.form.valid);
-  console.log('Contact Data:', this.contactData);
 
-  if (ngForm.submitted && ngForm.form.valid) {
+  if (ngForm.form.valid) {
 
     console.log('POST wird gesendet an:', this.post.endPoint);
 
@@ -103,25 +120,67 @@ updateTexts() {
       next: (response) => {
         console.log('PHP Antwort:', response);
         ngForm.resetForm();
+        this.submitted = false;
       },
 
-      error: (error) => {
-        console.error('POST FEHLER:', error);
-      },
+   
 
       complete: () => {
         console.info('send post complete');
- this. mailSent = true;
-          setTimeout(() => {
-    this. mailSent = false;
-  }, 5000);
-  
+
+        this.mailSent = true;
+
+        setTimeout(() => {
+          this.mailSent = false;
+        }, 5000);
       }
     });
-  } else {
-    console.log('POST NICHT gesendet – Formular ist ungültig');
-  }
+
+  } 
 }
+
+
+//   onSubmit(ngForm: NgForm) {
+//   console.log('SUBMIT wurde aufgerufen');
+//   console.log('Formular gültig:', ngForm.form.valid);
+//   console.log('Contact Data:', this.contactData);
+  
+
+//   if (ngForm.submitted && ngForm.form.valid) {
+
+//     console.log('POST wird gesendet an:', this.post.endPoint);
+
+//     this.http.post(
+//       this.post.endPoint,
+//       this.post.body(this.contactData),
+//       {
+//         headers: {
+//           'Content-Type': 'application/json'
+//         }
+//       }
+//     ).subscribe({
+//       next: (response) => {
+//         console.log('PHP Antwort:', response);
+//         ngForm.resetForm();
+//       },
+
+//       error: (error) => {
+//         console.error('POST FEHLER:', error);
+//       },
+
+//       complete: () => {
+//         console.info('send post complete');
+//  this. mailSent = true;
+//           setTimeout(() => {
+//     this. mailSent = false;
+//   }, 5000);
+  
+//       }
+//     });
+//   } else {
+//     console.log('POST NICHT gesendet – Formular ist ungültig');
+//   }
+// }
 
 
  post = {
