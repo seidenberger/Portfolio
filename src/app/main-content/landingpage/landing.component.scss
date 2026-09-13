@@ -132,7 +132,7 @@ section {
 
 .overlay_rotated {
   position: absolute;
-  right: max(50px, calc((100vw - 1440px) / 2 + 50px));
+  right: max(5px, calc((100vw - 1440px) / 2 + 50px));
   @include dNone();
   display: flex;
   align-items: center;
@@ -167,8 +167,8 @@ section {
 
 @media (min-width: 576px) {
   .container_name {
-    align-items: center;
-    justify-content: flex-end;
+    // align-items: center;
+    // justify-content: flex-end;
     // height: 70vh;
   }
 
@@ -200,6 +200,14 @@ section {
 //     display: none;
 //   }
 // }
+
+@media (min-width: 800px) {
+  .container_name {
+    align-items: center;
+    justify-content: flex-end;
+    // height: 70vh;
+  }
+}
 
 @media (min-width: 1201px) {
   section {
