@@ -42,28 +42,18 @@
               required
               #name="ngModel"
             />
-            <p class="required">
+
+            @if (showNameError) {
               <img
                 class="img_required"
                 src="assets/img/contact/attention.svg"
                 alt="required"
               />
-            </p>
-            @if (showNameError) {
-              <p class="required">
-                <img
-                  class="img_required"
-                  src="assets/img/contact/attention.svg"
-                  alt="required"
-                />
-              </p>
             }
           </div>
           <div class="folder_teach">
             @if (showNameError) {
-              <p class="required">
-                <span class="required"> {{ pleaseName }}</span>
-              </p>
+              <span class="required"> {{ pleaseName }}</span>
             }
           </div>
           <label for="email"></label>
