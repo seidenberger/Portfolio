@@ -1,11 +1,12 @@
 <div class="overlay_icons">
-  <!-- <div *ngIf="show"> -->
-  <hr />
-<!-- </div> -->
-
-<!-- <div> -->
-<nav>
-  @if (show) {}
+  <!-- <div *ngIf="show">
+    <hr />
+  </div> -->
+  @if (showSeparator) {
+    <hr />
+  }
+  <nav>
+    @if (show) {}
     @for (btn of buttonImgs; track btn) {
       @if (btn.external) {
         <a [href]="btn.link" target="_blank" rel="noopener noreferrer">
@@ -17,13 +18,13 @@
         </a>
       }
     }
-  <!-- </div> -->
-</nav>
-@if (show) {
-  <address>
+    <!-- </div> -->
+  </nav>
+  @if (show) {
     <address>
-      <a class="email" href="#contact">contact&#64;theodor-seidenberger.de</a>
+      <address>
+        <a class="email" href="#contact">contact&#64;theodor-seidenberger.de</a>
+      </address>
     </address>
-  </address>
-}
+  }
 </div>

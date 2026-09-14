@@ -10,8 +10,11 @@ import { RouterModule } from '@angular/router';
   styleUrl: './button-img.component.scss'
 })
 export class ButtonImgComponent {
+  buttonImgs = buttonImgs;
 
-buttonImgs = buttonImgs;
+  @Input() showSeparator = false;
+
+
   @Input() show = false;
 
 isExternal(url: string): boolean {

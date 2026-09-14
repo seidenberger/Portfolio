@@ -31,6 +31,14 @@
   }
 }
 
+:host(.footer-button) {
+  .overlay_icons {
+    hr {
+      display: none;
+    }
+  }
+}
+
 @media (min-width: 576px) {
   .overlay_icons {
     hr {
