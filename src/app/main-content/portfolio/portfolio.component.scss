@@ -47,14 +47,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  // width: max-content;
-
-  // width: 100%;
   max-width: 100%;
   @include layers(1);
   gap: 10px;
   left: 50%;
-  // transform: translateX(-20%);
   .hr_left {
     position: relative;
     @include hr();
@@ -63,27 +59,18 @@ header {
     @include fontH($f_media_small: $f_body_2);
   }
   .hr_right {
-    // position: relative;
-    // @include hr($wi: 300px);
     @include hr();
     width: 100vw;
-    // transform: translateX(-20%);
   }
   .description {
-    // text-align: right;
-    // padding-right: 100px;
     text-shadow: 1px 1px 2px $black;
     width: 100%;
     max-width: 100%;
     @include layers(2);
-
-    // align-self: flex-start;
   }
 }
 
 main {
-  // @include layers(4);
-
   display: flex;
   justify-content: center;
 }

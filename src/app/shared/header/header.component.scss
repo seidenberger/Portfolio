@@ -83,7 +83,7 @@ header {
   @include layers(10, $posi: fixed);
 }
 
-@media only screen and (min-width: 1001px) {
+@media only screen and (min-width: 1051px) {
   .burger {
     display: none;
   }
@@ -92,7 +92,7 @@ header {
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1050px) {
   .desktop {
     display: none;
   }

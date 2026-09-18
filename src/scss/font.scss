@@ -7,7 +7,7 @@
 ) {
   font-size: $font_size;
   font-weight: $font_weight;
-  @media (max-width: 900px) {
+  @media (max-width: $breakpoint-l) {
     font-size: $f_media;
   }
   @media (max-width: $breakpoint) {
@@ -42,6 +42,8 @@ $f_body_9: 14px;
 
 // max-width
 $breakpoint-xs: 380px;
+$breakpoint-l: 900px;
+$breakpoint-xl: 1200px;
 
 /* poppins-regular - latin */
 @font-face {
@@ -60,6 +62,5 @@ $breakpoint-xs: 380px;
   font-style: normal;
   font-weight: 700;
   // src: url("./../../assets/fonts/poppins-v22-latin-700.woff2")
-  // neu
   src: url("/assets/fonts/poppins-v22-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }

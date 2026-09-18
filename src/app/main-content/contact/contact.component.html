@@ -29,7 +29,6 @@
             </strong>
           </p>
         </div>
-        <!-- <form action="contactForm"> -->
         <form #ngForm="ngForm" (ngSubmit)="onSubmit(ngForm)">
           <label for="name"></label>
           <div class="input_box">
@@ -113,16 +112,6 @@
                 <label for="box"></label>
 
                 <div class="check">
-                  <!-- <input
-                    type="checkbox"
-                    id="privacy"
-                    name="privacy"
-                    [(ngModel)]="contactData.privacyAccepted"
-                    #privacy="ngModel"
-                    required
-                  /> -->
-
-                  <!-- <div class="check">  -->
                   <input
                     class="checkbox"
                     type="checkbox"
@@ -158,10 +147,6 @@
                     {{ policyAgree }}
                   </div>
                 </div>
-
-                <!-- -------------------------------------------------
-                 
-                -->
                 <div class="folder_teach">
                   @if (showPrivacyError) {
                     <p class="required">

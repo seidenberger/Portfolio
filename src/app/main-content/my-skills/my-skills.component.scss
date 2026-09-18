@@ -225,7 +225,7 @@ a:hover {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   section {
     grid-template-areas:
       "container_header "
@@ -251,14 +251,14 @@ a:hover {
   }
 }
 
-// @media (min-width: 1300px) {
-//   .icons {
-//     .grid-container {
-//       grid-template-columns: 1fr 1fr 1fr;
-//       grid-template-rows: auto auto auto auto;
-//     }
-//   }
-// }
+@media (min-width: 700px) {
+  .icons {
+    .grid-container {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto auto auto auto;
+    }
+  }
+}
 
 @media (max-width: 480px) {
   figure {

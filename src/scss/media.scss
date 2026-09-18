@@ -14,7 +14,7 @@
 }
 
 @mixin gridCandRows($rows) {
-  @media (max-width: 1200px) {
+  @media (max-width: 1100px) {
     grid-template-columns: 1fr;
     grid-template-rows: $rows;
   }
