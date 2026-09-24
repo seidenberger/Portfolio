@@ -4,7 +4,8 @@
 @import "./../../../scss/media.scss";
 
 section {
-  @include max_Width();
+  width: min(1440px, 100%);
+  margin: 0 auto;
   padding: 100px 0 0 0;
   @include fontH(
     $font_size: $f_body_8,
@@ -12,28 +13,21 @@ section {
     $f_media: $f_body_8
   );
   @include padding($right: 0px, $left: 0px);
-
-  // @include padding($right: 0px);
-
   display: grid;
-  grid-template-columns: 15% 15% auto 1fr;
-  grid-template-rows: auto auto;
-  width: 100%;
   grid-template-areas:
-    "icon icon icon container_header "
-    "icon icon icon container_butten";
-  @include gridCandRows(auto auto);
+    "icon icon container_header"
+    "icon icon head_text"
+    "icon icon container_butten";
 }
 
 .icons {
+  @include max_Width();
   @include layers(2);
   grid-area: icon;
   .grid-container {
     display: grid;
-    // grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto auto;
-    // gap: 32px;
     .skill_img {
       width: 54px;
       height: 60px;
@@ -54,9 +48,7 @@ section {
 
 figure {
   width: 48px;
-
   gap: 10px;
-  // width: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,47 +98,65 @@ figure.inactive:hover img {
 .container_header {
   grid-area: container_header;
   @include layers(1);
-
+  width: 100%;
+  min-width: 0;
+  transform: translateX(100px);
   .placement {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    grid-template-areas: "container_header";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
+    width: 100%;
+    transform: translateX(300px);
     .head {
+      display: flex;
+      justify-content: end;
       @include fontH($f_media_small: $f_body_2);
-      margin: 0;
       line-height: 90px;
+      flex: 0 0 auto;
+      margin: 0;
     }
   }
 }
 
 .head_text {
+  grid-area: head_text;
   margin: 32px 0;
   @include padding();
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
+  p {
+    padding: 0 100px;
+  }
 }
 
 .line {
-  display: flex;
+  grid-area: line;
   align-items: center;
-  hr {
-    // @include hr($wi: 64px);
+  flex: 1 1 auto;
+  min-width: 80px;
+  height: 4px;
+  position: relative;
+  overflow: visible;
 
-    @include hr();
+  hr {
+    margin: 0;
+    width: calc(100% + max(0px, (100vw - 1440px) / 2));
+    background-color: $purple;
+    border: none;
+    height: 4px;
   }
 }
 
 .container_butten {
-  //   padding-right: 25px;
-  //   padding-left: 25px;
-
   @include layers(1);
   grid-area: container_butten;
   @include padding();
   margin: 32px 0;
-
   .another_skill {
     @include fontH(
       $font_size: $f_body_2,
@@ -219,8 +229,6 @@ a:hover {
 @media (min-width: 400px) {
   .line {
     hr {
-      @include hr($min: 64px, $ideal: 30vw, $max: 64px);
-      // width: 100vw;
     }
   }
 }
