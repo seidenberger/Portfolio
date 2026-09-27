@@ -32,7 +32,6 @@ export class ButtonTranslatedComponent implements OnInit, OnDestroy{
     switchLang(lang: 'de' | 'en') {
     this.translationService.setLanguage(lang);
     this.activeLang.set(lang);
-    console.log('Aktive Sprache:', this.activeLang()); 
 
   }
 

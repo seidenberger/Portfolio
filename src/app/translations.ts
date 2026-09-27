@@ -7,7 +7,7 @@ export const translations :  {
       about: "Über mich",
       skill: "Fähigkeiten",
       portfolio: "Portfolio",
-      rotate: "Ich Bin",
+      rotate: "Ich bin",
       talk: "Lass uns reden",
       scroll: "nach unten",
       way: "Ich bin Quereinsteiger in der Softwareentwicklung. Mein Ziel ist es Software zuentwickeln, die Probleme löst und für Menschen anwendbar macht.",

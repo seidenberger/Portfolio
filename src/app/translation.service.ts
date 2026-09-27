@@ -25,7 +25,6 @@ export class TranslationService {
 
   setLanguage(lang: 'en' | 'de') {
     this.currentLang = lang;
-    console.log('Sprache im Service gesetzt:', lang);
     this.langSubject.next(lang);
   }
 

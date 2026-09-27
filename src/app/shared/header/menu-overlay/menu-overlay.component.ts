@@ -38,7 +38,6 @@ export class MenuOverlayComponent
     @Output() closed = new EventEmitter<void>();
 
   closeMenu() {
-      console.log('closeMenu() in MenuOverlayComponent aufgerufen'); 
     this.closed.emit();  
   }
 

@@ -16,12 +16,10 @@ export class HeaderComponent extends BaseTranslatedComponent{
 
   toggelMenu() {
   this.showMenu = !this.showMenu;
-    console.log('showMenu ist jetzt:', this.showMenu);
 }
 
   onOverlayClosed() {
     this.showMenu = false;
-    console.log('showMenu :', )
   }
 
   updateTexts() {}

@@ -26,7 +26,6 @@ export class PortfolioComponent extends BaseTranslatedComponent  {
 
     this.breakpointObserver.observe(['(max-width: 1200px)']).subscribe(result => {
       this.reverse = !result.matches; 
-          console.log('Reverse / breakpoint:', this.reverse);
     });
 
 

@@ -20,7 +20,6 @@ export class PrivacyPolicyComponent implements OnDestroy {
 
   constructor(private translationService: TranslationService) {
     this.currentLang = this.translationService.getLanguage();
-      console.log('Sprache beim Erstellen (Konstruktor):', this.currentLang);
     this.sub = this.translationService.lang$.subscribe(lang => {
       this.currentLang = lang;
     });

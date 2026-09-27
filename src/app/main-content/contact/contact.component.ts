@@ -59,10 +59,6 @@ showMessageError = false;
 showPrivacyError = false;
 
 
-logPrivacy() {
-  console.log(this.contactData.privacyAccepted);
-}
-
 updateTexts() {
   this.contact = this.translationService.translate('contact');
   this.solve = this.translationService.translate('solve');
@@ -128,21 +124,13 @@ private checkRequiredFields(): boolean {
   return valid;
 }
 
-
-
 onSubmit(ngForm: NgForm) {
   if (!this.checkRequiredFields()) {
     return;
   }
 
-
-
-
-
-
   if (ngForm.form.valid) {
 
-    console.log('POST wird gesendet an:', this.post.endPoint);
 
     this.http.post(
       this.post.endPoint,
@@ -154,15 +142,11 @@ onSubmit(ngForm: NgForm) {
       }
     ).subscribe({
       next: (response) => {
-        console.log('PHP Antwort:', response);
         ngForm.resetForm();
         this.submitted = false;
-      },
-
-   
+      }, 
 
       complete: () => {
-        console.info('send post complete');
 
         this.mailSent = true;
 
@@ -174,9 +158,6 @@ onSubmit(ngForm: NgForm) {
 
   } 
 }
-
-
-
 
  post = {
   endPoint: 'https://theodor-seidenberger.de/sendMail.php',
@@ -200,15 +181,6 @@ onLeave() {
   this.imageSrc = 'assets/icons/go_up_button_default.svg';
 }
 
-
-logName(nameField: any) {
-  console.log(nameField.valid);
-}
-
-// 
 loading = false;
-
-
-
 
 } 

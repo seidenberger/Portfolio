@@ -210,8 +210,9 @@ a:hover {
   overflow: visible;
   position: relative;
   @include layers(0);
-  left: -300px;
-  top: -350px;
+  // left: -300px;
+  // top: -350px;
+  transform: translate(-300px, -350px);
   img {
     height: 951px;
     width: 428px;
@@ -324,6 +325,10 @@ a:hover {
     p {
       padding: 0;
     }
+  }
+
+  .container_img_shadows {
+    transform: translate(-700px, -350px);
   }
 }
 
