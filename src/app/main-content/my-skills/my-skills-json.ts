@@ -51,7 +51,6 @@ export const mySkills =   [
     },
         {
             "imageW": 'assets/img/skills/continually-learning.svg',
-            // "imagew": 'assets/img/skillssssss/continually-learning.png',
         "image": 'assets/img/skills/learning.svg',
         "text": "Continually learning",
      active: false

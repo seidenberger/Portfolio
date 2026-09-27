@@ -13,7 +13,6 @@ import { RouterLink } from '@angular/router';
 ],
   templateUrl: './landingpage.component.html',
   styleUrl: './landing.component.scss'
-  // styleUrl: './landingpage.component.scss'
 })
 export class LandingpageComponent extends BaseTranslatedComponent{ 
 

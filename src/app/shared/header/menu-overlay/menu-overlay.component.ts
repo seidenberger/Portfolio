@@ -34,14 +34,11 @@ export class MenuOverlayComponent
   this.closeMenu();
 }
 
-  
     @Output() closed = new EventEmitter<void>();
 
   closeMenu() {
     this.closed.emit();  
   }
-
-
 
   ngOnInit(): void {
     this.updateTexts(); 
@@ -59,7 +56,6 @@ export class MenuOverlayComponent
     this.skill = this.translationService.translate('skill');
     this.portfolio = this.translationService.translate('portfolio');
   }
-
 
 }
 
