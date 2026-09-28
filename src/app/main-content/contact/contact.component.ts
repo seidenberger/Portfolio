@@ -27,7 +27,6 @@ export class ContactComponent extends BaseTranslatedComponent{
     super(translationService)
   }
   
-
   contactData = {
     name: "",
     email: "",
@@ -58,7 +57,6 @@ export class ContactComponent extends BaseTranslatedComponent{
 showMessageError = false;
 showPrivacyError = false;
 
-
 updateTexts() {
   this.contact = this.translationService.translate('contact');
   this.solve = this.translationService.translate('solve');
@@ -76,20 +74,14 @@ updateTexts() {
   this.policyPolicy = this.translationService.translate('policyPolicy');
   this.policyAgree = this.translationService.translate('policyAgree');
   this.sendMessage = this.translationService.translate('sendMessage');
-  this.messageSend = this.translationService.translate('messageSend');
-  
+  this.messageSend = this.translationService.translate('messageSend');  
 }
 
-
-
-
 private checkRequiredFields(): boolean {
-
   this.showNameError = false;
   this.showEmailError = false;
   this.showMessageError = false;
   this.showPrivacyError = false;
-
   let valid = true;
 
     if (!this.contactData.name) {
@@ -97,10 +89,14 @@ private checkRequiredFields(): boolean {
     valid = false;
   }
 
-   if (!this.contactData.email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+   if (!this.contactData.email || !emailRegex.test(this.contactData.email)) {
     this.showEmailError = true;
     valid = false;
   }
+
+  
 
   if (!this.contactData.message) {
     this.showMessageError = true;
@@ -115,7 +111,7 @@ private checkRequiredFields(): boolean {
     if (!valid) {
     setTimeout(() => {
       this.showNameError = false;
-            this.showEmailError = false;
+      this.showEmailError = false;
       this.showMessageError = false;
       this.showPrivacyError = false;
           }, 5000);
@@ -130,8 +126,6 @@ onSubmit(ngForm: NgForm) {
   }
 
   if (ngForm.form.valid) {
-
-
     this.http.post(
       this.post.endPoint,
       this.post.body(this.contactData),
@@ -145,11 +139,8 @@ onSubmit(ngForm: NgForm) {
         ngForm.resetForm();
         this.submitted = false;
       }, 
-
       complete: () => {
-
         this.mailSent = true;
-
         setTimeout(() => {
           this.mailSent = false;
         }, 5000);
@@ -169,8 +160,6 @@ onSubmit(ngForm: NgForm) {
       },
     },
   };
-
-
     imageSrc = 'assets/icons/go_up_button_default.svg';
 
 onHover() {
@@ -183,4 +172,4 @@ onLeave() {
 
 loading = false;
 
-} console
+}
