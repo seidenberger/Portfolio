@@ -78,6 +78,7 @@ figcaption {
 }
 
 .head {
+  margin: 0;
   @include fontH($f_media_small: $f_body_2);
 }
 

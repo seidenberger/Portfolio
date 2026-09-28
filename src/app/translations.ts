@@ -49,11 +49,7 @@ export const translations :  {
       noteWebsiteOne:"Dieses Impressum wurde mit Hilfe des",
       noteWebsiteTwo:"Impressums-Generators der activeMind AG",
       created:"erstellt",
-      // requiredName:"",
-      // requiredEmail:"",
-      // requiredMessage:"",
-      // requiredPolicy:"",
-       messageSend:"Nachricht gesendet",
+        messageSend:"Nachricht gesendet",
       },
 
     en: {
@@ -102,10 +98,6 @@ export const translations :  {
         noteWebsiteOne:"This imprint was created with the help of",
         noteWebsiteTwo:"Imprint generator of activeMind AG",
         created:"created",
-        // requiredName:"Your name is required",
-        // requiredEmail:"Your email is required",
-        // requiredMessage:"Your message is empty",
-        // requiredPolicy:"Pleas accept the privacy policy",
         messageSend:"Message send",
 
       }
