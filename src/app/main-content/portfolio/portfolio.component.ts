@@ -14,22 +14,15 @@ import { BaseTranslatedComponent } from '../../base-translated.component';
 })
 export class PortfolioComponent extends BaseTranslatedComponent  {
 
-
   reverse = true;
-
-
     constructor(
       private breakpointObserver: BreakpointObserver,
     public override translationService: TranslationService
     ) {
        super(translationService);
-
     this.breakpointObserver.observe(['(max-width: 1200px)']).subscribe(result => {
       this.reverse = !result.matches; 
     });
-
-
-
   }
 
   descriptionPortfoli= '';

@@ -10,7 +10,7 @@ export const translations :  {
       rotate: "Ich bin",
       talk: "Lass uns reden",
       scroll: "nach unten",
-      way: "Ich bin Quereinsteiger in der Softwareentwicklung. Mein Ziel ist es Software zuentwickeln, die Probleme löst und für Menschen anwendbar macht.",
+      way: "Ich bin Quereinsteiger in der Softwareentwicklung. Mein Ziel ist es, Software zu entwickeln, die Probleme löst und für Menschen anwendbar macht.",
       place: "Ich bin gebürtiger Weilheimer. Deshalb möchte ich meine Zukunft in einem Büro in der Region gestalten",
       enthusiasm: "Mit dem Raspberry PI entstand mein Intresse an der IT.",
       solutions: "Dank meiner Kreativität finde ich oft neue Lösungen, die ich gerne in einem Team bespreche und gemeinsam umsetze. ",

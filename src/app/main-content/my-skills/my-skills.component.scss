@@ -100,7 +100,6 @@ figure.inactive:hover img {
   @include layers(1);
   width: 100%;
   min-width: 0;
-  // transform: translateX(100px);
   .placement {
     display: flex;
     justify-content: flex-end;
@@ -124,14 +123,10 @@ figure.inactive:hover img {
 .head_text {
   grid-area: head_text;
   margin: 32px 0;
-  // @include padding();
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
-  p {
-    // padding: 0 100px;
-  }
 }
 
 .line {
@@ -210,8 +205,6 @@ a:hover {
   overflow: visible;
   position: relative;
   @include layers(0);
-  // left: -300px;
-  // top: -350px;
   transform: translate(-300px, -350px);
   img {
     height: 951px;
@@ -227,62 +220,6 @@ a:hover {
   gap: 10px;
 }
 
-// @media (min-width: 400px) {
-//   .line {
-//     hr {
-//     }
-//   }
-// }
-
-// @media (max-width: 1100px) {
-//   section {
-//     grid-template-areas:
-//       "container_header "
-//       "icon"
-//       " container_butten";
-//   }
-// }
-
-// @media (max-width: 600px) {
-//   .head_text,
-//   .container_butten {
-//     padding-right: 25px;
-//     padding-left: 25px;
-//   }
-
-//   .icons {
-//     .grid-container {
-//       .skill_img {
-//         width: 34px;
-//         height: 48px;
-//       }
-//     }
-//   }
-// }
-
-// @media (min-width: 700px) {
-//   .icons {
-//     .grid-container {
-//       grid-template-columns: 1fr 1fr 1fr;
-//       grid-template-rows: auto auto auto auto;
-//     }
-//   }
-// }
-
-// @media (max-width: 480px) {
-//   figure {
-//     width: 48px;
-//   }
-// }
-
-// @media (max-width: 1400px) {
-//   .icons {
-//     .grid-container {
-//       column-gap: 4px;
-//     }
-//   }
-// }
-
 @media (min-width: 450px) {
   .container_header {
     .placement {
@@ -291,10 +228,6 @@ a:hover {
 
     .head_text {
       @include padding();
-
-      p {
-        // padding: 0 100px;
-      }
     }
   }
 

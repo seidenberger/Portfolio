@@ -20,8 +20,6 @@ section {
       @include padding();
       @include layers(1);
       max-width: 1440px;
-      // display: flex;
-      // justify-content: center;
     }
   }
 }
@@ -144,8 +142,6 @@ textarea::placeholder {
 input[type="submit"] {
   color: white;
   @include CustomBtn($backc: $grey, $border_c: $grey, $padding: 10px 15px);
-  // border: none !important;
-  // cursor: pointer;
   width: auto;
   @include fontH(
     $font_size: $f_body_5,
@@ -180,7 +176,6 @@ input[type="submit"] {
 
 .form_butten {
   @include dFlex($g: $form-gap);
-  // margin-top: 16px;
   padding: 16px 0;
 }
 

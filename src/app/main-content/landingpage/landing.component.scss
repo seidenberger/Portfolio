@@ -7,7 +7,6 @@ section {
   height: calc(100vh - 53px);
   width: 100%;
   @include gridCandRows(auto auto auto);
-  //   padding-right: 100px;
   padding-top: 50px;
   padding-right: 0px;
 }
@@ -20,7 +19,6 @@ section {
     img {
       height: auto;
       display: block;
-
       object-fit: cover;
       object-position: left center;
       width: 100%;
@@ -106,7 +104,6 @@ section {
       background-color: $green;
       padding: 15px 30px 15px 30px;
       border-radius: 10px;
-
       position: relative;
       @include layers(10);
     }
@@ -119,11 +116,8 @@ section {
 }
 
 .container_icons {
-  // max-width: 1440px;
-  // margin: 0 auto;
   display: flex;
   align-items: flex-end;
-  // justify-content: center;
   grid-area: icons;
   @include layers(3);
   padding-top: 40px;
@@ -161,17 +155,7 @@ section {
 .img-small {
   display: none;
 }
-
-//   -------------------
-// -------------------
-
 @media (min-width: 576px) {
-  .container_name {
-    // align-items: center;
-    // justify-content: flex-end;
-    // height: 70vh;
-  }
-
   .container_icons {
     align-items: flex-end;
     padding-bottom: 20px;
@@ -182,30 +166,12 @@ section {
   .container_icons {
     justify-content: space-between;
   }
-
-  // .overlay_rotated {
-  //   max-width: 1440px;
-  //   margin: 0 auto;
-  //   right: 50px;
-  //   top: 50%;
-  //   position: absolute;
-  // }
 }
-
-// @media (min-width: 600px) {
-//   .img-big {
-//     display: block;
-//   }
-//   .img-small {
-//     display: none;
-//   }
-// }
 
 @media (min-width: 800px) {
   .container_name {
     align-items: center;
     justify-content: flex-end;
-    // height: 70vh;
   }
 }
 

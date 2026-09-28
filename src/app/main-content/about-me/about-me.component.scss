@@ -8,7 +8,6 @@ section {
   max-width: 1440px;
   margin: 0 auto;
   @include max_Width();
-  // @include layers(3);
   @include fontH(
     $font_size: $f_body_8,
     $font_weight: $f_w_small,
@@ -20,7 +19,6 @@ section {
     ". . . . shadow"
     "discriptio discriptio . picture line";
   justify-content: space-between;
-
   align-items: center;
   @include padding($right: 0);
   .discriptio {
