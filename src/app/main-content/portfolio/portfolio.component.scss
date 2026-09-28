@@ -56,7 +56,8 @@ header {
     @include hr();
   }
   .head {
-    scroll-margin-top: 5rem;
+    // scroll-margin-top: 5rem;
+    margin: 0;
     @include fontH($f_media_small: $f_body_2);
   }
   .hr_right {

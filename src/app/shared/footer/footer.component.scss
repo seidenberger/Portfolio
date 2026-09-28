@@ -12,9 +12,9 @@ section {
   background-color: $black;
   background-color: #141d2f;
   .container_outer {
-    // @include max_Width();
     width: 100vw;
     .container_inner {
+      @include max_Width();
       @include responsivePadding($p, $p-media);
       display: flex;
       flex-direction: column;
@@ -56,7 +56,6 @@ section {
 .container_footer {
   display: flex;
   justify-content: space-between;
-
   div {
     display: flex;
     gap: 21px;
