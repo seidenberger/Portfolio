@@ -18,20 +18,26 @@ export class PrivacyPolicyComponent implements OnDestroy {
   currentLang: 'de' | 'en' = 'de';
   private sub!: Subscription;
 
-  constructor(private translationService: TranslationService) {
-    this.currentLang = this.translationService.getLanguage();
-    this.sub = this.translationService.lang$.subscribe(lang => {
-      this.currentLang = lang;
-    });
-  }
+  constructor(private translationService: TranslationService) {}
+
+ngOnInit(): void {
+  this.setCurrentLanguage();
+  this.subscribeToLanguageChanges();
+}
+
+private setCurrentLanguage(): void {
+  this.currentLang = this.translationService.getLanguage();
+}
+
+private subscribeToLanguageChanges(): void {
+  this.sub = this.translationService.lang$.subscribe(lang => {
+    this.currentLang = lang;
+  });
+}
 
   ngOnDestroy(): void {
     if (this.sub) this.sub.unsubscribe();
   }
-
-
-
-
 }
 
 
