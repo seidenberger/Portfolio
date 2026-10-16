@@ -15,14 +15,22 @@ export class ButtonTranslatedComponent implements OnInit, OnDestroy{
  isDEActive = signal(false);
 
   constructor(public translationService: TranslationService) {
-     this.activeLang.set(this.translationService.getLanguage());
+    this.initializeLanguage();
   }
         ngOnInit(): void {
     this.updateTexts(); 
-    this.sub = this.translationService.lang$.subscribe(() => {
-      this.updateTexts(); 
-    });
+    this.subscribeToLanguageChanges();
   }
+
+  private initializeLanguage(): void {
+  this.activeLang.set(this.translationService.getLanguage());
+}
+
+private subscribeToLanguageChanges(): void {
+  this.sub = this.translationService.lang$.subscribe(() => {
+    this.updateTexts();
+  });
+}
 
   ngOnDestroy(): void {
     this.sub.unsubscribe(); 

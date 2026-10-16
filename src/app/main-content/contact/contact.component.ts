@@ -78,25 +78,20 @@ updateTexts() {
 }
 
 private checkRequiredFields(): boolean {
-  this.showNameError = false;
-  this.showEmailError = false;
-  this.showMessageError = false;
-  this.showPrivacyError = false;
-  let valid = true;
+  this.resetErrors();
 
-    if (!this.contactData.name) {
+  let valid = true;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!this.contactData.name) {
     this.showNameError = true;
     valid = false;
   }
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-   if (!this.contactData.email || !emailRegex.test(this.contactData.email)) {
+  if (!this.contactData.email || !emailRegex.test(this.contactData.email)) {
     this.showEmailError = true;
     valid = false;
   }
-
-  
 
   if (!this.contactData.message) {
     this.showMessageError = true;
@@ -108,17 +103,23 @@ private checkRequiredFields(): boolean {
     valid = false;
   }
 
-    if (!valid) {
-    setTimeout(() => {
-      this.showNameError = false;
-      this.showEmailError = false;
-      this.showMessageError = false;
-      this.showPrivacyError = false;
-          }, 5000);
-  }
+  if (!valid) this.hideErrorsAfterDelay();
 
   return valid;
 }
+
+
+private resetErrors(): void {
+  this.showNameError = false;
+  this.showEmailError = false;
+  this.showMessageError = false;
+  this.showPrivacyError = false;
+}
+
+private hideErrorsAfterDelay(): void {
+  setTimeout(() => this.resetErrors(), 5000);
+}
+
 
 onSubmit(ngForm: NgForm) {
   if (!this.checkRequiredFields()) {

@@ -15,6 +15,26 @@
   }
 }
 
+@mixin fontLnadingpage(
+  $font_size: $font_h_l,
+  $font_weight: $f_w_big,
+  $f_media: $f_body_1,
+  $breakpoint: $breakpoint-xs,
+  $f_media_small: $f_body_8
+) {
+  font-size: $font_size;
+  font-weight: $font_weight;
+  @media (max-width: $breakpoint-xl) {
+    font-size: $f_body_1;
+  }
+  @media (max-width: $breakpoint-l) {
+    font-size: $f_media;
+  }
+  @media (max-width: $breakpoint) {
+    font-size: $f_media_small;
+  }
+}
+
 @mixin fontL() {
   font-size: $font_logo;
   font-weight: $f_w_big;
@@ -43,7 +63,7 @@ $f_body_9: 14px;
 // max-width
 $breakpoint-xs: 380px;
 $breakpoint-l: 900px;
-$breakpoint-xl: 1200px;
+$breakpoint-xl: 1250px;
 
 /* poppins-regular - latin */
 @font-face {
