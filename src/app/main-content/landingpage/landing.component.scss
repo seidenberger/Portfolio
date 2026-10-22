@@ -46,28 +46,29 @@ section {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  height: 70vh;
+  height: 75vh;
   .column {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-right: 0px;
     article {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 15px;
+      align-items: stretch;
       .rotate {
-        transform: rotate(270deg) translate(-20%, -30%);
-        white-space: nowrap;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
         @include fontLnadingpage(
           $font_size: $font_h_2,
           $font_weight: $f_w_small,
           $f_media: $f_body_2,
           $f_media_small: $f_body_2
         );
-        line-height: 0;
-        margin: -20px;
       }
     }
   }
@@ -172,6 +173,7 @@ section {
   .container_name {
     align-items: center;
     justify-content: flex-end;
+    padding-right: 10px;
   }
 }
 

@@ -18,7 +18,7 @@ export class LandingpageComponent extends BaseTranslatedComponent{
 
   rotate= '';
   talk= '';
-  scroll= ''; 
+  scroll= '';  
   
 
   constructor(public override translationService: TranslationService) {

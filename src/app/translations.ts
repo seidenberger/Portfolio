@@ -56,7 +56,7 @@ export const translations :  {
         about: "About me",
         skill: "Skills", 
         portfolio: "Portfolio",
-        rotate: "I am",
+        rotate: " I am  ",
         talk: "Let's talk",
         scroll: "scroll down",
         way: "I'm a career changer in software development. My goal is to develop software that solves problems and makes them usable for people.",
