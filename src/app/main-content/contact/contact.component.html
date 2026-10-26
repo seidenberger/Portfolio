@@ -40,6 +40,9 @@
               placeholder=" {{ yourName }}"
               required
               #name="ngModel"
+              (blur)="
+                nameTouched = true; showNameError = !contactData.name.trim()
+              "
             />
 
             @if (showNameError) {
@@ -65,6 +68,7 @@
               placeholder="{{ yourMail }}"
               required
               #email="ngModel"
+              (blur)="checkEmail()"
             />
             @if (showEmailError) {
               <img
@@ -89,6 +93,7 @@
               name="message"
               placeholder=" {{ yourMassage }}"
               required
+              (blur)="showMessageError = !contactData.message.trim()"
             ></textarea>
             @if (showMessageError) {
               <img
@@ -119,6 +124,7 @@
                     [(ngModel)]="contactData.privacyAccepted"
                     #privacy="ngModel"
                     required
+                    (blur)="showPrivacyError = !contactData.privacyAccepted"
                   />
                   <label for="privacy" class="custom-checkbox">
                     <img

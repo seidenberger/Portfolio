@@ -227,7 +227,8 @@ a:hover {
     }
 
     .head_text {
-      @include padding();
+      // @include padding();
+      padding: 0 100px 0 250px;
     }
   }
 

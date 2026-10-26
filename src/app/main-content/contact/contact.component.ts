@@ -17,6 +17,11 @@ import { RouterLink } from "@angular/router";
 })
 export class ContactComponent extends BaseTranslatedComponent{
 
+   nameTouched = false;
+  emailTouched = false;
+  messageTouched = false;
+  privacyTouched = false;
+
   http = inject(HttpClient);
 
   showError = false; 
@@ -45,6 +50,9 @@ export class ContactComponent extends BaseTranslatedComponent{
   pleaseEmail= '';
   yourMassage= '';
   pleaseMassage= '';
+
+emailErrorMessage = '';
+
   pleaseAccept= '';
   policyRead= '';
   policyPolicy= ''; 
@@ -77,36 +85,62 @@ updateTexts() {
   this.messageSend = this.translationService.translate('messageSend');  
 }
 
-private checkRequiredFields(): boolean {
+private checkRequiredFields(ngForm: NgForm): boolean {
   this.resetErrors();
 
   let valid = true;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if (!this.contactData.name) {
+  
+  if (!this.contactData.name.trim()) {
     this.showNameError = true;
     valid = false;
   }
 
-  if (!this.contactData.email || !emailRegex.test(this.contactData.email)) {
-    this.showEmailError = true;
-    valid = false;
-  }
-
-  if (!this.contactData.message) {
+  if (!this.contactData.message.trim()) {
     this.showMessageError = true;
     valid = false;
   }
 
   if (!this.contactData.privacyAccepted) {
     this.showPrivacyError = true;
-    valid = false;
+    valid = false;  
   }
 
-  if (!valid) this.hideErrorsAfterDelay();
+  if (!valid) {
+    ngForm.form.markAllAsTouched();
+  }
 
-  return valid;
+  return valid && ngForm.form.valid;
 }
+
+checkEmail(): void {
+  const email = this.contactData.email.trim();
+
+  if (!email) {
+    this.showEmailError = true;
+    this.emailErrorMessage = 'Bitte gib deine E-Mail-Adresse ein.';
+    return;
+  }
+
+  if (/\s/.test(email)) {
+    this.showEmailError = true;
+    this.emailErrorMessage =
+      'Die E-Mail-Adresse darf keine Leerzeichen enthalten.';
+    return;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailRegex.test(email)) {
+    this.showEmailError = true;
+    this.emailErrorMessage =
+      'Bitte gib eine gültige E-Mail-Adresse ein.';
+    return;
+  }
+
+  this.showEmailError = false;
+  this.emailErrorMessage = '';
+}
+
 
 
 private resetErrors(): void {
@@ -122,33 +156,63 @@ private hideErrorsAfterDelay(): void {
 
 
 onSubmit(ngForm: NgForm) {
-  if (!this.checkRequiredFields()) {
+  if (!this.checkRequiredFields(ngForm)) {
     return;
   }
 
-  if (ngForm.form.valid) {
-    this.http.post(
-      this.post.endPoint,
-      this.post.body(this.contactData),
-      {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }
-    ).subscribe({
-      next: (response) => {
-        ngForm.resetForm();
-        this.submitted = false;
-      }, 
-      complete: () => {
-        this.mailSent = true;
-        setTimeout(() => {
-          this.mailSent = false;
-        }, 5000);
-      }
-    });
+    this.contactData.name = this.contactData.name.trim();
+  this.contactData.email = this.contactData.email.trim();
+  this.contactData.message = this.contactData.message.trim();
 
-  } 
+  this.http.post(
+    this.post.endPoint,
+    this.post.body(this.contactData),
+    {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+  ).subscribe({
+    next: () => {
+      ngForm.resetForm();
+      this.resetErrors();
+      this.submitted = false;
+      this.mailSent = true;
+
+      setTimeout(() => {
+        this.mailSent = false;
+      }, 5000);
+    },
+    error: (error) => {
+      console.error('Fehler beim Senden der Nachricht:', error);
+
+     
+    }
+  });
+
+  // if (ngForm.form.valid) {
+  //   this.http.post(
+  //     this.post.endPoint,
+  //     this.post.body(this.contactData),
+  //     {
+  //       headers: {
+  //         'Content-Type': 'application/json'
+  //       }
+  //     }
+  //   ).subscribe({
+  //     next: (response) => {
+  //       ngForm.resetForm();
+  //       this.submitted = false;
+  //     }, 
+  //     complete: () => {
+  //       this.mailSent = true;
+  //       setTimeout(() => {
+  //         this.mailSent = false;
+  //       }, 5000);
+  //     }
+  //   });
+
+  // } 
 }
 
  post = {
