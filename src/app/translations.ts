@@ -1,4 +1,11 @@
-export type TranslationKey = 'uebung' | 'about' | 'skill' | 'portfolio' | 'rotate' | 'talk' | 'scroll' | 'way' | 'place' |'enthusiasm' | 'solutions' | 'headSkills' | 'allSkills' | 'otherSkills' | 'anotherSkill' | 'enthusiasmSkills' | 'buttonSkill' | 'descriptionPortfoli' | 'textOne' |  'textTwo' | 'textThree' |'work' | 'join_description' | 'pollo_loco_description' | 'contact' | 'solve' | 'reinforcement' | 'wayMessage' | 'entertain'  | 'yourName' | 'pleaseName' | 'yourMail' | 'pleaseEmail' | 'yourMassage' | 'pleaseMassage' | 'pleaseAccept' | 'policyRead' | 'policyPolicy' | 'policyAgree' | 'sendMessage' | 'legelNotice' | 'responsible' |'address' | 'telephone' | 'noteWebsite' | 'noteWebsiteOne' | 'noteWebsiteTwo' | 'created' | 'messageSend';
+export type TranslationKey = 'uebung' | 'about' | 'skill' | 'portfolio' | 'rotate' | 'talk' | 'scroll' | 'way' | 'place' |
+                              'enthusiasm' | 'solutions' | 'headSkills' | 'allSkills' | 'otherSkills' | 'anotherSkill' | 'enthusiasmSkills' | 'buttonSkill' |
+                              'descriptionPortfoli' | 'textOne' |  'textTwo' | 'textThree' |'work' | 'join_description' | 'pollo_loco_description' | 'contact' | 'solve' |
+                               'reinforcement' | 'wayMessage' | 'entertain'  | 'yourName' | 'pleaseName' | 'yourMail' | 'pleaseEmail' | 'yourMassage' | 'pleaseMassage' | 
+                             'pleaseAccept' | 'policyRead' | 'policyPolicy' | 'policyAgree' | 'sendMessage' | 'legelNotice' | 'responsible' |'address' | 'telephone' |
+                             'noteWebsite' | 'noteWebsiteOne' | 'noteWebsiteTwo' | 'created' | 'messageSend' | 'teachingSignEmail' | 'validEmail';
+
+
 
 export const translations :  {
   [lang: string]: { [key: string]: string }
@@ -33,7 +40,10 @@ export const translations :  {
       yourName: "Dein Name",
       pleaseName: "Bitte Name einfügen",
       yourMail: "Deine E mail",
-      pleaseEmail: "Bitte Email einfügen",
+      pleaseEmail: "Bitte E-Mail-Adresse einfügen",
+      // dfahj
+      teachingSignEmail: "Die E-Mail-Adresse darf keine Leerzeichen enthalten.",
+      validEmail: "Bitte gib eine gültige E-Mail-Adresse ein.",
       yourMassage: "Hier kann deine Nachricht stehen ",
       pleaseMassage: "Bitte schreibe eine Nachricht",
       pleaseAccept: "Bitte stimme dem Datenschutz zu.",
@@ -83,6 +93,9 @@ export const translations :  {
         pleaseName: "Please insert name",
         yourMail: "Your Mail",
         pleaseEmail: "Please insert email",
+
+        teachingSignEmail: "The email address must not contain any spaces.",
+        validEmail: "Please enter a valid email address.",
         yourMassage: "Your Massage",
         pleaseMassage: "pleas enter a message",
         pleaseAccept: "Please accept the privacy policy",

@@ -50,9 +50,9 @@ export class ContactComponent extends BaseTranslatedComponent{
   pleaseEmail= '';
   yourMassage= '';
   pleaseMassage= '';
-
-emailErrorMessage = '';
-
+  emailErrorMessage = '';
+  teachingSignEmail = '';
+  validEmail= '';
   pleaseAccept= '';
   policyRead= '';
   policyPolicy= ''; 
@@ -62,8 +62,8 @@ emailErrorMessage = '';
   submitted = false;
   showNameError = false;
   showEmailError = false;
-showMessageError = false;
-showPrivacyError = false;
+  showMessageError = false;
+  showPrivacyError = false;
 
 updateTexts() {
   this.contact = this.translationService.translate('contact');
@@ -75,6 +75,8 @@ updateTexts() {
   this.pleaseName = this.translationService.translate('pleaseName');
   this.yourMail = this.translationService.translate('yourMail');
   this.pleaseEmail = this.translationService.translate('pleaseEmail');
+  this.pleaseEmail = this.translationService.translate('teachingSignEmail');
+  this.pleaseEmail = this.translationService.translate('validEmail');  
   this.yourMassage = this.translationService.translate('yourMassage');
   this.pleaseMassage = this.translationService.translate('pleaseMassage');
   this.pleaseAccept = this.translationService.translate('pleaseAccept');
@@ -117,14 +119,13 @@ checkEmail(): void {
 
   if (!email) {
     this.showEmailError = true;
-    this.emailErrorMessage = 'Bitte gib deine E-Mail-Adresse ein.';
+    this.emailErrorMessage = this.translationService.translate('pleaseEmail');
     return;
   }
 
   if (/\s/.test(email)) {
     this.showEmailError = true;
-    this.emailErrorMessage =
-      'Die E-Mail-Adresse darf keine Leerzeichen enthalten.';
+    this.emailErrorMessage = this.translationService.translate('teachingSignEmail');
     return;
   }
 
@@ -132,8 +133,7 @@ checkEmail(): void {
 
   if (!emailRegex.test(email)) {
     this.showEmailError = true;
-    this.emailErrorMessage =
-      'Bitte gib eine gültige E-Mail-Adresse ein.';
+    this.emailErrorMessage = this.translationService.translate('validEmail');
     return;
   }
 

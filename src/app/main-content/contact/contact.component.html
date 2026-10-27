@@ -81,7 +81,8 @@
           <label for=""></label>
           <div class="folder_teach">
             @if (showEmailError) {
-              <span class="required"> {{ pleaseEmail }}</span>
+              <!-- <span class="required"> {{ pleaseEmail }} html</span> -->
+              <span class="required"> {{ emailErrorMessage }}</span>
             }
           </div>
           <label for="message"></label>
