@@ -81,7 +81,6 @@
           <label for=""></label>
           <div class="folder_teach">
             @if (showEmailError) {
-              <!-- <span class="required"> {{ pleaseEmail }} html</span> -->
               <span class="required"> {{ emailErrorMessage }}</span>
             }
           </div>
@@ -125,7 +124,7 @@
                     [(ngModel)]="contactData.privacyAccepted"
                     #privacy="ngModel"
                     required
-                    (blur)="showPrivacyError = !contactData.privacyAccepted"
+                    (change)="showPrivacyError = !contactData.privacyAccepted"
                   />
                   <label for="privacy" class="custom-checkbox">
                     <img

@@ -114,6 +114,8 @@ private checkRequiredFields(ngForm: NgForm): boolean {
   return valid && ngForm.form.valid;
 }
 
+
+
 checkEmail(): void {
   const email = this.contactData.email.trim();
 
@@ -150,9 +152,9 @@ private resetErrors(): void {
   this.showPrivacyError = false;
 }
 
-private hideErrorsAfterDelay(): void {
-  setTimeout(() => this.resetErrors(), 5000);
-}
+// private hideErrorsAfterDelay(): void {
+//   setTimeout(() => this.resetErrors(), 5000);
+// }
 
 
 onSubmit(ngForm: NgForm) {
