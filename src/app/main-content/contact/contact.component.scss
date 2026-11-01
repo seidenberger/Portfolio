@@ -132,14 +132,6 @@ textarea::placeholder {
   opacity: 1;
 }
 
-.input_box:hover {
-  @include CustomBtn($backc: $blue, $border_c: $green, $padding: 10px 15px);
-}
-
-.input_box:focus {
-  @include CustomBtn($backc: $blue, $border_c: $green, $padding: 10px 15px);
-}
-
 input[type="submit"] {
   color: white;
   @include CustomBtn($backc: $grey, $border_c: $grey, $padding: 10px 15px);
@@ -151,8 +143,24 @@ input[type="submit"] {
   );
 }
 
+.input_box.error {
+  @include CustomBtn($backc: $blue, $border_c: $red, $padding: 10px 15px);
+}
+
+.input_box.success {
+  @include CustomBtn($backc: $blue, $border_c: $green, $padding: 10px 15px);
+}
+
 input[type="submit"] {
   @include CustomBtn($backc: $purple, $border_c: $purple, $padding: 10px 15px);
+}
+
+.input_box:hover {
+  @include CustomBtn($backc: $blue, $border_c: $green, $padding: 10px 15px);
+}
+
+.input_box:focus-within {
+  @include CustomBtn($backc: $blue, $border_c: $green, $padding: 10px 15px);
 }
 
 .privacy-policy {

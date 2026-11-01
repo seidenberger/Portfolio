@@ -3,7 +3,7 @@ export type TranslationKey = 'uebung' | 'about' | 'skill' | 'portfolio' | 'rotat
                               'descriptionPortfoli' | 'textOne' |  'textTwo' | 'textThree' |'work' | 'join_description' | 'pollo_loco_description' | 'contact' | 'solve' |
                                'reinforcement' | 'wayMessage' | 'entertain'  | 'yourName' | 'pleaseName' | 'yourMail' | 'pleaseEmail' | 'yourMassage' | 'pleaseMassage' | 
                              'pleaseAccept' | 'policyRead' | 'policyPolicy' | 'policyAgree' | 'sendMessage' | 'legelNotice' | 'responsible' |'address' | 'telephone' |
-                             'noteWebsite' | 'noteWebsiteOne' | 'noteWebsiteTwo' | 'created' | 'messageSend' | 'teachingSignEmail' | 'validEmail';
+                             'noteWebsite' | 'noteWebsiteOne' | 'noteWebsiteTwo' | 'created' | 'messageSend' | 'teachingSignEmail' | 'validEmail' | 'messegeSenbError';
 
 
 
@@ -60,6 +60,7 @@ export const translations :  {
       noteWebsiteTwo:"Impressums-Generators der activeMind AG",
       created:"erstellt",
         messageSend:"Nachricht gesendet",
+        messegeSenbError: "Fehler beim Senden der der E-Mail"
       },
 
     en: {
@@ -112,6 +113,7 @@ export const translations :  {
         noteWebsiteTwo:"Imprint generator of activeMind AG",
         created:"created",
         messageSend:"Message send",
+        messegeSenbError:"Error sending the E-Mail"
 
       }
   };  

@@ -27,6 +27,7 @@ export class ContactComponent extends BaseTranslatedComponent{
   showError = false; 
   mailTest = false;
   mailSent = false;
+  formSubmitted = false;
 
   constructor(public override translationService: TranslationService) {
     super(translationService)
@@ -35,8 +36,9 @@ export class ContactComponent extends BaseTranslatedComponent{
   contactData = {
     name: "",
     email: "",
-    message: "",
+    message: '',
      privacyAccepted: false
+     
   }
 
   contact= '';
@@ -59,11 +61,17 @@ export class ContactComponent extends BaseTranslatedComponent{
   policyAgree= '';
   sendMessage= '';
   messageSend= '';
+  messegeSenbError= '';
   submitted = false;
   showNameError = false;
   showEmailError = false;
   showMessageError = false;
   showPrivacyError = false;
+  MessegeError = false;
+  mailSendError = false;
+  messageIsValid = false;
+  nameIsValide = false;
+
 
 updateTexts() {
   this.contact = this.translationService.translate('contact');
@@ -85,35 +93,61 @@ updateTexts() {
   this.policyAgree = this.translationService.translate('policyAgree');
   this.sendMessage = this.translationService.translate('sendMessage');
   this.messageSend = this.translationService.translate('messageSend');  
+  this.messegeSenbError = this.translationService.translate('messegeSenbError');
 }
 
 private checkRequiredFields(ngForm: NgForm): boolean {
   this.resetErrors();
 
-  let valid = true;
-  
-  if (!this.contactData.name.trim()) {
-    this.showNameError = true;
-    valid = false;
+    const fieldsValid = this.validateRequiredFields();
+
+  if (!fieldsValid) {
+    this.markFormAsTouched(ngForm);
   }
 
-  if (!this.contactData.message.trim()) {
-    this.showMessageError = true;
-    valid = false;
-  }
-
-  if (!this.contactData.privacyAccepted) {
-    this.showPrivacyError = true;
-    valid = false;  
-  }
-
-  if (!valid) {
-    ngForm.form.markAllAsTouched();
-  }
-
-  return valid && ngForm.form.valid;
+    return fieldsValid && ngForm.form.valid;
 }
 
+private validateRequiredFields(): boolean {
+  const nameValid = this.validateName();
+  // const eMailValid = this.checkEmail();
+  const messageValid = this.validateMessage();
+  const privacyValid = this.validatePrivacy();
+
+  return nameValid && messageValid && privacyValid ;
+  // && eMailValid
+}
+
+private validateName(): boolean {
+  if (!this.contactData.name.trim()) {
+    this.showNameError = true;
+    return false;
+  }
+
+  return true;
+}
+
+private validateMessage(): boolean {
+  if (!this.contactData.message.trim()) {
+    this.showMessageError = true;
+    return false;
+  }
+
+  return true;
+}
+
+private validatePrivacy(): boolean {
+  if (!this.contactData.privacyAccepted) {
+    this.showPrivacyError = true;
+    return false;
+  }
+
+  return true;
+}
+
+private markFormAsTouched(ngForm: NgForm): void {
+  ngForm.form.markAllAsTouched();
+}
 
 
 checkEmail(): void {
@@ -152,70 +186,109 @@ private resetErrors(): void {
   this.showPrivacyError = false;
 }
 
-// private hideErrorsAfterDelay(): void {
-//   setTimeout(() => this.resetErrors(), 5000);
+
+// onSubmit(ngForm: NgForm) {
+//   if (!this.checkRequiredFields(ngForm)) {
+//     return;
+//   }
+
+//     this.contactData.name = this.contactData.name.trim();
+//   this.contactData.email = this.contactData.email.trim();
+//   this.contactData.message = this.contactData.message.trim();
+
+//   this.http.post(
+//     this.post.endPoint,
+//     this.post.body(this.contactData),
+//     {
+//       headers: {
+//         'Content-Type': 'application/json'
+//       }
+//     }
+//   ).subscribe({
+
+//  next: (response) => {
+//     console.log('NEXT wird ausgeführt:', response);
+
+//       ngForm.resetForm();
+//       this.resetErrors();
+
+//       this.submitted = false;
+   
+//         this.formSubmitted = true;
+//  },
+//            complete: () => {
+//                this.mailSent = true;
+//                  console.log('mailSent:', this.mailSent);
+//       setTimeout(() => {
+//         this.mailSent = false;
+//            this.formSubmitted = false;
+//       }, 5000);
+//     },
+//     // error: (error) => {
+//     //   console.error('Fehler beim Senden der Nachricht:', error);
+//     //       // this.MessegeError = this.translationService.translate('validEmail');
+    
+     
+//     // }
+//   });
+
 // }
 
+checkNameWhitespace(): void {
+  this.showNameError = !this.contactData.name.trim();
+  this.nameIsValide = !this.showNameError; 
+  // this.nameIsValide= true;
+}
+
+checkMessageWhitespace(): void {
+  this.showMessageError = !this.contactData.message.trim();
+  this.messageIsValid = !this.showMessageError;
+  // this.messageIsValid = true;
+}
 
 onSubmit(ngForm: NgForm) {
   if (!this.checkRequiredFields(ngForm)) {
     return;
   }
 
-    this.contactData.name = this.contactData.name.trim();
-  this.contactData.email = this.contactData.email.trim();
-  this.contactData.message = this.contactData.message.trim();
-
-  this.http.post(
-    this.post.endPoint,
-    this.post.body(this.contactData),
-    {
-      headers: {
-        'Content-Type': 'application/json'
+  if (ngForm.form.valid) {
+    this.http.post(
+      this.post.endPoint,
+      this.post.body(this.contactData),
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
       }
-    }
-  ).subscribe({
-    next: () => {
-      ngForm.resetForm();
-      this.resetErrors();
-      this.submitted = false;
-      this.mailSent = true;
+    ).subscribe({
+      next: (response) => {
+         this.mailSent = true;
+        ngForm.resetForm();
+        this.submitted = false;
+      // }, 
+      // complete: () => {
+      //   this.mailSent = true;
+        setTimeout(() => {
+          this.mailSent = false;
+        }, 5000);
+      },
+      
+      error: () => {
+        this.mailSendError = true;
 
-      setTimeout(() => {
-        this.mailSent = false;
-      }, 5000);
-    },
-    error: (error) => {
-      console.error('Fehler beim Senden der Nachricht:', error);
+        setTimeout(() => {
+          this.mailSendError = false;
+        }, 5000);
 
-     
-    }
-  });
+        console.error('Fehler beim Senden der E-Mail:', );
+      }
+    });
 
-  // if (ngForm.form.valid) {
-  //   this.http.post(
-  //     this.post.endPoint,
-  //     this.post.body(this.contactData),
-  //     {
-  //       headers: {
-  //         'Content-Type': 'application/json'
-  //       }
-  //     }
-  //   ).subscribe({
-  //     next: (response) => {
-  //       ngForm.resetForm();
-  //       this.submitted = false;
-  //     }, 
-  //     complete: () => {
-  //       this.mailSent = true;
-  //       setTimeout(() => {
-  //         this.mailSent = false;
-  //       }, 5000);
-  //     }
-  //   });
-
-  // } 
+  } 
 }
+
+// this.messageIsValid = false;
+// this.showMessageError = false;
 
  post = {
   endPoint: 'https://theodor-seidenberger.de/sendMail.php',

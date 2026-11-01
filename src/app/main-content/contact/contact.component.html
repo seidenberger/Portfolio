@@ -31,7 +31,11 @@
         </div>
         <form #ngForm="ngForm" (ngSubmit)="onSubmit(ngForm)">
           <label for="name"></label>
-          <div class="input_box">
+          <div
+            class="input_box"
+            [class.error]="showNameError"
+            [class.success]="nameIsValide"
+          >
             <input
               [(ngModel)]="contactData.name"
               type="text"
@@ -40,9 +44,7 @@
               placeholder=" {{ yourName }}"
               required
               #name="ngModel"
-              (blur)="
-                nameTouched = true; showNameError = !contactData.name.trim()
-              "
+              (blur)="checkNameWhitespace()"
             />
 
             @if (showNameError) {
@@ -59,7 +61,7 @@
             }
           </div>
           <label for="email"></label>
-          <div class="input_box">
+          <div class="input_box" [class.error]="showEmailError">
             <input
               [(ngModel)]="contactData.email"
               type="email"
@@ -85,7 +87,11 @@
             }
           </div>
           <label for="message"></label>
-          <div class="input_box">
+          <div
+            class="input_box"
+            [class.error]="showMessageError"
+            [class.success]="messageIsValid"
+          >
             <textarea
               #message="ngModel"
               [(ngModel)]="contactData.message"
@@ -93,7 +99,7 @@
               name="message"
               placeholder=" {{ yourMassage }}"
               required
-              (blur)="showMessageError = !contactData.message.trim()"
+              (blur)="checkMessageWhitespace()"
             ></textarea>
             @if (showMessageError) {
               <img
@@ -153,9 +159,9 @@
                 </div>
                 <div class="folder_teach">
                   @if (showPrivacyError) {
-                    <p class="required">
+                    <span class="required">
                       {{ pleaseAccept }}
-                    </p>
+                    </span>
                   }
                 </div>
               </div>
@@ -182,6 +188,16 @@
                 <span class="messageSend"
                   >{{ messageSend }}
                   <img src="assets/img/contact/finished.svg" alt="" />
+                </span>
+              }
+              @if (mailSendError) {
+                <span>
+                  {{ messegeSenbError }}
+                  <img
+                    class="img_required"
+                    src="assets/img/contact/attention.svg"
+                    alt="required"
+                  />
                 </span>
               }
             </div>
