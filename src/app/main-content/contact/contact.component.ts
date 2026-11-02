@@ -101,7 +101,6 @@ private checkRequiredFields(ngForm: NgForm): boolean {
 
 
     const fieldsValid = this.validateRequiredFields();
-  // this.resetErrors();
   if (!fieldsValid) {
     this.markFormAsTouched(ngForm);
   }
@@ -110,13 +109,12 @@ private checkRequiredFields(ngForm: NgForm): boolean {
 }
 
 private validateRequiredFields(): boolean {
-  const nameValid = this.validateName();
-  const messageValid = this.validateMessage();
-  const privacyValid = this.validatePrivacy();
   this.checkEmail();
-  const emailValid = !this.showEmailError;
 
-  return nameValid && messageValid && privacyValid && emailValid ;
+  return  this.validateName() &&
+         this.validateMessage() &&
+         this.validatePrivacy() &&
+         !this.showEmailError;
 }
 
 private validateName(): boolean {
@@ -223,9 +221,6 @@ onSubmit(ngForm: NgForm) {
          this.mailSent = true;
         ngForm.resetForm();
         this.submitted = false;
-      // }, 
-      // complete: () => {
-      //   this.mailSent = true;
         setTimeout(() => {
           this.mailSent = false;
            
