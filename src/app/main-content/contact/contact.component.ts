@@ -71,6 +71,7 @@ export class ContactComponent extends BaseTranslatedComponent{
   mailSendError = false;
   messageIsValid = false;
   nameIsValide = false;
+  emailIsValide = false;
 
 
 updateTexts() {
@@ -97,10 +98,10 @@ updateTexts() {
 }
 
 private checkRequiredFields(ngForm: NgForm): boolean {
-  this.resetErrors();
+
 
     const fieldsValid = this.validateRequiredFields();
-
+  // this.resetErrors();
   if (!fieldsValid) {
     this.markFormAsTouched(ngForm);
   }
@@ -110,12 +111,12 @@ private checkRequiredFields(ngForm: NgForm): boolean {
 
 private validateRequiredFields(): boolean {
   const nameValid = this.validateName();
-  // const eMailValid = this.checkEmail();
   const messageValid = this.validateMessage();
   const privacyValid = this.validatePrivacy();
+  this.checkEmail();
+  const emailValid = !this.showEmailError;
 
-  return nameValid && messageValid && privacyValid ;
-  // && eMailValid
+  return nameValid && messageValid && privacyValid && emailValid ;
 }
 
 private validateName(): boolean {
@@ -155,12 +156,14 @@ checkEmail(): void {
 
   if (!email) {
     this.showEmailError = true;
+
     this.emailErrorMessage = this.translationService.translate('pleaseEmail');
     return;
   }
 
   if (/\s/.test(email)) {
     this.showEmailError = true;
+
     this.emailErrorMessage = this.translationService.translate('teachingSignEmail');
     return;
   }
@@ -169,12 +172,14 @@ checkEmail(): void {
 
   if (!emailRegex.test(email)) {
     this.showEmailError = true;
+
     this.emailErrorMessage = this.translationService.translate('validEmail');
     return;
   }
 
   this.showEmailError = false;
   this.emailErrorMessage = '';
+    this.emailIsValide = !this.showEmailError; 
 }
 
 
@@ -184,66 +189,19 @@ private resetErrors(): void {
   this.showEmailError = false;
   this.showMessageError = false;
   this.showPrivacyError = false;
+  this.messageIsValid = false;
+  this.nameIsValide = false;
+  this.emailIsValide = false;
 }
-
-
-// onSubmit(ngForm: NgForm) {
-//   if (!this.checkRequiredFields(ngForm)) {
-//     return;
-//   }
-
-//     this.contactData.name = this.contactData.name.trim();
-//   this.contactData.email = this.contactData.email.trim();
-//   this.contactData.message = this.contactData.message.trim();
-
-//   this.http.post(
-//     this.post.endPoint,
-//     this.post.body(this.contactData),
-//     {
-//       headers: {
-//         'Content-Type': 'application/json'
-//       }
-//     }
-//   ).subscribe({
-
-//  next: (response) => {
-//     console.log('NEXT wird ausgeführt:', response);
-
-//       ngForm.resetForm();
-//       this.resetErrors();
-
-//       this.submitted = false;
-   
-//         this.formSubmitted = true;
-//  },
-//            complete: () => {
-//                this.mailSent = true;
-//                  console.log('mailSent:', this.mailSent);
-//       setTimeout(() => {
-//         this.mailSent = false;
-//            this.formSubmitted = false;
-//       }, 5000);
-//     },
-//     // error: (error) => {
-//     //   console.error('Fehler beim Senden der Nachricht:', error);
-//     //       // this.MessegeError = this.translationService.translate('validEmail');
-    
-     
-//     // }
-//   });
-
-// }
 
 checkNameWhitespace(): void {
   this.showNameError = !this.contactData.name.trim();
   this.nameIsValide = !this.showNameError; 
-  // this.nameIsValide= true;
 }
 
 checkMessageWhitespace(): void {
   this.showMessageError = !this.contactData.message.trim();
   this.messageIsValid = !this.showMessageError;
-  // this.messageIsValid = true;
 }
 
 onSubmit(ngForm: NgForm) {
@@ -270,7 +228,9 @@ onSubmit(ngForm: NgForm) {
       //   this.mailSent = true;
         setTimeout(() => {
           this.mailSent = false;
+           
         }, 5000);
+         this.resetErrors();
       },
       
       error: () => {
