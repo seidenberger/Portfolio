@@ -40,3 +40,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Audit Reports
+audit-report.json
+npm-audit.json
