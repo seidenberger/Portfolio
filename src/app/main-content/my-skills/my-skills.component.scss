@@ -16,6 +16,7 @@ section {
   display: grid;
   grid-template-areas:
     "container_header "
+    "shadows"
     "icon"
     " container_butten";
 }
@@ -202,6 +203,7 @@ a:hover {
 }
 
 .container_img_shadows {
+  grid-template-areas: "shadows";
   overflow: visible;
   position: relative;
   @include layers(0);
@@ -227,7 +229,6 @@ a:hover {
     }
 
     .head_text {
-      // @include padding();
       padding: 0 100px 0 250px;
     }
   }
