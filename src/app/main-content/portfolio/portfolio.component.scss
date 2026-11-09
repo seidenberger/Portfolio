@@ -148,6 +148,11 @@ main {
 }
 
 @media (min-width: 1100px) {
+  section {
+    .container_img_shadows {
+      grid-row: 1 /2;
+    }
+  }
   header {
     padding: 80px 0;
   }
@@ -175,6 +180,14 @@ main {
     }
   }
 
+  @media (min-width: 768px) {
+    section {
+      .container_img_shadows {
+        grid-row: 1 /2;
+      }
+    }
+  }
+
   @media (max-width: 768px) {
     section {
       display: block;
@@ -192,6 +205,11 @@ main {
   }
 
   @media (max-width: 400px) {
+    section {
+      .container_img_shadows {
+        grid-row: 3 /4;
+      }
+    }
     .container_project {
       .container_img_project {
         img {
