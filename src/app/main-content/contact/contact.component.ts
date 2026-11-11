@@ -151,10 +151,10 @@ private markFormAsTouched(ngForm: NgForm): void {
 
 checkEmail(): void {
   const email = this.contactData.email.trim();
-
+  console.log('Eingegebene Email:', email);
   if (!email) {
     this.showEmailError = true;
-
+    console.log('Email ist leer');
     this.emailErrorMessage = this.translationService.translate('pleaseEmail');
     return;
   }
@@ -166,15 +166,16 @@ checkEmail(): void {
     return;
   }
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+console.log(emailRegex.test(email));
   if (!emailRegex.test(email)) {
     this.showEmailError = true;
-
+console.log(emailRegex.test(email));
     this.emailErrorMessage = this.translationService.translate('validEmail');
     return;
   }
-
+  console.log('Email erfolgreich validiert');
   this.showEmailError = false;
   this.emailErrorMessage = '';
     this.emailIsValide = !this.showEmailError; 
