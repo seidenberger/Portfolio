@@ -111,10 +111,12 @@ private checkRequiredFields(ngForm: NgForm): boolean {
 private validateRequiredFields(): boolean {
   this.checkEmail();
 
-  return  this.validateName() &&
-         this.validateMessage() &&
-         this.validatePrivacy() &&
-         !this.showEmailError;
+  const nameValid = this.validateName();
+  const messageValid = this.validateMessage();
+  const privacyValid = this.validatePrivacy();
+  const emailValid = !this.showEmailError;
+
+  return nameValid && messageValid && privacyValid && emailValid;
 }
 
 private validateName(): boolean {
@@ -127,11 +129,14 @@ private validateName(): boolean {
 }
 
 private validateMessage(): boolean {
-  if (!this.contactData.message.trim()) {
+  const message = this.contactData.message.trim();
+
+  if (message.length < 2) {
     this.showMessageError = true;
     return false;
   }
 
+  this.showMessageError = false;
   return true;
 }
 
@@ -151,10 +156,8 @@ private markFormAsTouched(ngForm: NgForm): void {
 
 checkEmail(): void {
   const email = this.contactData.email.trim();
-  console.log('Eingegebene Email:', email);
   if (!email) {
     this.showEmailError = true;
-    console.log('Email ist leer');
     this.emailErrorMessage = this.translationService.translate('pleaseEmail');
     return;
   }
@@ -168,14 +171,11 @@ checkEmail(): void {
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-console.log(emailRegex.test(email));
   if (!emailRegex.test(email)) {
     this.showEmailError = true;
-console.log(emailRegex.test(email));
     this.emailErrorMessage = this.translationService.translate('validEmail');
     return;
   }
-  console.log('Email erfolgreich validiert');
   this.showEmailError = false;
   this.emailErrorMessage = '';
     this.emailIsValide = !this.showEmailError; 
@@ -198,9 +198,10 @@ checkNameWhitespace(): void {
   this.nameIsValide = !this.showNameError; 
 }
 
-checkMessageWhitespace(): void {
-  this.showMessageError = !this.contactData.message.trim();
-  this.messageIsValid = !this.showMessageError;
+checkMessage(): void {
+  const message = this.contactData.message.trim();
+  this.showMessageError = message.length < 2;
+    this.messageIsValid = message.length >= 2;
 }
 
 onSubmit(ngForm: NgForm) {
@@ -243,8 +244,6 @@ onSubmit(ngForm: NgForm) {
   } 
 }
 
-// this.messageIsValid = false;
-// this.showMessageError = false;
 
  post = {
   endPoint: 'https://theodor-seidenberger.de/sendMail.php',

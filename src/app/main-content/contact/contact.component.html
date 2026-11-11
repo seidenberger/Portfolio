@@ -105,7 +105,7 @@
               name="message"
               placeholder=" {{ yourMassage }}"
               required
-              (blur)="checkMessageWhitespace()"
+              (blur)="checkMessage()"
               (input)="messageIsValid = false"
             ></textarea>
             @if (showMessageError) {

@@ -263,6 +263,12 @@ a {
   content: url("/assets/icons/go_up_butten_hover.svg");
 }
 
+@media (min-width: 1100px) {
+  section {
+    justify-content: start;
+  }
+}
+
 @media (max-width: 600px) {
   .write_to {
     flex-direction: column;
