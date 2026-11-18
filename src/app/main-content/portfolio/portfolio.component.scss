@@ -4,9 +4,8 @@
 @import "./../../../scss/media.scss";
 
 section {
-  padding: 100px 0 0 0;
-  @include max_Width();
   padding: 0 20px;
+  @include max_Width();
   @include fontH(
     $font_size: $f_body_8,
     $font_weight: $f_w_small,
@@ -26,6 +25,9 @@ section {
       left: -300px;
       position: absolute;
     }
+  }
+  .description {
+    padding: 0 30px;
   }
 }
 
@@ -152,6 +154,9 @@ main {
     .container_img_shadows {
       grid-row: 1 /2;
     }
+    .description {
+      padding: 0 180px;
+    }
   }
   header {
     padding: 80px 0;
@@ -159,6 +164,8 @@ main {
 }
 
 @media (max-width: 1200px) {
+  section {
+  }
   .container_project {
     flex-direction: column;
   }

@@ -6,7 +6,6 @@
 $form-gap: 20px;
 
 section {
-  // margin-top: 100px;
   @include fontH(
     $font_size: $f_body_8,
     $font_weight: $f_w_small,
@@ -176,7 +175,18 @@ input[type="submit"] {
 }
 
 .checkbox {
-  display: none;
+  position: absolute;
+  opacity: 0;
+}
+
+.custom-checkbox {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  img {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .fill_1out_hint {
