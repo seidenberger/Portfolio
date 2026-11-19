@@ -51,11 +51,15 @@ export class MenuOverlayComponent
     this.sub.unsubscribe(); 
   }
 
+
+
   updateTexts() {
-    this.about = this.translationService.translate('about');
-    this.skill = this.translationService.translate('skill');
-    this.portfolio = this.translationService.translate('portfolio');
-  }
+  Object.assign(this, this.translationService.translateMany([
+    'about',
+    'skill',
+    'portfolio',
+  ]));
+}
 
 }
 

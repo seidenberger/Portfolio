@@ -30,14 +30,16 @@ buttonSkill = '';
     super(translationService);
   }
 
-  protected override updateTexts() {
-    this.headSkills = this.translationService.translate('headSkills');
-    this.allSkills = this.translationService.translate('allSkills');
-    this.otherSkills = this.translationService.translate('otherSkills');
-    this.anotherSkill = this.translationService.translate('anotherSkill');
-    this.enthusiasmSkills = this.translationService.translate('enthusiasmSkills');
-  this.buttonSkill = this.translationService.translate('buttonSkill');
-  }
+    updateTexts() {
+  Object.assign(this, this.translationService.translateMany([
+'headSkills',
+'allSkills',
+'otherSkills',
+'anotherSkill',
+'enthusiasmSkills',
+'buttonSkill',
+  ]));
+}
 
 
 onHover(index: number, truh: boolean) {

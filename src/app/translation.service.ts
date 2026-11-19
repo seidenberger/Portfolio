@@ -27,5 +27,12 @@ export class TranslationService {
   translate(key: TranslationKey): string {
     return translations[this.currentLang][key];
   } 
+
+    translateMany(keys: TranslationKey[]): Record<string, string> {
+    return keys.reduce((result, key) => {
+      result[key] = this.translate(key);
+      return result;
+    }, {} as Record<string, string>);
+  }
 }
    

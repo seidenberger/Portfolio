@@ -26,10 +26,13 @@ export class LandingpageComponent extends BaseTranslatedComponent{
   }
 
 
-updateTexts() {
-  this.rotate = this.translationService.translate('rotate');
-  this.talk = this.translationService.translate('talk');
-  this.scroll = this.translationService.translate('scroll');
-  
+  updateTexts() {
+  Object.assign(this, this.translationService.translateMany([
+  'rotate',
+  'talk',
+  'scroll',
+  ]));
 }
+
+
 }

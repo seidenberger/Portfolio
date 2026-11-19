@@ -75,26 +75,28 @@ export class ContactComponent extends BaseTranslatedComponent{
 
 
 updateTexts() {
-  this.contact = this.translationService.translate('contact');
-  this.solve = this.translationService.translate('solve');
-  this.reinforcement = this.translationService.translate('reinforcement');
-  this.wayMessage = this.translationService.translate('wayMessage');
-  this.entertain = this.translationService.translate('entertain');
-  this.yourName = this.translationService.translate('yourName');
-  this.pleaseName = this.translationService.translate('pleaseName');
-  this.yourMail = this.translationService.translate('yourMail');
-  this.pleaseEmail = this.translationService.translate('pleaseEmail');
-  this.pleaseEmail = this.translationService.translate('teachingSignEmail');
-  this.pleaseEmail = this.translationService.translate('validEmail');  
-  this.yourMassage = this.translationService.translate('yourMassage');
-  this.pleaseMassage = this.translationService.translate('pleaseMassage');
-  this.pleaseAccept = this.translationService.translate('pleaseAccept');
-  this.policyRead = this.translationService.translate('policyRead');
-  this.policyPolicy = this.translationService.translate('policyPolicy');
-  this.policyAgree = this.translationService.translate('policyAgree');
-  this.sendMessage = this.translationService.translate('sendMessage');
-  this.messageSend = this.translationService.translate('messageSend');  
-  this.messegeSenbError = this.translationService.translate('messegeSenbError');
+  Object.assign(this, this.translationService.translateMany([
+    'contact',
+    'solve',
+  'reinforcement',
+  'wayMessage',
+  'entertain',
+  'yourName',
+  'pleaseName',
+  'yourMail',
+  'pleaseEmail',
+  'yourMassage',
+  'pleaseMassage',
+  'teachingSignEmail',
+  'validEmail',
+  'pleaseAccept',
+  'policyRead',
+  'policyPolicy',
+  'policyAgree',
+  'sendMessage',
+  'messageSend',
+  'messegeSenbError'
+  ]));
 }
 
 private checkRequiredFields(ngForm: NgForm): boolean {

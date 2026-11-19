@@ -17,8 +17,10 @@ join_description = '';
     super(translationService);
   }
 
-  protected override updateTexts() {
-  this.join_description = this.translationService.translate('join_description');
-  }
+  updateTexts() {
+    Object.assign(this, this.translationService.translateMany([
+    'join_description',
+    ]));
+}
 
 }

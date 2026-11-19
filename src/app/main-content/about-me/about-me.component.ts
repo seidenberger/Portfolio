@@ -19,14 +19,16 @@ export class AboutMeComponent extends BaseTranslatedComponent{
   constructor(public override translationService: TranslationService) {
     super(translationService)
   }
-  
+
   updateTexts() {
-    this.about = this.translationService.translate('about');
-        this.way = this.translationService.translate('way');
-    this.place = this.translationService.translate('place');
-    this.enthusiasm = this.translationService.translate('enthusiasm');
-    this.solutions = this.translationService.translate('solutions');
-  }
+  Object.assign(this, this.translationService.translateMany([
+  'about',
+  'way',
+  'place',
+  'enthusiasm',
+  'solutions'
+  ]));
+}
   
 
 }

@@ -27,8 +27,10 @@ export class PortfolioComponent extends BaseTranslatedComponent  {
 
   descriptionPortfoli= '';
 
-    protected override updateTexts() {
-    this.descriptionPortfoli = this.translationService.translate('descriptionPortfoli');
-    }
+      updateTexts() {
+        Object.assign(this, this.translationService.translateMany([
+        'descriptionPortfoli',
+        ]));
+}
 
 }

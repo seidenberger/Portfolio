@@ -19,8 +19,10 @@ export class ElPolloLocoComponent extends BaseTranslatedComponent{
       super(translationService);
     }
   
-    protected override updateTexts() {
-    this.pollo_loco_description = this.translationService.translate('pollo_loco_description');
-    }
+          updateTexts() {
+        Object.assign(this, this.translationService.translateMany([
+        'pollo_loco_description',
+        ]));
+}
 
 }

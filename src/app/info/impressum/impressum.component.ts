@@ -26,16 +26,18 @@ export class ImpressumComponent extends BaseTranslatedComponent {
       super(translationService)
     }
 
-updateTexts() {
-  this.legelNotice = this.translationService.translate('legelNotice');
-  this.responsible = this.translationService.translate('responsible');
-  this.address = this.translationService.translate('address');
-  this.contact = this.translationService.translate('contact');
-  this.telephone = this.translationService.translate('telephone');
-  this.noteWebsite = this.translationService.translate('noteWebsite');
-  this.noteWebsiteTwo = this.translationService.translate('noteWebsiteTwo');
-  this.created = this.translationService.translate('created');
-  
+  updateTexts() {
+  Object.assign(this, this.translationService.translateMany([
+  'legelNotice',
+  'responsible',
+  'address',
+  'contact',
+  'telephone',
+  'noteWebsite',
+  'noteWebsiteOne',
+  'noteWebsiteTwo',
+  'created',
+  ]));
 }
     
 }

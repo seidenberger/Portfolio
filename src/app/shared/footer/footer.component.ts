@@ -23,8 +23,12 @@ export class FooterComponent extends BaseTranslatedComponent{
 
 legelNotice= '';
 
-updateTexts() {
-  this.legelNotice = this.translationService.translate('legelNotice');
+
+
+  updateTexts() {
+    Object.assign(this, this.translationService.translateMany([
+    'legelNotice',
+    ]));
 }
 
 }
