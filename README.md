@@ -1,6 +1,6 @@
 # :rocket: My Developer Portfolio
 
-## :file_folder: **Live Demo:** [Website öffnen](https://theodor-seidenberger.de/)
+## :eu: **Live Demo:** [Website öffnen](https://theodor-seidenberger.de/)
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.29
 
