@@ -1,6 +1,8 @@
 # Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
+**Live Demo:** [Website öffnen](https://theodor-seidenberger.de/)
+
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.29
 
 ## Development server
 
