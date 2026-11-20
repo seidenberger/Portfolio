@@ -1,6 +1,6 @@
 # :rocket: My Developer Portfolio
 
-## :eu: **Live Demo:** [Website öffnen](https://theodor-seidenberger.de/)
+## :globe_with_meridians: **Live Demo:** [Website öffnen](https://theodor-seidenberger.de/)
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.29
 
