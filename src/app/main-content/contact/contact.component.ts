@@ -158,32 +158,47 @@ private markFormAsTouched(ngForm: NgForm): void {
 
 checkEmail(): void {
   const email = this.contactData.email.trim();
-  if (!email) {
-    this.showEmailError = true;
-    this.emailErrorMessage = this.translationService.translate('pleaseEmail');
-    return;
-  }
 
-  if (/\s/.test(email)) {
-    this.showEmailError = true;
+  const error = this.validateEmail(email);
 
-    this.emailErrorMessage = this.translationService.translate('teachingSignEmail');
-    return;
-  }
-
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if (!emailRegex.test(email)) {
-    this.showEmailError = true;
-    this.emailErrorMessage = this.translationService.translate('validEmail');
-    return;
-  }
-  this.showEmailError = false;
-  this.emailErrorMessage = '';
-    this.emailIsValide = !this.showEmailError; 
+  this.showEmailError = !!error;
+  this.emailErrorMessage = error ?? '';
+  this.emailIsValide = !error;
 }
 
+private validateEmail(email: string): string | null {
+  return (
+    this.checkEmailEmpty(email) ??
+    this.checkEmailWhitespace(email) ??
+    this.checkEmailFormat(email)
+  );
+}
 
+private checkEmailEmpty(email: string): string | null {
+  if (!email) {
+    return this.translationService.translate('pleaseEmail');
+  }
+
+  return null;
+}
+
+private checkEmailWhitespace(email: string): string | null {
+  if (/\s/.test(email)) {
+    return this.translationService.translate('teachingSignEmail');
+  }
+
+  return null;
+}
+
+private checkEmailFormat(email: string): string | null {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailRegex.test(email)) {
+    return this.translationService.translate('validEmail');
+  }
+
+  return null;
+}
 
 private resetErrors(): void {
   this.showNameError = false;
@@ -245,7 +260,6 @@ onSubmit(ngForm: NgForm) {
 
   } 
 }
-
 
  post = {
   endPoint: 'https://theodor-seidenberger.de/sendMail.php',
